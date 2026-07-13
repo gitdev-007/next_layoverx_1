@@ -1,0 +1,42 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+backend/functions/node_modules/
+audit_tools/node_modules/
+
+# Coverage
+coverage/
+backend/functions/coverage/
+backend/functions/lcov-report/
+*.lcov
+
+# Build outputs
+frontend/*.html
+frontend/pages/*.html
+frontend/components/ui/*.html
+frontend/components/*.html
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+.next/
+
+# Playwright / test artifacts
+test-results/
+playwright-report/
