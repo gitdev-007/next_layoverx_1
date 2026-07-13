@@ -4,14 +4,14 @@
     "headings": [
       {
         "tag": "H1",
-        "text": "Experience MumbaiBeyond The Airport",
+        "text": "Experience Mumbai\n      Beyond The Airport",
         "fontSize": "16px",
         "fontWeight": "800",
-        "lineHeight": "19.2px",
+        "lineHeight": "18.4px",
         "marginBottom": "8px",
         "color": "rgb(31, 41, 55)",
-        "y": 263,
-        "h": 38
+        "y": 249,
+        "h": 86
       },
       {
         "tag": "H2",
@@ -270,12 +270,12 @@
     "paragraphs": [
       {
         "text": "Maximize your stopover. Discover hotels, restauran",
-        "fontSize": "18px",
-        "lineHeight": "30.6px",
-        "color": "oklab(0.999994 0.0000455678 0.0000200868 / 0.9)",
+        "fontSize": "16px",
+        "lineHeight": "27.2px",
+        "color": "rgb(31, 41, 55)",
         "marginBottom": "0px",
-        "y": 309,
-        "h": 61
+        "y": 344,
+        "h": 54
       },
       {
         "text": "Browse through our specialized transit services ta",
@@ -588,18 +588,18 @@
       },
       {
         "text": "Explore Tours",
-        "fontSize": "18px",
+        "fontSize": "16px",
         "padding": "12px 32px",
-        "h": 52,
-        "w": 185,
+        "h": 48,
+        "w": 171,
         "br": "12px"
       },
       {
         "text": "Plan My Layover",
-        "fontSize": "18px",
+        "fontSize": "16px",
         "padding": "12px 32px",
-        "h": 54,
-        "w": 211,
+        "h": 50,
+        "w": 195,
         "br": "12px"
       },
       {
@@ -842,7 +842,7 @@
       {
         "a": "DIV.absolute",
         "b": "DIV.relative",
-        "area": 165417
+        "area": 182973
       },
       {
         "a": "DIV.absolute",
@@ -852,77 +852,77 @@
       {
         "a": "DIV.absolute",
         "b": "DIV.reveal",
-        "area": 36288
+        "area": 33600
       },
       {
         "a": "DIV.absolute",
         "b": "DIV.reveal",
-        "area": 39648
+        "area": 32214
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.absolute",
         "b": "DIV.relative",
-        "area": 165417
+        "area": 182973
       },
       {
         "a": "DIV.absolute",
@@ -932,72 +932,72 @@
       {
         "a": "DIV.absolute",
         "b": "DIV.reveal",
-        "area": 36288
+        "area": 33600
       },
       {
         "a": "DIV.absolute",
         "b": "DIV.reveal",
-        "area": 39648
+        "area": 32214
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.absolute",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.relative",
@@ -1007,172 +1007,172 @@
       {
         "a": "DIV.relative",
         "b": "DIV.reveal",
-        "area": 36288
+        "area": 33600
       },
       {
         "a": "DIV.relative",
         "b": "DIV.reveal",
-        "area": 39648
+        "area": 32214
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.relative",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.bg-white/20",
-        "area": 9204
+        "b": "DIV.bg-black/30",
+        "area": 7622
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
         "a": "DIV.reveal",
-        "b": "DIV.text-white",
-        "area": 3234
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-white",
-        "area": 3234
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-white",
-        "area": 3234
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-white",
-        "area": 3234
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-3xl",
-        "area": 5544
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-2xl",
+        "area": 4521
       },
       {
-        "a": "DIV.bg-white/20",
-        "b": "DIV.text-white",
-        "area": 3234
+        "a": "DIV.bg-black/30",
+        "b": "DIV.text-white/70",
+        "area": 2691
       },
       {
         "a": "SECTION.relative",
