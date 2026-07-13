@@ -50,7 +50,7 @@ This document outlines all possible user journeys, booking flows, partnership wo
 **How it works:** Customer books -> Supplier gets notified -> Supplier provides service -> LayoverX takes a commission -> Payout is issued to the supplier.
 *   **Pros:** Classic marketplace model; highly scalable.
 *   **Cons:** Escrow, chargebacks, and split payments are complex.
-*   **Improvement (Implemented):** Created backend `createPaymentIntent` function hooked into Stripe API with marketplace support. Validates the cart total against the database backend, generating secure intents for frontend checkout.
+*   **Improvement (Implemented):** Created backend `createRazorpayOrder` function hooked into Razorpay API with marketplace support. Validates the cart total against the database backend, generating secure intents for frontend checkout.
 
 ---
 

@@ -53,7 +53,6 @@ a fully operational, live production platform.
 --------------------------------------------------------------------------------
 *   Production API Credentials & Environment Variables:
     - Path: backend/functions/server.js
-    - Issue: Stripe, Razorpay, Resend, and Supabase credentials are loaded from environment 
       variables (`process.env`), but need production configurations.
     - Required Variables (Render environment settings):
       * `SUPABASE_URL`: The production database API URL.

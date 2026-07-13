@@ -18,7 +18,7 @@ TABLE OF CONTENTS
 5. Supplier Onboarding, KYC Auditing & Partner Syncing
 6. Live Real-Time Flight Delay Monitoring Engine
 7. Messaging & Notifications (Twilio SMS/WhatsApp Integration)
-8. Payments, Webhooks & Finance Operations (Razorpay & Stripe)
+8. Payments, Webhooks 0026 Finance Operations (Razorpay)
 9. Search Discovery & High-Density Filtering (Algolia/Typesense)
 10. Admin / Superadmin Concierge & Operations Dashboard
 11. Monitoring, Alerting, Logging & Error Tracking
@@ -209,8 +209,6 @@ TABLE OF CONTENTS
 ================================================================================
 8. PAYMENTS, WEBHOOKS & FINANCE OPERATIONS (RAZORPAY & STRIPE)
 ================================================================================
-*   [ ] Switch Razorpay / Stripe to Live Mode:
-        - Register legal business status with Razorpay (and Stripe for international passengers).
         - Submit KYC documents on the dashboards and swap keys from `rzp_test_...` / `rzp_test_...`
           to `rzp_live_...` / `rzp_live_...`.
 
@@ -221,7 +219,6 @@ TABLE OF CONTENTS
         - Securely handle edge cases where payments fail midway through verification, and set booking status.
 
 *   [ ] Refund / Cancellation Flows:
-        - Add administrative API routes to trigger automated refunds via Razorpay/Stripe if a flight delay
           shrinks a passenger's layover below the minimum safety threshold (safe_exit_window < 1.0 hour).
 
 ================================================================================

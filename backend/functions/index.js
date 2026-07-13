@@ -5,7 +5,6 @@
 
 const emailService = require('./services/emailService');
 const Razorpay = require('razorpay');
-const stripe = require('stripe')(process.env.STRIPE_SECRET || 'mock_stripe_key');
 
 const flightProvider = require('./services/flightProvider');
 const notificationService = require('./services/notificationService');
@@ -27,7 +26,7 @@ function sanitizeLogContent(str) {
   clean = clean.replace(/(passport(?:\s*number)?\s*[:=]\s*)['"]?[a-z0-9]+['"]?/gi, "$1[REDACTED_PASSPORT]");
   clean = clean.replace(/\b[a-fA-F0-9]{64}\b/g, "[REDACTED_SIGNATURE]");
   clean = clean.replace(/rzp_(?:test|live)_[a-zA-Z0-9]{14,24}/g, "[REDACTED_RAZORPAY_KEY]");
-  clean = clean.replace(/sk_(?:test|live)_[a-zA-Z0-9]{24,100}/g, "[REDACTED_STRIPE_KEY]");
+  clean = clean.replace(/sk_(?:test|live)_[a-zA-Z0-9]{24,100}/g, "[REDACTED_API_KEY]");
   clean = clean.replace(/ey[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_]+/g, "[REDACTED_TOKEN]");
   clean = clean.replace(/(password|secret|pass|token)\s*[:=]\s*['"]?[a-zA-Z0-9_\-\.\/+=]{8,}['"]?/gi, "$1: [REDACTED]");
   return clean;
@@ -170,48 +169,7 @@ async function validateLockSession(data, context) {
   }
 }
 
-// ------------------------------------------------------------------
-// Secure Payment Gateway & Cart Validation
-// ------------------------------------------------------------------
-async function createPaymentIntent(data, context) {
-  const { cartItems } = data;
-  let validatedTotal = 0;
-  const supabase = getSupabaseClient();
-  const uid = context.auth ? context.auth.uid : 'guest-traveler';
-
-  try {
-    for (const item of cartItems) {
-      const { data: service, error } = await supabase
-        .from('services')
-        .select('*')
-        .eq('id', String(item.serviceId))
-        .single();
-
-      if (error || !service) {
-        throw new Error(`Service ${item.serviceId} not found`);
-      }
-      validatedTotal += (service.price * item.quantity);
-    }
-
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: validatedTotal * 100, // paise
-      currency: 'inr',
-      automatic_payment_methods: { enabled: true },
-      metadata: { integration_check: 'accept_a_payment' },
-    });
-
-    return {
-      clientSecret: paymentIntent.client_secret,
-      validatedTotal: validatedTotal
-    };
-  } catch (error) {
-    await logToErrorLogs("CRITICAL", "payment-selection", `Stripe PaymentIntent Creation Failed: ${error.message}`, error, uid);
-    throw error;
-  }
-}
-
-// ------------------------------------------------------------------
-// Partner Registration alert endpoint (Resend-backed webhook)
+ (Resend-backed webhook)
 // ------------------------------------------------------------------
 async function partnerRegistration(req, res) {
   const { appId, data } = req.body;
@@ -741,7 +699,6 @@ async function contactSubmit(data, context) {
 module.exports = {
   lockInventory,
   validateLockSession,
-  createPaymentIntent,
   partnerRegistration,
   createRazorpayOrder,
   verifyRazorpayPayment,
