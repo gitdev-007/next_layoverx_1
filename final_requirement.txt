@@ -207,7 +207,7 @@ TABLE OF CONTENTS
         - Deliver the alert email directly to the traveler's registered inbox.
 
 ================================================================================
-8. PAYMENTS, WEBHOOKS & FINANCE OPERATIONS (RAZORPAY & STRIPE)
+8. PAYMENTS, WEBHOOKS & FINANCE OPERATIONS (RAZORPAY)
 ================================================================================
         - Submit KYC documents on the dashboards and swap keys from `rzp_test_...` / `rzp_test_...`
           to `rzp_live_...` / `rzp_live_...`.
