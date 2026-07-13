@@ -1,0 +1,3104 @@
+{
+  "index.html": {
+    "rootFontSize": 16,
+    "bodyFontSize": "16px",
+    "bodyLineHeight": "25.6px",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Experience MumbaiBeyond The Airport",
+        "fontSize": "36px",
+        "lineHeight": "41.4px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 83,
+        "width": 672
+      },
+      {
+        "tag": "H2",
+        "text": "Optimize Every Stopover Hour",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H3",
+        "text": "Transit Hotels",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Transit Dining",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Spa & Wellness",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Gaming & Fun",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "City Tours",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Activities",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 400
+      },
+      {
+        "tag": "H2",
+        "text": "Popular Transit Experiences",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H3",
+        "text": "Transit Hotel Stays",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Transit Food Experiences",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Spa & Wellness Sessions",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Gaming & Entertainment",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Time-Optimized City Tours",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 400
+      },
+      {
+        "tag": "H3",
+        "text": "Fixed-Rate Airport Cabs",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 400
+      },
+      {
+        "tag": "H2",
+        "text": "Layover Booking in 3 Simple Steps",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H3",
+        "text": "Enter Layover Window",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 379
+      },
+      {
+        "tag": "H3",
+        "text": "Select Services",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 379
+      },
+      {
+        "tag": "H3",
+        "text": "Enjoy Transit Safely",
+        "fontSize": "20px",
+        "lineHeight": "27px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 27,
+        "width": 379
+      },
+      {
+        "tag": "H2",
+        "text": "Loved by Transit Travelers",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H2",
+        "text": "Don't Waste Your Mumbai Layover",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 38,
+        "width": 672
+      },
+      {
+        "tag": "H3",
+        "text": "Explore Services",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Company",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Get In Touch",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H2",
+        "text": "Welcome Back",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Create Account",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Reset Password",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Update Trip Details",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "paragraphs": [
+      {
+        "text": "Maximize your stopover. Discover hotels, restaurants, spas, ",
+        "fontSize": "16px",
+        "lineHeight": "27.2px",
+        "color": "rgb(255, 255, 255)",
+        "height": 54,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Browse through our specialized transit services tailored spe",
+        "fontSize": "16px",
+        "lineHeight": "27.2px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 54,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Flexible stays near CSMIA with 24/7 check-in and hourly day-",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "From fine dining to local street food crawl guides near the ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Refresh your transit with luxury treatments and express ther",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "VR zones, boutique bowling, and high-energy fun minutes from",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Private AC vehicle tours visiting Mumbai's iconic heritage l",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "From food trails to boutique shopping, curated for your sche",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Verified, top-reviewed partners, and close to the airport fo",
+        "fontSize": "16px",
+        "lineHeight": "27.2px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 54,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Flexible day-use transit rooms inside Terminal 2 with 24/7 c",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Savor authentic coastal seafood, Maharashtrian thalis, and l",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Refresh with express foot reflexology, deep tissue massage, ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Escape airport boredom. Explore virtual reality zones, bowli",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Guided heritage, food crawls, and boutique shopping tours st",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Surge-free flat rate airport pickups, drop-offs, tolls-inclu",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "We synchronize your airport exit, visa guidance, and transfe",
+        "fontSize": "16px",
+        "lineHeight": "27.2px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 54,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Input your landing and boarding times. We calculate buffer h",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Customize your timeline. Select day-rooms, restaurant tables",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Follow your smart timeline, keep tracked by your private cha",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Read real reviews from global transit flyers who escaped the",
+        "fontSize": "16px",
+        "lineHeight": "27.2px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 54,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"I had an 8-hour layover en route to London. LayoverX booked",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 95,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"Day-use hotel booking near Terminal 1 was smooth and fast. ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 95,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"Fantastic seafood lunch reserved at Gajalee. No queue, prem",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Escape the airport gates. Book verified hotels, transport, a",
+        "fontSize": "16px",
+        "lineHeight": "27.2px",
+        "color": "rgb(255, 255, 255)",
+        "height": 54,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Mumbai Travel & Layover Experience Platform. Transform your ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 119,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "© 2026 LayoverX. All rights reserved. Realized with high-per",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 20,
+        "marginBottom": "0px"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "HEADER#hero-section.relative.min-h-[90vh]",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 720
+      },
+      {
+        "tag": "SECTION#search.relative.z-20",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 155
+      },
+      {
+        "tag": "SECTION#categories.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 452
+      },
+      {
+        "tag": "SECTION#experiences.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 492
+      },
+      {
+        "tag": "SECTION#how-it-works.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 305
+      },
+      {
+        "tag": "SECTION#testimonials.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 278
+      },
+      {
+        "tag": "SECTION.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 119
+      },
+      {
+        "tag": "FOOTER.bg-gray-900.text-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 208
+      }
+    ],
+    "cards": [
+      {
+        "cls": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 48,
+        "width": 156
+      },
+      {
+        "cls": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 48,
+        "width": 156
+      },
+      {
+        "cls": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 48,
+        "width": 156
+      },
+      {
+        "cls": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 48,
+        "width": 156
+      },
+      {
+        "cls": "bg-white rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-8",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 155,
+        "width": 1200
+      },
+      {
+        "cls": "bg-gray-50 border border-gray-200 rounded-2xl p-4",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 44,
+        "width": 288
+      },
+      {
+        "cls": "bg-gray-50 border border-gray-200 rounded-2xl p-4",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 44,
+        "width": 288
+      },
+      {
+        "cls": "bg-gray-50 border border-gray-200 rounded-2xl p-4",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 44,
+        "width": 288
+      },
+      {
+        "cls": "bg-gray-50 border border-gray-200 rounded-2xl p-4",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 44,
+        "width": 288
+      },
+      {
+        "cls": "w-full mt-6 py-4 bg-gradient-to-r from-sky-500 to-sky-600 text-white text-base f",
+        "padding": "12px 24px",
+        "gap": "8px",
+        "borderRadius": "12px",
+        "height": 47,
+        "width": 1198
+      },
+      {
+        "cls": "card group h-full flex flex-col hover:-translate-y-1 transform transition durati",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 335,
+        "width": 400
+      },
+      {
+        "cls": "card group h-full flex flex-col hover:-translate-y-1 transform transition durati",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 335,
+        "width": 400
+      },
+      {
+        "cls": "card group h-full flex flex-col hover:-translate-y-1 transform transition durati",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 335,
+        "width": 400
+      },
+      {
+        "cls": "card group h-full flex flex-col hover:-translate-y-1 transform transition durati",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 335,
+        "width": 400
+      },
+      {
+        "cls": "card group h-full flex flex-col hover:-translate-y-1 transform transition durati",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 335,
+        "width": 400
+      },
+      {
+        "cls": "card group h-full flex flex-col hover:-translate-y-1 transform transition durati",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 335,
+        "width": 400
+      },
+      {
+        "cls": "card h-full flex flex-col justify-between",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 374,
+        "width": 400
+      },
+      {
+        "cls": "card h-full flex flex-col justify-between",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 374,
+        "width": 400
+      },
+      {
+        "cls": "card h-full flex flex-col justify-between",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 374,
+        "width": 400
+      },
+      {
+        "cls": "card h-full flex flex-col justify-between",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "20px",
+        "height": 374,
+        "width": 400
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Sign Up",
+        "fontSize": "14px",
+        "padding": "0px",
+        "height": 20,
+        "width": 53,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Explore Tours",
+        "fontSize": "16px",
+        "padding": "12px 32px",
+        "height": 50,
+        "width": 171,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Plan My Layover",
+        "fontSize": "16px",
+        "padding": "12px 32px",
+        "height": 52,
+        "width": 195,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Hotels",
+        "fontSize": "14px",
+        "padding": "8px 16px",
+        "height": 42,
+        "width": 103,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Restaurants",
+        "fontSize": "14px",
+        "padding": "8px 16px",
+        "height": 42,
+        "width": 140,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Spa",
+        "fontSize": "14px",
+        "padding": "8px 16px",
+        "height": 42,
+        "width": 86,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Gaming",
+        "fontSize": "14px",
+        "padding": "8px 16px",
+        "height": 42,
+        "width": 111,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Tours",
+        "fontSize": "14px",
+        "padding": "8px 16px",
+        "height": 42,
+        "width": 98,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Transfers",
+        "fontSize": "14px",
+        "padding": "8px 16px",
+        "height": 42,
+        "width": 124,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Build Custom AI Itinerary",
+        "fontSize": "15.2px",
+        "padding": "12px 24px",
+        "height": 47,
+        "width": 1198,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Book Day Room",
+        "fontSize": "12px",
+        "padding": "8px 16px",
+        "height": 32,
+        "width": 123,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Book Table",
+        "fontSize": "12px",
+        "padding": "8px 16px",
+        "height": 32,
+        "width": 97,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Book Spa",
+        "fontSize": "12px",
+        "padding": "8px 16px",
+        "height": 32,
+        "width": 87,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Book Gaming",
+        "fontSize": "12px",
+        "padding": "8px 16px",
+        "height": 32,
+        "width": 110,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Book Tour",
+        "fontSize": "12px",
+        "padding": "8px 16px",
+        "height": 32,
+        "width": 91,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Book Cab",
+        "fontSize": "12px",
+        "padding": "8px 16px",
+        "height": 32,
+        "width": 88,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Plan My Layover Now",
+        "fontSize": "16px",
+        "padding": "0px",
+        "height": 26,
+        "width": 168,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Speak with Transit Expert",
+        "fontSize": "16px",
+        "padding": "0px",
+        "height": 28,
+        "width": 202,
+        "borderRadius": "12px"
+      }
+    ],
+    "overflows": []
+  },
+  "hotels.html": {
+    "rootFontSize": 16,
+    "bodyFontSize": "16px",
+    "bodyLineHeight": "25.6px",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Luxury Transit Hotels Minutes from CSMIA",
+        "fontSize": "30px",
+        "lineHeight": "34.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 69,
+        "width": 680
+      },
+      {
+        "tag": "H2",
+        "text": "Filters",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 20,
+        "width": 49
+      },
+      {
+        "tag": "H3",
+        "text": "Price Range (INR)",
+        "fontSize": "12px",
+        "lineHeight": "16.2px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(197, 160, 89)",
+        "height": 16,
+        "width": 298
+      },
+      {
+        "tag": "H3",
+        "text": "Distance From Terminal",
+        "fontSize": "12px",
+        "lineHeight": "16.2px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(197, 160, 89)",
+        "height": 16,
+        "width": 298
+      },
+      {
+        "tag": "H3",
+        "text": "Star Rating",
+        "fontSize": "12px",
+        "lineHeight": "16.2px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(197, 160, 89)",
+        "height": 16,
+        "width": 298
+      },
+      {
+        "tag": "H3",
+        "text": "Transit Amenities",
+        "fontSize": "12px",
+        "lineHeight": "16.2px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(197, 160, 89)",
+        "height": 16,
+        "width": 298
+      },
+      {
+        "tag": "H3",
+        "text": "Niranta Airport Transit Hotel & Lounge",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 334
+      },
+      {
+        "tag": "H3",
+        "text": "JW Marriott Mumbai Sahar",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 235
+      },
+      {
+        "tag": "H3",
+        "text": "Ibis Mumbai Airport",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 174
+      },
+      {
+        "tag": "H3",
+        "text": "The Orchid Hotel Mumbai Vile Parle",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 311
+      },
+      {
+        "tag": "H3",
+        "text": "No Hotels Found",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Premium In-Terminal Transit",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 580
+      },
+      {
+        "tag": "H2",
+        "text": "What Transit Guests Say",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H2",
+        "text": "Airport Hotels FAQ",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H2",
+        "text": "Maximize Your Flight Layover",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 30,
+        "width": 1200
+      },
+      {
+        "tag": "H2",
+        "text": "Hotel Name",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H3",
+        "text": "Description",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H3",
+        "text": "What's Included in Day-Use",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Book Your Transit Stay",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Transit Room Confirmed!",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H3",
+        "text": "Explore Services",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Company",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Get In Touch",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H2",
+        "text": "Welcome Back",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Create Account",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Reset Password",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Update Trip Details",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "paragraphs": [
+      {
+        "text": "Sleep, refresh, and recharge during your Mumbai stopover. Bo",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Ideal for quick transits. No visa check needed if remaining ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(197, 160, 89)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Ultra-luxury stays with high-speed lounge setups, award-winn",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(197, 160, 89)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Cozy, ergonomic rooms designed for short-stay transits. Exce",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(197, 160, 89)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Asia's first certified 5-star ecofriendly hotel. Features a ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(197, 160, 89)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Have a layover under 5 hours? Avoid clearing immigration alt",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(197, 160, 89)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"Niranta was perfect. My flight landed at 3 AM and I had a c",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 95,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"Booked JW Marriott Sahar day slot for a 12-hour layover. Th",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"Super convenient pricing. Ibis airport was clean, modern, a",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 95,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "If you book a hotel inside the airport terminal (like Nirant",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Unlike standard hotel check-ins (usually 12 PM or 2 PM), tra",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Most 5-star hotels near CSMIA (like JW Marriott Sahar, Hilto",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Build an entire layover plan by connecting a transit hotel w",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(255, 255, 255)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Mumbai Travel & Layover Experience Platform. Transform your ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 119,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "© 2026 LayoverX. All rights reserved. Realized with high-per",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 20,
+        "marginBottom": "0px"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "SECTION.relative.theme-hero",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 472
+      },
+      {
+        "tag": "SECTION.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 910
+      },
+      {
+        "tag": "SECTION.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 321
+      },
+      {
+        "tag": "SECTION.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 197
+      },
+      {
+        "tag": "SECTION.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 142
+      },
+      {
+        "tag": "SECTION.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 104
+      },
+      {
+        "tag": "FOOTER.bg-gray-900.text-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 208
+      }
+    ],
+    "cards": [
+      {
+        "cls": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 472,
+        "width": 472
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 p-6 sticky top-52",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 368,
+        "width": 300
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 215,
+        "width": 868
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 242,
+        "width": 868
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 215,
+        "width": 868
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 215,
+        "width": 868
+      },
+      {
+        "cls": "relative rounded-3xl overflow-hidden shadow-lg h-80",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 320,
+        "width": 580
+      },
+      {
+        "cls": "bg-white border border-gray-200 p-6 rounded-2xl",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 133,
+        "width": 384
+      },
+      {
+        "cls": "bg-white border border-gray-200 p-6 rounded-2xl",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 133,
+        "width": 384
+      },
+      {
+        "cls": "bg-white border border-gray-200 p-6 rounded-2xl",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 133,
+        "width": 384
+      },
+      {
+        "cls": "bg-gradient-to-r from-sky-500 to-sky-600 rounded-3xl p-8 sm:p-12 text-center tex",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 103,
+        "width": 1200
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Sign Up",
+        "fontSize": "14px",
+        "padding": "0px",
+        "height": 20,
+        "width": 53,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Search Hotels",
+        "fontSize": "15.2px",
+        "padding": "12px 24px",
+        "height": 48,
+        "width": 288,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Plan My Entire Layover",
+        "fontSize": "16px",
+        "padding": "0px",
+        "height": 26,
+        "width": 178,
+        "borderRadius": "12px"
+      }
+    ],
+    "overflows": []
+  },
+  "airport-transfers.html": {
+    "rootFontSize": 16,
+    "bodyFontSize": "16px",
+    "bodyLineHeight": "25.6px",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Fixed-Rate Airport Cabs & Transfers",
+        "fontSize": "30px",
+        "lineHeight": "34.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 69,
+        "width": 680
+      },
+      {
+        "tag": "H2",
+        "text": "Filters",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 20,
+        "width": 49
+      },
+      {
+        "tag": "H3",
+        "text": "Cab Category",
+        "fontSize": "12px",
+        "lineHeight": "16.2px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(71, 85, 105)",
+        "height": 16,
+        "width": 298
+      },
+      {
+        "tag": "H3",
+        "text": "Passenger Capacity",
+        "fontSize": "12px",
+        "lineHeight": "16.2px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(71, 85, 105)",
+        "height": 16,
+        "width": 298
+      },
+      {
+        "tag": "H3",
+        "text": "Compact Sedan (Toyota Etios or similar)",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 351
+      },
+      {
+        "tag": "H3",
+        "text": "Premium SUV (Toyota Innova Crysta)",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 325
+      },
+      {
+        "tag": "H3",
+        "text": "Luxury Executive (Mercedes C-Class or Audi A4)",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 49,
+        "width": 414
+      },
+      {
+        "tag": "H3",
+        "text": "No Vehicles Found",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "How to Meet Your Driver at CSMIA T2",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H3",
+        "text": "Clear Immigration",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 19,
+        "width": 377
+      },
+      {
+        "tag": "H3",
+        "text": "Exit Gate 2",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 19,
+        "width": 377
+      },
+      {
+        "tag": "H3",
+        "text": "Spot Name Placard",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 19,
+        "width": 377
+      },
+      {
+        "tag": "H2",
+        "text": "Airport Taxi FAQ",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H3",
+        "text": "Explore Services",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Company",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Get In Touch",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H2",
+        "text": "Welcome Back",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Create Account",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Reset Password",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Update Trip Details",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "paragraphs": [
+      {
+        "text": "Book a professional, verified private taxi to escape CSMIA g",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.872 0.01 258.338)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Ideal for 1-3 passengers with standard luggage. AC, GPS trac",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(71, 85, 105)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Extra room, premium comfort, great for families. AC, high lu",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(71, 85, 105)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Chauffeur-driven luxury class vehicle. Leather seats, airpor",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(71, 85, 105)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Proceed to immigration. Clear passport control using your tr",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "rgb(71, 85, 105)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Collect baggage if checked in, then exit the arrival hall an",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "rgb(71, 85, 105)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Your driver will be waiting in the arrivals placard zone wit",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "rgb(71, 85, 105)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "We track your flight number in real-time. If your flight is ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 24,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Yes! All taxi quotes shown are flat-rate and include highway",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 24,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Mumbai Travel & Layover Experience Platform. Transform your ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 119,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "© 2026 LayoverX. All rights reserved. Realized with high-per",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 20,
+        "marginBottom": "0px"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "SECTION.relative.theme-hero",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 472
+      },
+      {
+        "tag": "SECTION.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 499
+      },
+      {
+        "tag": "SECTION#pickup-info.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 174
+      },
+      {
+        "tag": "SECTION.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 116
+      },
+      {
+        "tag": "FOOTER.bg-gray-900.text-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 208
+      }
+    ],
+    "cards": [
+      {
+        "cls": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 472,
+        "width": 472
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 p-6 sticky top-52",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 155,
+        "width": 300
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 151,
+        "width": 868
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 151,
+        "width": 868
+      },
+      {
+        "cls": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 175,
+        "width": 868
+      },
+      {
+        "cls": "bg-gray-50 p-6 rounded-2xl border border-gray-200",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 110,
+        "width": 379
+      },
+      {
+        "cls": "bg-gray-50 p-6 rounded-2xl border border-gray-200",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 110,
+        "width": 379
+      },
+      {
+        "cls": "bg-gray-50 p-6 rounded-2xl border border-gray-200",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 110,
+        "width": 379
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Sign Up",
+        "fontSize": "14px",
+        "padding": "0px",
+        "height": 20,
+        "width": 53,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Check Vehicles",
+        "fontSize": "15.2px",
+        "padding": "12px 24px",
+        "height": 48,
+        "width": 288,
+        "borderRadius": "12px"
+      }
+    ],
+    "overflows": []
+  },
+  "my-itinerary.html": {
+    "rootFontSize": 16,
+    "bodyFontSize": "16px",
+    "bodyLineHeight": "25.6px",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Stopover Planner & Workspace",
+        "fontSize": "30px",
+        "lineHeight": "34.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 35,
+        "width": 1200
+      },
+      {
+        "tag": "H2",
+        "text": "Timings & Exit Window",
+        "fontSize": "18px",
+        "lineHeight": "22.5px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 23,
+        "width": 218
+      },
+      {
+        "tag": "H3",
+        "text": "Timeline Sequence",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 22,
+        "width": 150
+      },
+      {
+        "tag": "H3",
+        "text": "Your Stopover Schedule is Empty",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 22,
+        "width": 787
+      },
+      {
+        "tag": "H3",
+        "text": "Draft Itineraries",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 19,
+        "width": 377
+      },
+      {
+        "tag": "H3",
+        "text": "AI Stopover Co-Pilot",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 22,
+        "width": 153
+      },
+      {
+        "tag": "H3",
+        "text": "Pricing Breakdown",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 19,
+        "width": 377
+      },
+      {
+        "tag": "H2",
+        "text": "Configure AI Co-pilot",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H3",
+        "text": "Explore Services",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Company",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Get In Touch",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H2",
+        "text": "Welcome Back",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Create Account",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Reset Password",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Update Trip Details",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "paragraphs": [
+      {
+        "text": "Build and refine your layover timeline. Check real-time exit",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.869 0.022 252.894)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Immigration exit & transfer buffer: 3.5h",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.554 0.046 257.417)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Choose transit hotels, fine dining, quick massages, and tour",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.554 0.046 257.417)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Need an optimized plan? The co-pilot reads your layover wind",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.869 0.022 252.894)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Mumbai Travel & Layover Experience Platform. Transform your ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 119,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "© 2026 LayoverX. All rights reserved. Realized with high-per",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 20,
+        "marginBottom": "0px"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "DIV.relative.min-h-[30vh]",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 240
+      },
+      {
+        "tag": "SECTION.section.bg-slate-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 800
+      },
+      {
+        "tag": "FOOTER.bg-gray-900.text-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 208
+      }
+    ],
+    "cards": [
+      {
+        "cls": "bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-sm space-y-6",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 110,
+        "width": 789
+      },
+      {
+        "cls": "bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 144,
+        "width": 789
+      },
+      {
+        "cls": "bg-white rounded-3xl border border-gray-200 p-6 shadow-sm space-y-4",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 62,
+        "width": 379
+      },
+      {
+        "cls": "bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-6 shadow",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 111,
+        "width": 379
+      },
+      {
+        "cls": "bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-md space-y-6",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 87,
+        "width": 379
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Sign Up",
+        "fontSize": "14px",
+        "padding": "0px",
+        "height": 20,
+        "width": 53,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Proceed to Checkout →",
+        "fontSize": "14px",
+        "padding": "0px",
+        "height": 20,
+        "width": 377,
+        "borderRadius": "12px"
+      }
+    ],
+    "overflows": []
+  },
+  "how-it-works.html": {
+    "rootFontSize": 16,
+    "bodyFontSize": "16px",
+    "bodyLineHeight": "25.6px",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Escaping Mumbai Airport \n          Made Simple",
+        "fontSize": "30px",
+        "lineHeight": "34.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 69,
+        "width": 680
+      },
+      {
+        "tag": "H2",
+        "text": "How We Calculate Your Buffer Hours",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 576
+      },
+      {
+        "tag": "H3",
+        "text": "Landing & Immigration (1.5 Hours)",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 19,
+        "width": 452
+      },
+      {
+        "tag": "H3",
+        "text": "Departures Security & Boarding (2 Hours)",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 19,
+        "width": 540
+      },
+      {
+        "tag": "H4",
+        "text": "Active Exploration Window",
+        "fontSize": "14px",
+        "lineHeight": "19.6px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 20,
+        "width": 540
+      },
+      {
+        "tag": "H3",
+        "text": "8-Hour Layover Example Timeline",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 574
+      },
+      {
+        "tag": "H2",
+        "text": "Essential Layover Logistics",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H3",
+        "text": "Indian Transit Visa Rules",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 582
+      },
+      {
+        "tag": "H3",
+        "text": "Left Luggage Locker Facility",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 582
+      },
+      {
+        "tag": "H2",
+        "text": "Proven Transit Comfort",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 30,
+        "width": 378
+      },
+      {
+        "tag": "H2",
+        "text": "Transit General FAQs",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H2",
+        "text": "Plan Your Layover Itinerary",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 30,
+        "width": 896
+      },
+      {
+        "tag": "H3",
+        "text": "Explore Services",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Company",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Get In Touch",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H2",
+        "text": "Welcome Back",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Create Account",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Reset Password",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Update Trip Details",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "paragraphs": [
+      {
+        "text": "Escape the terminals safely. We synchronize immigration clea",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.872 0.01 258.338)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Clearing airport gates requires security buffers. When you e",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "De-boarding, walking through CSMIA T2, and clearing passport",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Security screening check-in, customs control, and airport bo",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "The remaining middle window is your safe zone to enjoy hotel",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Clear passport checks, proceed to Exit Gate 2.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Meet your private chauffeur at the placard arrival zone.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Tour Bandra, Juhu beach, or enjoy coastal seafood lunch.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Dropoff directly at Terminal 2 departure ramp.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Gate boarding for your connecting flight.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "To exit the airport grounds during layover, travelers must h",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Don't drag heavy luggage around Mumbai. Clear security with ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 71,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Over 5,000 transits managed around Mumbai airport. Here is w",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"The 3-hour buffer logic calculation is incredibly accurate.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.446 0.03 256.802)",
+        "height": 61,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "\"Super helpful visa instructions. We applied for the e-trans",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.446 0.03 256.802)",
+        "height": 61,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "We maintain a Missed Flight Guarantee. Because we calculate ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "The luggage lockers counters are located in the public arriv",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Get custom travel timelines matched to your flight times usi",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "rgb(255, 255, 255)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Mumbai Travel & Layover Experience Platform. Transform your ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 119,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "© 2026 LayoverX. All rights reserved. Realized with high-per",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 20,
+        "marginBottom": "0px"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "SECTION.relative.bg-gradient-to-b",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 472
+      },
+      {
+        "tag": "SECTION.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 288
+      },
+      {
+        "tag": "SECTION.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 236
+      },
+      {
+        "tag": "SECTION.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 116
+      },
+      {
+        "tag": "SECTION#faq.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 116
+      },
+      {
+        "tag": "SECTION.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 104
+      },
+      {
+        "tag": "FOOTER.bg-gray-900.text-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 208
+      }
+    ],
+    "cards": [
+      {
+        "cls": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 472,
+        "width": 472
+      },
+      {
+        "cls": "bg-gray-50 rounded-3xl p-8 border border-gray-200",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 228,
+        "width": 576
+      },
+      {
+        "cls": "bg-white p-6 rounded-2xl border border-gray-200 shadow-sm",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 171,
+        "width": 584
+      },
+      {
+        "cls": "bg-white p-6 rounded-2xl border border-gray-200 shadow-sm",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 171,
+        "width": 584
+      },
+      {
+        "cls": "bg-gradient-to-r from-sky-50 to-indigo-50 border border-sky-100 rounded-3xl p-8 ",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 116,
+        "width": 1200
+      },
+      {
+        "cls": "bg-white p-6 rounded-2xl shadow-sm border border-gray-100",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 114,
+        "width": 382
+      },
+      {
+        "cls": "bg-white p-6 rounded-2xl shadow-sm border border-gray-100",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 114,
+        "width": 382
+      },
+      {
+        "cls": "bg-gradient-to-r from-sky-500 to-sky-600 rounded-3xl p-8 sm:p-12 text-white max-",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "24px",
+        "height": 103,
+        "width": 896
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Sign Up",
+        "fontSize": "14px",
+        "padding": "0px",
+        "height": 20,
+        "width": 53,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Start Planning",
+        "fontSize": "16px",
+        "padding": "0px",
+        "height": 26,
+        "width": 111,
+        "borderRadius": "12px"
+      }
+    ],
+    "overflows": []
+  },
+  "contact.html": {
+    "rootFontSize": 16,
+    "bodyFontSize": "16px",
+    "bodyLineHeight": "25.6px",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "24/7 Transit Customer \n          Support & Dispatch",
+        "fontSize": "30px",
+        "lineHeight": "34.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 69,
+        "width": 680
+      },
+      {
+        "tag": "H2",
+        "text": "Send Us a Message",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 30,
+        "width": 691
+      },
+      {
+        "tag": "H3",
+        "text": "Direct Contacts",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 24,
+        "width": 459
+      },
+      {
+        "tag": "H3",
+        "text": "Partner with LayoverX",
+        "fontSize": "18px",
+        "lineHeight": "24.3px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 24,
+        "width": 461
+      },
+      {
+        "tag": "H3",
+        "text": "CSMIA Dispatch Office",
+        "fontSize": "16px",
+        "lineHeight": "21.6px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 22,
+        "width": 382
+      },
+      {
+        "tag": "H2",
+        "text": "How Can We Help?",
+        "fontSize": "30px",
+        "lineHeight": "37.5px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 38,
+        "width": 1200
+      },
+      {
+        "tag": "H3",
+        "text": "Explore Services",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Company",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H3",
+        "text": "Get In Touch",
+        "fontSize": "14px",
+        "lineHeight": "18.9px",
+        "fontWeight": "700",
+        "marginBottom": "0px",
+        "color": "rgb(255, 255, 255)",
+        "height": 19,
+        "width": 270
+      },
+      {
+        "tag": "H2",
+        "text": "Welcome Back",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Create Account",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Reset Password",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "tag": "H2",
+        "text": "Update Trip Details",
+        "fontSize": "24px",
+        "lineHeight": "30px",
+        "fontWeight": "800",
+        "marginBottom": "0px",
+        "color": "rgb(31, 41, 55)",
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "paragraphs": [
+      {
+        "text": "Have a question about an upcoming layover? Need urgent help ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.872 0.01 258.338)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Our transit coordinators usually respond within 15 minutes.",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 24,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Available 24/7 for active transit passenger coordination.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Quickest channel for live coordinates updates.",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 20,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Are you a fleet manager, hotel owner near CSMIA, or a touris",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "rgb(255, 255, 255)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Conveniently situated inside Hotel District, Andheri East, j",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.373 0.034 259.733)",
+        "height": 41,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Yes! We support 100% free cancellations up to 2 hours prior ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 48,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Please reach out directly to our business desk at partners@l",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.278 0.033 256.848)",
+        "height": 24,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "Mumbai Travel & Layover Experience Platform. Transform your ",
+        "fontSize": "14px",
+        "lineHeight": "23.8px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 119,
+        "marginBottom": "0px"
+      },
+      {
+        "text": "© 2026 LayoverX. All rights reserved. Realized with high-per",
+        "fontSize": "12px",
+        "lineHeight": "20.4px",
+        "color": "oklch(0.707 0.022 261.325)",
+        "height": 20,
+        "marginBottom": "0px"
+      }
+    ],
+    "sections": [
+      {
+        "tag": "SECTION.relative.bg-gradient-to-b",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 472
+      },
+      {
+        "tag": "SECTION.section.bg-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 309
+      },
+      {
+        "tag": "SECTION.w-full.bg-gray-100",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 384
+      },
+      {
+        "tag": "SECTION.section.bg-gray-50",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 115
+      },
+      {
+        "tag": "FOOTER.bg-gray-900.text-white",
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "marginTop": "0px",
+        "marginBottom": "0px",
+        "height": 208
+      }
+    ],
+    "cards": [
+      {
+        "cls": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 472,
+        "width": 472
+      },
+      {
+        "cls": "bg-gray-50 rounded-2xl p-6 border border-gray-200",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 187,
+        "width": 461
+      },
+      {
+        "cls": "bg-gradient-to-br from-sky-500 to-indigo-600 text-white rounded-2xl p-6 shadow-m",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 91,
+        "width": 461
+      },
+      {
+        "cls": "bg-white/95 backdrop-blur-md rounded-2xl p-6 border border-gray-200 shadow-xl ma",
+        "padding": "0px",
+        "gap": "normal",
+        "borderRadius": "16px",
+        "height": 90,
+        "width": 384
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Sign Up",
+        "fontSize": "14px",
+        "padding": "0px",
+        "height": 20,
+        "width": 53,
+        "borderRadius": "12px"
+      },
+      {
+        "text": "Send Message",
+        "fontSize": "15.2px",
+        "padding": "12px 24px",
+        "height": 48,
+        "width": 691,
+        "borderRadius": "12px"
+      }
+    ],
+    "overflows": []
+  }
+}

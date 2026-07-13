@@ -73,3 +73,49 @@ button {
     padding-right: var(--space-2);
   }
 }
+
+/* Global typography consistency fixes */
+.text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+  line-height: 1.2 !important;
+}
+
+h1 { margin-bottom: 0.5em; }
+h2 { margin-bottom: 0.5em; }
+h3 { margin-bottom: 0.5em; }
+
+/* Consistent button sizing */
+.btn, a[class*="px-"][class*="py-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Fix hero sections to have enough top padding for fixed navbar */
+header.pt-24, section.pt-24, div.pt-24 {
+  padding-top: 6rem !important; /* 96px - better clearance for 80px navbar */
+}
+
+@media (min-width: 640px) {
+  header.pt-24, section.pt-24, div.pt-24 {
+    padding-top: 7rem !important; /* 112px on larger screens */
+  }
+}
+
+/* Ensure CTA sections have proper spacing */
+.section.bg-white {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix card text overflow */
+.card p, .card-content p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Consistent form input sizing */
+.form-input, input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+  min-height: 2.75rem;
+  padding: 0.625rem 1rem;
+}
