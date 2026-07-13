@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+Disallow: /fix_auth.py
+Disallow: /fix_mobile_menu.py
+Disallow: /build.py
+Disallow: /checkout.html
+Disallow: /booking-review.html
+Disallow: /payment-selection.html
+Disallow: /booking-confirmation.html
+Disallow: /my-trips.html
+Disallow: /saved-itineraries.html
+Disallow: /trip-details.html
+Disallow: /my-profile.html
+Disallow: /account-settings.html
+Disallow: /supplier-dashboard.html
+Disallow: /supplier-status.html
+Disallow: /revenue-admin.html
+Disallow: /notifications.html
+
+# Sitemap
+Sitemap: https://layoverx.com/sitemap.xml

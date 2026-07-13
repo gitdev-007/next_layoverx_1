@@ -1,0 +1,99 @@
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{TITLE}} - LayoverX</title>
+  <meta name="description" content="{{DESCRIPTION}}"/>
+  <meta name="keywords" content="Mumbai Airport Hotels, Mumbai Airport Restaurants, Mumbai Transit Tours, Mumbai Airport Cabs, Layover Itinerary Planner, LayoverX"/>
+  <link rel="canonical" href="{{CANONICAL}}"/>
+  <meta property="og:title" content="{{TITLE}} - LayoverX"/>
+  <meta property="og:description" content="{{DESCRIPTION}}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{CANONICAL}}"/>
+  <meta property="og:image" content="https://layoverx.com/assets/photos/homepage.png"/>
+  <meta property="og:site_name" content="LayoverX"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="{{TITLE}} - LayoverX"/>
+  <meta name="twitter:description" content="{{DESCRIPTION}}"/>
+  {{ROBOTS}}
+
+  <!-- Critical CSS: prevents FOUC & locks base font scale before Tailwind -->
+  <style>
+    /* Lock root font size — prevents browser zoom shifts */
+    html { font-size: 16px; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+
+    /* Base body typography */
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Heading scale — clear hierarchy, no browser defaults */
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem);   line-height: 1.15; font-weight: 800; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.25; font-weight: 700; }
+    h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); line-height: 1.35; font-weight: 700; }
+    h4 { font-size: 1.125rem; line-height: 1.4;  font-weight: 600; }
+    h5 { font-size: 1rem;     line-height: 1.5;  font-weight: 600; }
+    h6 { font-size: 0.875rem; line-height: 1.5;  font-weight: 600; }
+
+    /* Body text — never smaller than 14px */
+    p  { font-size: 1rem; line-height: 1.7; }
+
+    /* Input & button baseline */
+    input, select, textarea, button { font-family: inherit; font-size: 0.9375rem; }
+
+    /* Prevent layout shift from Tailwind loading */
+    .container { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1rem; }
+
+    /* Hide body content until CSS is parsed — avoids naked HTML flash */
+    body { visibility: visible; }
+  </style>
+
+  <!-- Inter font — weights 300-900 for full design range -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    as="style"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"/>
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  </noscript>
+
+  <!-- Tailwind utility classes -->
+  <link rel="preload" href="css/tailwind.min.css" as="style"/>
+  <link rel="stylesheet" href="css/tailwind.min.css"/>
+
+  <!-- Supabase JS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-init.js" type="module"></script>
+
+  <!-- LayoverX Design System (overrides Tailwind where needed) -->
+  <link rel="stylesheet" href="css/design-system.css"/>
+
+  <!-- Global Structure & Typography Overrides (loads last — highest priority) -->
+  <link rel="stylesheet" href="css/global-overrides.css"/>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+
+  <!-- Map Config -->
+  <script src="js/map-config.js" defer></script>
+
+  <!-- App JS -->
+  <script src="js/app.js" defer></script>
+
+  <!-- Google Maps JS SDK -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places" defer></script>
+
+  {{JSON_LD}}
+</head>

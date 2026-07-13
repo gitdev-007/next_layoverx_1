@@ -1,0 +1,305 @@
+================================================================================
+                    LAYOVERX - PRODUCTION LAUNCH REQUIREMENTS CHECKLIST
+================================================================================
+This document outlines all the remaining steps, configurations, API integrations,
+security audits, and deployment procedures required to take the LayoverX platform
+(layoverx.in) live as a fully functional, highly scalable, and production-ready system.
+
+STATUS: Firebase fully removed; Core stack migrated to Supabase + Render + Resend.
+DATE: June 2026
+
+--------------------------------------------------------------------------------
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. Core Stack Deployment & DevOps (Render & Vercel)
+2. Database Schema, Seeds & Hardening (Supabase PostgreSQL)
+3. Authentication & User Profile Syncing (Supabase Auth)
+4. Storage Buckets, File Management & Security Policies
+5. Supplier Onboarding, KYC Auditing & Partner Syncing
+6. Live Real-Time Flight Delay Monitoring Engine
+7. Messaging & Notifications (Twilio SMS/WhatsApp Integration)
+8. Payments, Webhooks & Finance Operations (Razorpay & Stripe)
+9. Search Discovery & High-Density Filtering (Algolia/Typesense)
+10. Admin / Superadmin Concierge & Operations Dashboard
+11. Monitoring, Alerting, Logging & Error Tracking
+12. SEO, Analytics, Performance & Content Delivery
+13. Repository Cleanup & Build Verification
+
+================================================================================
+1. CORE STACK DEPLOYMENT & DEVOPS (RENDER & VERCEL)
+================================================================================
+*   [ ] Backend Render Environment Variables Configuration:
+        In the Render Dashboard for the Express service, add these production keys:
+        - SUPABASE_URL: Live production database endpoint url.
+        - SUPABASE_SERVICE_ROLE_KEY: High-privilege role secret to bypass RLS policies.
+        - RESEND_API_KEY: Production transactional email service API key.
+        - RAZORPAY_KEY: Live Razorpay merchant key ID.
+        - RAZORPAY_SECRET: Live Razorpay API secret.
+        - RAZORPAY_WEBHOOK_SECRET: Secret for cryptographically verifying Webhooks.
+
+        - CRON_SECRET: Secret hash to authorize Flight Delay scheduler cron job.
+        - ADMIN_EMAILS: Comma-separated admin whitelist (e.g., admin@layoverx.in).
+        - FLIGHTAWARE_API_KEY: AeroAPI v4 subscription credential.
+        - AVIATIONEDGE_API_KEY: Aviation Edge API subscription key (fallback).
+        - TWILIO_SID & TWILIO_TOKEN: Twilio SMS communication gateway account credentials.
+        - JWT_SECRET: Strong random string for session signature overrides.
+        - PORT: 3000 (standard port for the Node process).
+
+*   [ ] Frontend Vercel Environment Variables Config:
+        Configure Vercel build properties to inject the production config:
+        - Edit/Inject LAYOVERX_SUPABASE_CONFIG variables into frontend/js/supabase-init.js:
+            * url: "https://your-production-project.supabase.co"
+            * anonKey: "your-production-anonymous-key"
+            * backendUrl: "https://api.layoverx.in"
+        - In production, ensure no requests default to "http://localhost:3000".
+
+*   [ ] CI/CD Pipeline (GitHub Actions):
+        - Create a .github/workflows/deploy.yml configuration.
+        - Configure a build process that:
+            1. Installs backend and audit dependencies.
+            2. Runs automated Playwright verification suites:
+               - marketplace_regression.js
+               - qa_verification.js
+               - supplier_onboarding.js
+            3. Auto-deploys to Render (backend) and Vercel (frontend) on success.
+
+*   [ ] Domain & SSL Setup:
+        - Map "layoverx.in" and "www.layoverx.in" to the Vercel deployment.
+        - Map "api.layoverx.in" to the Render service.
+        - Provision SSL/TLS certificates (managed automatically by Vercel and Render).
+
+================================================================================
+2. DATABASE SCHEMA, SEEDS & HARDENING (SUPABASE POSTGRESQL)
+================================================================================
+*   [ ] Generate Production SQL Schema (Database Migrations):
+        Create standard tables in the Supabase PostgreSQL database:
+        - services (id, name, description, price, image_url, category, partner_id, status)
+        - inventory_locks (lock_id, session_id, locked_at, expires_at)
+        - trips (booking_id, uid, status, incoming_flight, outgoing_flight, arrival, departure,
+          incoming_flight_delay, outgoing_flight_delay, flight_cancelled, departure_gate,
+          actual_arrival, actual_departure, layover_duration, safe_exit_window, experience_feasible,
+          details, payment_id, payment_failure_reason, created_at, updated_at)
+        - supplier_applications (application_id, user_id, business_name, business_category,
+          website, description, documents, status, created_at)
+        - partners (partner_id, status, approved_by_admin_uid, updated_at, created_at)
+        - error_logs (id, severity, source, message, stack, uid, created_at)
+        - notifications (id, user_id, booking_id, title, message, type, created_at)
+        - contacts (id, name, email, subject, message, user_id, created_at)
+
+*   [ ] Seed Production Data:
+        - Import standard flight schedules, local transit hotels data, verified restaurant listings, 
+          spas, and available transfer options into the `services` table.
+
+*   [ ] Hardening Row Level Security (RLS) Policies:
+        Write security rules in Supabase SQL Editor:
+        - Table "services": Allow public read; write/update only allowed by approved supplier
+          owners (auth.uid() = partner_id) and superadmins.
+        - Table "trips": Read/write allowed ONLY for authenticated owners (auth.uid() = uid)
+          and the backend server role bypass.
+        - Table "error_logs" & "notifications": Write-only for authenticated clients (or public
+          for anonymous bug reports); read-only for admin roles.
+        - Table "supplier_applications": Read-only for owner (auth.uid() = user_id) and admin;
+          insert allowed for authenticated suppliers.
+
+*   [ ] Indexes Optimization:
+        - Create indexes on fields evaluated by cron schedulers and searches:
+            * `trips(status)` and `trips(arrival, departure)`
+            * `inventory_locks(expires_at)`
+            * `services(category, status)`
+
+================================================================================
+3. AUTHENTICATION & USER PROFILE SYNCING (SUPABASE AUTH)
+================================================================================
+*   [ ] Google OAuth Provider Setup:
+        - Register LayoverX in Google Cloud Console Credentials.
+        - Input client ID and client secret into Supabase Auth providers.
+        - Setup redirect callback URLs pointing to `https://layoverx.in/oauth/callback`
+          and `https://your-project.supabase.co/auth/v1/callback`.
+
+*   [ ] Sign-up Profile Trigger (Auth Integration Fix):
+        Fix user profiles failing with permissions errors on initial account generation:
+        - Create a PostgreSQL trigger in Supabase:
+          ```sql
+          CREATE FUNCTION public.handle_new_user()
+          RETURNS trigger AS $$
+          BEGIN
+            INSERT INTO public.profiles (id, full_name, email, created_at)
+            VALUES (new.id, new.raw_user_meta_data->>'full_name', new.email, now());
+            RETURN new;
+          END;
+          $$ LANGUAGE plpgsql SECURITY DEFINER;
+
+          CREATE TRIGGER on_auth_user_created
+            AFTER INSERT ON auth.users
+            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+          ```
+        This ensures profile rows exist immediately when a traveler signs up.
+
+================================================================================
+4. STORAGE BUCKETS, FILE MANAGEMENT & SECURITY POLICIES
+================================================================================
+*   [ ] Storage Buckets Creation:
+        In Supabase Storage panel, create:
+        - "suppliers" (for sensitive business documents & KYC logs).
+        - "service-media" (for public hotel and experience images).
+
+*   [ ] Storage Security Policies (RLS):
+        - Bucket "suppliers": Disable public access. Write access allowed only for onboarding
+          applicants (auth.uid() = foldername); Read access limited strictly to admin role claims.
+        - Bucket "service-media": Enable public read. Write access limited to approved active
+          suppliers and administrators.
+
+*   [ ] File Type & Size Validations:
+        - Enforce constraints in app.js upload routines: limit files to 5MB max size and
+          restrict formats to secure types (PDF, PNG, JPG, JPEG) to prevent arbitrary code execution.
+
+================================================================================
+5. SUPPLIER ONBOARDING, KYC AUDITING & PARTNER SYNCING
+================================================================================
+*   [ ] KYC Auditing and Review Pipeline:
+        - Design a validation stage where uploaded files in `suppliers` storage are audited.
+        - Sync supplier verification status automatically with their `supplier_applications` row
+          (triggering automated status mailings to the partner on transition).
+
+*   [ ] Partner Availability Calendars (iCal / Sync Engine):
+        - Build an iCal sync service inside the backend application.
+        - Allow partners to submit their booking.com, Google Calendar, or private hotel channel manager
+          XML/iCal feeds.
+        - Configure a worker to fetch these feeds hourly and auto-block unavailable rooms or slots
+          in LayoverX database to prevent overbookings.
+
+================================================================================
+6. LIVE REAL-TIME FLIGHT DELAY MONITORING ENGINE
+================================================================================
+*   [ ] Production Flight Data Credentials:
+        - Obtain API keys for FlightAware AeroAPI (V4) or Aviation Edge (commercial plans).
+        - Replace mock response triggers in backend/functions/services/flightProvider.js with active
+          HTTP queries targeting real flight endpoints.
+
+*   [ ] Cron Scheduler Configuration:
+        - Configure a cron workflow (via Render Cron, GitHub Actions runner, or Upstash CRON) to hit:
+          `GET https://api.layoverx.in/api/cron/check-flight-delays?secret=YOUR_PRODUCTION_CRON_SECRET`
+          every 30 minutes.
+        - Ensure the cron route utilizes safe rate limiting, and does not leak delays checking routines.
+
+================================================================================
+7. MESSAGING & NOTIFICATIONS (TWILIO SMS/WHATSAPP INTEGRATION)
+================================================================================
+*   [ ] Implement Twilio SMS Service:
+        In backend/functions/services/notificationService.js:
+        - Uncomment and complete the Twilio client loading routine:
+          ```javascript
+          const twilio = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
+          ```
+        - Add driver SMS / Whatsapp templates for confirmed bookings (providing receipts, barcodes,
+          and contact details for airport pickup transfers).
+
+*   [ ] India DLT Registration (For Razorpay/Mumbai operations):
+        - Register "LayoverX" headers and SMS templates on an Indian DLT portal (e.g. VilPower, PingConnect)
+          complying with TRAI guidelines to avoid SMS blocking or carrier filtering in India.
+
+*   [ ] Dynamic Email Recipient Fetching:
+        - Currently, notifications in notificationService.js fallback to alerts@layoverx.com.
+        - Update code to dynamically query the database for the booking user's email:
+          ```javascript
+          const { data: userRecord } = await supabase.from('profiles').select('email').eq('id', userId).single();
+          ```
+        - Deliver the alert email directly to the traveler's registered inbox.
+
+================================================================================
+8. PAYMENTS, WEBHOOKS & FINANCE OPERATIONS (RAZORPAY & STRIPE)
+================================================================================
+*   [ ] Switch Razorpay / Stripe to Live Mode:
+        - Register legal business status with Razorpay (and Stripe for international passengers).
+        - Submit KYC documents on the dashboards and swap keys from `rzp_test_...` / `rzp_test_...`
+          to `rzp_live_...` / `rzp_live_...`.
+
+*   [ ] Razorpay Webhook Signatures Verification:
+        - Confirm RAZORPAY_WEBHOOK_SECRET matches the dashboard token.
+        - Ensure the backend webhook parses the raw body properly to compute verification signatures:
+          `crypto.createHmac('sha256', secret).update(JSON.stringify(req.body)).digest('hex')`
+        - Securely handle edge cases where payments fail midway through verification, and set booking status.
+
+*   [ ] Refund / Cancellation Flows:
+        - Add administrative API routes to trigger automated refunds via Razorpay/Stripe if a flight delay
+          shrinks a passenger's layover below the minimum safety threshold (safe_exit_window < 1.0 hour).
+
+================================================================================
+9. SEARCH DISCOVERY & HIGH-DENSITY FILTERING (ALGOLIA/TYPESENSE)
+================================================================================
+*   [ ] Algolia / Typesense Index Setup:
+        - Replace client-side array filters with a typo-tolerant, geospatial search index.
+        - Index the `services` collection to quickly search hotels, dining, and activities based on
+          distance from CSMIA Terminal 1 or Terminal 2.
+
+*   [ ] Database Sync Hooks:
+        - Create a database trigger (or Supabase function webhook) that auto-syncs rows from the `services`
+          table to the search index on INSERT, UPDATE, or DELETE.
+
+*   [ ] Autocomplete Frontends:
+        - Add search bars with fuzzy autocomplete into:
+            * hotels.html
+            * restaurants.html
+            * experiences.html
+
+================================================================================
+10. ADMIN / SUPERADMIN CONCIERGE & OPERATIONS DASHBOARD
+================================================================================
+*   [ ] Build Administrative Frontend:
+        Create a secure superadmin route or web portal dashboard that hooks into protected endpoints:
+        - Pending Review suppliers portal: Fetches from `/api/admin/pending`, renders KYC uploads,
+          and buttons to Approve (`/api/admin/approve`) or Reject (`/api/admin/reject`).
+        - Active Bookings tracker: Lists all confirmed trips, color-coded by feasibility (green = safe,
+          red = delay warning, grey = cancelled flight).
+        - Ledger logs: Displays running financial records (transactions status, payouts pending to partners).
+
+*   [ ] Secure Claims (Admin Custom Claims):
+        - Use Supabase SQL functions to grant admin custom roles inside user app_metadata:
+          ```sql
+          UPDATE auth.users 
+          SET raw_app_meta_data = raw_app_meta_data || '{"role": "admin"}' 
+          WHERE email = 'admin@layoverx.in';
+          ```
+
+================================================================================
+11. MONITORING, ALERTING, LOGGING & ERROR TRACKING
+================================================================================
+*   [ ] Sentry SDK Integration:
+        - Install Sentry in the backend Express server to capture exceptions, rate-limit drops, and database connection timeouts.
+        - Install Sentry client-side SDK in frontend/js/app.js to log runtime browser errors (e.g. map failures, Razorpay SDK drops).
+
+*   [ ] Winston Logging Setup (Backend):
+        - Replace standard console.log and console.error statements in server.js and index.js with Winston or Pino.
+        - Direct logs to a cloud logging aggregator (e.g. Datadog, Axiom, or Papertrail) for long-term audit compliance.
+
+*   [ ] Slack Alert Webhooks:
+        - Wire notifications for payment signature anomalies, supplier document failures, and cron delay calculation errors
+          directly to an internal admin slack channel.
+
+================================================================================
+12. SEO, ANALYTICS, PERFORMANCE & CONTENT DELIVERY
+================================================================================
+*   [ ] Dynamic Sitemap Scheduler:
+        - Automate updates to sitemap.xml to list newly added hotels and experience details pages.
+        - Ensure robots.txt canonical address points to `https://layoverx.in/sitemap.xml`.
+
+*   [ ] Production Google Analytics Setup:
+        - Swap global mock IDs in header templates with live GA4 measurement identifiers (G-XXXXXXXXXX).
+        - Verify domain in Google Search Console to monitor crawl rates, impressions, and index bugs.
+
+*   [ ] Asset Compression:
+        - Run static optimization on all assets in `frontend/assets/` (converting heavy images to WebP/AVIF).
+        - Enable Vercel asset caching and edge CDN configurations.
+
+================================================================================
+13. REPOSITORY CLEANUP & BUILD VERIFICATION
+================================================================================
+*   [ ] Delete Legacy Configs:
+        - Verify no residual Firebase files exist (e.g. local key files or draft rule configurations).
+        - Clean up old test scripts that are no longer applicable to the Supabase database model.
+
+*   [ ] Run Final Template Compilation:
+        - Make changes to frontend/components/head.html (Google Maps API key replacement, Sentry setup).
+        - Run `python frontend/build.py` to compile and update all HTML files before push.
+        - Test layouts across mobile, tablet, and desktop views for responsive alignment.
+================================================================================

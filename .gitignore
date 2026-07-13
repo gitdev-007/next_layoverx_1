@@ -1,42 +1,36 @@
-# Environment and secrets
-.env
-.env.*
-!.env.example
-
 # Dependencies
 node_modules/
 backend/functions/node_modules/
-audit_tools/node_modules/
 
-# Coverage
+# Local configuration & credentials
+.env
+.env.local
+.env.*.local
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright & test reports
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Coverage reports
 coverage/
 backend/functions/coverage/
 backend/functions/lcov-report/
 *.lcov
+coverage.dat
 
-# Build outputs
-frontend/*.html
-frontend/pages/*.html
-frontend/components/ui/*.html
-frontend/components/*.html
-
-# Logs
-*.log
-npm-debug.log*
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Build artifacts
-dist/
-build/
-.next/
-
-# Playwright / test artifacts
-test-results/
-playwright-report/
+# Audit tools
+audit_tools/

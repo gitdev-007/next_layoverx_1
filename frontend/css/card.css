@@ -1,0 +1,72 @@
+/* ==== Card Component ==== */
+/* Uses design-system tokens for spacing, radius, shadow, typography */
+.card {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--space-6));
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Image handling */
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.card:hover .card-image,
+.card:focus-within .card-image {
+  transform: scale(1.05);
+}
+
+/* Title & body */
+.card-title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  margin: var(--space-3) var(--space-4);
+  color: var(--color-text-primary);
+}
+.card-body {
+  flex-grow: 1;
+  padding: var(--space-4);
+}
+.card-body p {
+  margin-bottom: var(--space-2);
+}
+.card-actions {
+  margin-top: auto;
+  padding-bottom: var(--space-4);
+}
+.card-actions .btn {
+  margin-right: var(--space-2);
+}
+
+/* Price badge */
+.card-price {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-200);
+  margin-bottom: var(--space-2);
+}
+
+/* Badge / tag */
+.card-badge {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-primary-100);
+  color: var(--color-bg-primary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-1);
+  display: inline-block;
+  margin-bottom: var(--space-2);
+}

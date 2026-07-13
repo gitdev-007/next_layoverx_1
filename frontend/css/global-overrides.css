@@ -1,0 +1,75 @@
+@import "./design-system.css";
+
+/* Ensure consistent box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Enforce minimum tap targets for interactive elements */
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+a.btn,
+a[class*="btn"] {
+  min-height: var(--space-4);
+}
+
+/* Enforce heading sizes */
+h1 {
+  font-size: var(--font-size-h1);
+}
+h2 {
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-size: var(--font-size-h3);
+}
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+/* Force consistent paragraph spacing */
+p {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+/* Ensure forms use the design system typography */
+input,
+select,
+textarea,
+button {
+  font-family: var(--font-primary);
+}
+
+/* Align card-based components to use design system spacing */
+.card {
+  padding: var(--space-4);
+}
+.card-actions .btn {
+  margin-top: auto;
+}
+
+/* Align the container width consistently */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+
+/* Section spacing baseline */
+.section {
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 639px) {
+  .container {
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+  }
+}

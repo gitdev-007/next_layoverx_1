@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ====== SEO INJECTION START ====== -->
+<title>saved itineraries | LayoverX</title>
+<meta name="description" content="LayoverX - Book hotels, tours, spas, transfers and more during your airport layover. Fast, secure, and convenient.">
+<link rel="canonical" href="https://layoverx.com/saved-itineraries.html">
+<meta property="og:title" content="saved itineraries | LayoverX">
+<meta property="og:description" content="LayoverX - Book hotels, tours, spas, transfers and more during your airport layover. Fast, secure, and convenient.">
+<meta property="og:image" content="https://layoverx.com/assets/photos/homepage.png">
+<meta property="og:url" content="https://layoverx.com/saved-itineraries.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="saved itineraries | LayoverX">
+<meta name="twitter:description" content="LayoverX - Book hotels, tours, spas, transfers and more during your airport layover. Fast, secure, and convenient.">
+<meta name="twitter:image" content="https://layoverx.com/assets/photos/homepage.png">
+<!-- Structured Data (JSON‑LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "LayoverX",
+  "url": "https://layoverx.com/saved-itineraries.html",
+  "telephone": "+1-800-555-0123",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Mumbai",
+    "addressCountry": "IN"
+  },
+  "priceRange": "$$$"
+}
+</script>
+<!-- ====== SEO INJECTION END -------- -->
+</head></head>
+<body>
+<!-- SAVED PLANS PAGE -->
+<section class="relative bg-slate-900 text-white pt-24 pb-16 overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image:url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&auto=format&fm=webp&q=75')" role="img" aria-label="Airport Runway Background"></div>
+  <div class="container relative z-10">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="space-y-2">
+        <h1 class="text-3xl font-black tracking-tight">Saved Itineraries</h1>
+        <p class="text-sm text-sky-200">Manage and reload your saved transit plans</p>
+      </div>
+      <a href="plan-my-layover.html" class="px-5 py-3 bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold rounded-xl shadow-lg transition">＋ Plan New Stopover</a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-slate-50 min-h-[50vh]">
+  <div class="container">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Left Profile Sidebar -->
+      <aside class="md:col-span-1 space-y-6">
+        <div class="bg-white border border-gray-150 rounded-2xl p-6 shadow-sm">
+          <h2 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Navigation</h2>
+          <nav class="flex flex-col gap-1 text-sm">
+            <a href="my-profile.html" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-xl transition-all">👤 Profile Details</a>
+            <a href="my-trips.html" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-xl transition-all">✈️ My Trips</a>
+            <a href="saved-itineraries.html" class="flex items-center gap-2 px-3 py-2 bg-sky-50 text-sky-700 rounded-xl font-bold transition-all">💾 Saved Plans</a>
+            <a href="account-settings.html" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-xl transition-all">⚙️ Settings</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Center Saved Itineraries List -->
+      <div class="md:col-span-2 space-y-4" id="saved-plans-page-list">
+        <!-- Dynically populated list of saved itineraries -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center text-slate-500 italic">
+          Loading saved itineraries...
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    renderSavedPlansPage();
+  });
+
+  function renderSavedPlansPage() {
+    const container = document.getElementById('saved-plans-page-list');
+    if (!container) return;
+
+    let saved = [];
+    try {
+      const data = localStorage.getItem('layoverx_saved_plans');
+      if (data) saved = JSON.parse(data);
+    } catch(e) { console.error(e); }
+
+    if (saved.length === 0) {
+      container.innerHTML = `
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center text-slate-500">
+          <p class="font-semibold text-lg">No saved itineraries found</p>
+          <p class="text-xs text-slate-400 mt-1">Configure timings and select custom day rooms, spas, or tours in the planner to save plans.</p>
+          <a href="plan-my-layover.html" class="mt-4 inline-block px-4 py-2 bg-slate-900 hover:bg-black text-white text-xs font-bold rounded-xl transition">Open AI Planner</a>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = '';
+    saved.forEach((p, idx) => {
+      const arrivalDate = new Date(p.arrival);
+      const departureDate = new Date(p.departure);
+      const hours = ((departureDate - arrivalDate) / 3600000).toFixed(1);
+      
+      const details = p.details || {};
+      const countServices = [details.hotelId, details.diningId, details.spaId, details.gamingId].filter(Boolean).length + (details.items ? details.items.filter(x => x.type === 'activity').length : 0);
+
+      container.innerHTML += `
+        <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-4">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+            <div>
+              <span class="inline-block text-[10px] font-extrabold bg-sky-50 text-sky-700 px-2 py-0.5 rounded uppercase tracking-wider mb-2">
+                ${p.location === 'near-airport' ? 'Near Mumbai Airport' : p.location.toUpperCase()}
+              </span>
+              <h2 class="text-lg font-extrabold text-gray-900">${hours}h Stopover Plan (${p.travelers} Guests)</h2>
+              <p class="text-xs text-slate-400 mt-1">
+                📅 Arrival: ${arrivalDate.toLocaleDateString()} at ${arrivalDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+              </p>
+            </div>
+            <div class="text-right sm:text-right mt-1 sm:mt-0 flex-shrink-0">
+              <span class="text-xs text-gray-400 block font-semibold uppercase">Total Cost</span>
+              <strong class="text-lg font-black text-sky-700">${p.cost}</strong>
+            </div>
+          </div>
+          
+          <div class="border-t border-gray-100 pt-4 flex flex-wrap gap-2 items-center justify-between">
+            <span class="text-xs font-medium text-slate-500">🛒 Selected: ${countServices} Transit Services</span>
+            <div class="flex flex-wrap gap-1.5">
+              <a href="trip-details.html?id=${p.id}" class="px-2.5 py-1.5 bg-gray-55 hover:bg-gray-100 text-gray-700 border border-gray-200 rounded-lg text-xs font-bold transition">View Details</a>
+              <button onclick="loadPlanIntoPlanner(${idx})" class="px-2.5 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-100 rounded-lg text-xs font-bold transition">Load</button>
+              <button onclick="duplicatePlan(${idx})" class="px-2.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-bold transition">Duplicate</button>
+              <button onclick="sharePlanDetails(${idx})" class="px-2.5 py-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-100 rounded-lg text-xs font-bold transition">Share</button>
+              <button onclick="deletePlanDetails(${idx})" class="px-2.5 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 border border-red-100 rounded-lg text-xs font-bold transition">Delete</button>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  function loadPlanIntoPlanner(idx) {
+    try {
+      const data = JSON.parse(localStorage.getItem('layoverx_saved_plans'));
+      const plan = data[idx];
+      if (plan) {
+        // Set search params and current itinerary in localStorage, then redirect
+        localStorage.setItem('layoverx_search_params', JSON.stringify({
+          arrivalDateTime: plan.arrival,
+          departureDateTime: plan.departure,
+          location: plan.location,
+          travelers: plan.travelers,
+          layoverDuration: (new Date(plan.departure) - new Date(plan.arrival)) / 3600000
+        }));
+        
+        // Re-construct the itinerary array format
+        const HOTELS = {
+          1: { 
+            id: 1, 
+            name: "Niranta Airport Transit Hotel & Lounge", 
+            stars: 5, 
+            rating: 4.8, 
+            reviews: 2400, 
+            distance: 0.0, 
+            price: 3499, 
+            amenities: ["24/7 Check-in", "Free WiFi", "Shower Room", "Massage Spa"], 
+            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop", 
+            desc: "Located directly inside Terminal 2 Arrivals area. No transit visa required. Express spa, restaurant, clean sleeping pods, and shower suites.",
+            coordinates: { lat: 19.0883, lng: 72.8683 },
+            address: {
+              full: "Terminal 2, Arrival Level, Chhatrapati Shivaji Maharaj International Airport, Mumbai 400099",
+              area: "T2 Arrivals"
+            },
+            google_place_id: "ChIJ53zP4vXG5zsRx4YhS_Rk0Q8"
+          },
+          2: { 
+            id: 2, 
+            name: "JW Marriott Mumbai Sahar", 
+            stars: 5, 
+            rating: 4.7, 
+            reviews: 1800, 
+            distance: 1.2, 
+            price: 5499, 
+            amenities: ["24/7 Check-in", "Free Airport Shuttle", "Swimming Pool", "Spa & Gym"], 
+            image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&h=400&fit=crop", 
+            desc: "Five-star luxury oasis next to T2. Features premium suites, resort pool, luxury wellness treatments, and complimentary terminal dropoffs.",
+            coordinates: { lat: 19.1030, lng: 72.8735 },
+            address: {
+              full: "IA Project Road, Chhatrapati Shivaji International Airport Area, Andheri, Mumbai 400099",
+              area: "Sahar"
+            },
+            google_place_id: "ChIJN7pUOfvG5zsREJ1_R_Yw7Z8"
+          },
+          3: { 
+            id: 3, 
+            name: "Ibis Mumbai Airport", 
+            stars: 3, 
+            rating: 4.2, 
+            reviews: 1100, 
+            distance: 0.8, 
+            price: 2200, 
+            amenities: ["24/7 Check-in", "Free WiFi", "Airport Shuttle", "Breakfast Buffet"], 
+            image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=400&fit=crop", 
+            desc: "Ergonomic budget rooms situated next to the domestic terminal. Soundproof windows, all-day check-in, and convenient working desks.",
+            coordinates: { lat: 19.0952, lng: 72.8529 },
+            address: {
+              full: "Plot No 26, Nehru Rd, Adarsh Nagar, Vile Parle East, Mumbai 400099",
+              area: "Vile Parle East"
+            },
+            google_place_id: "ChIJR979DvfG5zsR_z1_X_Yw7Z8"
+          },
+          4: { 
+            id: 4, 
+            name: "The Orchid Hotel Mumbai Vile Parle", 
+            stars: 4, 
+            rating: 4.6, 
+            reviews: 1500, 
+            distance: 2.1, 
+            price: 4500, 
+            amenities: ["24/7 Check-in", "Free Airport Shuttle", "Rooftop Pool", "Green Certified"], 
+            image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop", 
+            desc: "Asia's first certified five-star ecofriendly hotel. Runway-view pool, spa, airport transportations, and delicious multiple dining options.",
+            coordinates: { lat: 19.0950, lng: 72.8520 },
+            address: {
+              full: "Nehru Road, Adarsh Nagar, Near Mumbai Domestic Airport, Vile Parle East, Mumbai 400099",
+              area: "Vile Parle East"
+            },
+            google_place_id: "ChIJp1eZDvfG5zsREJ1_R_Yw7Z8"
+          }
+        };
+        const DINING = {
+          1: { 
+            id: 1, 
+            name: "Gajalee Coastal Seafood Restaurant", 
+            cuisine: "seafood", 
+            rating: 4.8, 
+            reviews: 940, 
+            distance: 3.5, 
+            price: 1800, 
+            image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop", 
+            desc: "Legendary seafood destination famous for butter garlic pepper crabs, bombil fry, stuffed pomfret, and local sol kadhi drink.",
+            coordinates: { lat: 19.1022, lng: 72.8464 },
+            address: {
+              full: "Kadamgiri Complex, Hanuman Rd, Vile Parle East, Mumbai 400057",
+              area: "Vile Parle East"
+            },
+            google_place_id: "ChIJv53pYvfG5zsRfMvV8H-i_3Q"
+          },
+          2: { 
+            id: 2, 
+            name: "Peshawri - ITC Maratha", 
+            cuisine: "fine-dining", 
+            rating: 4.9, 
+            reviews: 1240, 
+            distance: 1.1, 
+            price: 4500, 
+            image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop", 
+            desc: "Ultra luxury traditional North-West Frontier clay-oven diner. World-famous Dal Bukhara, paneer tikka, and slow cooked lamb.",
+            coordinates: { lat: 19.1028, lng: 72.8705 },
+            address: {
+              full: "ITC Maratha, Sahar Rd, Andheri East, Mumbai 400099",
+              area: "Andheri East"
+            },
+            google_place_id: "ChIJuS9_R_vG5zsR-T_Lz7qU8Ww"
+          },
+          3: { 
+            id: 3, 
+            name: "Highway Gomantak", 
+            cuisine: "local", 
+            rating: 4.5, 
+            reviews: 560, 
+            distance: 2.2, 
+            price: 800, 
+            image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&h=400&fit=crop", 
+            desc: "An unpretentious local icon serving Konkan seafood thalis, sol kadhi, and crispy bombay duck fry.",
+            coordinates: { lat: 19.0620, lng: 72.8480 },
+            address: {
+              full: "44/2179, Gandhi Nagar, Service Rd, Bandra East, Mumbai 400051",
+              area: "Bandra East"
+            },
+            google_place_id: "ChIJ_U-YI_HG5zsRAw_M_7qU8Ww"
+          },
+          4: { 
+            id: 4, 
+            name: "Elco Pani Puri Center", 
+            cuisine: "street-food", 
+            rating: 4.4, 
+            reviews: 1890, 
+            distance: 4.2, 
+            price: 400, 
+            image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?w=600&h=400&fit=crop", 
+            desc: "High-hygiene local street food. Purified mineral water golgappe, pav bhaji, ragda pattice, and fresh fruit juices.",
+            coordinates: { lat: 19.0594, lng: 72.8333 },
+            address: {
+              full: "2/A, Elco Market, Hill Rd, Bandra West, Mumbai 400050",
+              area: "Bandra West"
+            },
+            google_place_id: "ChIJ7T-YI_HG5zsRAw_M_7qU8Ww"
+          }
+        };
+        const EXPERIENCES = {
+          1: { 
+            id: 1, 
+            name: "South Mumbai Gateway Heritage Tour", 
+            category: "sightseeing", 
+            rating: 4.9, 
+            duration: 5, 
+            price: 2899, 
+            image: "https://images.unsplash.com/photo-1605307066130-098b5f638948?w=600&h=400&fit=crop", 
+            desc: "AC private vehicle tour visiting the Gateway of India, Queen's Necklace, Taj Mahal Palace, and Victoria Terminus.",
+            coordinates: { lat: 18.9220, lng: 72.8347 },
+            address: {
+              full: "Apollo Bandar, Colaba, Mumbai 400001",
+              area: "Colaba"
+            },
+            google_place_id: "ChIJW2x9_7HG5zsR_z1_X_Yw7Z8"
+          },
+          2: { 
+            id: 2, 
+            name: "Guided Bandra Street Food Trail", 
+            category: "food", 
+            rating: 4.8, 
+            duration: 3, 
+            price: 1299, 
+            image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=400&fit=crop", 
+            desc: "Hygienic culinary walk through Bandra West. Sample local snacks, sweet rolls, seekh kebabs, and vada pav.",
+            coordinates: { lat: 19.0594, lng: 72.8333 },
+            address: {
+              full: "Hill Road, Bandra West, Mumbai 400050",
+              area: "Bandra West"
+            },
+            google_place_id: "ChIJ7T-YI_HG5zsRAw_M_7qU8Ww"
+          },
+          3: { 
+            id: 3, 
+            name: "Elephanta Caves Fast-Track Excursion", 
+            category: "culture", 
+            rating: 4.7, 
+            duration: 4, 
+            price: 1999, 
+            image: "https://images.unsplash.com/photo-1598977123418-45f04b616a0e?w=600&h=400&fit=crop", 
+            desc: "Ferry tickets and professional guides to explore the historic rock-cut cave temples on Elephanta Island.",
+            coordinates: { lat: 18.9220, lng: 72.8347 },
+            address: {
+              full: "Gateway of India, Colaba, Mumbai 400001",
+              area: "Colaba Jetty"
+            },
+            google_place_id: "ChIJW2x9_7HG5zsR_z1_X_Yw7Z8"
+          },
+          4: { 
+            id: 4, 
+            name: "Bazaar & Boutique Shopping Expedition", 
+            category: "shopping", 
+            rating: 4.6, 
+            duration: 3.5, 
+            price: 1500, 
+            image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=400&fit=crop", 
+            desc: "Accompanied market tour to buy Indian cottons, silks, spices, and souvenirs with secure baggage drop back in cab.",
+            coordinates: { lat: 18.9472, lng: 72.8354 },
+            address: {
+              full: "Mahatma Jyotiba Phule Mandai, Dhobi Talao, Mumbai 400001",
+              area: "South Mumbai"
+            },
+            google_place_id: "ChIJu-YI_7HG5zsRAw_M_7qU8Ww"
+          }
+        };
+        const SPA_WELLNESS = {
+          1: { 
+            id: 1, 
+            name: "Heavenly Spa by Westin", 
+            category: "massage", 
+            rating: 4.9, 
+            duration: 1.5, 
+            price: 4500, 
+            image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop", 
+            desc: "Full-body Swedish massage, steam room access, and luxury aromatherapy in a tranquil airport-adjacent setting.",
+            coordinates: { lat: 19.1020, lng: 72.8720 },
+            address: {
+              full: "The Westin Mumbai Sahar, Marol, Andheri East, Mumbai 400059",
+              area: "Andheri East"
+            },
+            google_place_id: "ChIJuS9_R_vG5zsR-T_Lz7qU8Ww"
+          },
+          2: { 
+            id: 2, 
+            name: "O2 Spa - Terminal 2", 
+            category: "express", 
+            rating: 4.7, 
+            duration: 0.5, 
+            price: 1800, 
+            image: "https://images.unsplash.com/photo-1611077544192-332e67500366?w=600&h=400&fit=crop", 
+            desc: "Convenient express foot reflexology and head-neck-shoulder massage located right at the T2 arrivals lounge.",
+            coordinates: { lat: 19.0883, lng: 72.8683 },
+            address: {
+              full: "T2 Arrival Level, Chhatrapati Shivaji Maharaj International Airport, Mumbai 400099",
+              area: "T2 Arrivals"
+            },
+            google_place_id: "ChIJ53zP4vXG5zsRx4YhS_Rk0Q8"
+          },
+          3: { 
+            id: 3, 
+            name: "Six Senses Wellness Circuit", 
+            category: "full-day", 
+            rating: 4.8, 
+            duration: 3, 
+            price: 8500, 
+            image: "https://images.unsplash.com/photo-1540555700478-4be289fbece8?w=600&h=400&fit=crop", 
+            desc: "Holistic wellness journey including detox juices, meditation session, deep tissue massage, and facial treatment.",
+            coordinates: { lat: 19.1020, lng: 72.8720 },
+            address: {
+              full: "The Westin Mumbai Sahar, Marol, Andheri East, Mumbai 400059",
+              area: "Andheri East"
+            },
+            google_place_id: "ChIJuS9_R_vG5zsR-T_Lz7qU8Ww"
+          }
+        };
+        const GAMING_ENTERTAINMENT = {
+          1: { 
+            id: 1, 
+            name: "Smaaash Entertainment Hub", 
+            category: "gaming", 
+            rating: 4.6, 
+            duration: 2, 
+            price: 1200, 
+            image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop", 
+            desc: "Virtual reality games, bowling, cricket simulators, and arcade fun. Perfect for high-energy transit breaks.",
+            coordinates: { lat: 19.1350, lng: 72.8800 },
+            address: {
+              full: "R City Mall, LBS Rd, Amrut Nagar, Ghatkopar West, Mumbai 400086",
+              area: "Ghatkopar West"
+            },
+            google_place_id: "ChIJv53pYvfG5zsRfMvV8H-i_3Q"
+          },
+          2: { 
+            id: 2, 
+            name: "PVR Directors Cut Luxury Cinema", 
+            category: "movie", 
+            rating: 4.9, 
+            duration: 3, 
+            price: 2500, 
+            image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop", 
+            desc: "Ultra-premium movie watching with recliner seats, butler service, and fine dining at the airport mall.",
+            coordinates: { lat: 19.0860, lng: 72.8880 },
+            address: {
+              full: "Phoenix Marketcity, Kurla West, Mumbai 400070",
+              area: "Kurla West"
+            },
+            google_place_id: "ChIJv53pYvfG5zsRfMvV8H-i_3Q"
+          },
+          3: { 
+            id: 3, 
+            name: "The Game Palacio - Casino Style Arcade", 
+            category: "gaming", 
+            rating: 4.7, 
+            duration: 2.5, 
+            price: 1800, 
+            image: "https://images.unsplash.com/photo-1511886929837-354d827aae26?w=600&h=400&fit=crop", 
+            desc: "Boutique bowling, high-end retro arcade games, and mechanical bull rides with a premium lounge bar.",
+            coordinates: { lat: 19.0590, lng: 72.8300 },
+            address: {
+              full: "Elanza, Hill Rd, Bandra West, Mumbai 400050",
+              area: "Bandra West"
+            },
+            google_place_id: "ChIJ7T-YI_HG5zsRAw_M_7qU8Ww"
+          }
+        };
+        
+        let itinerary = [];
+        const d = plan.details;
+        
+        if (d.cabType) {
+          const price = d.cabType === 'suv' ? 1499 : 899;
+          itinerary.push({ type: 'transfer', id: d.cabType, name: `Airport Transfer (${d.cabType.toUpperCase()})`, price, duration: 0.5 });
+        }
+        if (d.hotelId && HOTELS[d.hotelId]) {
+          itinerary.push({ type: 'hotel', id: d.hotelId, name: HOTELS[d.hotelId].name, price: HOTELS[d.hotelId].price, duration: 6.0 });
+        }
+        if (d.diningId && DINING[d.diningId]) {
+          itinerary.push({ type: 'dining', id: d.diningId, name: DINING[d.diningId].name, price: DINING[d.diningId].price, duration: 1.5 });
+        }
+        if (d.activityId && EXPERIENCES[d.activityId]) {
+          itinerary.push({ type: 'activity', id: d.activityId, name: EXPERIENCES[d.activityId].name, price: EXPERIENCES[d.activityId].price, duration: EXPERIENCES[d.activityId].duration });
+        }
+        if (d.spaId && SPA_WELLNESS[d.spaId]) {
+          itinerary.push({ type: 'spa', id: d.spaId, name: SPA_WELLNESS[d.spaId].name, price: SPA_WELLNESS[d.spaId].price, duration: SPA_WELLNESS[d.spaId].duration });
+        }
+        if (d.gamingId && GAMING_ENTERTAINMENT[d.gamingId]) {
+          itinerary.push({ type: 'gaming', id: d.gamingId, name: GAMING_ENTERTAINMENT[d.gamingId].name, price: GAMING_ENTERTAINMENT[d.gamingId].price, duration: GAMING_ENTERTAINMENT[d.gamingId].duration });
+        }
+        
+        localStorage.setItem('layoverx_current_itinerary', JSON.stringify(itinerary));
+        window.location.href = 'plan-my-layover.html';
+      }
+    } catch(e) { console.error(e); }
+  }
+
+  function duplicatePlan(idx) {
+    try {
+      const data = JSON.parse(localStorage.getItem('layoverx_saved_plans'));
+      const plan = data[idx];
+      if (plan) {
+        const copy = JSON.parse(JSON.stringify(plan));
+        copy.id = Date.now();
+        copy.dateSaved = new Date().toLocaleDateString();
+        data.push(copy);
+        localStorage.setItem('layoverx_saved_plans', JSON.stringify(data));
+        window.layoverx.showToast("Itinerary duplicated successfully!", "success");
+        renderSavedPlansPage();
+      }
+    } catch(e) { console.error(e); }
+  }
+
+  function sharePlanDetails(idx) {
+    try {
+      const data = JSON.parse(localStorage.getItem('layoverx_saved_plans'));
+      const plan = data[idx];
+      if (plan) {
+        const url = window.location.origin + '/plan-my-layover.html';
+        const params = new URLSearchParams({
+          arrivalDateTime: plan.arrival,
+          departureDateTime: plan.departure,
+          location: plan.location,
+          travelers: plan.travelers
+        });
+        navigator.clipboard.writeText(`${url}?${params.toString()}`)
+          .then(() => window.layoverx.showToast("Shareable link copied to clipboard!", "success"))
+          .catch(() => window.layoverx.showToast("Failed to copy link.", "error"));
+      }
+    } catch(e) { console.error(e); }
+  }
+
+  function deletePlanDetails(idx) {
+    try {
+      const data = JSON.parse(localStorage.getItem('layoverx_saved_plans'));
+      data.splice(idx, 1);
+      localStorage.setItem('layoverx_saved_plans', JSON.stringify(data));
+      window.layoverx.showToast("Saved Itinerary deleted successfully.", "info");
+      renderSavedPlansPage();
+    } catch(e) { console.error(e); }
+  }
+</script>
+
+</body>
+</html>

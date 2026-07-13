@@ -1,0 +1,115 @@
+================================================================================
+                    LAYOVERX - PRODUCTION READINESS AUDIT REPORT
+================================================================================
+File: remaining.txt
+Date: 2026-06-18
+Status: Audit & Major Implementations Complete (Migrated to Supabase/Render/Resend)
+
+This document details all completed features and outlines the remaining tasks, 
+stubs, credentials, and configurations required to transition LayoverX into 
+a fully operational, live production platform.
+
+--------------------------------------------------------------------------------
+[COMPLETED] COMPLETED CRITICAL FEATURES & RECENT IMPLEMENTATIONS
+--------------------------------------------------------------------------------
+*   Live Transit Map API Integration (Leaflet + OpenStreetMap + OpenRouteService):
+    - Status: COMPLETED.
+    - Details: Replaced mock maps with a production-ready Leaflet map engine on 
+      trip-details.html. Loaded OSM tiles, integrated with OpenRouteService 
+      directions POST endpoint (driving-car profile), rendered custom emoji markers
+      with distinct HSL colors for each category (Airport, Hotel, Restaurant, etc.),
+      and displayed total distance and travel duration under the map. 
+      Includes robust error handling and fallbacks for missing keys/offline states.
+
+*   Real-Time Inventory Locking & Validation (PostgreSQL):
+    - Status: COMPLETED.
+    - Details: Implemented backend-authoritative inventory lock expiration and 
+      countdown hooks. Created a 30-second checkout lock grace period (allowing payments
+      started before expiration to finish safely). Integrated cross-tab checkout
+      synchronization (via storage listeners) and session/lock ownership checks
+      prior to Razorpay payment verification. All locks are managed in the 
+      `inventory_locks` Supabase table.
+
+*   Admin Authorization & Security Fixes (admin_approval.js):
+    - Status: COMPLETED.
+    - Details: Created reusable `authenticateRequest` middleware to securely parse the 
+      `Authorization: Bearer <supabase_jwt>` header and verify the signature using 
+      Supabase Auth SDK (`supabase.auth.getUser()`). Checked admin credentials using 
+      email whitelists and custom claims from `user.app_metadata`. Applied this middleware 
+      to protect all admin routes (`getPendingPartners`, `approvePartner`, and `rejectPartner`).
+
+*   Dynamic Flight Delay Monitoring & Recalculation Engine:
+    - Status: COMPLETED.
+    - Details: Replaced legacy checkFlightDelays cron job stub with a real-time active 
+      traveler itinerary monitoring system. Implemented flight status fetcher with rate-limiting 
+      retry stubs, exponential backoff, and dual-provider support (FlightAware AeroAPI and 
+      Aviation Edge) along with mock offline suffixes. Calculates safe layover exit window 
+      adjustments (Departure - 2h - (Arrival + 1.5h)), triggers warnings when booked experiences 
+      exceed the new window, performs transaction-safe updates in PostgreSQL, and generates 
+      database-tracked user notifications.
+
+--------------------------------------------------------------------------------
+1. CRITICAL EXPRESS SERVER / BACKEND ENVIRONMENT VARIABLES
+--------------------------------------------------------------------------------
+*   Production API Credentials & Environment Variables:
+    - Path: backend/functions/server.js
+    - Issue: Stripe, Razorpay, Resend, and Supabase credentials are loaded from environment 
+      variables (`process.env`), but need production configurations.
+    - Required Variables (Render environment settings):
+      * `SUPABASE_URL`: The production database API URL.
+      * `SUPABASE_SERVICE_ROLE_KEY`: Service role secret to bypass RLS for administrative actions.
+      * `RAZORPAY_KEY`, `RAZORPAY_SECRET`, `RAZORPAY_WEBHOOK_SECRET`: Secure Razorpay credentials.
+
+      * `RESEND_API_KEY`: API key to trigger onboarding email confirmations.
+      * `CRON_SECRET`: Secret token protecting the flight delays cron controller route.
+      * `ADMIN_EMAILS`: Comma-separated list of whitelisted admin emails (e.g., admin@layoverx.com).
+
+--------------------------------------------------------------------------------
+2. MESSAGING & NOTIFICATIONS
+--------------------------------------------------------------------------------
+*   Transactional Messaging System (SMS/WhatsApp):
+    - Issue: When a booking is confirmed (post-checkout or via a webhook), there is no 
+      live integration to send receipts, barcodes, or chauffeur assignment messages. 
+      Need to connect Twilio or a similar SMS gateway to send automated alerts.
+
+--------------------------------------------------------------------------------
+3. PARTNER & SUPPLIER SYSTEM GAP ANALYSIS
+--------------------------------------------------------------------------------
+*   Partner Availability Syncing:
+    - Page: supplier-dashboard.html
+    - Issue: LayoverX has no automation for tracking slot availability. If a transit hotel 
+      room or tour is booked elsewhere, double bookings can occur. Needs iCal or 
+      direct reservation API syncing to automatically block slots.
+
+*   Partner Document Storage Auditing:
+    - Issue: Supplier KYC uploads save documents to the `suppliers` Supabase storage bucket. 
+      A document verification step (e.g. automated PDF verification or manual approval 
+      review pipeline) needs to be integrated.
+
+--------------------------------------------------------------------------------
+4. PLATFORM AUDITING & SECURITY HARDENING
+--------------------------------------------------------------------------------
+*   Supabase Row Level Security (RLS) Hardening:
+    - Issue: Needs validation of Supabase database RLS policies. Ensure that the 
+      `error_logs`, `analytics_events`, and `trips` collections only allow write access 
+      for authenticated owners, and deny arbitrary updates to pricing rules.
+
+*   Live Error & Metric Alerts:
+    - File: frontend/js/app.js (logErrorToStorage)
+    - Issue: Currently, client-side runtime errors are saved in local storage or PostgreSQL. 
+      For production, critical errors (such as Razorpay verification mismatches or webhook 
+      dropouts) should trigger notifications to Slack or an error tracking dashboard (like Sentry).
+
+--------------------------------------------------------------------------------
+5. SEARCH INDEXING & DISCOVERY
+--------------------------------------------------------------------------------
+*   Marketplace Search Engine:
+    - Pages: hotels.html, restaurants.html, experiences.html
+    - Issue: High-density searches are currently client-side filters. To support a scaling 
+      directory, integrate Algolia or Typesense for typo-tolerant search, autocomplete, 
+      and proximity filters.
+
+*   SEO and Crawling Assets:
+    - Issue: A dynamically generated `sitemap.xml` file is missing. Add build automation 
+      to generate sitemaps and update `robots.txt` pointing to the canonical domain.
+================================================================================
