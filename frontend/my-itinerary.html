@@ -150,7 +150,7 @@
         <!-- Auth Guest View -->
         <div class="auth-guest flex items-center gap-4">
           <a href="#login" class="nav-link text-sm font-medium cursor-pointer" onclick="openAuthModal('login');return false;">Login</a>
-          <a href="#signup" class="px-4 py-2 bg-sky-700 text-white text-sm font-semibold rounded-xl hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-500/20 transition hover:-translate-y-0.5 transform" onclick="openAuthModal('signup');return false;">Sign Up</a>
+          <a href="#signup" class="px-4 py-2 bg-sky-600 text-white text-sm font-semibold rounded-xl hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-500/20 transition-all hover:-translate-y-0.5 transform" onclick="openAuthModal('signup');return false;">Sign Up</a>
         </div>
  
         <!-- Auth User View -->
@@ -199,12 +199,12 @@
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="gaming-entertainment.html">Gaming & Fun</a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="experiences.html">Tours</a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="airport-transfers.html">Transfers</a>
-    <a href="plan-my-layover.html" class="mt-2 block w-full text-center py-3 bg-sky-700 text-white font-semibold rounded-xl hover:bg-sky-700 transition shadow-md shadow-sky-500/10">Plan My Layover</a>
+    <a href="plan-my-layover.html" class="mt-2 block w-full text-center py-3 bg-sky-600 text-white font-semibold rounded-xl hover:bg-sky-700 transition-all shadow-md shadow-sky-500/10">Plan My Layover</a>
     
     <!-- Auth Guest View (Mobile) -->
     <div class="auth-guest flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
       <a href="#login" class="block text-center py-2.5 text-gray-700 text-sm font-medium rounded-xl hover:bg-gray-50 border border-gray-200" onclick="openAuthModal('login');return false;">Login</a>
-      <a href="#signup" class="block text-center py-2.5 bg-sky-700 text-white text-sm font-semibold rounded-xl hover:bg-sky-700 transition" onclick="openAuthModal('signup');return false;">Sign Up</a>
+      <a href="#signup" class="block text-center py-2.5 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold rounded-xl transition-all" onclick="openAuthModal('signup');return false;">Sign Up</a>
     </div>
 
     <!-- Auth User View (Mobile) -->
@@ -232,22 +232,21 @@
   <main id="main">
     
 <!-- my-itinerary.html source template -->
-<div class="relative min-h-[40vh] pt-32 pb-16 overflow-hidden text-white flex items-center bg-slate-900">
+<div class="relative min-h-[30vh] pt-24 pb-12 overflow-hidden text-white flex items-center bg-slate-900">
   <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 to-indigo-950 opacity-95 z-0"></div>
-  <div class="container relative z-10 space-y-5">
+  <div class="container relative z-10 space-y-4">
     <nav class="flex items-center gap-2 text-xs text-white/70" aria-label="Breadcrumb">
       <a href="index.html" class="hover:text-white transition-colors">Home</a>
-      <svg class="w-3 h-3 text-white/50" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a 1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+      <svg class="w-3 h-3 text-white/50" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
       <span class="text-white font-medium">Itinerary Workspace</span>
     </nav>
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
       Stopover Planner <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">&amp; Workspace</span>
     </h1>
-    <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+    <p class="text-slate-300 text-sm max-w-2xl">
       Build and refine your layover timeline. Check real-time exit timings, calculate prices, and apply AI co-pilot improvements.
     </p>
   </div>
-</div>
 </div>
 
 <section class="section bg-slate-50 min-h-screen">
@@ -488,7 +487,7 @@
           <li><a class="text-gray-400 hover:text-white text-sm transition-colors" href="how-it-works.html">How It Works</a></li>
           <li><a class="text-gray-400 hover:text-white text-sm transition-colors" href="contact.html">Contact Us</a></li>
           <li><a class="text-gray-400 hover:text-white text-sm transition-colors" href="contact.html#partner">Partner With Us</a></li>
-          <li><a class="text-gray-400 hover:text-white text-sm transition-colors" href="how-it-works.html#faq">FAQs</a></li>
+          <li><a class="text-gray-400 hover:text-white text-sm transition-colors" href="faq.html">FAQs</a></li>
         </ul>
       </div>
       <div>
@@ -512,9 +511,9 @@
     <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-gray-400 text-xs">&copy; 2026 LayoverX. All rights reserved. Realized with high-performance standards.</p>
       <div class="flex items-center gap-6">
-        <a class="text-gray-400 hover:text-white text-xs transition-colors" href="#">Privacy Policy</a>
-        <a class="text-gray-400 hover:text-white text-xs transition-colors" href="#">Terms of Service</a>
-        <a class="text-gray-400 hover:text-white text-xs transition-colors" href="#">Cookie Policy</a>
+        <a class="text-gray-400 hover:text-white text-xs transition-colors" href="privacy.html">Privacy Policy</a>
+        <a class="text-gray-400 hover:text-white text-xs transition-colors" href="terms.html">Terms of Service</a>
+        <a class="text-gray-400 hover:text-white text-xs transition-colors" href="privacy.html#cookies">Cookie Policy</a>
       </div>
     </div>
   </div>

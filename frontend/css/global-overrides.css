@@ -1,89 +1,106 @@
-@import "./design-system.css";
+@import "./button.css";
+@import "./card.css";
 
-/* Ensure consistent box-sizing */
+/* =====================================================
+   LayoverX - Global Overrides (loads last — highest priority)
+   ===================================================== */
+
+/* ── Box Sizing ── */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Enforce minimum tap targets for interactive elements */
+/* ── Minimum tap targets for interactive elements ── */
 button,
 [role="button"],
 input[type="submit"],
 input[type="button"],
 a.btn,
 a[class*="btn"] {
-  min-height: var(--space-4);
+  min-height: 2.75rem; /* 44px — WCAG recommended minimum touch target */
 }
 
-/* Enforce heading sizes */
-h1 {
-  font-size: var(--font-size-h1);
-}
-h2 {
-  font-size: var(--font-size-h2);
-}
-h3 {
-  font-size: var(--font-size-h3);
-}
-h4 {
-  font-size: var(--font-size-h4);
-}
-
-/* Force consistent paragraph spacing */
-p {
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
-}
-
-/* Ensure forms use the design system typography */
-input,
-select,
-textarea,
-button {
-  font-family: var(--font-primary);
-}
-
-/* Align card-based components to use design system spacing */
-.card {
-  padding: var(--space-4);
-}
-.card-actions .btn {
-  margin-top: auto;
-}
-
-/* Align the container width consistently */
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-2);
-  padding-right: var(--space-2);
-}
-
-/* Section spacing baseline */
-.section {
-  padding-top: var(--space-9);
-  padding-bottom: var(--space-9);
-}
-
-/* Responsive adjustments */
-@media (max-width: 639px) {
-  .container {
-    padding-left: var(--space-2);
-    padding-right: var(--space-2);
-  }
-}
-
-/* Global typography consistency fixes */
-.text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl {
-  line-height: 1.2 !important;
-}
+/* ── Heading scale ── */
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
 
 h1 { margin-bottom: 0.5em; }
 h2 { margin-bottom: 0.5em; }
 h3 { margin-bottom: 0.5em; }
 
-/* Consistent button sizing */
+/* ── Paragraph spacing ── */
+p {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+/* ── Typography line-height consistency ── */
+.text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+  line-height: 1.2 !important;
+}
+
+/* ── Form baseline typography ── */
+input, select, textarea, button {
+  font-family: var(--font-primary, 'Inter', system-ui, sans-serif);
+}
+
+/* ── Consistent form input sizing ── */
+.form-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+  min-height: 2.75rem;
+  padding: 0.625rem 1rem;
+}
+
+/* ── Card spacing ── */
+.card {
+  padding: 0; /* card images need no outer padding — inner sections handle it */
+}
+.card-actions .btn {
+  margin-top: auto;
+}
+
+/* ── Container width ── */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+@media (max-width: 639px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+/* ── Section spacing baseline ── */
+.section {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+/* ── Fix hero sections to have enough top padding for fixed navbar ── */
+header.pt-24, section.pt-24, div.pt-24 {
+  padding-top: 6rem !important;
+}
+@media (min-width: 640px) {
+  header.pt-24, section.pt-24, div.pt-24 {
+    padding-top: 7rem !important;
+  }
+}
+
+/* ── Consistent button display ── */
 .btn, a[class*="px-"][class*="py-"] {
   display: inline-flex;
   align-items: center;
@@ -91,31 +108,101 @@ h3 { margin-bottom: 0.5em; }
   white-space: nowrap;
 }
 
-/* Fix hero sections to have enough top padding for fixed navbar */
-header.pt-24, section.pt-24, div.pt-24 {
-  padding-top: 6rem !important; /* 96px - better clearance for 80px navbar */
-}
-
-@media (min-width: 640px) {
-  header.pt-24, section.pt-24, div.pt-24 {
-    padding-top: 7rem !important; /* 112px on larger screens */
-  }
-}
-
-/* Ensure CTA sections have proper spacing */
+/* ── Ensure CTA sections have proper stacking ── */
 .section.bg-white {
   position: relative;
   z-index: 1;
 }
 
-/* Fix card text overflow */
+/* ── Fix card text overflow ── */
 .card p, .card-content p {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
 
-/* Consistent form input sizing */
-.form-input, input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
-  min-height: 2.75rem;
-  padding: 0.625rem 1rem;
+/* =============================================================
+   PHASE 2: ACCESSIBILITY — Global :focus-visible Ring
+   High-contrast, keyboard-only focus indicators (WCAG 2.4.7)
+   ============================================================= */
+
+/* Universal focus ring — only visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
+
+/* Remove the default :focus outline to avoid double-outlines on click */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Focus ring on text inputs and selects */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.18);
+}
+
+/* Nav links — custom underline focus style */
+#navbar .nav-link:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Mobile menu links */
+#mobile-menu a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* =============================================================
+   PHASE 2: HOVER STATE FIX
+   The pattern `bg-theme-primary hover:bg-theme-primary` provides
+   zero visual hover feedback. We override hover to use a darker
+   shade via the primary-dark variable.
+   ============================================================= */
+
+/* Any element with bg-theme-primary that has a hover should darken */
+.bg-theme-primary:hover,
+button.bg-theme-primary:hover,
+a.bg-theme-primary:hover {
+  background-color: var(--primary-dark) !important;
+}
+
+/* Correct the cancel button hover on modals (currently flips to primary, no transition) */
+button.hover\:bg-theme-primary:hover {
+  background-color: var(--primary-dark) !important;
+  color: #fff !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Ensure all interactive buttons have a visible transition */
+button, a[class*="transition"], [role="button"] {
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* =============================================================
+   PHASE 2: VISUAL POLISH
+   ============================================================= */
+
+/* Smooth image loading shimmer placeholder */
+.loading-image {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Fix card image containers — prevent overflow-x jumps on mobile */
+.card img, article img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
