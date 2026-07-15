@@ -20,15 +20,12 @@ a[class*="btn"] {
   min-height: 2.75rem; /* 44px — WCAG recommended minimum touch target */
 }
 
-/* ── Heading scale ── */
-h1 { font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); }
-h3 { font-size: var(--font-size-h3); }
-h4 { font-size: var(--font-size-h4); }
-
-h1 { margin-bottom: 0.5em; }
-h2 { margin-bottom: 0.5em; }
-h3 { margin-bottom: 0.5em; }
+/* ── Heading scale ──
+   NOTE: font-size is intentionally NOT overridden here.
+   The canonical responsive scale lives in design-system.css (clamp-based)
+   and the critical CSS block in <head>. This file only standardizes margins
+   so utilities and component classes remain free to size headings. */
+h1, h2, h3, h4 { margin-bottom: 0.5em; }
 
 /* ── Paragraph spacing ── */
 p {

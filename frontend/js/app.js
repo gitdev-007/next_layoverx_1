@@ -3375,14 +3375,14 @@
         <div class="flex items-start gap-3 bg-sky-50/50 border border-sky-100/50 p-4 rounded-2xl">
           <span class="text-xl">⚡</span>
           <div>
-            <h4 class="font-bold text-slate-900 text-xs">Transit Friendly</h4>
+            <h3 class="text-h4 font-bold text-slate-900 text-xs">Transit Friendly</h3>
             <p class="text-[10px] text-slate-500 mt-0.5 leading-relaxed">No overnight booking constraint. Optimized hourly rates.</p>
           </div>
         </div>
         <div class="flex items-start gap-3 bg-emerald-50/50 border border-emerald-100/50 p-4 rounded-2xl">
           <span class="text-xl">🛡️</span>
           <div>
-            <h4 class="font-bold text-slate-900 text-xs">Safe Exit Certified</h4>
+            <h3 class="text-h4 font-bold text-slate-900 text-xs">Safe Exit Certified</h3>
             <p class="text-[10px] text-slate-500 mt-0.5 leading-relaxed">Operator assists with express security lines & transfer timings.</p>
           </div>
         </div>
@@ -3558,7 +3558,7 @@
             <div class="flex justify-between items-start gap-4">
               <div>
                 <span class="text-[10px] uppercase font-black text-sky-600 block mb-0.5 tracking-wider">${item.type}</span>
-                <h4 class="text-sm sm:text-base font-extrabold text-slate-900 leading-tight">${item.name}</h4>
+                <h3 class="text-h4 text-sm sm:text-base font-extrabold text-slate-900 leading-tight">${item.name}</h3>
                 <p class="text-[11px] text-slate-500 mt-1 leading-normal line-clamp-1">${item.desc || 'Flexible transit hours'}</p>
               </div>
               
@@ -3805,9 +3805,9 @@
       container.innerHTML = `
         <div class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
           <div class="w-16 h-16 bg-slate-50 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">📅</div>
-          <h3 class="text-base font-bold text-slate-900 mb-1">No Upcoming Bookings</h3>
+          <h2 class="text-h3 text-base font-bold text-slate-900 mb-1">No Upcoming Bookings</h2>
           <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">You don't have any finalized stopovers booked yet. Complete checkout to secure your reservations.</p>
-          <a href="plan-my-layover.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold rounded-xl transition shadow">
+          <a href="plan-my-layover.html" class="btn-card btn-card-primary gap-2 transition shadow">
             Start Planning
           </a>
         </div>
@@ -3854,9 +3854,9 @@
       container.innerHTML = `
         <div class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
           <div class="w-16 h-16 bg-slate-50 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">💾</div>
-          <h3 class="text-base font-bold text-slate-900 mb-1">No Saved Drafts</h3>
+          <h2 class="text-h3 text-base font-bold text-slate-900 mb-1">No Saved Drafts</h2>
           <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">Build a timeline and click "Save Draft" in the itinerary workspace to access them here.</p>
-          <a href="my-itinerary.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-black text-white text-xs font-bold rounded-xl transition shadow">
+          <a href="my-itinerary.html" class="btn-card bg-slate-900 text-white hover:bg-black gap-2 transition shadow">
             Open Planner
           </a>
         </div>
@@ -3898,7 +3898,7 @@
       container.innerHTML = `
         <div class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
           <div class="w-16 h-16 bg-slate-50 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">⏳</div>
-          <h3 class="text-base font-bold text-slate-900 mb-1">No Past Trips Found</h3>
+          <h2 class="text-h3 text-base font-bold text-slate-900 mb-1">No Past Trips Found</h2>
           <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">Trips you complete will appear here as historic records with receipt print downloads.</p>
         </div>
       `;

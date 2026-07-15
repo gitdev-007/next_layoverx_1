@@ -102,12 +102,12 @@
 <section class="bg-white border-b border-gray-200 py-4 sticky top-16 sm:top-20 z-40 shadow-sm">
   <div class="container">
     <div class="flex items-center gap-3 overflow-x-auto no-scrollbar" id="cuisine-tabs">
-      <button class="cuisine-tab active bg-theme-primary text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterCuisine('all')">All Cuisines</button>
-      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterCuisine('seafood')">🦀 Coastal Seafood</button>
-      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterCuisine('local')">🥘 Local Maharashtrian</button>
-      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterCuisine('north-indian')">🍢 North Indian</button>
-      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterCuisine('street-food')">🌶️ Mumbai Street Food</button>
-      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterCuisine('fine-dining')">✨ Fine Dining</button>
+      <button class="cuisine-tab active bg-theme-primary text-white px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0 min-h-[2.5rem]" onclick="layoverx.filterCuisine('all')">All Cuisines</button>
+      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0 min-h-[2.5rem]" onclick="layoverx.filterCuisine('seafood')">🦀 Coastal Seafood</button>
+      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0 min-h-[2.5rem]" onclick="layoverx.filterCuisine('local')">🥘 Local Maharashtrian</button>
+      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0 min-h-[2.5rem]" onclick="layoverx.filterCuisine('north-indian')">🍢 North Indian</button>
+      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0 min-h-[2.5rem]" onclick="layoverx.filterCuisine('street-food')">🌶️ Mumbai Street Food</button>
+      <button class="cuisine-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0 min-h-[2.5rem]" onclick="layoverx.filterCuisine('fine-dining')">✨ Fine Dining</button>
     </div>
   </div>
 </section>
@@ -223,8 +223,8 @@
                   <div class="text-theme-primary text-xs border-l border-gray-200 pl-2">Est. Transit Time<br/><span class="text-theme-primary font-bold">15 mins taxi</span></div>
                 </div>
                 <div class="flex items-center gap-2">
-                  <a href="service-details.html?type=dining&id=1" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-xl transition">View Details</a>
-                  <button type="button" onclick="layoverx.addToItinerary('dining', 1)" class="px-4 py-2 bg-theme-primary hover:bg-theme-primary text-white font-bold text-xs rounded-xl shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
+                  <a href="service-details.html?type=dining&id=1" class="btn-card btn-card-secondary">View Details</a>
+                  <button type="button" onclick="layoverx.addToItinerary('dining', 1)" class="btn-card btn-card-primary shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
                 </div>
               </div>
             </div>
@@ -264,8 +264,8 @@
                   <div class="text-theme-primary text-xs border-l border-gray-200 pl-2">Est. Transit Time<br/><span class="text-theme-primary font-bold">5 mins taxi</span></div>
                 </div>
                 <div class="flex items-center gap-2">
-                  <a href="service-details.html?type=dining&id=2" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-xl transition">View Details</a>
-                  <button type="button" onclick="layoverx.addToItinerary('dining', 2)" class="px-4 py-2 bg-theme-primary hover:bg-theme-primary text-white font-bold text-xs rounded-xl shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
+                  <a href="service-details.html?type=dining&id=2" class="btn-card btn-card-secondary">View Details</a>
+                  <button type="button" onclick="layoverx.addToItinerary('dining', 2)" class="btn-card btn-card-primary shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
                 </div>
               </div>
             </div>
@@ -305,8 +305,8 @@
                   <div class="text-theme-primary text-xs border-l border-gray-200 pl-2">Est. Transit Time<br/><span class="text-theme-primary font-bold">10 mins taxi</span></div>
                 </div>
                 <div class="flex items-center gap-2">
-                  <a href="service-details.html?type=dining&id=3" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-xl transition">View Details</a>
-                  <button type="button" onclick="layoverx.addToItinerary('dining', 3)" class="px-4 py-2 bg-theme-primary hover:bg-theme-primary text-white font-bold text-xs rounded-xl shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
+                  <a href="service-details.html?type=dining&id=3" class="btn-card btn-card-secondary">View Details</a>
+                  <button type="button" onclick="layoverx.addToItinerary('dining', 3)" class="btn-card btn-card-primary shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
                 </div>
               </div>
             </div>
@@ -346,8 +346,8 @@
                   <div class="text-theme-primary text-xs border-l border-gray-200 pl-2">Est. Transit Time<br/><span class="text-theme-primary font-bold">18 mins taxi</span></div>
                 </div>
                 <div class="flex items-center gap-2">
-                  <a href="service-details.html?type=dining&id=4" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-xs rounded-xl transition">View Details</a>
-                  <button type="button" onclick="layoverx.addToItinerary('dining', 4)" class="px-4 py-2 bg-theme-primary hover:bg-theme-primary text-white font-bold text-xs rounded-xl shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
+                  <a href="service-details.html?type=dining&id=4" class="btn-card btn-card-secondary">View Details</a>
+                  <button type="button" onclick="layoverx.addToItinerary('dining', 4)" class="btn-card btn-card-primary shadow-md transition transform hover:-translate-y-0.5">Add to Itinerary</button>
                 </div>
               </div>
             </div>
@@ -358,7 +358,7 @@
         <div id="rest-empty" class="bg-white rounded-2xl border border-gray-200 p-12 text-center hidden">
           <h3 class="text-base font-bold text-gray-900 mb-1">No Restaurants Found</h3>
           <p class="text-theme-primary text-sm mb-4">No matching dining options found. Try clearing price filters or broadening your distance parameters.</p>
-          <button type="button" onclick="layoverx.clearRestFilters()" class="px-4 py-2 bg-theme-primary text-white text-xs font-bold rounded-xl shadow-md">Reset Filters</button>
+           <button type="button" onclick="layoverx.clearRestFilters()" class="btn-card btn-card-primary shadow-md">Reset Filters</button>
         </div>
 
       </main>
@@ -445,8 +445,8 @@
       <p id="detail-rest-description" class="text-gray-800 text-sm leading-relaxed mb-6">Description goes here.</p>
       
       <div class="flex items-center justify-end gap-3 pt-4 border-t border-gray-100">
-        <button type="button" onclick="layoverx.closeRestDetail()" class="px-5 py-2.5 bg-gray-100 hover:bg-theme-primary text-gray-800 font-bold text-sm rounded-xl">Cancel</button>
-        <button type="button" id="detail-rest-reserve-btn" class="px-6 py-2.5 bg-theme-primary hover:bg-theme-primary text-white font-bold text-sm rounded-xl shadow-md">Reserve Transit Table</button>
+        <button type="button" onclick="layoverx.closeRestDetail()" class="btn-card btn-card-secondary hover:bg-gray-200">Cancel</button>
+        <button type="button" id="detail-rest-reserve-btn" class="btn-card btn-card-primary shadow-md">Reserve Transit Table</button>
       </div>
     </div>
   </div>

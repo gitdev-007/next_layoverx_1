@@ -134,7 +134,7 @@
       <div class="hidden lg:flex items-center gap-4 flex-shrink-0">
         
         <!-- Trip Summary Chip -->
-        <button onclick="openAuthModal('trip-context')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer" id="global-trip-badge">
+        <button onclick="openAuthModal('trip-context')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer min-h-[2.5rem]" id="global-trip-badge">
           <span>✈️ Trip Summary</span>
         </button>
         
@@ -150,7 +150,7 @@
         <!-- Auth Guest View -->
         <div class="auth-guest flex items-center gap-4">
           <a href="#login" class="nav-link text-sm font-medium cursor-pointer" onclick="openAuthModal('login');return false;">Login</a>
-          <a href="#signup" class="px-4 py-2 bg-sky-600 text-white text-sm font-semibold rounded-xl hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-500/20 transition-all hover:-translate-y-0.5 transform" onclick="openAuthModal('signup');return false;">Sign Up</a>
+          <a href="#signup" class="px-5 py-3 bg-sky-600 text-white text-sm font-semibold rounded-xl hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-500/20 transition-all hover:-translate-y-0.5 transform min-h-[2.75rem] inline-flex items-center justify-center" onclick="openAuthModal('signup');return false;">Sign Up</a>
         </div>
  
         <!-- Auth User View -->
@@ -191,7 +191,7 @@
 
   <!-- Mobile Dropdown Menu -->
   <div class="lg:hidden hidden bg-white/95 backdrop-blur-xl rounded-2xl mt-2 p-4 shadow-xl mx-4 border border-gray-100" id="mobile-menu">
-    <button onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer" id="global-trip-badge-mobile">✈️ Trip Summary</button>
+    <button onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer min-h-[2.75rem]" id="global-trip-badge-mobile">✈️ Trip Summary</button>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium" href="my-itinerary.html">My Itinerary <span id="itinerary-badge-mobile" class="hidden ml-1 px-1.5 py-0.5 text-[10px] font-extrabold bg-rose-500 text-white rounded-full">0</span></a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="hotels.html">Hotels</a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="restaurants.html">Restaurants</a>
@@ -204,7 +204,7 @@
     <!-- Auth Guest View (Mobile) -->
     <div class="auth-guest flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
       <a href="#login" class="block text-center py-2.5 text-gray-700 text-sm font-medium rounded-xl hover:bg-gray-50 border border-gray-200" onclick="openAuthModal('login');return false;">Login</a>
-      <a href="#signup" class="block text-center py-2.5 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold rounded-xl transition-all" onclick="openAuthModal('signup');return false;">Sign Up</a>
+      <a href="#signup" class="block text-center py-3 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold rounded-xl transition-all min-h-[2.75rem] flex items-center justify-center" onclick="openAuthModal('signup');return false;">Sign Up</a>
     </div>
 
     <!-- Auth User View (Mobile) -->
@@ -240,7 +240,7 @@
         <h1 class="text-3xl font-black tracking-tight">Application Status</h1>
         <p class="text-sm text-sky-200">Track your LayoverX partner onboarding progress</p>
       </div>
-      <a href="supplier-dashboard.html" class="px-5 py-3 bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold rounded-xl shadow-lg transition">Supplier Dashboard</a>
+      <a href="supplier-dashboard.html" class="px-5 py-3.5 bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold rounded-xl shadow-lg transition min-h-[2.75rem] inline-flex items-center justify-center">Supplier Dashboard</a>
     </div>
   </div>
 </section>

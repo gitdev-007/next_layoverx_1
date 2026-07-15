@@ -134,7 +134,7 @@
       <div class="hidden lg:flex items-center gap-4 flex-shrink-0">
         
         <!-- Trip Summary Chip -->
-        <button onclick="openAuthModal('trip-context')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer" id="global-trip-badge">
+        <button onclick="openAuthModal('trip-context')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer min-h-[2.5rem]" id="global-trip-badge">
           <span>✈️ Trip Summary</span>
         </button>
         
@@ -150,7 +150,7 @@
         <!-- Auth Guest View -->
         <div class="auth-guest flex items-center gap-4">
           <a href="#login" class="nav-link text-sm font-medium cursor-pointer" onclick="openAuthModal('login');return false;">Login</a>
-          <a href="#signup" class="px-4 py-2 bg-sky-600 text-white text-sm font-semibold rounded-xl hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-500/20 transition-all hover:-translate-y-0.5 transform" onclick="openAuthModal('signup');return false;">Sign Up</a>
+          <a href="#signup" class="px-5 py-3 bg-sky-600 text-white text-sm font-semibold rounded-xl hover:bg-sky-700 hover:shadow-lg hover:shadow-sky-500/20 transition-all hover:-translate-y-0.5 transform min-h-[2.75rem] inline-flex items-center justify-center" onclick="openAuthModal('signup');return false;">Sign Up</a>
         </div>
  
         <!-- Auth User View -->
@@ -191,7 +191,7 @@
 
   <!-- Mobile Dropdown Menu -->
   <div class="lg:hidden hidden bg-white/95 backdrop-blur-xl rounded-2xl mt-2 p-4 shadow-xl mx-4 border border-gray-100" id="mobile-menu">
-    <button onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer" id="global-trip-badge-mobile">✈️ Trip Summary</button>
+    <button onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer min-h-[2.75rem]" id="global-trip-badge-mobile">✈️ Trip Summary</button>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium" href="my-itinerary.html">My Itinerary <span id="itinerary-badge-mobile" class="hidden ml-1 px-1.5 py-0.5 text-[10px] font-extrabold bg-rose-500 text-white rounded-full">0</span></a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="hotels.html">Hotels</a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="restaurants.html">Restaurants</a>
@@ -204,7 +204,7 @@
     <!-- Auth Guest View (Mobile) -->
     <div class="auth-guest flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
       <a href="#login" class="block text-center py-2.5 text-gray-700 text-sm font-medium rounded-xl hover:bg-gray-50 border border-gray-200" onclick="openAuthModal('login');return false;">Login</a>
-      <a href="#signup" class="block text-center py-2.5 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold rounded-xl transition-all" onclick="openAuthModal('signup');return false;">Sign Up</a>
+      <a href="#signup" class="block text-center py-3 bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold rounded-xl transition-all min-h-[2.75rem] flex items-center justify-center" onclick="openAuthModal('signup');return false;">Sign Up</a>
     </div>
 
     <!-- Auth User View (Mobile) -->
@@ -321,17 +321,17 @@
       <!-- Charts Section -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm lg:col-span-8 space-y-4">
-          <h3 class="font-bold text-slate-900 text-sm flex items-center justify-between">
+          <h2 class="text-h3 font-bold text-slate-900 text-sm flex items-center justify-between">
             <span>📊 Booking Performance Trends</span>
             <span class="text-xs text-slate-400">Weekly breakdown</span>
-          </h3>
+          </h2>
           <div class="relative h-64 w-full">
             <canvas id="bookingsChart"></canvas>
           </div>
         </div>
 
         <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm lg:col-span-4 space-y-4">
-          <h3 class="font-bold text-slate-900 text-sm">🍰 Net Revenue Streams</h3>
+          <h2 class="text-h3 font-bold text-slate-900 text-sm">🍰 Net Revenue Streams</h2>
           <div class="relative h-64 w-full flex items-center justify-center">
             <canvas id="streamsChart"></canvas>
           </div>
@@ -342,10 +342,10 @@
       <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
           <div>
-            <h3 class="font-bold text-slate-900 text-base">🛒 Real-time Revenue Transaction Ledger</h3>
+            <h2 class="text-h3 font-bold text-slate-900 text-base">🛒 Real-time Revenue Transaction Ledger</h2>
             <p class="text-xs text-slate-500 mt-0.5">Calculated prices, platform convenience fees, and taxes collected.</p>
           </div>
-          <button onclick="downloadFinancialPlanCA()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-md flex items-center gap-1.5">
+          <button onclick="downloadFinancialPlanCA()" class="btn-card bg-emerald-600 text-white hover:bg-emerald-700 shadow-md flex items-center gap-1.5">
             📥 Compile CA Financial Summary
           </button>
         </div>
@@ -378,9 +378,9 @@
       
       <!-- Overrides slider -->
       <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
-        <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2">
+        <h2 class="text-h3 font-bold text-slate-900 text-lg flex items-center gap-2">
           <span>⚡ Global Price Override Control</span>
-        </h3>
+        </h2>
         <p class="text-xs text-slate-500 leading-relaxed">
           Instantly markup or discount all pricing rules across all categories. This applies dynamically at checkout review steps.
         </p>
@@ -396,7 +396,7 @@
             <span>Normal</span>
             <span>+50% Max Markup</span>
           </div>
-          <button onclick="saveOverrideSetting()" class="mt-4 px-4 py-2 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
+          <button onclick="saveOverrideSetting()" class="mt-4 btn-card bg-slate-900 text-white hover:bg-black shadow">
             Apply Global Override Slider
           </button>
         </div>
@@ -407,7 +407,7 @@
         
         <!-- Base Prices List -->
         <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm lg:col-span-2 space-y-4">
-          <h3 class="font-bold text-slate-900 text-base">🏨 Service Base Pricing Configurator</h3>
+          <h2 class="text-h3 font-bold text-slate-900 text-base">🏨 Service Base Pricing Configurator</h2>
           <p class="text-xs text-slate-500">Edit base prices stored in local storage for service categories.</p>
           
           <div class="space-y-4" id="base-prices-editor-container">
@@ -426,7 +426,7 @@
           
           <!-- Occupancy Slider -->
           <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
-            <h3 class="font-bold text-slate-900 text-base">📈 Occupancy Pricing Yield Control</h3>
+            <h2 class="text-h3 font-bold text-slate-900 text-base">📈 Occupancy Pricing Yield Control</h2>
             <p class="text-xs text-slate-550">Simulate local transit demand to test dynamic markup triggers.</p>
             
             <div class="space-y-3 pt-2">
@@ -454,18 +454,18 @@
               <label for="chk-auto-demand" class="text-xs font-bold text-slate-700 select-none">Enable Yield Yield Auto Adjustments</label>
             </div>
             
-            <button onclick="saveOccupancySettings()" class="w-full px-4 py-2.5 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
+            <button onclick="saveOccupancySettings()" class="w-full btn-card bg-slate-900 text-white hover:bg-black shadow">
               Apply Yield Config
             </button>
           </div>
 
           <!-- Seasonal Pricing Config -->
           <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
-            <h3 class="font-bold text-slate-900 text-base">❄️ Seasonal Calendar Multipliers</h3>
+            <h2 class="text-h3 font-bold text-slate-900 text-base">❄️ Seasonal Calendar Multipliers</h2>
             <div id="seasonal-pricing-list" class="space-y-3">
               <!-- Populated dynamically -->
             </div>
-            <button onclick="saveSeasonalPricing()" class="w-full px-4 py-2.5 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
+            <button onclick="saveSeasonalPricing()" class="w-full btn-card bg-slate-900 text-white hover:bg-black shadow">
               Update Seasonal Ranges
             </button>
           </div>
@@ -481,9 +481,9 @@
       
       <!-- Discount Stack Policy -->
       <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
-        <h3 class="font-bold text-slate-900 text-lg flex items-center gap-2">
+        <h2 class="text-h3 font-bold text-slate-900 text-lg flex items-center gap-2">
           <span>🛡️ Stackable discount & Priority Rules</span>
-        </h3>
+        </h2>
         <p class="text-xs text-slate-500 leading-relaxed max-w-3xl">
           Configure whether customized promotional coupons can be stacked on top of automated system discounts (Loyalty Member - 5%, Group Booking - 15%, Long Stay - 10%). A hard margin cap of 35% discount ceiling is enforced.
         </p>
@@ -491,24 +491,24 @@
         <!-- Stacking options -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
           <div class="bg-slate-50 p-4 border border-slate-200/60 rounded-xl space-y-3">
-            <h4 class="text-xs font-bold text-slate-700 flex items-center justify-between">
+            <h3 class="text-h4 text-xs font-bold text-slate-700 flex items-center justify-between">
               <span>Loyalty Discount</span>
               <span class="text-emerald-700 font-extrabold text-[10px]">5%</span>
-            </h4>
+            </h3>
             <p class="text-[10px] text-slate-400">Triggered if user is logged into their account.</p>
           </div>
           <div class="bg-slate-50 p-4 border border-slate-200/60 rounded-xl space-y-3">
-            <h4 class="text-xs font-bold text-slate-700 flex items-center justify-between">
+            <h3 class="text-h4 text-xs font-bold text-slate-700 flex items-center justify-between">
               <span>Group Booking</span>
               <span class="text-emerald-700 font-extrabold text-[10px]">15%</span>
-            </h4>
+            </h3>
             <p class="text-[10px] text-slate-400">Triggered if traveler guest count is 3 or more.</p>
           </div>
           <div class="bg-slate-50 p-4 border border-slate-200/60 rounded-xl space-y-3">
-            <h4 class="text-xs font-bold text-slate-700 flex items-center justify-between">
+            <h3 class="text-h4 text-xs font-bold text-slate-700 flex items-center justify-between">
               <span>Long-Stay Discount</span>
               <span class="text-emerald-700 font-extrabold text-[10px]">10%</span>
-            </h4>
+            </h3>
             <p class="text-[10px] text-slate-400">Triggered if total layover dur. exceeds 8 hours.</p>
           </div>
         </div>
@@ -519,7 +519,7 @@
         
         <!-- Add Coupon Form -->
         <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm lg:col-span-4 space-y-4">
-          <h3 class="font-bold text-slate-900 text-base">➕ Add New Promo Coupon</h3>
+          <h2 class="text-h3 font-bold text-slate-900 text-base">➕ Add New Promo Coupon</h2>
           <form id="add-coupon-form" onsubmit="createNewCoupon(event)" class="space-y-4">
             <div class="form-group">
               <label class="block text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-code">Coupon Code</label>
@@ -567,7 +567,7 @@
 
         <!-- Coupon List Table -->
         <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm lg:col-span-8 space-y-4">
-          <h3 class="font-bold text-slate-900 text-base">🏷️ Active Promotional Coupons</h3>
+          <h2 class="text-h3 font-bold text-slate-900 text-base">🏷️ Active Promotional Coupons</h2>
           
           <div class="overflow-x-auto">
             <table class="w-full text-left text-xs border-collapse">
@@ -598,7 +598,7 @@
       
       <!-- Vendor Payouts -->
       <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
-        <h3 class="font-bold text-slate-900 text-base">💼 Vendor Payouts Ledger & Commissions</h3>
+        <h2 class="text-h3 font-bold text-slate-900 text-base">💼 Vendor Payouts Ledger & Commissions</h2>
         <p class="text-xs text-slate-550">Track payments due to transit hotels, dining bistros, spa partners and transport fleets. Commission is subtracted from gross vendor amount.</p>
         
         <div class="overflow-x-auto">
@@ -625,9 +625,9 @@
 
       <!-- Audit Logs -->
       <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
-        <h3 class="font-bold text-slate-900 text-base flex items-center gap-1.5">
+        <h2 class="text-h3 font-bold text-slate-900 text-base flex items-center gap-1.5">
           <span>🕒 Pricing Rule Audit Trail & Logs</span>
-        </h3>
+        </h2>
         <p class="text-xs text-slate-500">Chronological history of manual base price changes, overrides and coupon edits.</p>
         
         <div class="overflow-x-auto">
@@ -860,7 +860,7 @@
 
         container.innerHTML += `
           <div class="bg-white border border-slate-200/80 p-5 rounded-2xl space-y-3 shadow-xs">
-            <h4 class="text-xs font-bold text-slate-900 border-b border-slate-100 pb-2 uppercase tracking-wider">${friendlyCategoryMap[category] || category}</h4>
+            <h3 class="text-h4 text-xs font-bold text-slate-900 border-b border-slate-100 pb-2 uppercase tracking-wider">${friendlyCategoryMap[category] || category}</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
               ${rowsHtml}
             </div>

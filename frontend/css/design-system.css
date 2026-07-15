@@ -93,7 +93,7 @@
   --color-shadow-md:      0 4px 12px rgba(0,0,0,.12);
 }
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--body-color);background:var(--surface);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;margin:0}
 h1,h2,h3,h4,h5,h6{color:inherit;margin-top:0}
@@ -204,6 +204,16 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)
 .uppercase{text-transform:uppercase}
 .tracking-wider{letter-spacing:.05em}
 
+/* Heading size utilities — unlayered so they override the base element sizes.
+   Use these when you change a heading tag for accessibility hierarchy but need to
+   preserve the original visual size (e.g. an h2 that should look like an h3). */
+.text-h1{font-size:clamp(2rem,5vw,4rem);line-height:1.1}
+.text-h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.25}
+.text-h3{font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.35}
+.text-h4{font-size:1.125rem;line-height:1.4}
+.text-h5{font-size:1rem;line-height:1.5}
+.text-h6{font-size:0.875rem;line-height:1.5}
+
 h1{font-size:clamp(2rem,5vw,4rem);line-height:1.1;font-weight:900}
 h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.25;font-weight:700}
 h3{font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.35;font-weight:700}
@@ -252,18 +262,34 @@ button[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
-.card a[href*=".html"] {
-  display: inline-block;
-  padding: .5rem 1rem;
-  background: var(--primary);
-  color: #fff;
-  font-weight: 700;
-  font-size: .75rem;
+/* Card CTA buttons — explicit component classes for consistent sizing/touch targets */
+.btn-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: .625rem 1.25rem;
+  font-weight: 600;
+  font-size: .875rem;
   border-radius: .75rem;
   transition: var(--transition);
+  white-space: nowrap;
 }
-.card a:hover {
+.btn-card-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-card-primary:hover {
   background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+.btn-card-secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+.btn-card-secondary:hover {
+  background: #e5e7eb;
   transform: translateY(-1px);
 }
 
