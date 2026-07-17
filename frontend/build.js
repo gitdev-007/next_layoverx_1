@@ -299,7 +299,47 @@ function extractBodyContent(src) {
   return m ? m[1] : src;
 }
 
+// ─── Supabase env-variable injection ────────────────────────────────────────
 
+function processSupabaseInit() {
+  const jsPath = path.join(BASE, 'js', 'supabase-init.js');
+  if (!fs.existsSync(jsPath)) {
+    console.warn(`Warning: supabase-init.js not found at ${jsPath}`);
+    return;
+  }
+
+  console.log('Processing supabase-init.js with environment variables...');
+  let content = fs.readFileSync(jsPath, 'utf8');
+
+  const url        = process.env.VITE_SUPABASE_URL;
+  const anonKey    = process.env.VITE_SUPABASE_ANON_KEY;
+  const backendUrl = process.env.VITE_BACKEND_URL;
+
+  if (url) {
+    console.log(`  Injecting VITE_SUPABASE_URL: ${url}`);
+    content = content.replace(
+      /VITE_SUPABASE_URL:\s*["'].*?["']/,
+      `VITE_SUPABASE_URL: "${url}"`
+    );
+  }
+  if (anonKey) {
+    console.log(`  Injecting VITE_SUPABASE_ANON_KEY: ${anonKey.slice(0, 10)}...`);
+    content = content.replace(
+      /VITE_SUPABASE_ANON_KEY:\s*["'].*?["']/,
+      `VITE_SUPABASE_ANON_KEY: "${anonKey}"`
+    );
+  }
+  if (backendUrl) {
+    console.log(`  Injecting VITE_BACKEND_URL: ${backendUrl}`);
+    content = content.replace(
+      /VITE_BACKEND_URL:\s*["'].*?["']/,
+      `VITE_BACKEND_URL: "${backendUrl}"`
+    );
+  }
+
+  fs.writeFileSync(jsPath, content, 'utf8');
+  console.log('supabase-init.js processed successfully.');
+}
 
 // ─── Page compiler ───────────────────────────────────────────────────────────
 
@@ -316,6 +356,7 @@ function compilePage(filename) {
   const headTpl   = loadComponent('head');
   const headerTpl = loadComponent('header');
   const footerTpl = loadComponent('footer');
+  const modalsTpl = loadComponent('auth-modals');
 
   // Page body content
   const rawPage    = fs.readFileSync(pagePath, 'utf8');
@@ -382,6 +423,9 @@ ${headCompiled}
   <!-- Footer Section -->
   ${footerTpl}
 
+  <!-- Modals Section -->
+  ${modalsTpl}
+
 </body>
 </html>
 `;
@@ -399,6 +443,8 @@ function buildAll() {
     fs.mkdirSync(path.join(BASE, dir), { recursive: true });
   });
 
+  processSupabaseInit();
+
   const pages = Object.keys(PAGES_METADATA);
   pages.forEach(compilePage);
 
@@ -408,6 +454,7 @@ function buildAll() {
 // Allow running a single page: node build.js contact.html
 const arg = process.argv[2];
 if (arg) {
+  processSupabaseInit();
   compilePage(arg);
 } else {
   buildAll();

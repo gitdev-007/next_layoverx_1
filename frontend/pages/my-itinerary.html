@@ -66,7 +66,7 @@
               <p class="text-xs text-slate-500 mt-1">Immigration exit & transfer buffer: 3.5h</p>
             </div>
             <!-- Configure trip details shortcut -->
-            <button onclick="console.log('[Stub] openAuthModal called')" class="px-4 py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold rounded-xl border border-slate-200 transition-all flex items-center gap-1.5 cursor-pointer min-h-[2.5rem]">
+            <button onclick="openAuthModal('trip-context')" class="px-4 py-2 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold rounded-xl border border-slate-200 transition-all flex items-center gap-1.5 cursor-pointer">
               ✏️ Modify Trip Timings
             </button>
           </div>
@@ -117,13 +117,13 @@
           <!-- Empty State -->
           <div id="workspace-empty" class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
             <div class="w-16 h-16 bg-sky-50 text-sky-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">✈️</div>
-            <h2 class="text-h3 text-base font-bold text-slate-900 mb-1">Your Stopover Schedule is Empty</h2>
+            <h3 class="text-base font-bold text-slate-900 mb-1">Your Stopover Schedule is Empty</h3>
             <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">Choose transit hotels, fine dining, quick massages, and tours to custom build your stopover.</p>
             <div class="flex flex-wrap items-center justify-center gap-3">
-              <a href="hotels.html" class="btn-card bg-slate-900 text-white hover:bg-black shadow">Hotels</a>
-              <a href="restaurants.html" class="btn-card bg-slate-900 text-white hover:bg-black shadow">Restaurants</a>
-              <a href="experiences.html" class="btn-card bg-slate-900 text-white hover:bg-black shadow">Tours</a>
-              <button onclick="layoverx.openAiCopilot()" class="btn-card btn-card-primary shadow flex items-center gap-1.5">
+              <a href="hotels.html" class="px-4 py-2 bg-slate-900 hover:bg-black text-white text-xs font-bold rounded-xl transition shadow">Hotels</a>
+              <a href="restaurants.html" class="px-4 py-2 bg-slate-900 hover:bg-black text-white text-xs font-bold rounded-xl transition shadow">Restaurants</a>
+              <a href="experiences.html" class="px-4 py-2 bg-slate-900 hover:bg-black text-white text-xs font-bold rounded-xl transition shadow">Tours</a>
+              <button onclick="layoverx.openAiCopilot()" class="px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold rounded-xl transition shadow flex items-center gap-1.5">
                 🔮 Ask AI Co-pilot
               </button>
             </div>
@@ -152,10 +152,10 @@
             </div>
             
             <div class="grid grid-cols-2 gap-2">
-              <button onclick="layoverx.saveItineraryDraft()" id="btn-save-draft" class="btn-card bg-slate-900 text-white hover:bg-black shadow transition flex items-center justify-center gap-1.5">
+              <button onclick="layoverx.saveItineraryDraft()" id="btn-save-draft" class="py-2.5 bg-slate-900 hover:bg-black text-white font-bold text-xs rounded-xl shadow transition flex items-center justify-center gap-1.5">
                 💾 Save Draft
               </button>
-              <button onclick="layoverx.duplicateItineraryDraft()" id="btn-duplicate-draft" class="btn-card btn-card-secondary border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <button onclick="layoverx.duplicateItineraryDraft()" id="btn-duplicate-draft" class="py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold text-xs rounded-xl border border-slate-200 transition flex items-center justify-center gap-1.5">
                 👯 Duplicate
               </button>
             </div>
@@ -167,16 +167,16 @@
           <div class="absolute -top-10 -right-10 w-28 h-28 bg-indigo-500/10 rounded-full blur-xl"></div>
           <div class="flex items-center gap-2">
             <span class="text-xl">🔮</span>
-            <h2 class="text-h3 font-extrabold text-base tracking-tight">AI Stopover Co-Pilot</h2>
+            <h3 class="font-extrabold text-base tracking-tight">AI Stopover Co-Pilot</h3>
           </div>
           <p class="text-xs text-slate-300 leading-relaxed">
             Need an optimized plan? The co-pilot reads your layover window to auto-select recommendations.
           </p>
           <div class="flex flex-col gap-2 pt-2">
-            <button onclick="layoverx.openAiCopilot()" class="w-full btn-card bg-indigo-600 text-white hover:bg-indigo-700 shadow transition flex items-center justify-center gap-1.5">
+            <button onclick="layoverx.openAiCopilot()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition shadow flex items-center justify-center gap-1.5">
               ✨ Generate New Plan
             </button>
-            <button onclick="layoverx.improvePlanWithAi()" id="btn-improve-ai" class="w-full btn-card bg-white/10 text-indigo-200 hover:bg-white/20 border border-white/10 transition flex items-center justify-center gap-1.5">
+            <button onclick="layoverx.improvePlanWithAi()" id="btn-improve-ai" class="w-full py-2.5 bg-white/10 hover:bg-white/20 text-indigo-200 font-bold text-xs rounded-xl border border-white/10 transition flex items-center justify-center gap-1.5">
               🚀 Fill Safely With AI
             </button>
           </div>
@@ -184,7 +184,7 @@
 
         <!-- Checkout Card Summary -->
         <div class="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-md space-y-6">
-          <h2 class="text-h3 text-sm font-bold text-slate-900 uppercase tracking-widest">Pricing Breakdown</h2>
+          <h3 class="text-sm font-bold text-slate-900 uppercase tracking-widest">Pricing Breakdown</h3>
           
           <ul id="workspace-summary-prices" class="space-y-3.5 text-xs text-slate-600">
             <!-- Dynamically populated -->

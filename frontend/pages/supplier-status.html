@@ -43,7 +43,7 @@
         <h1 class="text-3xl font-black tracking-tight">Application Status</h1>
         <p class="text-sm text-sky-200">Track your LayoverX partner onboarding progress</p>
       </div>
-      <a href="supplier-dashboard.html" class="px-5 py-3.5 bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold rounded-xl shadow-lg transition min-h-[2.75rem] inline-flex items-center justify-center">Supplier Dashboard</a>
+      <a href="supplier-dashboard.html" class="px-5 py-3 bg-sky-700 hover:bg-sky-800 text-white text-xs font-bold rounded-xl shadow-lg transition">Supplier Dashboard</a>
     </div>
   </div>
 </section>
@@ -123,11 +123,54 @@
 
     let app = null;
     
-    // Load from localStorage
-    try {
-      const stored = localStorage.getItem('layoverx_supplier_application');
-      if (stored) app = JSON.parse(stored);
-    } catch (e) { console.error(e); }
+    // Attempt to read from Supabase if logged in
+    if (window.supabase) {
+      try {
+        const { data: { session } } = await window.supabase.auth.getSession();
+        const user = session?.user;
+        if (user) {
+          const { data: apps, error } = await window.supabase
+            .from("supplier_applications")
+            .select("*")
+            .eq("user_id", user.id);
+            
+          if (!error && apps && apps.length > 0) {
+            const rawApp = apps[0];
+            app = {
+              applicationId: rawApp.application_id,
+              userId: rawApp.user_id,
+              businessName: rawApp.business_name,
+              businessCategory: rawApp.business_category,
+              businessType: rawApp.business_type,
+              pricingRange: rawApp.pricing_range,
+              servicesOffered: rawApp.services_offered,
+              ownerName: rawApp.owner_name,
+              email: rawApp.email,
+              phone: rawApp.phone,
+              airportServed: rawApp.airport_served,
+              city: rawApp.city,
+              country: rawApp.country,
+              website: rawApp.website,
+              description: rawApp.description,
+              documents: rawApp.documents,
+              status: rawApp.status,
+              createdAt: rawApp.created_at ? { seconds: new Date(rawApp.created_at).getTime() / 1000 } : null,
+              approvedBy: rawApp.approved_by,
+              approvedAt: rawApp.approved_at,
+              reviewNotes: rawApp.review_notes
+            };
+          }
+        }
+      } catch (err) { console.warn("Supabase load status check error:", err); }
+    }
+
+    // Fallback to localStorage mock application data
+    if (!app) {
+      try {
+        const stored = localStorage.getItem('layoverx_supplier_application');
+        if (stored) app = JSON.parse(stored);
+      } catch (e) { console.error(e); }
+    }
     if (!app) {
       app = {
         applicationId: 'APP-MOCK-MUM',

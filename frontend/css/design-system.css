@@ -4,7 +4,6 @@
    ===================================================== */
 
 :root {
-  /* ── Brand Colors ── */
   --primary: #0ea5e9;
   --primary-dark: #0284c7;
   --primary-light: #38bdf8;
@@ -14,8 +13,7 @@
   --danger: #ef4444;
   --surface: #f8fafc;
   --border: #e2e8f0;
-
-  /* ── Text Colors ── */
+  
   --text: #111827;
   --text-muted: #374151;
   --text-primary: #111827;
@@ -24,76 +22,20 @@
   --text-on-light: #111827;
   --heading-color: #0f172a;
   --body-color: #1f2937;
-
-  /* ── Shadows ── */
+  
   --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
   --shadow: 0 4px 6px -1px rgba(0,0,0,.1);
-  --shadow-md: 0 4px 12px rgba(0,0,0,.12);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1);
   --shadow-xl: 0 20px 25px -5px rgba(0,0,0,.1);
-
-  /* ── Border Radii ── */
   --radius: 0.75rem;
   --radius-lg: 1rem;
-  --radius-1: 0.25rem;
-  --radius-2: 0.75rem;
-  --radius-3: 1rem;
-  --radius-full: 9999px;
-
-  /* ── Animation ── */
   --transition: all .2s cubic-bezier(.4,0,.2,1);
-
-  /* ── Hero Theme Vars ── */
+  
   --theme-hero-from: #0f172a;
   --theme-hero-to: #1e293b;
-
-  /* ── Spacing Scale (8px base unit) ── */
-  --space-1:  0.25rem;   /*  4px */
-  --space-2:  0.5rem;    /*  8px */
-  --space-3:  0.75rem;   /* 12px */
-  --space-4:  1rem;      /* 16px */
-  --space-5:  1.25rem;   /* 20px */
-  --space-6:  1.5rem;    /* 24px */
-  --space-7:  2rem;      /* 32px */
-  --space-8:  2.5rem;    /* 40px */
-  --space-9:  3rem;      /* 48px */
-  --space-10: 4rem;      /* 64px */
-  --space-11: 5rem;      /* 80px */
-  --space-12: 6rem;      /* 96px */
-
-  /* ── Typography Scale ── */
-  --font-size-xs:    0.75rem;    /* 12px */
-  --font-size-small: 0.875rem;   /* 14px */
-  --font-size-body:  1rem;       /* 16px */
-  --font-size-lg:    1.125rem;   /* 18px */
-  --font-size-xl:    1.25rem;    /* 20px */
-  --font-size-h4:    1.125rem;   /* 18px */
-  --font-size-h3:    1.375rem;   /* 22px */
-  --font-size-h2:    1.75rem;    /* 28px */
-  --font-size-h1:    2.25rem;    /* 36px */
-
-  /* ── Font Weights ── */
-  --font-weight-normal:    400;
-  --font-weight-medium:    500;
-  --font-weight-semibold:  600;
-  --font-weight-bold:      700;
-  --font-weight-extrabold: 800;
-
-  /* ── Semantic Color Tokens ── */
-  --color-bg-primary:     #ffffff;
-  --color-bg-surface:     #f8fafc;
-  --color-text-primary:   #111827;
-  --color-text-muted:     #6b7280;
-  --color-primary-100:    #0ea5e9;
-  --color-primary-200:    #0284c7;
-  --color-secondary-100:  #0f172a;
-  --color-secondary-200:  #1e293b;
-  --color-border:         #e2e8f0;
-  --color-shadow-sm:      0 1px 2px rgba(0,0,0,.06);
-  --color-shadow-md:      0 4px 12px rgba(0,0,0,.12);
 }
 
-*,*::before,*::after{box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--body-color);background:var(--surface);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;margin:0}
 h1,h2,h3,h4,h5,h6{color:inherit;margin-top:0}
@@ -148,23 +90,11 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)
 #navbar .nav-link{color:rgba(255,255,255,.95);transition:color .3s ease;font-size:.875rem;font-weight:500}
 #navbar .nav-link:hover,#navbar .nav-link:focus{color:#fff}
 #navbar:not(.scrolled) #logo-text{color:#fff}
-
-#navbar:not(.scrolled) #global-trip-badge,
-#navbar:not(.scrolled) #global-trip-badge-mobile{
-  color:#fff;
-  text-shadow:0 2px 8px rgba(0,0,0,0.35);
-}
-
 #navbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);box-shadow:var(--shadow-sm)}
 #navbar.scrolled .nav-link{color:var(--text-primary)}
 #navbar.scrolled .nav-link:hover,#navbar.scrolled .nav-link:focus{color:var(--primary)}
 #navbar.scrolled #logo-text{color:var(--text-primary)}
 
-#navbar.scrolled #global-trip-badge,
-#navbar.scrolled #global-trip-badge-mobile{
-  color:#111827;
-  text-shadow:none;
-}
 #mobile-menu{position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:1rem;box-shadow:var(--shadow-lg);margin:0 1rem;padding:.75rem;display:none}
 #mobile-menu:not(.hidden){display:block}
 #mobile-menu a{color:#1e293b!important}
@@ -208,6 +138,14 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)
 .text-body{color:var(--body-color)!important}
 .text-muted{color:var(--text-muted)!important}
 .text-heading{color:var(--heading-color)!important}
+.text-base{font-size:1rem}
+.text-sm{font-size:.875rem}
+.text-xs{font-size:.75rem}
+.text-lg{font-size:1.125rem}
+.text-xl{font-size:1.25rem}
+.text-2xl{font-size:1.5rem}
+.text-3xl{font-size:1.875rem}
+.text-4xl{font-size:2.25rem}
 .font-medium{font-weight:500}
 .font-semibold{font-weight:600}
 .font-bold{font-weight:700}
@@ -216,17 +154,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary)
 .uppercase{text-transform:uppercase}
 .tracking-wider{letter-spacing:.05em}
 
-/* Heading size utilities — unlayered so they override the base element sizes.
-   Use these when you change a heading tag for accessibility hierarchy but need to
-   preserve the original visual size (e.g. an h2 that should look like an h3). */
-.text-h1{font-size:clamp(2rem,5vw,4rem);line-height:1.1}
-.text-h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.25}
-.text-h3{font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.35}
-.text-h4{font-size:1.125rem;line-height:1.4}
-.text-h5{font-size:1rem;line-height:1.5}
-.text-h6{font-size:0.875rem;line-height:1.5}
-
-h1{font-size:clamp(2rem,5vw,4rem);line-height:1.1;font-weight:900}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.15;font-weight:800}
 h2{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.25;font-weight:700}
 h3{font-size:clamp(1.125rem,2vw,1.5rem);line-height:1.35;font-weight:700}
 p{line-height:1.7;margin-bottom:1rem}
@@ -247,9 +175,10 @@ header a[href*="experiences"] {
   color: #fff;
 }
 header a[href*="plan-my-layover"] {
-  background: #fff;
-  color: #111827;
-  border: none;
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.3);
+  backdrop-filter: blur(4px);
 }
 
 #search-btn,
@@ -274,34 +203,18 @@ button[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
-/* Card CTA buttons — explicit component classes for consistent sizing/touch targets */
-.btn-card {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: .625rem 1.25rem;
-  font-weight: 600;
-  font-size: .875rem;
-  border-radius: .75rem;
-  transition: var(--transition);
-  white-space: nowrap;
-}
-.btn-card-primary {
+.card a[href*=".html"] {
+  display: inline-block;
+  padding: .5rem 1rem;
   background: var(--primary);
   color: #fff;
-  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+  font-size: .75rem;
+  border-radius: .75rem;
+  transition: var(--transition);
 }
-.btn-card-primary:hover {
+.card a:hover {
   background: var(--primary-dark);
-  transform: translateY(-1px);
-}
-.btn-card-secondary {
-  background: #f3f4f6;
-  color: #374151;
-}
-.btn-card-secondary:hover {
-  background: #e5e7eb;
   transform: translateY(-1px);
 }
 

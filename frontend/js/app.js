@@ -11,6 +11,8 @@
 
   /* ===== STATE ===== */
   const state = {
+    isAuthenticated: false,
+    user: null,
     savedPlans: [],
     // Planner current configuration
     currentPlan: {
@@ -354,37 +356,160 @@
     }
   };
 
-  /* ===== STUB: DATABASE MAPPING (no longer used - static frontend) ===== */
+  /* ===== DATABASE & AUTH INTEGRATION ===== */
   function mapTripToDatabase(trip) {
-    console.log('[Stub] mapTripToDatabase called - backend removed');
-    return trip;
+    return {
+      booking_id: trip.bookingId,
+      uid: trip.uid,
+      status: trip.status || 'confirmed',
+      arrival: trip.arrival || trip.arrivalDateTime || null,
+      departure: trip.departure || trip.departureDateTime || null,
+      incoming_flight: trip.incomingFlight || null,
+      outgoing_flight: trip.outgoingFlight || null,
+      incoming_flight_delay: trip.incomingFlightDelay || 0,
+      outgoing_flight_delay: trip.outgoingFlightDelay || 0,
+      flight_cancelled: trip.flightCancelled || false,
+      departure_gate: trip.departureGate || null,
+      actual_arrival: trip.actualArrival || null,
+      actual_departure: trip.actualDeparture || null,
+      layover_duration: trip.layoverDuration || 0.0,
+      safe_exit_window: trip.safeExitWindow || 0.0,
+      experience_feasible: trip.experienceFeasible !== false,
+      details: trip,
+      payment_id: trip.paymentId || null,
+      order_id: trip.orderId || null,
+      payment_failure_reason: trip.paymentFailureReason || null,
+      created_at: trip.createdAt || new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    };
   }
 
   function mapTripFromDatabase(row) {
-    console.log('[Stub] mapTripFromDatabase called - backend removed');
-    return row;
+    if (!row) return null;
+    return row.details || {
+      bookingId: row.booking_id,
+      uid: row.uid,
+      status: row.status,
+      arrival: row.arrival,
+      departure: row.departure,
+      arrivalDateTime: row.arrival,
+      departureDateTime: row.departure,
+      incomingFlight: row.incoming_flight,
+      outgoingFlight: row.outgoing_flight,
+      incomingFlightDelay: row.incoming_flight_delay || 0,
+      outgoingFlightDelay: row.outgoing_flight_delay || 0,
+      flightCancelled: row.flight_cancelled || false,
+      departureGate: row.departure_gate,
+      actualArrival: row.actual_arrival,
+      actualDeparture: row.actual_departure,
+      layoverDuration: row.layover_duration,
+      safeExitWindow: row.safe_exit_window,
+      experienceFeasible: row.experience_feasible,
+      details: row.details,
+      paymentId: row.payment_id,
+      orderId: row.order_id,
+      paymentFailureReason: row.payment_failure_reason,
+      createdAt: row.created_at,
+      updatedAt: row.updated_at
+    };
   }
 
-  /* ===== AUTH (STUB - auth removed for static frontend) ===== */
+  /* ===== AUTH ===== */
   const Auth = {
     init() {
-      console.log('[Stub] Auth.init called - Supabase auth removed');
+      if (window.supabase) {
+        window.supabase.auth.onAuthStateChange(async (event, session) => {
+          const user = session?.user;
+          if (user) {
+            state.user = { 
+              email: user.email, 
+              name: user.user_metadata?.full_name || user.email.split('@')[0], 
+              avatar: (user.user_metadata?.full_name || user.email)[0].toUpperCase(),
+              uid: user.id
+            };
+            state.isAuthenticated = true;
+
+            // Auto-upsert user profile to database
+            try {
+              await window.supabase.from("users").upsert({
+                uid: user.id,
+                full_name: user.user_metadata?.full_name || user.email.split('@')[0],
+                email: user.email,
+                created_at: new Date().toISOString()
+              });
+            } catch (dbError) {
+              console.warn("Supabase user profile auto-upsert failed:", dbError);
+            }
+          } else {
+            state.user = null;
+            state.isAuthenticated = false;
+          }
+          this.updateUI();
+        });
+      }
     },
-    login(email, password) {
-      console.log('[Stub] Auth.login called - auth disabled');
-      showToast('Auth disabled - this is a static demo site', 'info');
+    async login(email, password) {
+      try {
+        const { data, error } = await window.supabase.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+        Modal.closeAll();
+        showToast(`Welcome back!`, 'success');
+      } catch (error) {
+        console.error("Login Error:", error);
+        let msg = error.message || 'Invalid email or password.';
+        showToast(msg, 'error');
+        throw error;
+      }
     },
-    signup(name, email, password) {
-      console.log('[Stub] Auth.signup called - auth disabled');
-      showToast('Auth disabled - this is a static demo site', 'info');
+    async signup(name, email, password) {
+      try {
+        const { data, error } = await window.supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              full_name: name
+            }
+          }
+        });
+        if (error) throw error;
+        const user = data.user;
+        
+        // Save user profile to Supabase users table
+        const { error: dbError } = await window.supabase.from("users").upsert({
+          uid: user.id,
+          full_name: name,
+          email: email,
+          created_at: new Date().toISOString()
+        });
+        if (dbError) throw dbError;
+        
+        Modal.closeAll();
+        showToast(`Account created! Welcome, ${name}.`, 'success');
+      } catch (error) {
+        console.error("Signup Error:", error);
+        showToast(error.message || 'Signup failed', 'error');
+        throw error;
+      }
     },
-    logout() {
-      console.log('[Stub] Auth.logout called - auth disabled');
-      showToast('Auth disabled - this is a static demo site', 'info');
+    async logout() {
+      try {
+        const { error } = await window.supabase.auth.signOut();
+        if (error) throw error;
+        showToast("Signed out successfully.", 'info');
+        setTimeout(() => window.location.reload(), 800);
+      } catch (error) {
+        console.error("Logout Error:", error);
+        showToast(`Logout failed: ${error.message}`, 'error');
+      }
     },
     updateUI() {
-      $$('.auth-guest').forEach((el) => el.style.display = 'flex');
-      $$('.auth-user').forEach((el) => el.style.display = 'none');
+      const isAuth = state.isAuthenticated;
+      $$('.auth-guest').forEach((el) => el.style.display = isAuth ? 'none' : 'flex');
+      $$('.auth-user').forEach((el) => el.style.display = isAuth ? 'flex' : 'none');
+      $$('.user-name').forEach((el) => el.textContent = state.user?.name || '');
+      $$('.user-avatar-letter').forEach((el) => el.textContent = state.user?.avatar || 'U');
+      $$('.user-email-display').forEach((el) => el.textContent = state.user?.email || 'traveler@layoverx.com');
     }
   };
 
@@ -475,10 +600,16 @@
   function initHashRouting() {
     function checkHash() {
       const hash = window.location.hash;
-      console.log('[Stub] Hash routing check - auth routes disabled, hash:', hash);
+      if (hash === '#login') {
+        Modal.open('login');
+      } else if (hash === '#signup') {
+        Modal.open('signup');
+      } else if (hash === '#forgot') {
+        Modal.open('forgot');
+      }
     }
     window.addEventListener('hashchange', checkHash);
-    checkHash();
+    checkHash(); // on page load
   }
 
   /* ===== TOAST SYSTEM ===== */
@@ -2134,16 +2265,28 @@
   };
 
   /* ===== AUTH BRIDGE TRIGGERS ===== */
-  window.openAuthModal = (name) => { console.log('[Stub] openAuthModal called - auth disabled:', name); showToast('Auth disabled - this is a static demo site', 'info'); };
-  window.closeAuthModal = (name) => { console.log('[Stub] closeAuthModal called - auth disabled'); };
+  window.openAuthModal = (name) => Modal.open(name);
+  window.closeAuthModal = (name) => Modal.close(name);
   Object.assign(window.layoverx, {
     openModal: (name) => Modal.open(name),
     closeModal: (name) => Modal.close(name),
     switchModal: (from, to) => { Modal.close(from); Modal.open(to); },
     logout: () => Auth.logout(),
     socialLogin: async (p) => {
-      console.log('[Stub] socialLogin called - auth disabled:', p);
-      showToast('Auth disabled - this is a static demo site', 'info');
+      if (p === 'google') {
+        try {
+          const { error } = await window.supabase.auth.signInWithOAuth({
+            provider: 'google'
+          });
+          if (error) throw error;
+        } catch (error) {
+          console.error("Google Login Error:", error);
+          showToast(`Google login failed: ${error.message || error}`);
+        }
+      } else {
+        showToast(`Redirecting to ${p.toUpperCase()} login...`);
+        setTimeout(() => Auth.login(`${p}@layoverx.com`, "123456"), 1000);
+      }
     },
     togglePassword: (id) => {
       const input = document.getElementById(id);
@@ -2153,37 +2296,70 @@
     },
     handleLogin: async (e) => {
       e.preventDefault();
-      console.log('[Stub] handleLogin called - auth disabled');
-      showToast('Auth disabled - this is a static demo site', 'info');
+      const btn = document.getElementById('btn-login-submit');
+      if (btn.disabled) return;
+      const email = $('#login-email')?.value;
+      const pass = $('#login-password')?.value;
+      if (email && pass) {
+        try {
+          btn.disabled = true;
+          btn.classList.add('opacity-80', 'cursor-not-allowed');
+          btn.querySelector('span').textContent = 'Signing In...';
+          btn.querySelector('.loading-spinner').classList.remove('hidden');
+          await Auth.login(email, pass);
+        } finally {
+          btn.disabled = false;
+          btn.classList.remove('opacity-80', 'cursor-not-allowed');
+          btn.querySelector('span').textContent = 'Sign In';
+          btn.querySelector('.loading-spinner').classList.add('hidden');
+        }
+      }
     },
     handleSignup: async (e) => {
       e.preventDefault();
-      console.log('[Stub] handleSignup called - auth disabled');
-      showToast('Auth disabled - this is a static demo site', 'info');
+      const btn = document.getElementById('btn-signup-submit');
+      if (btn.disabled) return;
+      const name = $('#signup-name')?.value;
+      const email = $('#signup-email')?.value;
+      const pass = $('#signup-password')?.value;
+      if (name && email && pass) {
+        try {
+          btn.disabled = true;
+          btn.classList.add('opacity-80', 'cursor-not-allowed');
+          btn.querySelector('span').textContent = 'Creating Account...';
+          btn.querySelector('.loading-spinner').classList.remove('hidden');
+          await Auth.signup(name, email, pass);
+        } finally {
+          btn.disabled = false;
+          btn.classList.remove('opacity-80', 'cursor-not-allowed');
+          btn.querySelector('span').textContent = 'Create Account';
+          btn.querySelector('.loading-spinner').classList.add('hidden');
+        }
+      }
     },
     checkPasswordStrength: (val) => {
       const container = document.getElementById('pwd-strength-container');
       const bar = document.getElementById('pwd-strength-bar');
       const text = document.getElementById('pwd-strength-text');
       if (!container || !bar || !text) return;
-
+      
       if (!val) {
         container.classList.add('hidden');
         return;
       }
-
+      
       container.classList.remove('hidden');
-
+      
       let score = 0;
       if (val.length >= 8) score++;
       if (/[A-Z]/.test(val)) score++;
       if (/[0-9]/.test(val)) score++;
       if (/[^A-Za-z0-9]/.test(val)) score++;
-
+      
       let width = "25%";
       let color = "bg-red-500";
       let msg = "Weak (add capital, number, or symbol)";
-
+      
       if (score === 2) {
         width = "50%";
         color = "bg-amber-500";
@@ -2197,14 +2373,36 @@
         color = "bg-emerald-500";
         msg = "Very Strong";
       }
-
+      
       bar.style.width = width;
       bar.className = `h-full transition-all duration-300 ${color}`;
       text.textContent = msg;
     },
     handleForgot: async () => {
-      console.log('[Stub] handleForgot called - auth disabled');
-      showToast('Auth disabled - this is a static demo site', 'info');
+      const btn = document.getElementById('btn-forgot-submit');
+      if (btn && btn.disabled) return;
+      const email = $('#forgot-email')?.value;
+      if (email) {
+        if (btn) {
+          btn.disabled = true;
+          btn.classList.add('opacity-80', 'cursor-not-allowed');
+          btn.querySelector('span').textContent = 'Sending...';
+          btn.querySelector('.loading-spinner').classList.remove('hidden');
+        }
+        
+        // Simulate network request
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        showToast(`Reset code successfully sent to ${email}`, 'success');
+        Modal.close('forgot');
+        
+        if (btn) {
+          btn.disabled = false;
+          btn.classList.remove('opacity-80', 'cursor-not-allowed');
+          btn.querySelector('span').textContent = 'Send Reset Link';
+          btn.querySelector('.loading-spinner').classList.add('hidden');
+        }
+      }
     }
   });
 
@@ -2339,6 +2537,7 @@
       }
     });
 
+    Auth.init();
     initHashRouting();
     decorateNavbar();
     decorateMobileMenu();
@@ -2710,6 +2909,12 @@
       const discVal = subtotal * 0.10;
       totalDiscount += discVal;
       discountLogs.push(`Long-stay discount (10%): -₹${discVal.toFixed(2)}`);
+    }
+
+    if (state.isAuthenticated) {
+      const discVal = subtotal * 0.05;
+      totalDiscount += discVal;
+      discountLogs.push(`Loyalty member discount (5%): -₹${discVal.toFixed(2)}`);
     }
 
     let activeCoupon = null;
@@ -3170,14 +3375,14 @@
         <div class="flex items-start gap-3 bg-sky-50/50 border border-sky-100/50 p-4 rounded-2xl">
           <span class="text-xl">⚡</span>
           <div>
-            <h3 class="text-h4 font-bold text-slate-900 text-xs">Transit Friendly</h3>
+            <h4 class="font-bold text-slate-900 text-xs">Transit Friendly</h4>
             <p class="text-[10px] text-slate-500 mt-0.5 leading-relaxed">No overnight booking constraint. Optimized hourly rates.</p>
           </div>
         </div>
         <div class="flex items-start gap-3 bg-emerald-50/50 border border-emerald-100/50 p-4 rounded-2xl">
           <span class="text-xl">🛡️</span>
           <div>
-            <h3 class="text-h4 font-bold text-slate-900 text-xs">Safe Exit Certified</h3>
+            <h4 class="font-bold text-slate-900 text-xs">Safe Exit Certified</h4>
             <p class="text-[10px] text-slate-500 mt-0.5 leading-relaxed">Operator assists with express security lines & transfer timings.</p>
           </div>
         </div>
@@ -3353,7 +3558,7 @@
             <div class="flex justify-between items-start gap-4">
               <div>
                 <span class="text-[10px] uppercase font-black text-sky-600 block mb-0.5 tracking-wider">${item.type}</span>
-                <h3 class="text-h4 text-sm sm:text-base font-extrabold text-slate-900 leading-tight">${item.name}</h3>
+                <h4 class="text-sm sm:text-base font-extrabold text-slate-900 leading-tight">${item.name}</h4>
                 <p class="text-[11px] text-slate-500 mt-1 leading-normal line-clamp-1">${item.desc || 'Flexible transit hours'}</p>
               </div>
               
@@ -3533,6 +3738,27 @@
     if (flightVal && $('#chk-flight-in')) $('#chk-flight-in').value = flightVal;
     if (flightOutVal && $('#chk-flight-departure')) $('#chk-flight-departure').value = flightOutVal;
     if (emergencyVal && $('#chk-emergency')) $('#chk-emergency').value = emergencyVal;
+
+    if (window.supabase) {
+      window.supabase.auth.getSession().then(({ data: { session } }) => {
+        const user = session?.user;
+        if (user) {
+          const nameInput = $('#chk-traveler-name');
+          if (nameInput && !nameInput.value) {
+            nameInput.value = user.user_metadata?.full_name || user.email.split('@')[0];
+          }
+        }
+      });
+      window.supabase.auth.onAuthStateChange((event, session) => {
+        const user = session?.user;
+        if (user) {
+          const nameInput = $('#chk-traveler-name');
+          if (nameInput && !nameInput.value) {
+            nameInput.value = user.user_metadata?.full_name || user.email.split('@')[0];
+          }
+        }
+      });
+    }
   }
 
   function initMyTripsPage() {
@@ -3553,15 +3779,35 @@
     const container = $('#tab-content-upcoming');
     if (!container) return;
 
-    const trips = getLocalCompletedTrips();
+    let trips = getLocalCompletedTrips();
+
+    if (window.supabase) {
+      try {
+        const { data: { session } } = await window.supabase.auth.getSession();
+        const user = session?.user;
+        if (user) {
+          const { data: dbTrips, error: dbError } = await window.supabase
+            .from("trips")
+            .select("*")
+            .eq("uid", user.id);
+          if (dbError) throw dbError;
+          const dbTripsMapped = (dbTrips || []).map(row => row.details || mapTripFromDatabase(row));
+          if (dbTripsMapped.length > 0) {
+            trips = dbTripsMapped;
+          }
+        }
+      } catch (dbError) {
+        console.warn("Could not query Supabase upcoming trips:", dbError);
+      }
+    }
 
     if (trips.length === 0) {
       container.innerHTML = `
         <div class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
           <div class="w-16 h-16 bg-slate-50 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">📅</div>
-          <h2 class="text-h3 text-base font-bold text-slate-900 mb-1">No Upcoming Bookings</h2>
+          <h3 class="text-base font-bold text-slate-900 mb-1">No Upcoming Bookings</h3>
           <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">You don't have any finalized stopovers booked yet. Complete checkout to secure your reservations.</p>
-          <a href="plan-my-layover.html" class="btn-card btn-card-primary gap-2 transition shadow">
+          <a href="plan-my-layover.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold rounded-xl transition shadow">
             Start Planning
           </a>
         </div>
@@ -3608,9 +3854,9 @@
       container.innerHTML = `
         <div class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
           <div class="w-16 h-16 bg-slate-50 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">💾</div>
-          <h2 class="text-h3 text-base font-bold text-slate-900 mb-1">No Saved Drafts</h2>
+          <h3 class="text-base font-bold text-slate-900 mb-1">No Saved Drafts</h3>
           <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">Build a timeline and click "Save Draft" in the itinerary workspace to access them here.</p>
-          <a href="my-itinerary.html" class="btn-card bg-slate-900 text-white hover:bg-black gap-2 transition shadow">
+          <a href="my-itinerary.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-black text-white text-xs font-bold rounded-xl transition shadow">
             Open Planner
           </a>
         </div>
@@ -3652,7 +3898,7 @@
       container.innerHTML = `
         <div class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
           <div class="w-16 h-16 bg-slate-50 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">⏳</div>
-          <h2 class="text-h3 text-base font-bold text-slate-900 mb-1">No Past Trips Found</h2>
+          <h3 class="text-base font-bold text-slate-900 mb-1">No Past Trips Found</h3>
           <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">Trips you complete will appear here as historic records with receipt print downloads.</p>
         </div>
       `;
@@ -4042,6 +4288,12 @@
 
     const bookingId = `LX-${Math.floor(Math.random() * 90000 + 10000)}-CSMIA`;
 
+    let user = null;
+    if (window.supabase) {
+      const { data: { session } } = await window.supabase.auth.getSession();
+      user = session?.user;
+    }
+
     const tripData = {
       bookingId,
       items: itinerary,
@@ -4051,12 +4303,22 @@
       emergencyContact,
       totalCost,
       createdAt: new Date().toISOString(),
-      uid: 'guest-traveler'
+      uid: user ? user.id : 'guest-traveler'
     };
 
     let completedTrips = getLocalCompletedTrips();
     completedTrips.push(tripData);
     localStorage.setItem('layoverx_completed_trips', JSON.stringify(completedTrips));
+
+    if (user && window.supabase) {
+      try {
+        const payload = mapTripToDatabase(tripData);
+        const { error } = await window.supabase.from("trips").upsert(payload);
+        if (error) throw error;
+      } catch (dbError) {
+        console.warn("Supabase trip save failed, saved locally:", dbError);
+      }
+    }
 
     await new Promise(r => setTimeout(r, 1200));
 
@@ -4393,14 +4655,36 @@
   let countdownInterval = null;
 
   async function checkAndCreateLock() {
-    console.log('[Stub] checkAndCreateLock called - backend locks disabled');
+    const callApi = async (endpoint, payload) => {
+      const backendUrl = window.LAYOVERX_SUPABASE_CONFIG?.backendUrl || "https://api.layoverx.in";
+      let token = null;
+      if (window.supabase) {
+        const { data: { session } } = await window.supabase.auth.getSession();
+        if (session) token = session.access_token;
+      }
+      const headers = { 'Content-Type': 'application/json' };
+      if (token) headers['Authorization'] = `Bearer ${token}`;
+      
+      const response = await fetch(`${backendUrl}/api/${endpoint}`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(payload)
+      });
+      const resData = await response.json();
+      if (!response.ok) {
+        throw new Error(resData.error || resData.message || 'API request failed');
+      }
+      return resData;
+    };
+
     let expiry = parseInt(localStorage.getItem('layoverx_lock_expiry') || 0);
+    let sessionId = localStorage.getItem('layoverx_lock_session_id');
     let lockedItems = [];
     try {
       const stored = localStorage.getItem('layoverx_locked_items');
       if (stored) lockedItems = JSON.parse(stored);
     } catch(e) { console.error(e); }
-
+    
     let itinerary = [];
     try {
       const stored = localStorage.getItem('layoverx_current_itinerary');
@@ -4408,26 +4692,74 @@
     } catch(e) { console.error(e); }
 
     if (itinerary.length === 0 && lockedItems.length === 0) {
-      enableCheckoutControls();
-      return;
+      return; // nothing to lock
     }
 
-    if (expiry > Date.now()) {
-      startCountdownTimer(expiry, Date.now());
-    } else {
-      localStorage.removeItem('layoverx_lock_expiry');
-      localStorage.removeItem('layoverx_lock_session_id');
-      localStorage.removeItem('layoverx_locked_items');
-      const sessionId = `sess_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      const newExpiry = Date.now() + (30 * 60 * 1000);
-      localStorage.setItem('layoverx_lock_session_id', sessionId);
-      localStorage.setItem('layoverx_lock_expiry', newExpiry);
-      localStorage.setItem('layoverx_locked_items', JSON.stringify(lockedItems.length > 0 ? lockedItems : itinerary.map(item => ({
-        serviceId: String(item.id),
-        slot: item.slot || 'slot_default'
-      }))));
-      showToast("Inventory lock simulated (static mode)", "info");
-      startCountdownTimer(newExpiry, Date.now());
+    const items = lockedItems.length > 0 ? lockedItems : itinerary.map(item => ({
+      serviceId: String(item.id),
+      slot: item.slot || 'slot_default'
+    }));
+
+    // If there is an existing session, validate it against backend
+    if (sessionId && expiry) {
+      try {
+        const res = await callApi('bookings/validate-lock', { items, sessionId });
+        if (res && res.success) {
+          expiry = res.expiresAt;
+          localStorage.setItem('layoverx_lock_expiry', expiry);
+          localStorage.setItem('layoverx_locked_items', JSON.stringify(items));
+          startCountdownTimer(expiry, res.serverTime);
+          return;
+        } else {
+          // Lock session is invalid/expired. Clear it and show expired modal.
+          localStorage.removeItem('layoverx_lock_expiry');
+          localStorage.removeItem('layoverx_lock_session_id');
+          localStorage.removeItem('layoverx_locked_items');
+          showExpirationModal();
+          return;
+        }
+      } catch (err) {
+        console.error("validateLockSession failed:", err);
+        // Fallback to local countdown if valid locally
+        const localExpiry = parseInt(localStorage.getItem('layoverx_lock_expiry') || 0);
+        if (localExpiry > Date.now()) {
+          startCountdownTimer(localExpiry, Date.now());
+          return;
+        } else {
+          localStorage.removeItem('layoverx_lock_expiry');
+          localStorage.removeItem('layoverx_lock_session_id');
+          localStorage.removeItem('layoverx_locked_items');
+          showExpirationModal();
+          return;
+        }
+      }
+    }
+
+    // Create a new lock session
+    sessionId = `sess_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    try {
+      const res = await callApi('bookings/lock', { items, sessionId });
+      if (res && res.success) {
+        expiry = res.expiresAt;
+        localStorage.setItem('layoverx_lock_expiry', expiry);
+        localStorage.setItem('layoverx_lock_session_id', sessionId);
+        localStorage.setItem('layoverx_locked_items', JSON.stringify(items));
+        showToast("Inventory locked successfully.", "success");
+        startCountdownTimer(expiry, res.serverTime);
+      } else {
+        showToast("Failed to lock inventory: " + (res ? res.error : "Unknown error"), "error");
+        setTimeout(() => {
+          window.location.href = 'my-itinerary.html';
+        }, 2000);
+        return;
+      }
+    } catch (err) {
+      console.error("lockInventory failed:", err);
+      showToast("Error locking inventory. Please try again.", "error");
+      setTimeout(() => {
+        window.location.href = 'my-itinerary.html';
+      }, 2000);
+      return;
     }
   }
 
@@ -4824,47 +5156,82 @@
         return;
       }
 
-      // Render markers without route (ORS API disabled for static frontend)
-      console.log('[Stub] OpenRouteService API call disabled - rendering markers only');
+      // Call OpenRouteService Directions API (POST)
+      fetch('https://api.openrouteservice.org/v2/directions/driving-car/geojson', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+          'Authorization': apiKey
+        },
+        body: JSON.stringify({
+          coordinates: coords
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`ORS API responded with status ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Draw route polyline
+        const routeLayer = L.geoJSON(data, {
+          style: {
+            color: '#0ea5e9',
+            weight: 5,
+            opacity: 0.85
+          }
+        }).addTo(map);
 
-      map.setView([airportOrigin.coordinates.lat, airportOrigin.coordinates.lng], 12);
+        // Fit map boundaries to the polyline route
+        map.fitBounds(routeLayer.getBounds(), { padding: [40, 40] });
 
-      L.marker([airportOrigin.coordinates.lat, airportOrigin.coordinates.lng], {
-        icon: createCustomMarkerIcon('🛫', '#0284c7')
-      }).addTo(map).bindPopup(`<b>${airportOrigin.name}</b><br>Origin & Destination`);
+        // Extract total distance and duration from properties summary
+        const summary = data.features[0].properties.summary;
+        updateMapStats(summary.distance, summary.duration);
 
-      if (details.hotelId && HOTELS[details.hotelId]) {
-        const h = HOTELS[details.hotelId];
-        L.marker([h.coordinates.lat, h.coordinates.lng], {
-          icon: createCustomMarkerIcon('🏨', '#8b5cf6')
-        }).addTo(map).bindPopup(`<b>${h.name}</b><br>Hotel`);
-      }
-      if (details.diningId && DINING[details.diningId]) {
-        const d = DINING[details.diningId];
-        L.marker([d.coordinates.lat, d.coordinates.lng], {
-          icon: createCustomMarkerIcon('🍽️', '#f97316')
-        }).addTo(map).bindPopup(`<b>${d.name}</b><br>Restaurant`);
-      }
-      if (details.activityId && EXPERIENCES[details.activityId]) {
-        const e = EXPERIENCES[details.activityId];
-        L.marker([e.coordinates.lat, e.coordinates.lng], {
-          icon: createCustomMarkerIcon('📸', '#eab308')
-        }).addTo(map).bindPopup(`<b>${e.name}</b><br>Experience`);
-      }
-      if (details.spaId && SPA_WELLNESS[details.spaId]) {
-        const s = SPA_WELLNESS[details.spaId];
-        L.marker([s.coordinates.lat, s.coordinates.lng], {
-          icon: createCustomMarkerIcon('💆', '#ec4899')
-        }).addTo(map).bindPopup(`<b>${s.name}</b><br>Spa`);
-      }
-      if (details.gamingId && GAMING_ENTERTAINMENT[details.gamingId]) {
-        const g = GAMING_ENTERTAINMENT[details.gamingId];
-        L.marker([g.coordinates.lat, g.coordinates.lng], {
-          icon: createCustomMarkerIcon('🎮', '#10b981')
-        }).addTo(map).bindPopup(`<b>${g.name}</b><br>Gaming & Entertainment`);
-      }
+        // Render markers
+        // Origin Marker (T1 or T2)
+        L.marker([airportOrigin.coordinates.lat, airportOrigin.coordinates.lng], {
+          icon: createCustomMarkerIcon('🛫', '#0284c7')
+        }).addTo(map).bindPopup(`<b>${airportOrigin.name}</b><br>Origin & Destination`);
 
-      updateMapStats(0, 0);
+        // Waypoints
+        if (details.hotelId && HOTELS[details.hotelId]) {
+          const h = HOTELS[details.hotelId];
+          L.marker([h.coordinates.lat, h.coordinates.lng], {
+            icon: createCustomMarkerIcon('🏨', '#8b5cf6')
+          }).addTo(map).bindPopup(`<b>${h.name}</b><br>Hotel`);
+        }
+        if (details.diningId && DINING[details.diningId]) {
+          const d = DINING[details.diningId];
+          L.marker([d.coordinates.lat, d.coordinates.lng], {
+            icon: createCustomMarkerIcon('🍽️', '#f97316')
+          }).addTo(map).bindPopup(`<b>${d.name}</b><br>Restaurant`);
+        }
+        if (details.activityId && EXPERIENCES[details.activityId]) {
+          const e = EXPERIENCES[details.activityId];
+          L.marker([e.coordinates.lat, e.coordinates.lng], {
+            icon: createCustomMarkerIcon('📸', '#eab308')
+          }).addTo(map).bindPopup(`<b>${e.name}</b><br>Experience`);
+        }
+        if (details.spaId && SPA_WELLNESS[details.spaId]) {
+          const s = SPA_WELLNESS[details.spaId];
+          L.marker([s.coordinates.lat, s.coordinates.lng], {
+            icon: createCustomMarkerIcon('💆', '#ec4899')
+          }).addTo(map).bindPopup(`<b>${s.name}</b><br>Spa`);
+        }
+        if (details.gamingId && GAMING_ENTERTAINMENT[details.gamingId]) {
+          const g = GAMING_ENTERTAINMENT[details.gamingId];
+          L.marker([g.coordinates.lat, g.coordinates.lng], {
+            icon: createCustomMarkerIcon('🎮', '#10b981')
+          }).addTo(map).bindPopup(`<b>${g.name}</b><br>Gaming & Entertainment`);
+        }
+      })
+      .catch(err => {
+        console.error("Directions request failed:", err);
+        showMapFallback("Map unavailable. View itinerary timeline instead.");
+      });
 
     } catch (err) {
       console.error("Leaflet initialization failed:", err);
@@ -4910,23 +5277,43 @@
     savePlannerToItinerary
   });
 
-  // --- ANALYTICS SYSTEM (STUB - backend removed) ---
+  // --- ANALYTICS SYSTEM ---
   const Analytics = {
     async trackEvent(eventName, eventData = {}) {
       console.log(`[Analytics Event] ${eventName}:`, eventData);
-
+      
       let localEvents = [];
       try {
         localEvents = JSON.parse(localStorage.getItem('layoverx_analytics_events')) || [];
       } catch(e) {}
+      
+      let userId = 'guest-traveler';
+      if (window.supabase) {
+        const { data: { session } } = await window.supabase.auth.getSession();
+        if (session?.user) {
+          userId = session.user.id;
+        }
+      }
 
       localEvents.push({
         eventName,
         eventData,
         timestamp: new Date().toISOString(),
-        userId: 'guest-traveler'
+        userId
       });
       localStorage.setItem('layoverx_analytics_events', JSON.stringify(localEvents));
+
+      if (window.supabase) {
+        try {
+          await window.supabase.from("analytics_events").insert([{
+            user_id: userId,
+            event: eventName,
+            data: eventData
+          }]);
+        } catch (err) {
+          console.warn("Could not save event to Supabase:", err);
+        }
+      }
     }
   };
   window.layoverxAnalytics = Analytics;
@@ -4939,13 +5326,13 @@
     clean = clean.replace(/(passport(?:\s*number)?\s*[:=]\s*)['"]?[a-z0-9]+['"]?/gi, "$1[REDACTED_PASSPORT]");
     clean = clean.replace(/\b[a-fA-F0-9]{64}\b/g, "[REDACTED_SIGNATURE]");
     clean = clean.replace(/rzp_(?:test|live)_[a-zA-Z0-9]{14,24}/g, "[REDACTED_RAZORPAY_KEY]");
-    clean = clean.replace(/sk_(?:test|live)_[a-zA-Z0-9]{24,100}/g, "[REDACTED_API_KEY]");
+    clean = clean.replace(/sk_(?:test|live)_[a-zA-Z0-9]{24,100}/g, "[REDACTED_STRIPE_KEY]");
     clean = clean.replace(/ey[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_]+/g, "[REDACTED_TOKEN]");
     clean = clean.replace(/(password|secret|pass|token)\s*[:=]\s*['"]?[a-zA-Z0-9_\-\.\/+=]{8,}['"]?/gi, "$1: [REDACTED]");
     return clean;
   }
 
-  // --- MONITORING & LOGGING (STUB - backend removed) ---
+  // --- MONITORING & LOGGING ---
   async function logErrorToStorage(type, message, stack = "", severity = "ERROR", source = "client-runtime") {
     if (type === "Unhandled Promise Rejection" || type === "Javascript Runtime Error") {
       severity = "ERROR";
@@ -4956,11 +5343,19 @@
     const cleanStack = sanitizeLogContent(stack);
 
     console.error(`[Error Logged] [${severity}] ${type}: ${cleanMessage}`);
-
+    
     let localErrors = [];
     try {
       localErrors = JSON.parse(localStorage.getItem('layoverx_error_logs')) || [];
     } catch(e) {}
+    
+    let userId = 'guest-traveler';
+    if (window.supabase) {
+      const { data: { session } } = await window.supabase.auth.getSession();
+      if (session?.user) {
+        userId = session.user.id;
+      }
+    }
 
     localErrors.push({
       type,
@@ -4973,8 +5368,23 @@
       source
     });
     localStorage.setItem('layoverx_error_logs', JSON.stringify(localErrors));
+
+    if (window.supabase) {
+      try {
+        await window.supabase.from("error_logs").insert([{
+          severity,
+          source: source || type || "client-runtime",
+          message: cleanMessage,
+          stack: cleanStack,
+          uid: userId
+        }]);
+      } catch (err) {
+        console.warn("Could not save error log to Supabase:", err);
+      }
+    }
   }
 
+  // Window error listeners
   window.addEventListener('error', function (event) {
     logErrorToStorage("Javascript Runtime Error", event.message, event.error ? event.error.stack : "");
   });
