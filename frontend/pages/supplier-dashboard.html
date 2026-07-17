@@ -67,10 +67,10 @@
         To view your supplier applications dashboard, please log in or create an account.
       </p>
       <div class="flex flex-col gap-3">
-        <button onclick="window.openAuthModal('login')" class="px-6 py-3 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-md transition-all">
+        <button onclick="console.log('[Stub] openAuthModal called')" class="px-6 py-3 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-md transition-all">
           Sign In / Log In
         </button>
-        <button onclick="window.openAuthModal('signup')" class="px-6 py-3 border border-gray-300 hover:bg-gray-50 text-gray-800 font-bold rounded-xl transition-all">
+        <button onclick="console.log('[Stub] openAuthModal called')" class="px-6 py-3 border border-gray-300 hover:bg-gray-50 text-gray-800 font-bold rounded-xl transition-all">
           Create New Account
         </button>
       </div>
@@ -248,79 +248,36 @@
     applications: [],
     
     init() {
-      // Monitor auth state
-      if (window.supabase) {
-        window.supabase.auth.onAuthStateChange(async (event, session) => {
-          const user = session?.user;
-          const authPanel = document.getElementById('auth-required-panel');
-          const activePanel = document.getElementById('active-dashboard-panel');
-          const noAppsPanel = document.getElementById('no-applications-panel');
-          
-          if (!authPanel || !activePanel || !noAppsPanel) return;
-
-          if (user) {
-            authPanel.classList.add('hidden');
-            try {
-              await this.fetchApplications(user.id);
-            } catch (err) {
-              console.error("Fetch Apps Error:", err);
-              activePanel.classList.add('hidden');
-              noAppsPanel.classList.remove('hidden');
-            }
-          } else {
-            authPanel.classList.remove('hidden');
-            activePanel.classList.add('hidden');
-            noAppsPanel.classList.add('hidden');
-          }
-        });
-      }
+      console.log('[Stub] supplierDashboard.init() called');
+      this.loadFromLocalStorage();
     },
 
-    async fetchApplications(uid) {
-      if (!window.supabase) throw new Error("Supabase client not initialized.");
-      
-      const { data, error } = await window.supabase
-        .from("supplier_applications")
-        .select("*")
-        .eq("user_id", uid);
-
-      if (error) throw error;
-
-      const apps = (data || []).map(app => ({
-        applicationId: app.application_id,
-        userId: app.user_id,
-        businessName: app.business_name,
-        businessCategory: app.business_category,
-        businessType: app.business_type,
-        pricingRange: app.pricing_range,
-        servicesOffered: app.services_offered,
-        ownerName: app.owner_name,
-        email: app.email,
-        phone: app.phone,
-        airportServed: app.airport_served,
-        city: app.city,
-        country: app.country,
-        website: app.website,
-        description: app.description,
-        documents: app.documents,
-        status: app.status,
-        createdAt: app.created_at ? { seconds: new Date(app.created_at).getTime() / 1000 } : null,
-        approvedBy: app.approved_by,
-        approvedAt: app.approved_at,
-        reviewNotes: app.review_notes
-      }));
-
-      // Sort by creation date (descending) or fallback to name/appId
-      apps.sort((a, b) => {
-        const t1 = a.createdAt?.seconds || 0;
-        const t2 = b.createdAt?.seconds || 0;
-        return t2 - t1;
-      });
-
-      this.applications = apps;
-
+    loadFromLocalStorage() {
+      const authPanel = document.getElementById('auth-required-panel');
       const activePanel = document.getElementById('active-dashboard-panel');
       const noAppsPanel = document.getElementById('no-applications-panel');
+      
+      if (!authPanel || !activePanel || !noAppsPanel) return;
+
+      try {
+        const stored = localStorage.getItem('layoverx_supplier_application');
+        if (stored) {
+          const app = JSON.parse(stored);
+          this.applications = [app];
+          noAppsPanel.classList.add('hidden');
+          activePanel.classList.remove('hidden');
+          this.loadApplication(app.applicationId);
+        } else {
+          activePanel.classList.add('hidden');
+          noAppsPanel.classList.remove('hidden');
+        }
+        authPanel.classList.add('hidden');
+      } catch (e) {
+        console.error("Error loading applications:", e);
+        activePanel.classList.add('hidden');
+        noAppsPanel.classList.remove('hidden');
+      }
+    },
 
       if (apps.length === 0) {
         activePanel.classList.add('hidden');

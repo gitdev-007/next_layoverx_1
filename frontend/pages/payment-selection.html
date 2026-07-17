@@ -271,11 +271,6 @@
       return;
     }
 
-    if (!window.supabase) {
-      alert("Database connection is not ready.");
-      return;
-    }
-
     const btn = document.getElementById('btn-pay-now');
     const spinner = btn.querySelector('.loading-spinner');
     const span = btn.querySelector('span');
@@ -315,19 +310,13 @@
       window.layoverxAnalytics.trackEvent("Payment Selection Clicked", { bookingId, amount: calculations.grandTotal });
     }
 
-    // Retrieve current session token
-    const { data: { session } } = await window.supabase.auth.getSession();
-    const user = session?.user;
-    const backendUrl = window.LAYOVERX_SUPABASE_CONFIG?.backendUrl || "https://api.layoverx.in";
-
     // Call REST endpoint to create Razorpay Order
     let rzOrder = null;
     try {
-      const response = await fetch(`${backendUrl}/api/payments/create-order`, {
+      const response = await fetch(`/api/payments/create-order`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': session ? `Bearer ${session.access_token}` : ''
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ cartItems: calculations.itemPricingDetails, bookingId })
       });
@@ -376,7 +365,7 @@
       totalCost: `₹${calculations.grandTotal.toFixed(2)}`,
       createdAt: new Date().toISOString(),
       status: 'Pending Payment',
-      uid: user ? user.id : 'guest-traveler'
+      uid: 'guest-traveler'
     };
 
     let completed = [];
@@ -386,37 +375,6 @@
     } catch(e) { console.error(e); }
     completed.push(tripData);
     localStorage.setItem('layoverx_completed_trips', JSON.stringify(completed));
-
-    if (user) {
-      try {
-        const mappedTrip = {
-          booking_id: bookingId,
-          order_id: rzOrder.orderId || null,
-          uid: user.id,
-          passenger: travelerDetails.passenger,
-          passport: travelerDetails.passport,
-          nationality: travelerDetails.nationality,
-          emergency_contact: travelerDetails.emergencyContact,
-          incoming_flight: travelerDetails.incomingFlight,
-          outgoing_flight: travelerDetails.outgoingFlight,
-          subtotal: calculations.subtotal,
-          total_discount: calculations.totalDiscount,
-          convenience_fee: calculations.convenienceFee,
-          service_fee: calculations.serviceFee,
-          taxes: calculations.taxes,
-          insurance_premium: calculations.insurancePremium,
-          grand_total: calculations.grandTotal,
-          status: 'Pending Payment',
-          created_at: tripData.createdAt,
-          updated_at: new Date().toISOString(),
-          details: tripData
-        };
-        const { error } = await window.supabase.from("trips").upsert(mappedTrip);
-        if (error) throw error;
-      } catch (dbError) {
-        console.warn("Supabase initial trip save failed:", dbError);
-      }
-    }
 
     if (span) span.textContent = 'Awaiting Secure Payment...';
 
@@ -441,11 +399,10 @@
 
         let verificationRes = { success: false };
         try {
-          const verifyResponse = await fetch(`${backendUrl}/api/payments/verify`, {
+          const verifyResponse = await fetch(`/api/payments/verify`, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-              'Authorization': session ? `Bearer ${session.access_token}` : ''
+              'Content-Type': 'application/json'
             },
             body: JSON.stringify({
               razorpay_order_id: response.razorpay_order_id,

@@ -938,16 +938,8 @@
     renderAllAdminViews();
   }
 
-  async function logAuditAction(action, details) {
-    let email = "admin@layoverx.com";
-    if (window.supabase) {
-      try {
-        const { data: { session } } = await window.supabase.auth.getSession();
-        if (session && session.user) {
-          email = session.user.email;
-        }
-      } catch (e) {}
-    }
+  function logAuditAction(action, details) {
+    const email = "admin@layoverx.com";
     const historyList = JSON.parse(localStorage.getItem('layoverx_pricing_history')) || [];
     historyList.push({
       timestamp: new Date().toISOString(),
