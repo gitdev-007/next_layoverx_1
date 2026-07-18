@@ -702,20 +702,8 @@
         };
         localStorage.setItem('layoverx_supplier_application', JSON.stringify(localDocData));
 
-        // Submit via Render Web Service endpoint
-        const backendUrl = window.LAYOVERX_SUPABASE_CONFIG?.backendUrl || "https://api.layoverx.in";
-        const response = await fetch(`${backendUrl}/api/suppliers/register`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${session.access_token}`
-          },
-          body: JSON.stringify({ appId, data: docData })
-        });
-        const resJson = await response.json();
-        if (!response.ok || !resJson.success) {
-          throw new Error(resJson.error || "Submission failed");
-        }
+        // Submit via local mock simulation (100% frontend)
+        await new Promise(resolve => setTimeout(resolve, 800));
 
         if (typeof window.layoverx.showToast === 'function') {
           window.layoverx.showToast("Application submitted! Redirecting to status tracker...", "success");

@@ -2,15 +2,13 @@
 if (typeof import.meta !== 'undefined' && !import.meta.env) {
   import.meta.env = {
     VITE_SUPABASE_URL: "https://mock-supabase.supabase.co",
-    VITE_SUPABASE_ANON_KEY: "mock-anon-key-12345",
-    VITE_BACKEND_URL: "https://api.layoverx.in"
+    VITE_SUPABASE_ANON_KEY: "mock-anon-key-12345"
   };
 }
 
 const LAYOVERX_SUPABASE_CONFIG = {
   url: import.meta.env.VITE_SUPABASE_URL,
-  anonKey: import.meta.env.VITE_SUPABASE_ANON_KEY,
-  backendUrl: import.meta.env.VITE_BACKEND_URL
+  anonKey: import.meta.env.VITE_SUPABASE_ANON_KEY
 };
 
 window.LAYOVERX_SUPABASE_CONFIG = LAYOVERX_SUPABASE_CONFIG;

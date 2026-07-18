@@ -313,7 +313,6 @@ function processSupabaseInit() {
 
   const url        = process.env.VITE_SUPABASE_URL;
   const anonKey    = process.env.VITE_SUPABASE_ANON_KEY;
-  const backendUrl = process.env.VITE_BACKEND_URL;
 
   if (url) {
     console.log(`  Injecting VITE_SUPABASE_URL: ${url}`);
@@ -327,13 +326,6 @@ function processSupabaseInit() {
     content = content.replace(
       /VITE_SUPABASE_ANON_KEY:\s*["'].*?["']/,
       `VITE_SUPABASE_ANON_KEY: "${anonKey}"`
-    );
-  }
-  if (backendUrl) {
-    console.log(`  Injecting VITE_BACKEND_URL: ${backendUrl}`);
-    content = content.replace(
-      /VITE_BACKEND_URL:\s*["'].*?["']/,
-      `VITE_BACKEND_URL: "${backendUrl}"`
     );
   }
 

@@ -4656,25 +4656,19 @@
 
   async function checkAndCreateLock() {
     const callApi = async (endpoint, payload) => {
-      const backendUrl = window.LAYOVERX_SUPABASE_CONFIG?.backendUrl || "https://api.layoverx.in";
-      let token = null;
-      if (window.supabase) {
-        const { data: { session } } = await window.supabase.auth.getSession();
-        if (session) token = session.access_token;
+      // Client-side mock for 100% frontend implementation
+      await new Promise(resolve => setTimeout(resolve, 300));
+      if (endpoint === 'bookings/validate-lock') {
+        const currentExpiry = parseInt(localStorage.getItem('layoverx_lock_expiry') || 0);
+        if (currentExpiry > Date.now()) {
+          return { success: true, expiresAt: currentExpiry, serverTime: Date.now() };
+        }
+        return { success: false, error: 'Lock expired' };
       }
-      const headers = { 'Content-Type': 'application/json' };
-      if (token) headers['Authorization'] = `Bearer ${token}`;
-      
-      const response = await fetch(`${backendUrl}/api/${endpoint}`, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify(payload)
-      });
-      const resData = await response.json();
-      if (!response.ok) {
-        throw new Error(resData.error || resData.message || 'API request failed');
+      if (endpoint === 'bookings/lock') {
+        return { success: true, expiresAt: Date.now() + 15 * 60 * 1000, serverTime: Date.now() };
       }
-      return resData;
+      throw new Error('Endpoint not supported in mock mode');
     };
 
     let expiry = parseInt(localStorage.getItem('layoverx_lock_expiry') || 0);

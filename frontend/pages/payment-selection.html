@@ -263,7 +263,7 @@
   async function processBookingPayment(e) {
     e.preventDefault();
     
-    // Safety check: Require remainingTime > 0 to create or open Razorpay
+    // Safety check: Require remainingTime > 0
     const remainingTime = window.layoverx.getRemainingTime();
     if (remainingTime <= 0) {
       alert("Your reservation has expired. Please restart checkout.");
@@ -318,44 +318,20 @@
     // Retrieve current session token
     const { data: { session } } = await window.supabase.auth.getSession();
     const user = session?.user;
-    const backendUrl = window.LAYOVERX_SUPABASE_CONFIG?.backendUrl || "https://api.layoverx.in";
 
-    // Call REST endpoint to create Razorpay Order
-    let rzOrder = null;
-    try {
-      const response = await fetch(`${backendUrl}/api/payments/create-order`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': session ? `Bearer ${session.access_token}` : ''
-        },
-        body: JSON.stringify({ cartItems: calculations.itemPricingDetails, bookingId })
-      });
-      const orderRes = await response.json();
-      if (response.ok && orderRes.success) {
-        rzOrder = orderRes;
-      } else {
-        throw new Error(orderRes.error || "Failed to create order");
-      }
-    } catch (functionsErr) {
-      console.error("Could not call createRazorpayOrder:", functionsErr);
-      if (window.layoverx && window.layoverx.logError) {
-        window.layoverx.logError("Create Order REST Call Failed", functionsErr.message, functionsErr.stack, "CRITICAL", "payment-selection");
-      }
-    }
+    // Simulate Payment Delay
+    await new Promise(resolve => setTimeout(resolve, 800));
+    if (span) span.textContent = 'Processing Secure Payment...';
+    await new Promise(resolve => setTimeout(resolve, 800));
+    if (span) span.textContent = 'Finalizing Booking...';
 
-    if (!rzOrder) {
-      alert("Failed to initiate secure payment order. Please try again.");
-      btn.disabled = false;
-      btn.classList.remove('opacity-80', 'cursor-not-allowed');
-      if (span) span.textContent = 'Secure Book & Pay';
-      if (spinner) spinner.classList.add('hidden');
-      return;
-    }
+    const mockOrderId = `order_mock_${Date.now()}`;
+    const mockPaymentId = `pay_mock_${Date.now()}`;
 
     const tripData = {
       bookingId,
-      orderId: rzOrder.orderId,
+      orderId: mockOrderId,
+      paymentId: mockPaymentId,
       items: calculations.itemPricingDetails,
       passenger: travelerDetails.passenger,
       passport: travelerDetails.passport,
@@ -375,7 +351,7 @@
       appliedCoupon: calculations.appliedCoupon,
       totalCost: `₹${calculations.grandTotal.toFixed(2)}`,
       createdAt: new Date().toISOString(),
-      status: 'Pending Payment',
+      status: 'Confirmed',
       uid: user ? user.id : 'guest-traveler'
     };
 
@@ -391,7 +367,7 @@
       try {
         const mappedTrip = {
           booking_id: bookingId,
-          order_id: rzOrder.orderId || null,
+          order_id: mockOrderId,
           uid: user.id,
           passenger: travelerDetails.passenger,
           passport: travelerDetails.passport,
@@ -406,7 +382,7 @@
           taxes: calculations.taxes,
           insurance_premium: calculations.insurancePremium,
           grand_total: calculations.grandTotal,
-          status: 'Pending Payment',
+          status: 'Confirmed',
           created_at: tripData.createdAt,
           updated_at: new Date().toISOString(),
           details: tripData
@@ -418,179 +394,29 @@
       }
     }
 
-    if (span) span.textContent = 'Awaiting Secure Payment...';
+    saveRevenueLogs(bookingId, travelerDetails, calculations);
 
-    const rzpOptions = {
-      key: rzOrder.keyId,
-      amount: rzOrder.amount,
-      currency: rzOrder.currency,
-      name: "LayoverX Stopovers",
-      description: `Layover booking for ${travelerDetails.passenger}`,
-      order_id: rzOrder.orderId,
-      handler: async function (response) {
-        window.layoverx.razorpayOpen = false; // set open flag to false
-        if (span) span.textContent = 'Verifying Payment...';
-        
-        // Read lock session metadata for server-side revalidation (Improvement #4)
-        const lockSessionId = localStorage.getItem('layoverx_lock_session_id');
-        let lockItems = [];
-        try {
-          const stored = localStorage.getItem('layoverx_locked_items');
-          if (stored) lockItems = JSON.parse(stored);
-        } catch(e) {}
-
-        let verificationRes = { success: false };
-        try {
-          const verifyResponse = await fetch(`${backendUrl}/api/payments/verify`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': session ? `Bearer ${session.access_token}` : ''
-            },
-            body: JSON.stringify({
-              razorpay_order_id: response.razorpay_order_id,
-              razorpay_payment_id: response.razorpay_payment_id,
-              razorpay_signature: response.razorpay_signature,
-              bookingId: bookingId,
-              sessionId: lockSessionId,
-              items: lockItems
-            })
-          });
-          verificationRes = await verifyResponse.json();
-        } catch (verifyErr) {
-          console.error("Could not call verifyRazorpayPayment:", verifyErr);
-          if (window.layoverx && window.layoverx.logError) {
-            window.layoverx.logError("Payment Verification Call Failed", verifyErr.message, verifyErr.stack, "CRITICAL", "payment-selection");
-          }
-        }
-
-        // Case B/C: Server blocked the booking due to lock revalidation failure
-        if (verificationRes && verificationRes.blocked) {
-          const blockReason = verificationRes.reason || 'lock-validation-failed';
-          console.error("Booking blocked by lock revalidation:", blockReason);
-          if (window.layoverx && window.layoverx.logError) {
-            window.layoverx.logError("Lock Revalidation Blocked Booking", blockReason, `BookingId: ${bookingId}`, "ERROR", "payment-selection");
-          }
-          if (window.layoverxAnalytics) {
-            window.layoverxAnalytics.trackEvent("Booking Blocked", { bookingId, reason: blockReason });
-          }
-          btn.disabled = false;
-          btn.classList.remove('opacity-80', 'cursor-not-allowed');
-          if (span) span.textContent = 'Secure Book & Pay';
-          if (spinner) spinner.classList.add('hidden');
-          alert("Your reservation lock has expired. Please restart checkout to book your itinerary.");
-          window.location.href = 'my-itinerary.html';
-          return;
-        }
-
-        if (verificationRes && verificationRes.success) {
-          tripData.status = 'Confirmed';
-          tripData.paymentId = response.razorpay_payment_id;
-          
-          let completedUpdated = [];
-          try {
-            completedUpdated = JSON.parse(localStorage.getItem('layoverx_completed_trips') || '[]').map(t => t.bookingId === bookingId ? tripData : t);
-          } catch(e) {}
-          localStorage.setItem('layoverx_completed_trips', JSON.stringify(completedUpdated));
-
-          saveRevenueLogs(bookingId, travelerDetails, calculations);
-
-          // Broadcast to other tabs BEFORE clearing lock state
-          if (window.layoverx && window.layoverx.broadcastCheckoutEvent) {
-            window.layoverx.broadcastCheckoutEvent('payment_complete');
-          }
-
-          localStorage.removeItem('layoverx_current_itinerary');
-          localStorage.removeItem('layoverx_temp_booking');
-          localStorage.removeItem('layoverx_active_calculation');
-          localStorage.removeItem('layoverx_lock_session_id'); // clear lock session ID
-          localStorage.removeItem('layoverx_lock_expiry'); // clear lock expiry
-          localStorage.removeItem('layoverx_locked_items'); // clear cached locked items
-          
-          if (window.layoverx && window.layoverx.updateItineraryBadges) {
-            window.layoverx.updateItineraryBadges();
-          }
-
-          if (window.layoverxAnalytics) {
-            window.layoverxAnalytics.trackEvent("Booking Confirmed", { bookingId, paymentId: response.razorpay_payment_id });
-          }
-
-          window.location.href = `booking-confirmation.html?bookingId=${bookingId}`;
-        } else {
-          handlePaymentFailure(bookingId, "Verification failed");
-        }
-      },
-      prefill: {
-        name: travelerDetails.passenger,
-        email: user ? user.email : "guest@layoverx.com"
-      },
-      theme: {
-        color: "#0f766e"
-      },
-      modal: {
-        ondismiss: function () {
-          window.layoverx.razorpayOpen = false; // set open flag to false
-          console.warn("User closed Razorpay checkout modal");
-          handlePaymentFailure(bookingId, "Payment cancelled by user");
-        }
-      }
-    };
-
-    // Safety check again right before opening Razorpay
-    const finalCheckRemaining = window.layoverx.getRemainingTime();
-    if (finalCheckRemaining <= 0) {
-      alert("Your reservation has expired. Please restart checkout.");
-      window.location.href = 'my-itinerary.html';
-      return;
+    // Broadcast to other tabs BEFORE clearing lock state
+    if (window.layoverx && window.layoverx.broadcastCheckoutEvent) {
+      window.layoverx.broadcastCheckoutEvent('payment_complete');
     }
 
-    try {
-      window.layoverx.razorpayOpen = true; // set open flag to true
-      const rzp1 = new Razorpay(rzpOptions);
-      rzp1.on('payment.failed', function (response) {
-        window.layoverx.razorpayOpen = false; // set open flag to false
-        console.error("Razorpay payment failure callback:", response.error);
-        handlePaymentFailure(bookingId, response.error.description);
-      });
-      rzp1.open();
-    } catch (checkoutErr) {
-      window.layoverx.razorpayOpen = false; // set open flag to false
-      console.error("Razorpay widget instantiation failed:", checkoutErr);
-      alert("Payment gateway widget failed to load. Please check your connection and try again.");
-      handlePaymentFailure(bookingId, "Payment gateway failed to load");
+    localStorage.removeItem('layoverx_current_itinerary');
+    localStorage.removeItem('layoverx_temp_booking');
+    localStorage.removeItem('layoverx_active_calculation');
+    localStorage.removeItem('layoverx_lock_session_id'); // clear lock session ID
+    localStorage.removeItem('layoverx_lock_expiry'); // clear lock expiry
+    localStorage.removeItem('layoverx_locked_items'); // clear cached locked items
+    
+    if (window.layoverx && window.layoverx.updateItineraryBadges) {
+      window.layoverx.updateItineraryBadges();
     }
-  }
-
-  function handlePaymentFailure(bookingId, reason) {
-    window.layoverx.razorpayOpen = false; // safety reset open flag
-    const btn = document.getElementById('btn-pay-now');
-    const spinner = btn.querySelector('.loading-spinner');
-    const span = btn.querySelector('span');
-
-    btn.disabled = false;
-    btn.classList.remove('opacity-80', 'cursor-not-allowed');
-    if (span) span.textContent = 'Secure Book & Pay';
-    if (spinner) spinner.classList.add('hidden');
 
     if (window.layoverxAnalytics) {
-      window.layoverxAnalytics.trackEvent("Payment Failed", { bookingId, reason });
-    }
-    if (window.layoverx && window.layoverx.logError) {
-      window.layoverx.logError("Payment Failure Logged", reason, `BookingId: ${bookingId}`, "CRITICAL", "payment-selection");
+      window.layoverxAnalytics.trackEvent("Booking Confirmed", { bookingId, paymentId: mockPaymentId });
     }
 
-    try {
-      const completed = JSON.parse(localStorage.getItem('layoverx_completed_trips') || '[]').map(t => {
-        if (t.bookingId === bookingId) {
-          t.status = 'Failed';
-          t.paymentFailureReason = reason;
-        }
-        return t;
-      });
-      localStorage.setItem('layoverx_completed_trips', JSON.stringify(completed));
-    } catch(e) {}
-
-    alert(`Payment Failed: ${reason}. Please retry or choose another payment method.`);
+    window.location.href = `booking-confirmation.html?bookingId=${bookingId}`;
   }
 
   function saveRevenueLogs(bookingId, travelerDetails, calculations) {
