@@ -122,7 +122,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="search-fields">
         <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
           <label for="search-location" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Destination Area</label>
-          <select id="search-location" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
+          <select id="search-location" class="form-input w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
             <option value="near-airport">Near Mumbai Airport (CSMIA)</option>
             <option value="bandra">Bandra & Andheri West</option>
             <option value="colaba">Colaba & South Mumbai</option>
@@ -131,22 +131,21 @@
         </div>
         <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
           <label for="search-arrival" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Flight Arrival Time</label>
-          <input type="datetime-local" id="search-arrival" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none" aria-label="Arrival date and time" required/>
+          <input type="datetime-local" id="search-arrival" class="form-input w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none" aria-label="Arrival date and time" required/>
         </div>
         <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
           <label for="search-departure" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Flight Departure Time</label>
-          <input type="datetime-local" id="search-departure" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none" aria-label="Departure date and time" required/>
+          <input type="datetime-local" id="search-departure" class="form-input w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none" aria-label="Departure date and time" required/>
         </div>
         <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
           <label for="search-travelers" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Travelers</label>
-          <select id="search-travelers" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
+          <select id="search-travelers" class="form-input w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
             <option value="1">1 Adult</option>
             <option value="2">2 Adults</option>
             <option value="3">3 Adults</option>
             <option value="4">4+ Family/Group</option>
           </select>
-        </div>
-      </div>
+        </div>      </div>
       
       <!-- Duration Display -->
       <div class="mt-4 flex items-center justify-between flex-wrap gap-3">
@@ -200,9 +199,9 @@
           <div class="p-6 flex-grow flex flex-col">
             <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors">Transit Hotels</h3>
             <p class="text-gray-700 text-sm mb-6 flex-grow">Flexible stays near CSMIA with 24/7 check-in and hourly day-use rates.</p>
-            <div class="flex items-center text-sky-700 font-bold text-sm">
-              Explore Stays <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-            </div>
+             <div class="flex items-center text-theme-primary font-bold text-sm">
+               Explore Stays <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+             </div>
           </div>
         </a>
       </div>
@@ -218,9 +217,9 @@
           <div class="p-6 flex-grow flex flex-col">
             <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors">Transit Dining</h3>
             <p class="text-gray-700 text-sm mb-6 flex-grow">From fine dining to local street food crawl guides near the airport.</p>
-            <div class="flex items-center text-sky-700 font-bold text-sm">
-              Explore Dining <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-            </div>
+             <div class="flex items-center text-theme-primary font-bold text-sm">
+               Explore Dining <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+             </div>
           </div>
         </a>
       </div>
@@ -236,9 +235,9 @@
           <div class="p-6 flex-grow flex flex-col">
             <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors">Spa & Wellness</h3>
             <p class="text-gray-700 text-sm mb-6 flex-grow">Refresh your transit with luxury treatments and express therapy sessions.</p>
-            <div class="flex items-center text-sky-700 font-bold text-sm">
-              Explore Wellness <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-            </div>
+             <div class="flex items-center text-theme-primary font-bold text-sm">
+               Explore Wellness <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+             </div>
           </div>
         </a>
       </div>
@@ -254,9 +253,9 @@
           <div class="p-6 flex-grow flex flex-col">
             <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors">Gaming & Fun</h3>
             <p class="text-gray-700 text-sm mb-6 flex-grow">VR zones, boutique bowling, and high-energy fun minutes from terminal.</p>
-            <div class="flex items-center text-sky-700 font-bold text-sm">
-              Explore Fun <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-            </div>
+             <div class="flex items-center text-theme-primary font-bold text-sm">
+               Explore Fun <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+             </div>
           </div>
         </a>
       </div>
@@ -272,9 +271,9 @@
           <div class="p-6 flex-grow flex flex-col">
             <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors">City Tours</h3>
             <p class="text-gray-700 text-sm mb-6 flex-grow">Private AC vehicle tours visiting Mumbai's iconic heritage landmarks.</p>
-            <div class="flex items-center text-sky-700 font-bold text-sm">
-              Explore Tours <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-            </div>
+             <div class="flex items-center text-theme-primary font-bold text-sm">
+               Explore Tours <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+             </div>
           </div>
         </a>
       </div>
@@ -290,9 +289,9 @@
           <div class="p-6 flex-grow flex flex-col">
             <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors">Activities</h3>
             <p class="text-gray-700 text-sm mb-6 flex-grow">From food trails to boutique shopping, curated for your schedule.</p>
-            <div class="flex items-center text-sky-700 font-bold text-sm">
-              Explore More <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-            </div>
+             <div class="flex items-center text-theme-primary font-bold text-sm">
+               Explore More <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+             </div>
           </div>
         </a>
       </div>
