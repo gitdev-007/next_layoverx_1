@@ -1,0 +1,391 @@
+{
+  "totalPagesAudited": 30,
+  "successfulPages": 28,
+  "distinctFontSizes": 8,
+  "distinctLineHeights": 12,
+  "distinctFontWeights": 6,
+  "distinctTextColors": 33,
+  "distinctBackgroundColors": 43,
+  "distinctPaddings": 7,
+  "distinctGaps": 10,
+  "distinctBorderRadii": 5,
+  "distinctButtonHeights": 14,
+  "topFontSizes": [
+    {
+      "value": "15px",
+      "count": 2306
+    },
+    {
+      "value": "13px",
+      "count": 1470
+    },
+    {
+      "value": "17px",
+      "count": 790
+    },
+    {
+      "value": "26px",
+      "count": 256
+    },
+    {
+      "value": "22px",
+      "count": 137
+    },
+    {
+      "value": "32px",
+      "count": 82
+    },
+    {
+      "value": "40px",
+      "count": 49
+    },
+    {
+      "value": "19px",
+      "count": 25
+    }
+  ],
+  "topLineHeights": [
+    {
+      "value": "18.85px",
+      "count": 1470
+    },
+    {
+      "value": "23.25px",
+      "count": 1448
+    },
+    {
+      "value": "28.9px",
+      "count": 790
+    },
+    {
+      "value": "25.5px",
+      "count": 577
+    },
+    {
+      "value": "33.8px",
+      "count": 256
+    },
+    {
+      "value": "18.75px",
+      "count": 237
+    },
+    {
+      "value": "29.7px",
+      "count": 137
+    },
+    {
+      "value": "40px",
+      "count": 82
+    },
+    {
+      "value": "44.8px",
+      "count": 49
+    },
+    {
+      "value": "20.25px",
+      "count": 36
+    }
+  ],
+  "topFontWeights": [
+    {
+      "value": "400",
+      "count": 1775
+    },
+    {
+      "value": "700",
+      "count": 1273
+    },
+    {
+      "value": "600",
+      "count": 870
+    },
+    {
+      "value": "500",
+      "count": 766
+    },
+    {
+      "value": "800",
+      "count": 397
+    },
+    {
+      "value": "900",
+      "count": 34
+    }
+  ],
+  "topTextColors": [
+    {
+      "value": "rgb(51, 65, 85)",
+      "count": 3191
+    },
+    {
+      "value": "rgb(255, 255, 255)",
+      "count": 847
+    },
+    {
+      "value": "rgb(15, 23, 42)",
+      "count": 570
+    },
+    {
+      "value": "rgb(203, 213, 225)",
+      "count": 466
+    },
+    {
+      "value": "rgb(30, 41, 59)",
+      "count": 464
+    },
+    {
+      "value": "rgb(3, 105, 161)",
+      "count": 185
+    },
+    {
+      "value": "rgb(71, 85, 105)",
+      "count": 156
+    },
+    {
+      "value": "rgba(255, 255, 255, 0.95)",
+      "count": 50
+    },
+    {
+      "value": "rgb(190, 18, 60)",
+      "count": 34
+    },
+    {
+      "value": "rgb(194, 65, 12)",
+      "count": 33
+    },
+    {
+      "value": "oklch(0.577 0.245 27.325)",
+      "count": 29
+    },
+    {
+      "value": "oklch(0.637 0.237 25.331)",
+      "count": 27
+    },
+    {
+      "value": "rgb(124, 58, 237)",
+      "count": 23
+    },
+    {
+      "value": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+      "count": 22
+    },
+    {
+      "value": "rgb(138, 101, 39)",
+      "count": 22
+    }
+  ],
+  "topBackgroundColors": [
+    {
+      "value": "rgb(255, 255, 255)",
+      "count": 345
+    },
+    {
+      "value": "oklch(0.985 0.002 247.839)",
+      "count": 249
+    },
+    {
+      "value": "rgb(3, 105, 161)",
+      "count": 191
+    },
+    {
+      "value": "rgba(0, 0, 0, 0.6)",
+      "count": 114
+    },
+    {
+      "value": "oklch(0.278 0.033 256.848)",
+      "count": 87
+    },
+    {
+      "value": "oklch(0.984 0.003 247.858)",
+      "count": 61
+    },
+    {
+      "value": "oklch(0.967 0.003 264.542)",
+      "count": 51
+    },
+    {
+      "value": "oklch(0.962 0.018 272.314)",
+      "count": 33
+    },
+    {
+      "value": "oklch(0.979 0.021 166.113)",
+      "count": 33
+    },
+    {
+      "value": "oklch(0.21 0.034 264.665)",
+      "count": 32
+    },
+    {
+      "value": "oklab(0.979 -0.0203862 0.00504016 / 0.5)",
+      "count": 29
+    },
+    {
+      "value": "rgba(255, 255, 255, 0.97)",
+      "count": 22
+    },
+    {
+      "value": "oklch(0.208 0.042 265.755)",
+      "count": 20
+    },
+    {
+      "value": "oklch(0.928 0.006 264.531)",
+      "count": 18
+    },
+    {
+      "value": "rgb(138, 101, 39)",
+      "count": 16
+    }
+  ],
+  "topPaddings": [
+    {
+      "value": "0px 32px",
+      "count": 141
+    },
+    {
+      "value": "16px",
+      "count": 114
+    },
+    {
+      "value": "28px",
+      "count": 53
+    },
+    {
+      "value": "104px 0px",
+      "count": 44
+    },
+    {
+      "value": "12px",
+      "count": 29
+    },
+    {
+      "value": "16px 20px",
+      "count": 3
+    },
+    {
+      "value": "32px 0px 104px",
+      "count": 1
+    }
+  ],
+  "topGaps": [
+    {
+      "value": "8px",
+      "count": 286
+    },
+    {
+      "value": "16px",
+      "count": 186
+    },
+    {
+      "value": "20px",
+      "count": 111
+    },
+    {
+      "value": "12px",
+      "count": 73
+    },
+    {
+      "value": "24px",
+      "count": 61
+    },
+    {
+      "value": "4px",
+      "count": 43
+    },
+    {
+      "value": "36px",
+      "count": 30
+    },
+    {
+      "value": "40px",
+      "count": 30
+    },
+    {
+      "value": "28px",
+      "count": 16
+    },
+    {
+      "value": "48px",
+      "count": 2
+    }
+  ],
+  "topBorderRadii": [
+    {
+      "value": "12px",
+      "count": 299
+    },
+    {
+      "value": "14px",
+      "count": 126
+    },
+    {
+      "value": "16px",
+      "count": 37
+    },
+    {
+      "value": "9999px",
+      "count": 4
+    },
+    {
+      "value": "3.35544e+07px",
+      "count": 2
+    }
+  ],
+  "topButtonHeights": [
+    {
+      "value": "18.8438px",
+      "count": 60
+    },
+    {
+      "value": "38.8438px",
+      "count": 29
+    },
+    {
+      "value": "43.5px",
+      "count": 22
+    },
+    {
+      "value": "41.5px",
+      "count": 7
+    },
+    {
+      "value": "45.5px",
+      "count": 6
+    },
+    {
+      "value": "48px",
+      "count": 5
+    },
+    {
+      "value": "23.25px",
+      "count": 5
+    },
+    {
+      "value": "53.5px",
+      "count": 4
+    },
+    {
+      "value": "49.75px",
+      "count": 3
+    },
+    {
+      "value": "32px",
+      "count": 2
+    },
+    {
+      "value": "40px",
+      "count": 2
+    },
+    {
+      "value": "37.6875px",
+      "count": 1
+    },
+    {
+      "value": "20.8438px",
+      "count": 1
+    },
+    {
+      "value": "51.25px",
+      "count": 1
+    }
+  ]
+}

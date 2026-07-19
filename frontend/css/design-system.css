@@ -16,8 +16,18 @@
 
   /* Surfaces & borders (collapsed neutrals) */
   --surface: #f8fafc;
+  --surface-2: #f1f5f9;     /* slate-100 — soft secondary */
+  --surface-3: #e2e8f0;     /* slate-200 — borders / dividers */
+  --surface-tint: #eff6ff;  /* sky-50  — accent surface */
+  --surface-tint-2: #ecfdf5;/* emerald-50 — success surface */
+  --surface-tint-3: #fdf2f8;/* rose-50 — danger surface */
   --surface-elevated: #ffffff;
   --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  /* Backdrop overlays */
+  --overlay-modal: rgba(0, 0, 0, 0.6);
+  --overlay-soft:  rgba(15, 23, 42, 0.4);
 
   /* Text (4 roles) */
   --text: #0f172a;
@@ -90,6 +100,14 @@
   --btn-pad-x-md: var(--space-5);
   --btn-pad-y-lg: var(--space-3);
   --btn-pad-x-lg: var(--space-6);
+
+  /* Button heights — one value per size, snapped to 8-px grid */
+  --btn-height-sm: 2.5rem;   /* 40px */
+  --btn-height-md: 3rem;     /* 48px — default */
+  --btn-height-lg: 3.25rem;  /* 52px */
+
+  /* Button radius — collapsed to a single token (was 12/14/16) */
+  --btn-radius: 0.75rem;     /* 12px */
 
   /* Legacy aliases */
   --color-bg-primary: var(--surface-elevated);
@@ -297,20 +315,24 @@ textarea:focus {
   justify-content: center;
   gap: var(--space-2);
   padding: var(--btn-pad-y-md) var(--btn-pad-x-md);
+  min-height: var(--btn-height-md);
   font-family: var(--font-primary);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semibold);
   line-height: 1.25;
-  border-radius: var(--radius);
+  border-radius: var(--btn-radius);
   transition: var(--transition);
   white-space: nowrap;
+  text-decoration: none;
 }
 .btn-sm {
   padding: var(--btn-pad-y-sm) var(--btn-pad-x-sm);
+  min-height: var(--btn-height-sm);
   font-size: var(--font-size-caption);
 }
 .btn-lg {
   padding: var(--btn-pad-y-lg) var(--btn-pad-x-lg);
+  min-height: var(--btn-height-lg);
   font-size: var(--font-size-body);
 }
 .btn-primary {
@@ -557,7 +579,7 @@ textarea:focus {
   position: fixed;
   inset: 0;
   z-index: 1500;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--overlay-modal);
   backdrop-filter: blur(8px);
   display: none;
   align-items: center;
