@@ -40,7 +40,7 @@
   <div class="absolute -top-40 -right-40 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl"></div>
   
   <div class="container relative z-10 text-center max-w-3xl">
-    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30 mb-4">
+    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30 mb-4">
       🚀 LAYOVERX PARTNER PROGRAM
     </span>
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
@@ -86,29 +86,29 @@
           <div id="stepper-progress-line" class="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-sky-600 z-0 transition-all duration-300" style="width: 0%;"></div>
 
           <!-- Step Indicators -->
-          <div class="step-indicator z-10 flex flex-col items-center gap-1.5 active" data-step="1">
+          <div class="step-indicator z-10 flex flex-col items-center gap-2 active" data-step="1">
             <div class="w-8 h-8 rounded-full bg-sky-600 text-white font-bold text-sm flex items-center justify-center transition-all shadow-md shadow-sky-500/20 ring-4 ring-sky-50">1</div>
-            <span class="text-[10px] sm:text-xs font-bold text-gray-800">Owner</span>
+            <span class="text-xs sm:text-xs font-bold text-gray-800">Owner</span>
           </div>
-          <div class="step-indicator z-10 flex flex-col items-center gap-1.5" data-step="2">
+          <div class="step-indicator z-10 flex flex-col items-center gap-2" data-step="2">
             <div class="w-8 h-8 rounded-full bg-white text-gray-400 border border-gray-300 font-bold text-sm flex items-center justify-center transition-all">2</div>
-            <span class="text-[10px] sm:text-xs font-medium text-gray-400">Business</span>
+            <span class="text-xs sm:text-xs font-medium text-gray-400">Business</span>
           </div>
-          <div class="step-indicator z-10 flex flex-col items-center gap-1.5" data-step="3">
+          <div class="step-indicator z-10 flex flex-col items-center gap-2" data-step="3">
             <div class="w-8 h-8 rounded-full bg-white text-gray-400 border border-gray-300 font-bold text-sm flex items-center justify-center transition-all">3</div>
-            <span class="text-[10px] sm:text-xs font-medium text-gray-400">Location</span>
+            <span class="text-xs sm:text-xs font-medium text-gray-400">Location</span>
           </div>
-          <div class="step-indicator z-10 flex flex-col items-center gap-1.5" data-step="4">
+          <div class="step-indicator z-10 flex flex-col items-center gap-2" data-step="4">
             <div class="w-8 h-8 rounded-full bg-white text-gray-400 border border-gray-300 font-bold text-sm flex items-center justify-center transition-all">4</div>
-            <span class="text-[10px] sm:text-xs font-medium text-gray-400">Details</span>
+            <span class="text-xs sm:text-xs font-medium text-gray-400">Details</span>
           </div>
-          <div class="step-indicator z-10 flex flex-col items-center gap-1.5" data-step="5">
+          <div class="step-indicator z-10 flex flex-col items-center gap-2" data-step="5">
             <div class="w-8 h-8 rounded-full bg-white text-gray-400 border border-gray-300 font-bold text-sm flex items-center justify-center transition-all">5</div>
-            <span class="text-[10px] sm:text-xs font-medium text-gray-400">Uploads</span>
+            <span class="text-xs sm:text-xs font-medium text-gray-400">Uploads</span>
           </div>
-          <div class="step-indicator z-10 flex flex-col items-center gap-1.5" data-step="6">
+          <div class="step-indicator z-10 flex flex-col items-center gap-2" data-step="6">
             <div class="w-8 h-8 rounded-full bg-white text-gray-400 border border-gray-300 font-bold text-sm flex items-center justify-center transition-all">6</div>
-            <span class="text-[10px] sm:text-xs font-medium text-gray-400">Review</span>
+            <span class="text-xs sm:text-xs font-medium text-gray-400">Review</span>
           </div>
         </div>
       </div>
@@ -267,7 +267,7 @@
                     <input type="file" id="upload-logo" accept="image/*,.pdf" class="hidden" required onchange="partnerOnboarding.handleFileSelected(this, 'logo')"/>
                   </label>
                 </div>
-                <div id="file-logo-status" class="hidden mt-3 text-xs font-medium text-emerald-600 flex items-center gap-1.5">
+                <div id="file-logo-status" class="hidden mt-3 text-xs font-medium text-emerald-600 flex items-center gap-2">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   <span>Selected: <strong class="file-name text-gray-800"></strong></span>
                 </div>
@@ -286,7 +286,7 @@
                     <input type="file" id="upload-license" accept="image/*,.pdf" class="hidden" required onchange="partnerOnboarding.handleFileSelected(this, 'license')"/>
                   </label>
                 </div>
-                <div id="file-license-status" class="hidden mt-3 text-xs font-medium text-emerald-600 flex items-center gap-1.5">
+                <div id="file-license-status" class="hidden mt-3 text-xs font-medium text-emerald-600 flex items-center gap-2">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   <span>Selected: <strong class="file-name text-gray-800"></strong></span>
                 </div>
@@ -305,7 +305,7 @@
                     <input type="file" id="upload-id" accept="image/*,.pdf" class="hidden" required onchange="partnerOnboarding.handleFileSelected(this, 'id')"/>
                   </label>
                 </div>
-                <div id="file-id-status" class="hidden mt-3 text-xs font-medium text-emerald-600 flex items-center gap-1.5">
+                <div id="file-id-status" class="hidden mt-3 text-xs font-medium text-emerald-600 flex items-center gap-2">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   <span>Selected: <strong class="file-name text-gray-800"></strong></span>
                 </div>
@@ -387,7 +387,7 @@
               </div>
               <div class="flex justify-between items-center text-sm">
                 <span class="text-gray-500 font-medium">Review Verification Status:</span>
-                <span class="px-2.5 py-1 text-xs font-bold text-amber-700 bg-amber-100 rounded-full flex items-center gap-1.5">
+                <span class="px-2.5 py-1 text-xs font-bold text-amber-700 bg-amber-100 rounded-full flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
                   Pending Review
                 </span>
@@ -482,17 +482,17 @@
           // Completed steps
           ring.className = "w-8 h-8 rounded-full bg-emerald-600 text-white font-bold text-sm flex items-center justify-center shadow-md shadow-emerald-500/10 transition-all";
           ring.innerHTML = '✓';
-          indicator.querySelector('span').className = "text-[10px] sm:text-xs font-bold text-emerald-600";
+          indicator.querySelector('span').className = "text-xs sm:text-xs font-bold text-emerald-600";
         } else if (step === this.currentStep) {
           // Active step
           ring.className = "w-8 h-8 rounded-full bg-sky-600 text-white font-bold text-sm flex items-center justify-center shadow-md shadow-sky-500/20 ring-4 ring-sky-50 transition-all";
           ring.innerHTML = step;
-          indicator.querySelector('span').className = "text-[10px] sm:text-xs font-bold text-gray-800";
+          indicator.querySelector('span').className = "text-xs sm:text-xs font-bold text-gray-800";
         } else {
           // Inactive step
           ring.className = "w-8 h-8 rounded-full bg-white text-gray-400 border border-gray-300 font-bold text-sm flex items-center justify-center transition-all";
           ring.innerHTML = step;
-          indicator.querySelector('span').className = "text-[10px] sm:text-xs font-medium text-gray-400";
+          indicator.querySelector('span').className = "text-xs sm:text-xs font-medium text-gray-400";
         }
       });
     },

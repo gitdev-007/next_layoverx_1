@@ -40,7 +40,7 @@
   <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
   
   <div class="container relative z-10 text-center max-w-3xl">
-    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-4">
+    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-4">
       📊 PARTNER DASHBOARD
     </span>
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
@@ -200,7 +200,7 @@
                 <span class="text-xl">🖼️</span>
                 <div class="flex-grow">
                   <div class="text-xs font-bold text-gray-900">Logo / Banner Image</div>
-                  <div class="text-[10px] text-gray-400">View file</div>
+                  <div class="text-xs text-gray-400">View file</div>
                 </div>
                 <span class="text-gray-400 font-semibold text-lg">↗</span>
               </a>
@@ -209,7 +209,7 @@
                 <span class="text-xl">📜</span>
                 <div class="flex-grow">
                   <div class="text-xs font-bold text-gray-900">GST / Trade License</div>
-                  <div class="text-[10px] text-gray-400">View file</div>
+                  <div class="text-xs text-gray-400">View file</div>
                 </div>
                 <span class="text-gray-400 font-semibold text-lg">↗</span>
               </a>
@@ -218,7 +218,7 @@
                 <span class="text-xl">🆔</span>
                 <div class="flex-grow">
                   <div class="text-xs font-bold text-gray-900">Owner Verification ID</div>
-                  <div class="text-[10px] text-gray-400">View file</div>
+                  <div class="text-xs text-gray-400">View file</div>
                 </div>
                 <span class="text-gray-400 font-semibold text-lg">↗</span>
               </a>
@@ -427,28 +427,28 @@
     getStatusBadgeHtml(status) {
       if (status === 'pending_review') {
         return `
-          <span class="px-3 py-1 rounded-full text-xs font-bold text-amber-700 bg-amber-100 flex items-center gap-1.5">
+          <span class="px-3 py-1 rounded-full text-xs font-bold text-amber-700 bg-amber-100 flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
             Pending Review
           </span>
         `;
       } else if (status === 'approved') {
         return `
-          <span class="px-3 py-1 rounded-full text-xs font-bold text-emerald-700 bg-emerald-100 flex items-center gap-1.5">
+          <span class="px-3 py-1 rounded-full text-xs font-bold text-emerald-700 bg-emerald-100 flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
             Approved
           </span>
         `;
       } else if (status === 'rejected') {
         return `
-          <span class="px-3 py-1 rounded-full text-xs font-bold text-red-700 bg-red-100 flex items-center gap-1.5">
+          <span class="px-3 py-1 rounded-full text-xs font-bold text-red-700 bg-red-100 flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
             Rejected
           </span>
         `;
       } else if (status === 'requires_info') {
         return `
-          <span class="px-3 py-1 rounded-full text-xs font-bold text-sky-700 bg-sky-100 flex items-center gap-1.5">
+          <span class="px-3 py-1 rounded-full text-xs font-bold text-sky-700 bg-sky-100 flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
             Requires More Info
           </span>

@@ -18,39 +18,33 @@
   <meta name="twitter:description" content="Access your upcoming, past, and draft transit itineraries."/>
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Critical CSS: prevents FOUC & locks base font scale before Tailwind -->
+  <!-- Critical CSS: prevents FOUC & locks design-system type scale before Tailwind -->
   <style>
-    /* Lock root font size — prevents browser zoom shifts */
     html { font-size: 16px; box-sizing: border-box; }
     *, *::before, *::after { box-sizing: inherit; }
 
-    /* Base body typography */
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 1rem;
-      line-height: 1.65;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* Heading scale — clear hierarchy, no browser defaults */
-    h1 { font-size: clamp(2rem, 5vw, 3.5rem);   line-height: 1.15; font-weight: 800; }
-    h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.25; font-weight: 700; }
-    h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); line-height: 1.35; font-weight: 700; }
-    h4 { font-size: 1.125rem; line-height: 1.4;  font-weight: 600; }
-    h5 { font-size: 1rem;     line-height: 1.5;  font-weight: 600; }
-    h6 { font-size: 0.875rem; line-height: 1.5;  font-weight: 600; }
+    /* Phase 2 type roles: H1 36 / H2 30 / H3 20 / body 16 */
+    h1 { font-size: clamp(1.875rem, 4vw, 2.25rem); line-height: 1.15; font-weight: 800; }
+    h2 { font-size: clamp(1.5rem, 3vw, 1.875rem); line-height: 1.25; font-weight: 800; }
+    h3 { font-size: 1.25rem; line-height: 1.35; font-weight: 700; }
+    h4 { font-size: 1.125rem; line-height: 1.4; font-weight: 600; }
+    h5 { font-size: 1rem; line-height: 1.5; font-weight: 600; }
+    h6 { font-size: 0.875rem; line-height: 1.5; font-weight: 600; }
 
-    /* Body text — never smaller than 14px */
-    p  { font-size: 1rem; line-height: 1.7; }
+    p { font-size: 1rem; line-height: 1.6; }
 
-    /* Input & button baseline */
-    input, select, textarea, button { font-family: inherit; font-size: 0.9375rem; }
+    input, select, textarea, button { font-family: inherit; font-size: 0.875rem; }
 
-    /* Prevent layout shift from Tailwind loading */
     .container { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1rem; }
 
-    /* Hide body content until CSS is parsed — avoids naked HTML flash */
     body { visibility: visible; }
   </style>
 
@@ -134,14 +128,14 @@
       <div class="hidden lg:flex items-center gap-4 flex-shrink-0">
         
         <!-- Trip Summary Chip -->
-        <button onclick="openAuthModal('trip-context')" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer" id="global-trip-badge">
+        <button onclick="openAuthModal('trip-context')" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer" id="global-trip-badge">
           <span>✈️ Trip Summary</span>
         </button>
         
         <!-- My Itinerary Link -->
         <a class="nav-link text-sm font-medium transition-colors duration-200 flex items-center gap-1" href="my-itinerary.html" id="nav-itinerary-link">
           My Itinerary
-          <span id="itinerary-badge" class="hidden px-2 py-0.5 text-[10px] font-extrabold bg-rose-500 text-white rounded-full">0</span>
+          <span id="itinerary-badge" class="hidden px-2 py-0.5 text-xs font-extrabold bg-rose-500 text-white rounded-full">0</span>
         </a>
         
         <!-- Plan My Layover primary button -->
@@ -156,7 +150,7 @@
         <!-- Auth User View -->
         <div class="auth-user hidden relative" id="header-user-menu">
           <button id="user-menu-btn" class="flex items-center gap-2 border px-3 py-1.5 rounded-xl transition cursor-pointer" aria-expanded="false" aria-haspopup="true">
-            <div class="w-6 h-6 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full flex items-center justify-center text-[10px] font-bold text-white uppercase user-avatar-letter">U</div>
+            <div class="w-6 h-6 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full flex items-center justify-center text-xs font-bold text-white uppercase user-avatar-letter">U</div>
             <span class="text-sm font-medium user-name">Traveler</span>
             <svg class="w-3.5 h-3.5 transition-transform duration-200" id="user-menu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
@@ -168,14 +162,14 @@
               <p class="text-xs text-gray-500 font-medium">Signed in as</p>
               <p class="text-sm font-bold text-gray-900 truncate user-email-display">traveler@layoverx.com</p>
             </div>
-            <a href="my-profile.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">👤</span> My Profile</a>
-            <a href="my-trips.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">✈️</span> My Trips</a>
-            <a href="saved-itineraries.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">💾</span> Saved Itineraries</a>
-            <a href="supplier-dashboard.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">💼</span> Supplier Hub</a>
-            <a href="revenue-admin.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-55 transition-colors font-semibold text-emerald-700 bg-emerald-50/50"><span class="text-base">📊</span> Revenue Admin</a>
-            <a href="account-settings.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">⚙️</span> Settings</a>
+            <a href="my-profile.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">👤</span> My Profile</a>
+            <a href="my-trips.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">✈️</span> My Trips</a>
+            <a href="saved-itineraries.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">💾</span> Saved Itineraries</a>
+            <a href="supplier-dashboard.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">💼</span> Supplier Hub</a>
+            <a href="revenue-admin.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-55 transition-colors font-semibold text-emerald-700 bg-emerald-50/50"><span class="text-base">📊</span> Revenue Admin</a>
+            <a href="account-settings.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-50 transition-colors"><span class="text-base">⚙️</span> Settings</a>
             <div class="border-t border-gray-100 my-1"></div>
-            <button onclick="layoverx.logout()" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-sm text-red-650 hover:bg-red-50 transition-colors text-left"><span class="text-base">🚪</span> Logout</button>
+            <button onclick="layoverx.logout()" class="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-650 hover:bg-red-50 transition-colors text-left"><span class="text-base">🚪</span> Logout</button>
           </div>
         </div>
       </div>
@@ -191,8 +185,8 @@
 
   <!-- Mobile Dropdown Menu -->
   <div class="lg:hidden hidden bg-white/95 backdrop-blur-xl rounded-2xl mt-2 p-4 shadow-xl mx-4 border border-gray-100" id="mobile-menu">
-    <button onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer" id="global-trip-badge-mobile">✈️ Trip Summary</button>
-    <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium" href="my-itinerary.html">My Itinerary <span id="itinerary-badge-mobile" class="hidden ml-1 px-1.5 py-0.5 text-[10px] font-extrabold bg-rose-500 text-white rounded-full">0</span></a>
+    <button onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer" id="global-trip-badge-mobile">✈️ Trip Summary</button>
+    <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium" href="my-itinerary.html">My Itinerary <span id="itinerary-badge-mobile" class="hidden ml-1 px-1.5 py-0.5 text-xs font-extrabold bg-rose-500 text-white rounded-full">0</span></a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="hotels.html">Hotels</a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="restaurants.html">Restaurants</a>
     <a class="block text-gray-800 py-3 px-4 rounded-xl hover:bg-gray-50 text-sm font-medium " href="spa-wellness.html">Spa & Wellness</a>
@@ -212,7 +206,7 @@
       <div class="flex items-center gap-3 px-4 py-2 bg-gray-50 rounded-xl mb-2">
         <div class="w-8 h-8 bg-gradient-to-br from-sky-400 to-sky-600 rounded-full flex items-center justify-center text-xs font-bold text-white uppercase user-avatar-letter">U</div>
         <div>
-          <div class="text-[10px] text-gray-400 font-medium">Signed in as</div>
+          <div class="text-xs text-gray-400 font-medium">Signed in as</div>
           <div class="text-sm font-bold text-gray-900 user-name">Traveler</div>
         </div>
       </div>
@@ -275,7 +269,7 @@
             <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
               <span class="text-sky-500">🗺️</span> Live Transit Route
             </h3>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-2 py-1 rounded-lg">Real-time sync</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-2 py-1 rounded-lg">Real-time sync</span>
           </div>
           <div class="w-full h-64 bg-slate-100 relative">
             <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-400">
@@ -366,11 +360,11 @@
       </div>
 
       <!-- Mock barcode/QR -->
-      <div class="flex flex-col items-center justify-center gap-1.5 pt-4 border-t border-slate-100 border-dashed">
+      <div class="flex flex-col items-center justify-center gap-2 pt-4 border-t border-slate-100 border-dashed">
         <div class="w-44 h-16 bg-slate-100 flex items-center justify-center text-2xl font-mono tracking-widest text-slate-400 border border-slate-200">
           ||||| | ||||| | | ||
         </div>
-        <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Present at gate check exit</span>
+        <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Present at gate check exit</span>
       </div>
     </div>
   </div>
@@ -429,15 +423,15 @@
       <div>
         <h3 class="font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider">Get In Touch</h3>
         <ul class="space-y-3">
-          <li class="flex items-center gap-2.5 text-gray-400 text-sm">
+          <li class="flex items-center gap-3 text-gray-400 text-sm">
             <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
             <a href="mailto:hello@layoverx.com" class="hover:text-white transition-colors">hello@layoverx.com</a>
           </li>
-          <li class="flex items-center gap-2.5 text-gray-400 text-sm">
+          <li class="flex items-center gap-3 text-gray-400 text-sm">
             <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.47-5.112-3.758-6.58-6.58l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
             <a href="tel:+912212345678" class="hover:text-white transition-colors">+91 22 1234 5678</a>
           </li>
-          <li class="flex items-start gap-2.5 text-gray-400 text-sm">
+          <li class="flex items-start gap-3 text-gray-400 text-sm">
             <svg class="w-4 h-4 text-sky-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
             <span>Andheri East, Near CSMIA Terminal 2,<br/>Mumbai, MH 400099, India</span>
           </li>
@@ -543,7 +537,7 @@
             <div class="flex gap-1 h-1.5 w-full rounded-full overflow-hidden bg-gray-100">
               <div class="h-full transition-all duration-300" id="pwd-strength-bar"></div>
             </div>
-            <p class="text-[10px] text-gray-500 mt-1 font-medium" id="pwd-strength-text">Must be at least 8 characters</p>
+            <p class="text-xs text-gray-500 mt-1 font-medium" id="pwd-strength-text">Must be at least 8 characters</p>
           </div>
         </div>
         <button id="btn-signup-submit" type="submit" class="btn btn-primary w-full mt-4 py-3.5 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex justify-center items-center gap-2">

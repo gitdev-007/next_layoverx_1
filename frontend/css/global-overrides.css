@@ -1,28 +1,80 @@
 /*
- * Final shared UI pass. This stylesheet loads after Tailwind and the design
- * system, so it is deliberately limited to rules that must be consistent on
- * every generated page.
+ * Final shared UI pass — loads after Tailwind + design-system.
+ * Enforces the Phase 2 token scale on utilities that bypass :root.
  */
 
 :root {
+  /* Keep in sync with design-system.css (explicit for cascade clarity) */
   --primary: #0369a1;
   --primary-dark: #075985;
   --primary-light: #7dd3fc;
+  --text: #0f172a;
   --text-muted: #475569;
+  --text-primary: #0f172a;
   --body-color: #1e293b;
+  --heading-color: #0f172a;
+  --surface: #f8fafc;
+  --surface-elevated: #ffffff;
+  --border: #e2e8f0;
+  --font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.875rem;
+  --font-size-h3: 1.25rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-caption: 0.75rem;
+  --font-size-xs: 0.75rem;
+  --section-y-sm: 4rem;
+  --section-y-md: 5rem;
+  --section-y-lg: 6rem;
 }
 
-/* Theme accents serve as both text and button colors, so keep each accessible on white. */
-.theme-hotels { --primary: #8a6527; --primary-dark: #70501d; --primary-light: #e9c987; }
-.theme-restaurants { --primary: #c2410c; --primary-dark: #9a3412; --primary-light: #fdba74; }
-.theme-spa { --primary: #7c3aed; --primary-dark: #6d28d9; --primary-light: #c4b5fd; }
-.theme-gaming { --primary: #a21caf; --primary-dark: #86198f; --primary-light: #f5d0fe; }
-.theme-tours { --primary: #be123c; --primary-dark: #9f1239; --primary-light: #fda4af; }
+.theme-hotels {
+  --primary: #8a6527;
+  --primary-dark: #70501d;
+  --primary-light: #e9c987;
+}
+.theme-restaurants {
+  --primary: #c2410c;
+  --primary-dark: #9a3412;
+  --primary-light: #fdba74;
+}
+.theme-spa {
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --primary-light: #c4b5fd;
+}
+.theme-gaming {
+  --primary: #a21caf;
+  --primary-dark: #86198f;
+  --primary-light: #f5d0fe;
+}
+.theme-tours {
+  --primary: #be123c;
+  --primary-dark: #9f1239;
+  --primary-light: #fda4af;
+}
+.theme-transfers {
+  --primary: #475569;
+  --primary-dark: #1e293b;
+  --primary-light: #94a3b8;
+}
 
-/* Reset browser paragraph margins; page utilities now control local composition. */
+/* Font inheritance — kill ui-sans-serif leaks */
+body,
+button,
+input,
+select,
+textarea,
+.btn,
+[class*="text-"] {
+  font-family: var(--font-primary);
+}
+
 p {
   margin: 0;
-  line-height: 1.65;
+  line-height: 1.6;
+  font-size: var(--font-size-body);
 }
 
 main h1,
@@ -30,6 +82,7 @@ main h2,
 main h3,
 main h4 {
   letter-spacing: -0.015em;
+  font-family: var(--font-primary);
 }
 
 main h1,
@@ -37,55 +90,114 @@ main h2 {
   text-wrap: balance;
 }
 
-/* Metadata stays secondary, while remaining comfortably readable at every breakpoint. */
-main .text-xs {
-  font-size: 0.8125rem;
-  line-height: 1.45;
+/* Hero / page titles — one H1 size band (30–36px) */
+main h1,
+.theme-hero h1,
+section h1 {
+  font-size: clamp(1.875rem, 4vw, var(--font-size-h1)) !important;
+  line-height: 1.15 !important;
+  font-weight: 800 !important;
 }
 
+/* True section titles (exclude caption/small utility roles) */
+main h2:not(.text-xs):not(.text-sm):not(.text-base) {
+  font-size: clamp(1.5rem, 3vw, var(--font-size-h2));
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+/*
+ * Caption / small text — map arbitrary + remapped sizes onto 12px / 14px.
+ * (Previously text-xs was forced to 13px / 0.8125rem — that created sprawl.)
+ */
+.text-xs,
+main .text-xs,
+.text-\[9px\],
+.text-\[10px\],
+.text-\[11px\],
 main .text-\[9px\],
 main .text-\[10px\],
 main .text-\[11px\] {
-  font-size: 0.75rem;
-  line-height: 1.45;
+  font-size: var(--font-size-caption) !important;
+  line-height: 1.4 !important;
 }
 
-/* Low-contrast slate/gray utilities are used for primary information on white cards. */
-main .text-gray-400,
-main .text-slate-400 {
-  color: #64748b;
+.text-sm,
+main .text-sm {
+  font-size: var(--font-size-small) !important;
+  line-height: 1.5 !important;
 }
 
-/* Preserve the light treatment for muted text that intentionally sits on dark surfaces. */
-main :is(.bg-gray-800, .bg-gray-900, .bg-gray-950, .bg-slate-800, .bg-slate-900, .bg-slate-950) :is(.text-gray-400, .text-slate-400) {
-  color: #cbd5e1;
+.text-base,
+main .text-base {
+  font-size: var(--font-size-body) !important;
+  line-height: 1.6 !important;
 }
 
-/* One responsive rhythm keeps adjacent sections visually consistent. */
+/* Higher specificity than .text-sm / .text-lg utilities above */
+main h3.text-lg,
+main h3.text-xl,
+.card h3 {
+  font-size: var(--font-size-h3) !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+}
+
+footer h3,
+footer h3.text-sm,
+aside h3.text-xs,
+aside h3.text-sm,
+main h3.text-xs,
+main h3.text-sm.uppercase {
+  font-size: var(--font-size-caption) !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em;
+}
+
+/* Off-grid gaps → nearest 8px-grid step */
+.gap-1\.5 { gap: 0.5rem !important; } /* 6 → 8 */
+.gap-x-1\.5 { column-gap: 0.5rem !important; }
+.gap-y-1\.5 { row-gap: 0.5rem !important; }
+.gap-2\.5 { gap: 0.75rem !important; } /* 10 → 12 */
+.gap-x-2\.5 { column-gap: 0.75rem !important; }
+.gap-y-2\.5 { row-gap: 0.75rem !important; }
+
+/* Section rhythm — exact 64 / 80 / 96 (not clamp mid-values like 86.4px) */
 .section {
-  padding-top: clamp(3.5rem, 6vw, 5.5rem);
-  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+  padding-top: var(--section-y-sm) !important;
+  padding-bottom: var(--section-y-sm) !important;
+}
+@media (min-width: 768px) {
+  .section {
+    padding-top: var(--section-y-md) !important;
+    padding-bottom: var(--section-y-md) !important;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    padding-top: var(--section-y-lg) !important;
+    padding-bottom: var(--section-y-lg) !important;
+  }
 }
 
-/* Cards define their own internal padding in page markup; only preserve their outer geometry here. */
 .card {
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 1rem;
+  background: var(--surface-elevated);
 }
 
 .container {
-  max-width: 75rem;
+  max-width: 80rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 @media (min-width: 640px) {
   .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
-
 @media (min-width: 1024px) {
   .container {
     padding-left: 2rem;
@@ -93,7 +205,86 @@ main :is(.bg-gray-800, .bg-gray-900, .bg-gray-950, .bg-slate-800, .bg-slate-900,
   }
 }
 
+/* Collapse muted greys onto one token */
+main .text-gray-400,
+main .text-slate-400,
+main .text-gray-500,
+main .text-slate-500,
+.text-gray-400,
+.text-slate-400,
+.text-gray-500,
+.text-slate-500 {
+  color: var(--text-muted) !important;
+}
+
+main .text-gray-600,
+main .text-slate-600,
+.text-gray-600,
+.text-slate-600 {
+  color: var(--body-color) !important;
+}
+
+main .text-gray-800,
+main .text-slate-800,
+main .text-gray-900,
+main .text-slate-900,
+.text-gray-800,
+.text-slate-800,
+.text-gray-900,
+.text-slate-900 {
+  color: var(--heading-color) !important;
+}
+
+/* Preserve light muted text on dark surfaces */
+:is(.bg-gray-800, .bg-gray-900, .bg-gray-950, .bg-slate-800, .bg-slate-900, .bg-slate-950, .theme-hero)
+  :is(.text-gray-400, .text-slate-400, .text-gray-500, .text-slate-500) {
+  color: #cbd5e1 !important;
+}
+
+/* Primary brand utilities → CSS token (reduce sky-* drift) */
+.bg-sky-600,
+.bg-sky-700,
+.hover\:bg-sky-600:hover,
+.hover\:bg-sky-700:hover {
+  background-color: var(--primary) !important;
+}
+.text-sky-600,
+.text-sky-700,
+.text-sky-500 {
+  color: var(--primary) !important;
+}
+.border-sky-600,
+.border-sky-700 {
+  border-color: var(--primary) !important;
+}
+
+/* Button API — kill .95rem / 15.2px */
+.btn,
+#search-btn,
+button[type="submit"],
+.plan-my-layover-btn {
+  font-size: var(--font-size-small) !important;
+  font-family: var(--font-primary) !important;
+}
+.btn {
+  padding: 0.75rem 1.5rem !important; /* 12×24 */
+}
+.btn-sm {
+  padding: 0.5rem 1rem !important; /* 8×16 */
+  font-size: var(--font-size-caption) !important;
+}
+.btn-lg {
+  padding: 0.75rem 2rem !important; /* 12×32 */
+  font-size: var(--font-size-body) !important;
+}
+
+/* Common Tailwind CTA chips → md button padding on 8px grid */
+a.px-3\.5.py-1\.5,
+button.px-3\.5.py-1\.5 {
+  padding: 0.5rem 1rem !important;
+}
+
 :where(a, button, input, select, textarea):focus-visible {
-  outline: 3px solid rgba(14, 165, 233, 0.45);
+  outline: 3px solid rgba(3, 105, 161, 0.45);
   outline-offset: 3px;
 }

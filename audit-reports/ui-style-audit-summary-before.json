@@ -1,0 +1,1871 @@
+{
+  "meta": {
+    "baseUrl": "https://next-layoverx-1.vercel.app",
+    "startedAt": "2026-07-19T09:55:31.102Z",
+    "finishedAt": "2026-07-19T09:56:27.909Z",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "routeCount": 30,
+    "okCount": 30,
+    "failCount": 0
+  },
+  "summary": {
+    "fontFamilies": [
+      {
+        "value": "Inter, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "count": 2323
+      },
+      {
+        "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+        "count": 11
+      }
+    ],
+    "fontSizesByTag": {
+      "h1": [
+        {
+          "value": "30px",
+          "count": 26
+        },
+        {
+          "value": "36px",
+          "count": 3
+        },
+        {
+          "value": "24px",
+          "count": 1
+        }
+      ],
+      "h2": [
+        {
+          "value": "18px",
+          "count": 24
+        },
+        {
+          "value": "30px",
+          "count": 23
+        },
+        {
+          "value": "16px",
+          "count": 7
+        },
+        {
+          "value": "24px",
+          "count": 4
+        },
+        {
+          "value": "14px",
+          "count": 4
+        },
+        {
+          "value": "20px",
+          "count": 2
+        },
+        {
+          "value": "13px",
+          "count": 1
+        }
+      ],
+      "h3": [
+        {
+          "value": "14px",
+          "count": 121
+        },
+        {
+          "value": "18px",
+          "count": 38
+        },
+        {
+          "value": "20px",
+          "count": 18
+        },
+        {
+          "value": "13px",
+          "count": 14
+        },
+        {
+          "value": "16px",
+          "count": 12
+        },
+        {
+          "value": "24px",
+          "count": 6
+        }
+      ],
+      "h4": [
+        {
+          "value": "14px",
+          "count": 1
+        }
+      ],
+      "p": [
+        {
+          "value": "14px",
+          "count": 143
+        },
+        {
+          "value": "13px",
+          "count": 66
+        },
+        {
+          "value": "12px",
+          "count": 37
+        },
+        {
+          "value": "16px",
+          "count": 27
+        },
+        {
+          "value": "18px",
+          "count": 1
+        }
+      ],
+      "span": [
+        {
+          "value": "13px",
+          "count": 165
+        },
+        {
+          "value": "12px",
+          "count": 64
+        },
+        {
+          "value": "20px",
+          "count": 55
+        },
+        {
+          "value": "14px",
+          "count": 42
+        },
+        {
+          "value": "16px",
+          "count": 36
+        },
+        {
+          "value": "30px",
+          "count": 19
+        },
+        {
+          "value": "18px",
+          "count": 15
+        },
+        {
+          "value": "24px",
+          "count": 9
+        },
+        {
+          "value": "36px",
+          "count": 3
+        },
+        {
+          "value": "15.2px",
+          "count": 1
+        }
+      ],
+      "a": [
+        {
+          "value": "14px",
+          "count": 462
+        },
+        {
+          "value": "16px",
+          "count": 192
+        },
+        {
+          "value": "13px",
+          "count": 65
+        },
+        {
+          "value": "18px",
+          "count": 21
+        },
+        {
+          "value": "12px",
+          "count": 10
+        }
+      ],
+      "button": [
+        {
+          "value": "13px",
+          "count": 71
+        },
+        {
+          "value": "12px",
+          "count": 30
+        },
+        {
+          "value": "14px",
+          "count": 19
+        },
+        {
+          "value": "15px",
+          "count": 10
+        },
+        {
+          "value": "15.2px",
+          "count": 6
+        }
+      ],
+      "label": [
+        {
+          "value": "14px",
+          "count": 42
+        },
+        {
+          "value": "13px",
+          "count": 38
+        },
+        {
+          "value": "16px",
+          "count": 19
+        },
+        {
+          "value": "12px",
+          "count": 1
+        }
+      ],
+      "li": [
+        {
+          "value": "16px",
+          "count": 240
+        },
+        {
+          "value": "14px",
+          "count": 94
+        },
+        {
+          "value": "13px",
+          "count": 26
+        }
+      ]
+    },
+    "fontWeightsByTag": {
+      "h1": [
+        {
+          "value": "800",
+          "count": 30
+        }
+      ],
+      "h2": [
+        {
+          "value": "800",
+          "count": 39
+        },
+        {
+          "value": "700",
+          "count": 26
+        }
+      ],
+      "h3": [
+        {
+          "value": "700",
+          "count": 195
+        },
+        {
+          "value": "800",
+          "count": 14
+        }
+      ],
+      "h4": [
+        {
+          "value": "700",
+          "count": 1
+        }
+      ],
+      "p": [
+        {
+          "value": "400",
+          "count": 261
+        },
+        {
+          "value": "600",
+          "count": 5
+        },
+        {
+          "value": "700",
+          "count": 5
+        },
+        {
+          "value": "500",
+          "count": 3
+        }
+      ],
+      "span": [
+        {
+          "value": "700",
+          "count": 165
+        },
+        {
+          "value": "400",
+          "count": 89
+        },
+        {
+          "value": "600",
+          "count": 76
+        },
+        {
+          "value": "800",
+          "count": 38
+        },
+        {
+          "value": "500",
+          "count": 25
+        },
+        {
+          "value": "900",
+          "count": 16
+        }
+      ],
+      "a": [
+        {
+          "value": "400",
+          "count": 357
+        },
+        {
+          "value": "500",
+          "count": 234
+        },
+        {
+          "value": "700",
+          "count": 88
+        },
+        {
+          "value": "600",
+          "count": 70
+        },
+        {
+          "value": "800",
+          "count": 1
+        }
+      ],
+      "button": [
+        {
+          "value": "700",
+          "count": 102
+        },
+        {
+          "value": "500",
+          "count": 12
+        },
+        {
+          "value": "400",
+          "count": 10
+        },
+        {
+          "value": "600",
+          "count": 9
+        },
+        {
+          "value": "800",
+          "count": 3
+        }
+      ],
+      "label": [
+        {
+          "value": "500",
+          "count": 39
+        },
+        {
+          "value": "700",
+          "count": 38
+        },
+        {
+          "value": "400",
+          "count": 22
+        },
+        {
+          "value": "600",
+          "count": 1
+        }
+      ],
+      "li": [
+        {
+          "value": "400",
+          "count": 360
+        }
+      ]
+    },
+    "lineHeightsByTag": {
+      "h1": [
+        {
+          "value": "34.5px",
+          "count": 26
+        },
+        {
+          "value": "41.4px",
+          "count": 3
+        },
+        {
+          "value": "27.6px",
+          "count": 1
+        }
+      ],
+      "h2": [
+        {
+          "value": "22.5px",
+          "count": 24
+        },
+        {
+          "value": "37.5px",
+          "count": 23
+        },
+        {
+          "value": "20px",
+          "count": 7
+        },
+        {
+          "value": "30px",
+          "count": 4
+        },
+        {
+          "value": "17.5px",
+          "count": 4
+        },
+        {
+          "value": "25px",
+          "count": 2
+        },
+        {
+          "value": "18.85px",
+          "count": 1
+        }
+      ],
+      "h3": [
+        {
+          "value": "18.9px",
+          "count": 121
+        },
+        {
+          "value": "24.3px",
+          "count": 38
+        },
+        {
+          "value": "27px",
+          "count": 18
+        },
+        {
+          "value": "18.85px",
+          "count": 14
+        },
+        {
+          "value": "21.6px",
+          "count": 12
+        },
+        {
+          "value": "32.4px",
+          "count": 6
+        }
+      ],
+      "h4": [
+        {
+          "value": "19.6px",
+          "count": 1
+        }
+      ],
+      "p": [
+        {
+          "value": "23.1px",
+          "count": 143
+        },
+        {
+          "value": "18.85px",
+          "count": 66
+        },
+        {
+          "value": "19.8px",
+          "count": 28
+        },
+        {
+          "value": "26.4px",
+          "count": 27
+        },
+        {
+          "value": "17.4px",
+          "count": 9
+        },
+        {
+          "value": "29.7px",
+          "count": 1
+        }
+      ],
+      "span": [
+        {
+          "value": "18.85px",
+          "count": 165
+        },
+        {
+          "value": "17.4px",
+          "count": 64
+        },
+        {
+          "value": "28px",
+          "count": 61
+        },
+        {
+          "value": "20px",
+          "count": 39
+        },
+        {
+          "value": "25.6px",
+          "count": 32
+        },
+        {
+          "value": "34.5px",
+          "count": 19
+        },
+        {
+          "value": "22.5px",
+          "count": 9
+        },
+        {
+          "value": "32px",
+          "count": 6
+        },
+        {
+          "value": "24px",
+          "count": 4
+        },
+        {
+          "value": "41.4px",
+          "count": 3
+        },
+        {
+          "value": "28.8px",
+          "count": 3
+        },
+        {
+          "value": "23.1px",
+          "count": 1
+        },
+        {
+          "value": "22.4px",
+          "count": 1
+        },
+        {
+          "value": "21.7143px",
+          "count": 1
+        },
+        {
+          "value": "18.9px",
+          "count": 1
+        }
+      ],
+      "a": [
+        {
+          "value": "20px",
+          "count": 431
+        },
+        {
+          "value": "25.6px",
+          "count": 192
+        },
+        {
+          "value": "18.85px",
+          "count": 65
+        },
+        {
+          "value": "22.4px",
+          "count": 30
+        },
+        {
+          "value": "24.3px",
+          "count": 21
+        },
+        {
+          "value": "17.4px",
+          "count": 10
+        },
+        {
+          "value": "23.1px",
+          "count": 1
+        }
+      ],
+      "button": [
+        {
+          "value": "18.85px",
+          "count": 71
+        },
+        {
+          "value": "16px",
+          "count": 30
+        },
+        {
+          "value": "22.4px",
+          "count": 12
+        },
+        {
+          "value": "24px",
+          "count": 10
+        },
+        {
+          "value": "20px",
+          "count": 7
+        },
+        {
+          "value": "24.32px",
+          "count": 3
+        },
+        {
+          "value": "22.8px",
+          "count": 2
+        },
+        {
+          "value": "21.7143px",
+          "count": 1
+        }
+      ],
+      "label": [
+        {
+          "value": "20px",
+          "count": 42
+        },
+        {
+          "value": "18.85px",
+          "count": 38
+        },
+        {
+          "value": "25.6px",
+          "count": 19
+        },
+        {
+          "value": "17.4px",
+          "count": 1
+        }
+      ],
+      "li": [
+        {
+          "value": "25.6px",
+          "count": 240
+        },
+        {
+          "value": "20px",
+          "count": 94
+        },
+        {
+          "value": "18.85px",
+          "count": 26
+        }
+      ]
+    },
+    "textColors": [
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 1477
+      },
+      {
+        "value": "rgb(30, 41, 59)",
+        "count": 1435
+      },
+      {
+        "value": "oklch(0.707 0.022 261.325)",
+        "count": 236
+      },
+      {
+        "value": "rgb(17, 24, 39)",
+        "count": 222
+      },
+      {
+        "value": "oklch(0.373 0.034 259.733)",
+        "count": 166
+      },
+      {
+        "value": "oklch(0.446 0.03 256.802)",
+        "count": 84
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.95)",
+        "count": 66
+      },
+      {
+        "value": "oklch(0.278 0.033 256.848)",
+        "count": 64
+      },
+      {
+        "value": "rgb(2, 132, 199)",
+        "count": 64
+      },
+      {
+        "value": "rgb(71, 85, 105)",
+        "count": 52
+      },
+      {
+        "value": "oklch(0.372 0.044 257.287)",
+        "count": 48
+      },
+      {
+        "value": "oklch(0.5 0.134 242.749)",
+        "count": 41
+      },
+      {
+        "value": "rgb(194, 65, 12)",
+        "count": 32
+      },
+      {
+        "value": "rgb(190, 18, 60)",
+        "count": 32
+      },
+      {
+        "value": "rgb(100, 116, 139)",
+        "count": 29
+      },
+      {
+        "value": "oklch(0.928 0.006 264.531)",
+        "count": 28
+      },
+      {
+        "value": "oklch(0.554 0.046 257.417)",
+        "count": 27
+      },
+      {
+        "value": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "count": 25
+      },
+      {
+        "value": "rgb(124, 58, 237)",
+        "count": 25
+      },
+      {
+        "value": "oklch(0.279 0.041 260.031)",
+        "count": 25
+      },
+      {
+        "value": "oklch(0.551 0.027 264.364)",
+        "count": 24
+      },
+      {
+        "value": "rgb(162, 28, 175)",
+        "count": 21
+      },
+      {
+        "value": "oklch(0.508 0.118 165.612)",
+        "count": 20
+      },
+      {
+        "value": "rgba(0, 0, 0, 0)",
+        "count": 16
+      },
+      {
+        "value": "oklch(0.901 0.058 230.902)",
+        "count": 15
+      },
+      {
+        "value": "oklch(0.828 0.111 230.318)",
+        "count": 11
+      },
+      {
+        "value": "rgb(138, 101, 39)",
+        "count": 10
+      },
+      {
+        "value": "oklch(0.869 0.022 252.894)",
+        "count": 10
+      },
+      {
+        "value": "oklch(0.872 0.01 258.338)",
+        "count": 9
+      },
+      {
+        "value": "oklch(0.446 0.043 257.281)",
+        "count": 9
+      },
+      {
+        "value": "oklch(0.21 0.034 264.665)",
+        "count": 8
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.9)",
+        "count": 7
+      },
+      {
+        "value": "rgb(203, 213, 225)",
+        "count": 6
+      },
+      {
+        "value": "oklch(0.765 0.177 163.223)",
+        "count": 5
+      },
+      {
+        "value": "oklch(0.208 0.042 265.755)",
+        "count": 5
+      },
+      {
+        "value": "oklch(0.577 0.245 27.325)",
+        "count": 4
+      },
+      {
+        "value": "oklab(0.828 -0.0708764 -0.0854256 / 0.8)",
+        "count": 4
+      },
+      {
+        "value": "oklch(0.87 0.065 274.039)",
+        "count": 4
+      },
+      {
+        "value": "oklch(0.588 0.158 241.966)",
+        "count": 3
+      },
+      {
+        "value": "oklch(0.129 0.042 264.695)",
+        "count": 3
+      },
+      {
+        "value": "rgb(233, 201, 135)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.845 0.143 164.978)",
+        "count": 2
+      },
+      {
+        "value": "rgb(196, 181, 253)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.827 0.119 306.383)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.879 0.169 91.605)",
+        "count": 2
+      },
+      {
+        "value": "rgb(148, 163, 184)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.685 0.169 237.323)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.696 0.17 162.48)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.785 0.115 274.713)",
+        "count": 2
+      },
+      {
+        "value": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.511 0.262 276.966)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.951 0.026 236.824)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.457 0.24 277.023)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.555 0.163 48.998)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.596 0.145 163.225)",
+        "count": 1
+      }
+    ],
+    "backgroundColors": [
+      {
+        "value": "rgba(0, 0, 0, 0)",
+        "count": 1358
+      },
+      {
+        "value": "oklch(0.278 0.033 256.848)",
+        "count": 154
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 133
+      },
+      {
+        "value": "oklch(0.21 0.034 264.665)",
+        "count": 64
+      },
+      {
+        "value": "oklch(0.985 0.002 247.839)",
+        "count": 56
+      },
+      {
+        "value": "oklch(0.984 0.003 247.858)",
+        "count": 40
+      },
+      {
+        "value": "oklch(0.5 0.134 242.749)",
+        "count": 33
+      },
+      {
+        "value": "oklch(0.208 0.042 265.755)",
+        "count": 32
+      },
+      {
+        "value": "rgb(3, 105, 161)",
+        "count": 30
+      },
+      {
+        "value": "oklch(0.967 0.003 264.542)",
+        "count": 23
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.97)",
+        "count": 22
+      },
+      {
+        "value": "oklch(0.977 0.013 236.62)",
+        "count": 12
+      },
+      {
+        "value": "rgb(138, 101, 39)",
+        "count": 11
+      },
+      {
+        "value": "rgb(194, 65, 12)",
+        "count": 11
+      },
+      {
+        "value": "rgb(190, 18, 60)",
+        "count": 11
+      },
+      {
+        "value": "oklab(0 0 0 / 0.6)",
+        "count": 9
+      },
+      {
+        "value": "rgb(124, 58, 237)",
+        "count": 9
+      },
+      {
+        "value": "rgb(162, 28, 175)",
+        "count": 9
+      },
+      {
+        "value": "rgb(71, 85, 105)",
+        "count": 9
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+        "count": 4
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "count": 4
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.1)",
+        "count": 3
+      },
+      {
+        "value": "oklab(0.685 -0.0912435 -0.142252 / 0.2)",
+        "count": 3
+      },
+      {
+        "value": "oklch(0.979 0.021 166.113)",
+        "count": 3
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.15)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.951 0.026 236.824)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.971 0.013 17.38)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.685 0.169 237.323)",
+        "count": 2
+      },
+      {
+        "value": "rgb(2, 132, 199)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.293 -0.0298021 -0.0588883 / 0.4)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.968 0.007 247.896)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.15)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.962 0.018 272.314)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.987 0.022 95.277)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.585 0.0288678 -0.231205 / 0.2)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.696 0.17 162.48)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.769 0.188 70.08)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.928 0.006 264.531)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.696 -0.162114 0.0511765 / 0.1)",
+        "count": 1
+      }
+    ],
+    "borderColors": [
+      {
+        "value": "rgb(30, 41, 59)",
+        "count": 844
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "count": 624
+      },
+      {
+        "value": "oklch(0.707 0.022 261.325)",
+        "count": 63
+      },
+      {
+        "value": "oklch(0.928 0.006 264.531)",
+        "count": 53
+      },
+      {
+        "value": "rgba(148, 163, 184, 0.22)",
+        "count": 42
+      },
+      {
+        "value": "oklch(0.967 0.003 264.542)",
+        "count": 39
+      },
+      {
+        "value": "oklch(0.446 0.03 256.802)",
+        "count": 39
+      },
+      {
+        "value": "oklch(0.373 0.034 259.733)",
+        "count": 31
+      },
+      {
+        "value": "rgb(2, 132, 199)",
+        "count": 30
+      },
+      {
+        "value": "oklch(0.278 0.033 256.848)",
+        "count": 25
+      },
+      {
+        "value": "rgba(0, 0, 0, 0)",
+        "count": 24
+      },
+      {
+        "value": "rgb(17, 24, 39)",
+        "count": 22
+      },
+      {
+        "value": "rgb(194, 65, 12)",
+        "count": 17
+      },
+      {
+        "value": "rgb(190, 18, 60)",
+        "count": 17
+      },
+      {
+        "value": "oklch(0.372 0.044 257.287)",
+        "count": 17
+      },
+      {
+        "value": "rgb(226, 232, 240)",
+        "count": 16
+      },
+      {
+        "value": "oklch(0.5 0.134 242.749)",
+        "count": 16
+      },
+      {
+        "value": "rgb(124, 58, 237)",
+        "count": 13
+      },
+      {
+        "value": "oklch(0.279 0.041 260.031)",
+        "count": 13
+      },
+      {
+        "value": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+        "count": 11
+      },
+      {
+        "value": "oklch(0.551 0.027 264.364)",
+        "count": 10
+      },
+      {
+        "value": "rgb(162, 28, 175)",
+        "count": 10
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.95)",
+        "count": 8
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "count": 8
+      },
+      {
+        "value": "oklch(0.21 0.034 264.665)",
+        "count": 6
+      },
+      {
+        "value": "oklch(0.446 0.043 257.281)",
+        "count": 6
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+        "count": 4
+      },
+      {
+        "value": "rgb(71, 85, 105)",
+        "count": 4
+      },
+      {
+        "value": "rgb(138, 101, 39)",
+        "count": 3
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.2)",
+        "count": 3
+      },
+      {
+        "value": "oklab(0.685 -0.0912435 -0.142252 / 0.3)",
+        "count": 3
+      },
+      {
+        "value": "oklch(0.87 0.065 274.039)",
+        "count": 3
+      },
+      {
+        "value": "oklch(0.929 0.013 255.508)",
+        "count": 3
+      },
+      {
+        "value": "oklch(0.554 0.046 257.417)",
+        "count": 3
+      },
+      {
+        "value": "rgba(255, 255, 255, 0.3)",
+        "count": 2
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.901 0.058 230.902)",
+        "count": 2
+      },
+      {
+        "value": "oklab(0.828 -0.0708764 -0.0854256 / 0.8)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.885 0.062 18.334)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.208 0.042 265.755)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.951 0.026 236.824)",
+        "count": 2
+      },
+      {
+        "value": "oklch(0.845 0.143 164.978)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.827 0.119 306.383)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.879 0.169 91.605)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.391 -0.0438031 -0.0786212 / 0.5)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.765 0.177 163.223)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.905 0.093 164.15)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.588 0.158 241.966)",
+        "count": 1
+      },
+      {
+        "value": "rgb(100, 116, 139)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.9)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.93 0.034 272.788)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.828 0.111 230.318)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.95 0.052 163.051)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.555 0.163 48.998)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.508 0.118 165.612)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.585 0.0288678 -0.231205 / 0.3)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.872 0.01 258.338)",
+        "count": 1
+      },
+      {
+        "value": "oklab(0.696 -0.162114 0.0511766 / 0.2)",
+        "count": 1
+      },
+      {
+        "value": "oklch(0.968 0.007 247.896)",
+        "count": 1
+      }
+    ],
+    "layoutPaddings": [
+      {
+        "value": "0px 0px 0px 0px",
+        "count": 1145
+      },
+      {
+        "value": "0px 32px 0px 32px",
+        "count": 149
+      },
+      {
+        "value": "86.4px 0px 86.4px 0px",
+        "count": 49
+      },
+      {
+        "value": "12px 24px 12px 24px",
+        "count": 6
+      },
+      {
+        "value": "32px 0px 86.4px 0px",
+        "count": 1
+      }
+    ],
+    "layoutMargins": [
+      {
+        "value": "0px 0px 0px 0px",
+        "count": 1201
+      },
+      {
+        "value": "0px 120px 0px 120px",
+        "count": 149
+      }
+    ],
+    "gaps": [
+      {
+        "value": "normal",
+        "count": 618
+      },
+      {
+        "value": "8px",
+        "count": 173
+      },
+      {
+        "value": "16px",
+        "count": 162
+      },
+      {
+        "value": "10px",
+        "count": 103
+      },
+      {
+        "value": "6px",
+        "count": 83
+      },
+      {
+        "value": "24px",
+        "count": 62
+      },
+      {
+        "value": "4px",
+        "count": 46
+      },
+      {
+        "value": "12px",
+        "count": 41
+      },
+      {
+        "value": "40px",
+        "count": 31
+      },
+      {
+        "value": "32px",
+        "count": 21
+      },
+      {
+        "value": "48px",
+        "count": 10
+      }
+    ],
+    "buttonFontSizes": [
+      {
+        "value": "16px",
+        "count": 133
+      },
+      {
+        "value": "13px",
+        "count": 109
+      },
+      {
+        "value": "14px",
+        "count": 91
+      },
+      {
+        "value": "12px",
+        "count": 42
+      },
+      {
+        "value": "15px",
+        "count": 10
+      },
+      {
+        "value": "15.2px",
+        "count": 6
+      }
+    ],
+    "buttonPaddings": [
+      {
+        "value": "0px 0px 0px 0px",
+        "count": 324
+      },
+      {
+        "value": "10px 20px 10px 20px",
+        "count": 30
+      },
+      {
+        "value": "8px 16px 8px 16px",
+        "count": 24
+      },
+      {
+        "value": "12px 24px 12px 24px",
+        "count": 9
+      },
+      {
+        "value": "12px 32px 12px 32px",
+        "count": 4
+      }
+    ],
+    "sectionPaddings": [
+      {
+        "value": "86.4px 0px 86.4px 0px",
+        "count": 49
+      },
+      {
+        "value": "0px 0px 0px 0px",
+        "count": 35
+      },
+      {
+        "value": "32px 0px 86.4px 0px",
+        "count": 1
+      }
+    ],
+    "debtHints": [
+      {
+        "type": "typography",
+        "severity": "high",
+        "message": "h2 uses 7 distinct font-size values",
+        "values": [
+          {
+            "value": "18px",
+            "count": 24
+          },
+          {
+            "value": "30px",
+            "count": 23
+          },
+          {
+            "value": "16px",
+            "count": 7
+          },
+          {
+            "value": "24px",
+            "count": 4
+          },
+          {
+            "value": "14px",
+            "count": 4
+          },
+          {
+            "value": "20px",
+            "count": 2
+          },
+          {
+            "value": "13px",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "typography",
+        "severity": "high",
+        "message": "h3 uses 6 distinct font-size values",
+        "values": [
+          {
+            "value": "14px",
+            "count": 121
+          },
+          {
+            "value": "18px",
+            "count": 38
+          },
+          {
+            "value": "20px",
+            "count": 18
+          },
+          {
+            "value": "13px",
+            "count": 14
+          },
+          {
+            "value": "16px",
+            "count": 12
+          },
+          {
+            "value": "24px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "type": "typography",
+        "severity": "medium",
+        "message": "p uses 5 distinct font-size values",
+        "values": [
+          {
+            "value": "14px",
+            "count": 143
+          },
+          {
+            "value": "13px",
+            "count": 66
+          },
+          {
+            "value": "12px",
+            "count": 37
+          },
+          {
+            "value": "16px",
+            "count": 27
+          },
+          {
+            "value": "18px",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "typography",
+        "severity": "high",
+        "message": "span uses 10 distinct font-size values",
+        "values": [
+          {
+            "value": "13px",
+            "count": 165
+          },
+          {
+            "value": "12px",
+            "count": 64
+          },
+          {
+            "value": "20px",
+            "count": 55
+          },
+          {
+            "value": "14px",
+            "count": 42
+          },
+          {
+            "value": "16px",
+            "count": 36
+          },
+          {
+            "value": "30px",
+            "count": 19
+          },
+          {
+            "value": "18px",
+            "count": 15
+          },
+          {
+            "value": "24px",
+            "count": 9
+          },
+          {
+            "value": "36px",
+            "count": 3
+          },
+          {
+            "value": "15.2px",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "typography",
+        "severity": "medium",
+        "message": "a uses 5 distinct font-size values",
+        "values": [
+          {
+            "value": "14px",
+            "count": 462
+          },
+          {
+            "value": "16px",
+            "count": 192
+          },
+          {
+            "value": "13px",
+            "count": 65
+          },
+          {
+            "value": "18px",
+            "count": 21
+          },
+          {
+            "value": "12px",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "type": "typography",
+        "severity": "medium",
+        "message": "button uses 5 distinct font-size values",
+        "values": [
+          {
+            "value": "13px",
+            "count": 71
+          },
+          {
+            "value": "12px",
+            "count": 30
+          },
+          {
+            "value": "14px",
+            "count": 19
+          },
+          {
+            "value": "15px",
+            "count": 10
+          },
+          {
+            "value": "15.2px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "type": "typography",
+        "severity": "medium",
+        "message": "label uses 4 distinct font-size values",
+        "values": [
+          {
+            "value": "14px",
+            "count": 42
+          },
+          {
+            "value": "13px",
+            "count": 38
+          },
+          {
+            "value": "16px",
+            "count": 19
+          },
+          {
+            "value": "12px",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "type": "buttons",
+        "severity": "medium",
+        "message": "Buttons use 5 distinct padding combinations",
+        "values": [
+          {
+            "value": "0px 0px 0px 0px",
+            "count": 324
+          },
+          {
+            "value": "10px 20px 10px 20px",
+            "count": 30
+          },
+          {
+            "value": "8px 16px 8px 16px",
+            "count": 24
+          },
+          {
+            "value": "12px 24px 12px 24px",
+            "count": 9
+          },
+          {
+            "value": "12px 32px 12px 32px",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "type": "buttons",
+        "severity": "medium",
+        "message": "Buttons use 6 distinct font-size values",
+        "values": [
+          {
+            "value": "16px",
+            "count": 133
+          },
+          {
+            "value": "13px",
+            "count": 109
+          },
+          {
+            "value": "14px",
+            "count": 91
+          },
+          {
+            "value": "12px",
+            "count": 42
+          },
+          {
+            "value": "15px",
+            "count": 10
+          },
+          {
+            "value": "15.2px",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "type": "color",
+        "severity": "high",
+        "message": "55 distinct text colors found",
+        "topValues": [
+          {
+            "value": "rgb(255, 255, 255)",
+            "count": 1477
+          },
+          {
+            "value": "rgb(30, 41, 59)",
+            "count": 1435
+          },
+          {
+            "value": "oklch(0.707 0.022 261.325)",
+            "count": 236
+          },
+          {
+            "value": "rgb(17, 24, 39)",
+            "count": 222
+          },
+          {
+            "value": "oklch(0.373 0.034 259.733)",
+            "count": 166
+          },
+          {
+            "value": "oklch(0.446 0.03 256.802)",
+            "count": 84
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.95)",
+            "count": 66
+          },
+          {
+            "value": "oklch(0.278 0.033 256.848)",
+            "count": 64
+          },
+          {
+            "value": "rgb(2, 132, 199)",
+            "count": 64
+          },
+          {
+            "value": "rgb(71, 85, 105)",
+            "count": 52
+          },
+          {
+            "value": "oklch(0.372 0.044 257.287)",
+            "count": 48
+          },
+          {
+            "value": "oklch(0.5 0.134 242.749)",
+            "count": 41
+          },
+          {
+            "value": "rgb(194, 65, 12)",
+            "count": 32
+          },
+          {
+            "value": "rgb(190, 18, 60)",
+            "count": 32
+          },
+          {
+            "value": "rgb(100, 116, 139)",
+            "count": 29
+          },
+          {
+            "value": "oklch(0.928 0.006 264.531)",
+            "count": 28
+          },
+          {
+            "value": "oklch(0.554 0.046 257.417)",
+            "count": 27
+          },
+          {
+            "value": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+            "count": 25
+          },
+          {
+            "value": "rgb(124, 58, 237)",
+            "count": 25
+          },
+          {
+            "value": "oklch(0.279 0.041 260.031)",
+            "count": 25
+          }
+        ]
+      },
+      {
+        "type": "color",
+        "severity": "medium",
+        "message": "39 distinct background colors found",
+        "topValues": [
+          {
+            "value": "rgba(0, 0, 0, 0)",
+            "count": 1358
+          },
+          {
+            "value": "oklch(0.278 0.033 256.848)",
+            "count": 154
+          },
+          {
+            "value": "rgb(255, 255, 255)",
+            "count": 133
+          },
+          {
+            "value": "oklch(0.21 0.034 264.665)",
+            "count": 64
+          },
+          {
+            "value": "oklch(0.985 0.002 247.839)",
+            "count": 56
+          },
+          {
+            "value": "oklch(0.984 0.003 247.858)",
+            "count": 40
+          },
+          {
+            "value": "oklch(0.5 0.134 242.749)",
+            "count": 33
+          },
+          {
+            "value": "oklch(0.208 0.042 265.755)",
+            "count": 32
+          },
+          {
+            "value": "rgb(3, 105, 161)",
+            "count": 30
+          },
+          {
+            "value": "oklch(0.967 0.003 264.542)",
+            "count": 23
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.97)",
+            "count": 22
+          },
+          {
+            "value": "oklch(0.977 0.013 236.62)",
+            "count": 12
+          },
+          {
+            "value": "rgb(138, 101, 39)",
+            "count": 11
+          },
+          {
+            "value": "rgb(194, 65, 12)",
+            "count": 11
+          },
+          {
+            "value": "rgb(190, 18, 60)",
+            "count": 11
+          },
+          {
+            "value": "oklab(0 0 0 / 0.6)",
+            "count": 9
+          },
+          {
+            "value": "rgb(124, 58, 237)",
+            "count": 9
+          },
+          {
+            "value": "rgb(162, 28, 175)",
+            "count": 9
+          },
+          {
+            "value": "rgb(71, 85, 105)",
+            "count": 9
+          },
+          {
+            "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.2)",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "uniqueTextColors": 55,
+      "uniqueBgColors": 39,
+      "uniqueLayoutPaddings": 5,
+      "uniqueSectionPaddings": 3,
+      "uniqueButtonPaddings": 5,
+      "uniqueButtonFontSizes": 6,
+      "uniqueFontFamilies": 2,
+      "uniqueGaps": 11
+    }
+  }
+}

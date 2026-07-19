@@ -54,7 +54,7 @@
           </p>
         </div>
         <div class="flex items-center gap-2">
-          <span class="text-xs bg-emerald-500/10 text-emerald-400 font-extrabold px-3 py-1 rounded-full border border-emerald-500/20 flex items-center gap-1.5 animate-pulse">
+          <span class="text-xs bg-emerald-500/10 text-emerald-400 font-extrabold px-3 py-1 rounded-full border border-emerald-500/20 flex items-center gap-2 animate-pulse">
             <span class="w-2 h-2 rounded-full bg-emerald-405"></span> Live Pricing Engine Active
           </span>
         </div>
@@ -92,7 +92,7 @@
           <div class="flex items-baseline gap-1">
             <span class="text-2xl font-black text-slate-900" id="stat-gbv">₹0</span>
           </div>
-          <p class="text-[10px] text-emerald-600 font-semibold">↑ 12.4% from last week</p>
+          <p class="text-xs text-emerald-600 font-semibold">↑ 12.4% from last week</p>
         </div>
         
         <div class="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm space-y-2">
@@ -100,16 +100,16 @@
           <div class="flex items-baseline gap-1">
             <span class="text-2xl font-black text-emerald-700" id="stat-net-rev">₹0</span>
           </div>
-          <p class="text-[10px] text-slate-500 font-medium">Includes fees + commissions</p>
+          <p class="text-xs text-slate-500 font-medium">Includes fees + commissions</p>
         </div>
 
         <div class="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm space-y-2">
           <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Simulated Occupancy</p>
           <div class="flex items-center gap-2">
             <span class="text-2xl font-black text-slate-900" id="stat-occupancy">0%</span>
-            <span id="stat-occupancy-badge" class="text-[9px] font-extrabold px-2 py-0.5 rounded uppercase">Normal</span>
+            <span id="stat-occupancy-badge" class="text-xs font-extrabold px-2 py-0.5 rounded uppercase">Normal</span>
           </div>
-          <p class="text-[10px] text-slate-500 font-medium">Controls yield-pricing trigger</p>
+          <p class="text-xs text-slate-500 font-medium">Controls yield-pricing trigger</p>
         </div>
 
         <div class="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-sm space-y-2">
@@ -117,7 +117,7 @@
           <div class="flex items-baseline gap-1">
             <span class="text-2xl font-black text-indigo-750" id="stat-coupons-count">0</span>
           </div>
-          <p class="text-[10px] text-slate-500 font-medium">4 active stacking/priority filters</p>
+          <p class="text-xs text-slate-500 font-medium">4 active stacking/priority filters</p>
         </div>
       </div>
 
@@ -148,7 +148,7 @@
             <h3 class="font-bold text-slate-900 text-base">🛒 Real-time Revenue Transaction Ledger</h3>
             <p class="text-xs text-slate-500 mt-0.5">Calculated prices, platform convenience fees, and taxes collected.</p>
           </div>
-          <button onclick="downloadFinancialPlanCA()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-md flex items-center gap-1.5">
+          <button onclick="downloadFinancialPlanCA()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-md flex items-center gap-2">
             📥 Compile CA Financial Summary
           </button>
         </div>
@@ -194,7 +194,7 @@
             <span id="override-badge" class="text-sm font-black px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-xl">0% (Disabled)</span>
           </div>
           <input type="range" id="override-slider" min="-20" max="50" step="5" value="0" oninput="updateOverrideLabel(this.value)" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"/>
-          <div class="flex justify-between text-[9px] font-extrabold text-slate-400 uppercase tracking-widest mt-2">
+          <div class="flex justify-between text-xs font-extrabold text-slate-400 uppercase tracking-widest mt-2">
             <span>-20% Discount</span>
             <span>Normal</span>
             <span>+50% Max Markup</span>
@@ -241,7 +241,7 @@
             </div>
 
             <!-- Yield thresholds info -->
-            <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-3.5 space-y-2 text-[10px] text-indigo-700">
+            <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-3.5 space-y-2 text-xs text-indigo-700">
               <div class="flex items-center justify-between font-bold">
                 <span>🔥 High Occupancy (&ge;80%):</span>
                 <span>1.20x Markup</span>
@@ -296,23 +296,23 @@
           <div class="bg-slate-50 p-4 border border-slate-200/60 rounded-xl space-y-3">
             <h4 class="text-xs font-bold text-slate-700 flex items-center justify-between">
               <span>Loyalty Discount</span>
-              <span class="text-emerald-700 font-extrabold text-[10px]">5%</span>
+              <span class="text-emerald-700 font-extrabold text-xs">5%</span>
             </h4>
-            <p class="text-[10px] text-slate-400">Triggered if user is logged into their account.</p>
+            <p class="text-xs text-slate-400">Triggered if user is logged into their account.</p>
           </div>
           <div class="bg-slate-50 p-4 border border-slate-200/60 rounded-xl space-y-3">
             <h4 class="text-xs font-bold text-slate-700 flex items-center justify-between">
               <span>Group Booking</span>
-              <span class="text-emerald-700 font-extrabold text-[10px]">15%</span>
+              <span class="text-emerald-700 font-extrabold text-xs">15%</span>
             </h4>
-            <p class="text-[10px] text-slate-400">Triggered if traveler guest count is 3 or more.</p>
+            <p class="text-xs text-slate-400">Triggered if traveler guest count is 3 or more.</p>
           </div>
           <div class="bg-slate-50 p-4 border border-slate-200/60 rounded-xl space-y-3">
             <h4 class="text-xs font-bold text-slate-700 flex items-center justify-between">
               <span>Long-Stay Discount</span>
-              <span class="text-emerald-700 font-extrabold text-[10px]">10%</span>
+              <span class="text-emerald-700 font-extrabold text-xs">10%</span>
             </h4>
-            <p class="text-[10px] text-slate-400">Triggered if total layover dur. exceeds 8 hours.</p>
+            <p class="text-xs text-slate-400">Triggered if total layover dur. exceeds 8 hours.</p>
           </div>
         </div>
       </div>
@@ -325,31 +325,31 @@
           <h3 class="font-bold text-slate-900 text-base">➕ Add New Promo Coupon</h3>
           <form id="add-coupon-form" onsubmit="createNewCoupon(event)" class="space-y-4">
             <div class="form-group">
-              <label class="block text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-code">Coupon Code</label>
+              <label class="block text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-code">Coupon Code</label>
               <input type="text" id="new-coupon-code" placeholder="e.g. MONSOON40" required class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-800 uppercase focus:ring-1 focus:ring-sky-500 w-full font-bold"/>
             </div>
             
             <div class="grid grid-cols-2 gap-3">
               <div class="form-group">
-                <label class="block text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-type">Discount Type</label>
+                <label class="block text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-type">Discount Type</label>
                 <select id="new-coupon-type" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:ring-1 focus:ring-sky-500 w-full font-semibold">
                   <option value="percent">Percentage (%)</option>
                   <option value="flat">Flat Amount (₹)</option>
                 </select>
               </div>
               <div class="form-group">
-                <label class="block text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-value">Value</label>
+                <label class="block text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-value">Value</label>
                 <input type="number" id="new-coupon-value" min="1" placeholder="e.g. 15" required class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:ring-1 focus:ring-sky-500 w-full font-semibold"/>
               </div>
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div class="form-group">
-                <label class="block text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-priority">Priority</label>
+                <label class="block text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-priority">Priority</label>
                 <input type="number" id="new-coupon-priority" value="5" min="1" required class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:ring-1 focus:ring-sky-500 w-full font-semibold"/>
               </div>
               <div class="form-group">
-                <label class="block text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-stackable">Stackable?</label>
+                <label class="block text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-stackable">Stackable?</label>
                 <select id="new-coupon-stackable" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:ring-1 focus:ring-sky-500 w-full font-semibold">
                   <option value="true">Yes (Stackable)</option>
                   <option value="false">No (Single Use)</option>
@@ -358,7 +358,7 @@
             </div>
 
             <div class="form-group">
-              <label class="block text-[10px] font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-desc">Description</label>
+              <label class="block text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-1" for="new-coupon-desc">Description</label>
               <textarea id="new-coupon-desc" rows="2" placeholder="Explain the discount terms..." required class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-800 focus:ring-1 focus:ring-sky-500 w-full"></textarea>
             </div>
 
@@ -428,7 +428,7 @@
 
       <!-- Audit Logs -->
       <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm space-y-4">
-        <h3 class="font-bold text-slate-900 text-base flex items-center gap-1.5">
+        <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
           <span>🕒 Pricing Rule Audit Trail & Logs</span>
         </h3>
         <p class="text-xs text-slate-500">Chronological history of manual base price changes, overrides and coupon edits.</p>
@@ -536,13 +536,13 @@
     const occBadge = document.getElementById('stat-occupancy-badge');
     if (occupancy >= 80) {
       occBadge.textContent = "High (Yield +20%)";
-      occBadge.className = "text-[9px] font-extrabold px-2 py-0.5 rounded uppercase bg-rose-100 text-rose-700 border border-rose-200";
+      occBadge.className = "text-xs font-extrabold px-2 py-0.5 rounded uppercase bg-rose-100 text-rose-700 border border-rose-200";
     } else if (occupancy <= 30) {
       occBadge.textContent = "Low (Discount -10%)";
-      occBadge.className = "text-[9px] font-extrabold px-2 py-0.5 rounded uppercase bg-amber-100 text-amber-700 border border-amber-200";
+      occBadge.className = "text-xs font-extrabold px-2 py-0.5 rounded uppercase bg-amber-100 text-amber-700 border border-amber-200";
     } else {
       occBadge.textContent = "Standard";
-      occBadge.className = "text-[9px] font-extrabold px-2 py-0.5 rounded uppercase bg-emerald-100 text-emerald-700 border border-emerald-200";
+      occBadge.className = "text-xs font-extrabold px-2 py-0.5 rounded uppercase bg-emerald-100 text-emerald-700 border border-emerald-200";
     }
 
     document.getElementById('stat-coupons-count').textContent = couponsList.length;
@@ -653,7 +653,7 @@
           rowsHtml += `
             <div class="flex items-center justify-between gap-4 p-3 bg-slate-50 border border-slate-100 rounded-xl">
               <span class="text-xs font-semibold text-slate-700">${friendlyName}</span>
-              <div class="flex items-center gap-1.5">
+              <div class="flex items-center gap-2">
                 <span class="text-xs text-slate-400">₹</span>
                 <input type="number" min="0" data-cat="${category}" data-id="${itemId}" value="${basePriceValue}" class="w-24 text-center rounded-lg border border-slate-200 px-2 py-1 text-xs font-bold text-slate-900 focus:outline-emerald-500 focus:ring-1 focus:ring-emerald-500"/>
               </div>
@@ -683,10 +683,10 @@
               <span class="font-extrabold text-slate-800">${s.name}</span>
               <div class="flex items-center gap-1">
                 <input type="number" step="0.05" id="season-mult-${idx}" value="${s.multiplier}" class="w-16 text-center border rounded px-1.5 py-0.5 text-xs font-bold text-slate-900"/>
-                <span class="text-[10px] text-slate-400">x</span>
+                <span class="text-xs text-slate-400">x</span>
               </div>
             </div>
-            <div class="flex justify-between items-center gap-2 text-[10px]">
+            <div class="flex justify-between items-center gap-2 text-xs">
               <div class="flex items-center gap-1">
                 <span class="text-slate-400">Start (MM-DD):</span>
                 <input type="text" id="season-start-${idx}" value="${s.start}" class="w-14 border rounded px-1 text-center py-0.5"/>
@@ -805,7 +805,7 @@
           <td class="py-3 px-4 capitalize">${c.discountType}</td>
           <td class="py-3 px-4">${c.priority}</td>
           <td class="py-3 px-4">
-            <span class="px-2 py-0.5 rounded-full text-[9px] font-bold ${c.stackable ? 'bg-emerald-50 text-emerald-700 border border-emerald-250' : 'bg-slate-100 text-slate-500'}">
+            <span class="px-2 py-0.5 rounded-full text-xs font-bold ${c.stackable ? 'bg-emerald-50 text-emerald-700 border border-emerald-250' : 'bg-slate-100 text-slate-500'}">
               ${c.stackable ? 'Stackable' : 'Single Use'}
             </span>
           </td>
@@ -900,7 +900,7 @@
           
           const isPending = po.status === 'Pending';
           const badgeClass = isPending ? 'bg-amber-50 text-amber-700 border-amber-200' : 'bg-emerald-50 text-emerald-700 border-emerald-250';
-          const processBtn = isPending ? `<button onclick="processPayout(${realIdx})" class="px-2.5 py-1 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-[10px] rounded-lg transition shadow-xs">Disburse Payout</button>` : `<span class="text-slate-400 italic text-[10px]">Settled ${new Date(po.datePaid).toLocaleDateString()}</span>`;
+          const processBtn = isPending ? `<button onclick="processPayout(${realIdx})" class="px-2.5 py-1 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-lg transition shadow-xs">Disburse Payout</button>` : `<span class="text-slate-400 italic text-xs">Settled ${new Date(po.datePaid).toLocaleDateString()}</span>`;
 
           payoutTbody.innerHTML += `
             <tr class="hover:bg-slate-50/80 transition-colors">
@@ -912,7 +912,7 @@
               <td class="py-3 px-4 text-slate-500">₹${(po.commissionAmount || 0).toFixed(2)}</td>
               <td class="py-3 px-4 font-black text-slate-900">₹${po.amount.toFixed(2)}</td>
               <td class="py-3 px-4">
-                <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold border ${badgeClass}">
+                <span class="px-2 py-0.5 rounded-full text-xs font-extrabold border ${badgeClass}">
                   ${po.status}
                 </span>
               </td>

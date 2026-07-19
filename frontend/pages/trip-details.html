@@ -65,19 +65,19 @@
         <!-- Summary Info Grid -->
         <div class="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-            <span class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Duration</span>
+            <span class="text-xs text-slate-400 font-extrabold uppercase tracking-wider block">Duration</span>
             <strong class="text-base text-slate-900 font-bold block" id="trip-duration-val">--</strong>
           </div>
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-            <span class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Passengers</span>
+            <span class="text-xs text-slate-400 font-extrabold uppercase tracking-wider block">Passengers</span>
             <strong class="text-base text-slate-900 font-bold block" id="trip-travelers-val">--</strong>
           </div>
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-            <span class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Arrival</span>
+            <span class="text-xs text-slate-400 font-extrabold uppercase tracking-wider block">Arrival</span>
             <strong class="text-sm text-slate-900 font-bold block truncate" id="trip-arrival-val">--</strong>
           </div>
           <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-            <span class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">Departure</span>
+            <span class="text-xs text-slate-400 font-extrabold uppercase tracking-wider block">Departure</span>
             <strong class="text-sm text-slate-900 font-bold block truncate" id="trip-departure-val">--</strong>
           </div>
         </div>
@@ -97,8 +97,8 @@
               <span class="text-sky-500">🗺️</span> Live Transit Route
             </h3>
             <div class="flex items-center gap-4">
-              <span id="map-distance" class="text-[10px] font-bold text-slate-500 uppercase">-- km</span>
-              <span id="map-duration" class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded-lg">Calculating ETA...</span>
+              <span id="map-distance" class="text-xs font-bold text-slate-500 uppercase">-- km</span>
+              <span id="map-duration" class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2 py-1 rounded-lg">Calculating ETA...</span>
             </div>
           </div>
           <div id="itinerary-map" class="w-full h-80 bg-slate-100">
@@ -157,7 +157,7 @@
         <div class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-6 shadow-md relative overflow-hidden">
           <div class="absolute -top-10 -right-10 w-24 h-24 bg-white/5 rounded-full blur-xl"></div>
           <h3 class="font-extrabold text-sm mb-2 flex items-center gap-1">✨ AI Co-Pilot Tips</h3>
-          <p class="text-[11px] text-indigo-200 leading-relaxed mb-4" id="ai-optimization-text">
+          <p class="text-xs text-indigo-200 leading-relaxed mb-4" id="ai-optimization-text">
             Analyzing traffic patterns... Mumbai Western Express Highway has moderate congestion. Recommend starting return transfer 2.5 hours before boarding.
           </p>
         </div>
@@ -268,7 +268,7 @@
     const addTimelineBlock = (time, title, desc, icon = '⚪') => {
       timelineNodes.innerHTML += `
         <div class="relative bg-white border border-gray-200 p-4 rounded-xl shadow-sm">
-          <div class="absolute -left-[33px] top-4 w-5 h-5 rounded-full bg-sky-500 border-2 border-white flex items-center justify-center text-[10px] text-white">${icon}</div>
+          <div class="absolute -left-[33px] top-4 w-5 h-5 rounded-full bg-sky-500 border-2 border-white flex items-center justify-center text-xs text-white">${icon}</div>
           <strong class="text-gray-900 block text-xs sm:text-sm font-extrabold">${time} • ${title}</strong>
           <p class="text-gray-500 text-xs mt-1 leading-relaxed">${desc}</p>
         </div>
