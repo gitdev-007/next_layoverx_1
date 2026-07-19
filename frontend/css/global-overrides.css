@@ -70,6 +70,37 @@
   --primary-light: #94a3b8;
 }
 
+/* ── Layout & Spacing Fixes (Sizing/Alignment) ── */
+body {
+  overflow-x: hidden !important;
+}
+
+.theme-hero {
+  overflow: hidden !important;
+}
+
+.form-input {
+  max-width: 100% !important;
+}
+
+/* ── Section Padding Enforcement (L5) ── */
+section:not(.theme-hero):not(.relative) {
+  padding-top: var(--section-y-sm) !important;
+  padding-bottom: var(--section-y-sm) !important;
+}
+@media (min-width: 768px) {
+  section:not(.theme-hero):not(.relative) {
+    padding-top: var(--section-y-md) !important;
+    padding-bottom: var(--section-y-md) !important;
+  }
+}
+@media (min-width: 1024px) {
+  section:not(.theme-hero):not(.relative) {
+    padding-top: var(--section-y-lg) !important;
+    padding-bottom: var(--section-y-lg) !important;
+  }
+}
+
 body,
 button,
 input,
@@ -191,7 +222,7 @@ main .text-base {
   line-height: 1.15 !important;
 }
 
-/* ─── Spacing: sections, stacks, cards ─── */
+/* ─── Card padding consistency ─── */
 .section {
   padding-top: var(--section-y-sm) !important;
   padding-bottom: var(--section-y-sm) !important;
@@ -265,7 +296,7 @@ main .gap-8 {
   margin-top: 2.25rem !important;
 }
 
-/* Card padding consistency */
+/* Fixed Padding only */
 .card,
 main a.group.bg-white,
 main .bg-white.rounded-2xl,
@@ -381,7 +412,7 @@ main .text-slate-900,
   border-color: var(--primary) !important;
 }
 
-/* ─── Buttons: larger tap targets, consistent type ─── */
+/* ─── Buttons: Larger tap targets, consistent type & layout ─── */
 .btn,
 #search-btn,
 button[type="submit"],
@@ -391,36 +422,57 @@ button[type="submit"],
   font-weight: 600 !important;
   letter-spacing: -0.01em;
 }
+
+/* Standardize heights and paddings to UI Standard */
 .btn,
 #search-btn,
 button[type="submit"] {
-  padding: 0.75rem 1.5rem !important;       /* 12 / 24 (snapped) */
-  min-height: 3rem;
-  border-radius: 0.75rem !important;        /* 12px — matches --btn-radius */
+  padding: 0.875rem 1.75rem !important;       /* Medium: 14 / 28px */
+  min-height: 3rem !important;                  /* 48px */
+  border-radius: var(--btn-radius) !important;  /* 12px */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
+
 .btn-sm {
-  padding: 0.5rem 1rem !important;           /* 8 / 16 (snapped) */
+  padding: 0.625rem 1.125rem !important;       /* Small: 10 / 18px */
   font-size: var(--font-size-caption) !important;
-  min-height: 2.5rem;
-  border-radius: 0.75rem !important;
+  min-height: 2.5rem !important;               /* 40px */
+  border-radius: var(--btn-radius) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
+
 .btn-lg,
 a.px-8.py-4,
 button.px-8.py-4 {
-  padding: 0.875rem 1.75rem !important;     /* 14 / 28 (snapped to 16/32 nearest grid) */
-  font-size: 1.0625rem !important;
-  min-height: 3.25rem;
-  border-radius: 0.75rem !important;
+  padding: 1rem 2rem !important;               /* Large: 16 / 32px */
+  font-size: var(--font-size-body) !important;
+  min-height: 3.25rem !important;              /* 52px */
+  border-radius: var(--btn-radius) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
+/* Fix for 199 link-buttons below 40px (H2/M3) */
 a.px-3\.5.py-1\.5,
-button.px-3\.5.py-1\.5 {
-  padding: 0.5rem 1rem !important;          /* 8 / 16 (snapped) */
-  min-height: 2.5rem;
-  border-radius: 0.75rem !important;
+button.px-3\.5.py-1\.5,
+a[class*="text-"][class*="font-"]:not(.nav-link),
+a.text-sm:not(.nav-link),
+a.text-xs:not(.nav-link) {
+  padding: 0.5rem 1rem !important;
+  min-height: 2.5rem !important;               /* 40px minimum tap target */
+  border-radius: var(--btn-radius) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1.2 !important;
 }
 
-/* Nav links slightly larger */
+/* Nav links handled separately to avoid breaking header layout */
 #navbar .nav-link {
   font-size: 0.9375rem !important;
   font-weight: 500 !important;
@@ -568,35 +620,84 @@ main .text-base:not(p):not(h1):not(h2):not(h3):not(h4) {
   background-color: var(--surface-elevated) !important;
 }
 
-/* ── Link-styled buttons get a proper tap target ── */
-a.btn,
-a[class*="btn-"],
-a.px-6.py-3,
-a.px-8.py-4,
-a.px-5.py-3,
-a.px-3\.5.py-1\.5,
-a.px-3\.5.py-2,
-a.px-4.py-2,
-a.px-4.py-2\.5,
-a.px-4.py-3,
-a.px-2\.5.py-2,
-a[class*="px-"][class*="py-"]:not(.nav-link):not(.no-min-h):not(.badge) {
-  min-height: 2.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.2;
+/* ─── Form Standardization (Audit H4 / UI Standard 3.3) ─── */
+.form-group {
+  margin-bottom: 1.5rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-/* ── Border collapse (slate/gray borders → single token) ── */
-main .border-slate-200,
-main .border-gray-200,
-main .border-slate-300,
-main .border-gray-300,
-main .border-slate-100,
-main .border-gray-100 {
-  border-color: var(--border) !important;
+.form-label {
+  font-size: var(--font-size-small) !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 0.25rem !important;
 }
+
+input.form-input,
+select.form-input,
+textarea.form-input {
+  height: auto !important;
+  min-height: 2.75rem !important;   /* 44px */
+  padding: 0.625rem 1rem !important;
+  font-size: var(--font-size-body) !important;
+  line-height: 1.4 !important;
+  border-radius: 0.75rem !important; /* 12px */
+  border: 1px solid var(--border) !important;
+  background-color: #fff !important;
+  color: var(--text-primary) !important;
+  transition: var(--transition) !important;
+}
+
+input.form-input:focus,
+select.form-input:focus,
+textarea.form-input:focus {
+  outline: 3px solid rgba(3, 105, 161, 0.45) !important;
+  outline-offset: 2px !important;
+  border-color: var(--primary) !important;
+}
+
+/* Fix for select dropdown heights in browsers */
+select.form-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.25rem;
+}
+
+/* Checkbox & Radio Alignment */
+.form-checkbox,
+.form-radio {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  border-radius: 0.25rem !important;
+  border: 2px solid var(--border) !important;
+  cursor: pointer;
+}
+
+.form-checkbox:checked,
+.form-radio:checked {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Validation Messages */
+.form-error-message {
+  font-size: var(--font-size-caption) !important;
+  color: var(--danger) !important;
+  margin-top: 0.25rem !important;
+  text-align: left !important;
+}
+
+/* Buttons inside forms align to right by default */
+form .flex.justify-end button {
+  margin-top: 1rem;
+}
+
+/* ─── Color collapse ─── */
 main .border-sky-200,
 main .border-sky-300,
 main .border-indigo-200,

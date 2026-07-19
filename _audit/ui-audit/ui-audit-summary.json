@@ -1,0 +1,321 @@
+{
+  "pagesAudited": 90,
+  "successfulPages": 90,
+  "distinctFontSizes": 0,
+  "distinctH1Sizes": 3,
+  "distinctH2Sizes": 2,
+  "distinctH3Sizes": 3,
+  "distinctButtonHeights": 12,
+  "distinctButtonRadii": 5,
+  "distinctButtonPaddings": 5,
+  "distinctCardShadows": 13,
+  "distinctCardRadii": 4,
+  "distinctCardPaddings": 5,
+  "distinctTextColors": 51,
+  "distinctBgColors": 51,
+  "distinctBorderColors": 38,
+  "distinctContainerWidths": 7,
+  "distinctSectionPads": 7,
+  "distinctGaps": 10,
+  "distinctInputHeights": 14,
+  "pagesWithHScroll": 1,
+  "imagesWithoutAlt": 0,
+  "emptyLinks": 0,
+  "topH1": [
+    [
+      "40px",
+      30
+    ],
+    [
+      "34.56px",
+      30
+    ],
+    [
+      "32px",
+      30
+    ]
+  ],
+  "topH2": [
+    [
+      "26px",
+      530
+    ],
+    [
+      "32px",
+      97
+    ]
+  ],
+  "topH3": [
+    [
+      "22px",
+      381
+    ],
+    [
+      "13px",
+      288
+    ],
+    [
+      "15px",
+      12
+    ]
+  ],
+  "topBtnH": [
+    [
+      "auto",
+      1740
+    ],
+    [
+      "18.8438px",
+      199
+    ],
+    [
+      "24px",
+      78
+    ],
+    [
+      "40px",
+      36
+    ],
+    [
+      "48px",
+      30
+    ],
+    [
+      "43.5px",
+      23
+    ],
+    [
+      "45.5px",
+      18
+    ],
+    [
+      "49.5px",
+      9
+    ],
+    [
+      "41.5px",
+      7
+    ],
+    [
+      "32px",
+      6
+    ]
+  ],
+  "topBtnR": [
+    [
+      "12px",
+      1332
+    ],
+    [
+      "0px",
+      687
+    ],
+    [
+      "16px",
+      114
+    ],
+    [
+      "9999px",
+      12
+    ],
+    [
+      "3.35544e+07px",
+      6
+    ]
+  ],
+  "topBtnP": [
+    [
+      "0px",
+      1554
+    ],
+    [
+      "12px 24px",
+      393
+    ],
+    [
+      "8px 16px",
+      108
+    ],
+    [
+      "8px 24px",
+      90
+    ],
+    [
+      "0px 32px",
+      6
+    ]
+  ],
+  "topCardShadow": [
+    [
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px",
+      273
+    ],
+    [
+      "none",
+      270
+    ],
+    [
+      "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px",
+      117
+    ],
+    [
+      "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px",
+      90
+    ],
+    [
+      "rgba(0, 0, 0, 0.06) 0px 1px 2px 0px",
+      45
+    ]
+  ],
+  "topCardR": [
+    [
+      "16px",
+      669
+    ],
+    [
+      "24px",
+      192
+    ],
+    [
+      "20px",
+      45
+    ],
+    [
+      "12px",
+      3
+    ]
+  ],
+  "topContainerW": [
+    [
+      "375",
+      145
+    ],
+    [
+      "768",
+      145
+    ],
+    [
+      "1280",
+      145
+    ],
+    [
+      "0",
+      3
+    ],
+    [
+      "335",
+      3
+    ],
+    [
+      "720",
+      3
+    ],
+    [
+      "1216",
+      3
+    ]
+  ],
+  "topSectionPad": [
+    [
+      "0px / 0px",
+      105
+    ],
+    [
+      "104px / 104px",
+      45
+    ],
+    [
+      "88px / 88px",
+      45
+    ],
+    [
+      "72px / 72px",
+      45
+    ],
+    [
+      "32px / 104px",
+      1
+    ],
+    [
+      "32px / 88px",
+      1
+    ],
+    [
+      "32px / 72px",
+      1
+    ]
+  ],
+  "topGap": [
+    [
+      "8px",
+      1957
+    ],
+    [
+      "12px",
+      1286
+    ],
+    [
+      "16px",
+      726
+    ],
+    [
+      "20px",
+      342
+    ],
+    [
+      "4px",
+      309
+    ],
+    [
+      "24px",
+      204
+    ],
+    [
+      "36px",
+      93
+    ],
+    [
+      "40px",
+      93
+    ]
+  ],
+  "topInputH": [
+    [
+      "auto",
+      1098
+    ],
+    [
+      "13px",
+      117
+    ],
+    [
+      "26px",
+      54
+    ],
+    [
+      "16px",
+      48
+    ],
+    [
+      "23px",
+      18
+    ],
+    [
+      "25.5px",
+      18
+    ],
+    [
+      "21px",
+      15
+    ],
+    [
+      "27.5px",
+      12
+    ]
+  ],
+  "hScrollPages": [
+    "/my-profile.html@tablet"
+  ],
+  "missingAltExamples": [],
+  "emptyLinksExamples": []
+}
