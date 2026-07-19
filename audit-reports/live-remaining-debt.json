@@ -1,0 +1,2197 @@
+[
+  {
+    "route": "/",
+    "h1": [
+      {
+        "text": "Experience MumbaiBeyond The Airport",
+        "className": "reveal text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "0px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Optimize Every Stopover Hour",
+        "className": "text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Popular Transit Experiences",
+        "className": "text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Layover Booking in 3 Simple Steps",
+        "className": "text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Loved by Transit Travelers",
+        "className": "text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Don't Waste Your Mumbai Layover",
+        "className": "text-3xl sm:text-4xl font-extrabold mb-4",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Transit Hotels",
+        "className": "text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Transit Dining",
+        "className": "text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Spa & Wellness",
+        "className": "text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Gaming & Fun",
+        "className": "text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "City Tours",
+        "className": "text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Activities",
+        "className": "text-xl font-bold text-gray-900 mb-2 group-hover:text-sky-700 transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Transit Hotel Stays",
+        "className": "text-lg font-bold text-gray-900 mb-2",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Transit Food Experiences",
+        "className": "text-lg font-bold text-gray-900 mb-2",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Spa & Wellness Sessions",
+        "className": "text-lg font-bold text-gray-900 mb-2",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Gaming & Entertainment",
+        "className": "text-lg font-bold text-gray-900 mb-2",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Maximize your stopover. Discover hotels, restauran",
+        "className": "reveal text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto mb-10 leading-relaxed",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Browse through our specialized transit services ta",
+        "className": "text-gray-700 max-w-xl mx-auto",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Flexible stays near CSMIA with 24/7 check-in and h",
+        "className": "text-gray-700 text-sm mb-6 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "From fine dining to local street food crawl guides",
+        "className": "text-gray-700 text-sm mb-6 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Refresh your transit with luxury treatments and ex",
+        "className": "text-gray-700 text-sm mb-6 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "VR zones, boutique bowling, and high-energy fun mi",
+        "className": "text-gray-700 text-sm mb-6 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Private AC vehicle tours visiting Mumbai's iconic ",
+        "className": "text-gray-700 text-sm mb-6 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "From food trails to boutique shopping, curated for",
+        "className": "text-gray-700 text-sm mb-6 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Verified, top-reviewed partners, and close to the ",
+        "className": "text-gray-700 max-w-xl mx-auto",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Flexible day-use transit rooms inside Terminal 2 w",
+        "className": "text-gray-700 text-sm",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "search",
+        "className": "relative z-20 -mt-16 sm:-mt-20 px-4 sm:px-6 mb-16",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "categories",
+        "className": "section bg-white overflow-hidden",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "experiences",
+        "className": "section bg-gray-50 overflow-hidden",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "how-it-works",
+        "className": "section bg-white",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "testimonials",
+        "className": "section bg-gray-50",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white",
+        "padY": "104px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white/20 backdrop-blur-md border border-white/10 rounded-2xl p-4 text-center",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-8",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 border border-gray-200 rounded-2xl p-4",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 border border-gray-200 rounded-2xl p-4",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 border border-gray-200 rounded-2xl p-4",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  },
+  {
+    "route": "/hotels.html",
+    "h1": [
+      {
+        "text": "Luxury Transit Hotels Minutes from CSMIA",
+        "className": "text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "28px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Filters",
+        "className": "text-base font-bold text-gray-900",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Premium In-Terminal Transit",
+        "className": "text-3xl font-extrabold text-gray-900 mb-4",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "What Transit Guests Say",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Airport Hotels FAQ",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Maximize Your Flight Layover",
+        "className": "text-2xl sm:text-3xl font-extrabold mb-3",
+        "fontSize": "26px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Price Range (INR)",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Distance From Terminal",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Star Rating",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Transit Amenities",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Niranta Airport Transit Hotel & Lounge",
+        "className": "text-lg font-bold text-gray-900 hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "JW Marriott Mumbai Sahar",
+        "className": "text-lg font-bold text-gray-900 hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Ibis Mumbai Airport",
+        "className": "text-lg font-bold text-gray-900 hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "The Orchid Hotel Mumbai Vile Parle",
+        "className": "text-lg font-bold text-gray-900 hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Explore Services",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Company",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Sleep, refresh, and recharge during your Mumbai st",
+        "className": "text-white/80 text-sm sm:text-base leading-relaxed max-w-2xl",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "28px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Ideal for quick transits. No visa check needed if ",
+        "className": "text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Ultra-luxury stays with high-speed lounge setups, ",
+        "className": "text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Cozy, ergonomic rooms designed for short-stay tran",
+        "className": "text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Asia's first certified 5-star ecofriendly hotel. F",
+        "className": "text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Have a layover under 5 hours? Avoid clearing immig",
+        "className": "text-theme-primary text-sm sm:text-base leading-relaxed mb-6",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"Niranta was perfect. My flight landed at 3 AM and",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"Booked JW Marriott Sahar day slot for a 12-hour l",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"Super convenient pricing. Ibis airport was clean,",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "If you book a hotel inside the airport terminal (l",
+        "className": "text-gray-800 text-sm mt-3 leading-relaxed",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "",
+        "className": "relative theme-hero text-white pt-24 pb-16 overflow-hidden",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "bg-white border-b border-gray-200 py-6 sticky top-16 sm:top-20 z-40 sh",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white border-t border-gray-100",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50 border-t border-gray-100",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white border-t border-gray-100",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50 border-t border-gray-100",
+        "padY": "104px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 p-6 sticky top-52",
+        "title": "Filters",
+        "titleSize": "17px",
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 p-4 mb-6 flex flex-col sm:flex-row i",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Niranta Airport Transit Hotel & Lounge",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "JW Marriott Mumbai Sahar",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Ibis Mumbai Airport",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "The Orchid Hotel Mumbai Vile Parle",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "relative rounded-3xl overflow-hidden shadow-lg h-80",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  },
+  {
+    "route": "/restaurants.html",
+    "h1": [
+      {
+        "text": "Premium Dining & Local Food Experiences",
+        "className": "text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "28px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Filters",
+        "className": "text-base font-bold text-gray-900",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Loved by Global Travelers",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Dining FAQ",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Cost For Two",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Distance From CSMIA",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Guest Review Rating",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Gajalee Coastal Seafood Restaurant",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Peshawri - ITC Maratha",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Highway Gomantak",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Elco Pani Puri Center",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Explore Services",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Company",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Get In Touch",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Indulge in Mumbai's legendary culinary landscape w",
+        "className": "text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "28px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "World-famous coastal dining near airport. Indulge ",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Five-star Northwest Frontier luxury dining. Famous",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Legendary 30-year-old local Maharashtrian diner. F",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "High-hygiene local street food experience. Famous ",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"The Butter Garlic Crabs at Gajalee were incredibl",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"Dal Bukhara at Peshawri is worth leaving the airp",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"Super safe and hygienic street food. Tried Pani P",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "We recommend a minimum layover of 4 hours to clear",
+        "className": "text-gray-800 text-sm mt-3 leading-relaxed",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Yes! We only partner with and list highly hygienic",
+        "className": "text-gray-800 text-sm mt-3 leading-relaxed",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "",
+        "className": "relative theme-hero text-white pt-24 pb-16 overflow-hidden",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "bg-white border-b border-gray-200 py-4 sticky top-16 sm:top-20 z-40 sh",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white border-t border-gray-100",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50 border-t border-gray-100",
+        "padY": "104px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 p-6 sticky top-52",
+        "title": "Filters",
+        "titleSize": "17px",
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Gajalee Coastal Seafood Restaurant",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Peshawri - ITC Maratha",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Highway Gomantak",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Elco Pani Puri Center",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-gray-50 p-6 rounded-2xl border border-gray-200",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 p-6 rounded-2xl border border-gray-200",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  },
+  {
+    "route": "/plan-my-layover.html",
+    "h1": [
+      {
+        "text": "AI Itinerary Builder & Estimator",
+        "className": "text-2xl sm:text-3xl font-extrabold tracking-tight mb-6",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "0px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Premium Service Marketplace",
+        "className": "text-xl font-extrabold text-gray-900 tracking-tight",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Choose Airport Transfer Cab",
+        "className": "text-lg font-bold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Add Transit Hotel (Optional)",
+        "className": "text-lg font-bold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Add Dining Reservation (Optional)",
+        "className": "text-lg font-bold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Add Experiences (Optional)",
+        "className": "text-lg font-bold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Review & Passenger Registration",
+        "className": "text-lg font-bold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Booking Summary",
+        "className": "text-sm font-black text-gray-900 uppercase tracking-widest",
+        "fontSize": "15px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Your Smart AI Timeline\n            Checked",
+        "className": "text-lg font-bold text-gray-900 pb-4 border-b border-gray-100 mb-6 flex items-center justi",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "My Saved Itineraries\n            0",
+        "className": "text-base font-bold text-gray-900 pb-4 border-b border-gray-100 mb-4 flex items-center jus",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Transit Hotels",
+        "className": "font-bold text-gray-900 mb-1",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Transit Dining",
+        "className": "font-bold text-gray-900 mb-1",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Spa & Wellness",
+        "className": "font-bold text-gray-900 mb-1",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Gaming & Fun",
+        "className": "font-bold text-gray-900 mb-1",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "City Tours",
+        "className": "font-bold text-gray-900 mb-1",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Airport Transfers",
+        "className": "font-bold text-gray-900 mb-1",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "AC Sedan Transfer (Toyota Etios)",
+        "className": "font-bold text-gray-800 text-sm",
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "AC SUV Transfer (Innova Crysta)",
+        "className": "font-bold text-gray-800 text-sm",
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Niranta Airport Transit Hotel & Lounge\n           ",
+        "className": "font-bold text-gray-800 text-sm flex items-center gap-2",
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "JW Marriott Mumbai Sahar\n                    1.2 k",
+        "className": "font-bold text-gray-800 text-sm flex items-center gap-2",
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Add luxury to your transit window",
+        "className": "text-gray-700 text-sm",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Luxury day-rooms inside T2 or minutes away.",
+        "className": "text-gray-700 text-xs mb-4 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Gourmet seafood and local fine dining guides.",
+        "className": "text-gray-700 text-xs mb-4 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Express massages to melt away travel fatigue.",
+        "className": "text-gray-700 text-xs mb-4 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "VR zones and entertainment hubs near terminal.",
+        "className": "text-gray-700 text-xs mb-4 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Guided private tours to iconic Mumbai landmarks.",
+        "className": "text-gray-700 text-xs mb-4 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Reliable pickup and return to Terminal 1 or 2.",
+        "className": "text-gray-700 text-xs mb-4 flex-grow",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Fits 4 Passengers, 2 Standard Bags. Verified Drive",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Fits 6 Passengers, 4 Standard Bags. Extra comfort.",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "⭐ 4.8 | Located inside Terminal 2 Arrivals area. N",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "",
+        "className": "bg-gray-900 text-white pt-20 sm:pt-28 pb-10 border-b border-gray-800",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "bg-white border-b border-gray-100 py-10 overflow-hidden",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50 !pt-8",
+        "padY": "32px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-gray-800 p-4 rounded-2xl",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-2xl p-4 border border-gray-200 h-full flex flex-col hover:bor",
+        "title": "Transit Hotels",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-2xl p-4 border border-gray-200 h-full flex flex-col hover:bor",
+        "title": "Transit Dining",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-2xl p-4 border border-gray-200 h-full flex flex-col hover:bor",
+        "title": "Spa & Wellness",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-2xl p-4 border border-gray-200 h-full flex flex-col hover:bor",
+        "title": "Gaming & Fun",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-2xl p-4 border border-gray-200 h-full flex flex-col hover:bor",
+        "title": "City Tours",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-2xl p-4 border border-gray-200 h-full flex flex-col hover:bor",
+        "title": "Airport Transfers",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 p-6 shadow-sm",
+        "title": "Choose Airport Transfer Cab",
+        "titleSize": "32px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  },
+  {
+    "route": "/how-it-works.html",
+    "h1": [
+      {
+        "text": "Escaping Mumbai Airport \n          Made Simple",
+        "className": "text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "28px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "How We Calculate Your Buffer Hours",
+        "className": "text-3xl font-extrabold text-gray-900 mb-4",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Essential Layover Logistics",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Proven Transit Comfort",
+        "className": "text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Transit General FAQs",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Plan Your Layover Itinerary",
+        "className": "text-2xl sm:text-3xl font-extrabold mb-3",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Landing & Immigration (1.5 Hours)",
+        "className": "font-bold text-gray-800 text-sm",
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Departures Security & Boarding (2 Hours)",
+        "className": "font-bold text-gray-800 text-sm",
+        "fontSize": "15px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "8-Hour Layover Example Timeline",
+        "className": "font-bold text-gray-900 text-lg mb-4 text-center",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Indian Transit Visa Rules",
+        "className": "font-bold text-gray-900 text-lg mb-2",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Left Luggage Locker Facility",
+        "className": "font-bold text-gray-900 text-lg mb-2",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Explore Services",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Company",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Get In Touch",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Escape the terminals safely. We synchronize immigr",
+        "className": "text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "28px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Clearing airport gates requires security buffers. ",
+        "className": "text-gray-700 text-sm sm:text-base leading-relaxed mb-6",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "De-boarding, walking through CSMIA T2, and clearin",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Security screening check-in, customs control, and ",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "The remaining middle window is your safe zone to e",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Clear passport checks, proceed to Exit Gate 2.",
+        "className": "text-gray-700 text-xs",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Meet your private chauffeur at the placard arrival",
+        "className": "text-gray-700 text-xs",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Tour Bandra, Juhu beach, or enjoy coastal seafood ",
+        "className": "text-gray-700 text-xs",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Dropoff directly at Terminal 2 departure ramp.",
+        "className": "text-gray-700 text-xs",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Gate boarding for your connecting flight.",
+        "className": "text-gray-700 text-xs",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "",
+        "className": "relative bg-gradient-to-b from-slate-900 to-slate-950 text-white pt-24",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50 border-t border-b border-gray-200",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "faq",
+        "className": "section bg-gray-50 border-t border-gray-200",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white border-t border-gray-100",
+        "padY": "104px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-3xl p-8 border border-gray-200",
+        "title": "8-Hour Layover Example Timeline",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white p-6 rounded-2xl border border-gray-200 shadow-sm",
+        "title": "Indian Transit Visa Rules",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white p-6 rounded-2xl border border-gray-200 shadow-sm",
+        "title": "Left Luggage Locker Facility",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gradient-to-r from-sky-50 to-indigo-50 border border-sky-100 rounded-3xl p-8 ",
+        "title": "Proven Transit Comfort",
+        "titleSize": "32px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white p-6 rounded-2xl shadow-sm border border-gray-100",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white p-6 rounded-2xl shadow-sm border border-gray-100",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "group bg-white rounded-2xl border border-gray-200 p-5 cursor-pointer",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  },
+  {
+    "route": "/contact.html",
+    "h1": [
+      {
+        "text": "24/7 Transit Customer \n          Support & Dispatc",
+        "className": "text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "28px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Send Us a Message",
+        "className": "text-2xl font-bold text-gray-900 mb-2",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "How Can We Help?",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Direct Contacts",
+        "className": "font-bold text-gray-900 text-lg mb-4",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Partner with LayoverX",
+        "className": "font-bold text-lg mb-2",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "CSMIA Dispatch Office",
+        "className": "font-bold text-gray-900 text-base mb-1.5",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Explore Services",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Company",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Get In Touch",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Have a question about an upcoming layover? Need ur",
+        "className": "text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "28px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Our transit coordinators usually respond within 15",
+        "className": "text-gray-700 text-sm mb-6",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Available 24/7 for active transit passenger coordi",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Quickest channel for live coordinates updates.",
+        "className": "text-gray-700 text-xs mt-0.5",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Are you a fleet manager, hotel owner near CSMIA, o",
+        "className": "text-white text-xs leading-relaxed mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Conveniently situated inside Hotel District, Andhe",
+        "className": "text-gray-700 text-xs mb-3",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "",
+        "className": "relative bg-gradient-to-b from-slate-900 to-slate-950 text-white pt-24",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "w-full bg-gray-100 border-t border-b border-gray-200 h-96 relative",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50",
+        "padY": "104px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 rounded-2xl p-6 border border-gray-200",
+        "title": "Direct Contacts",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gradient-to-br from-sky-500 to-indigo-600 text-white rounded-2xl p-6 shadow-m",
+        "title": "Partner with LayoverX",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white/95 backdrop-blur-md rounded-2xl p-6 border border-gray-200 shadow-xl ma",
+        "title": "CSMIA Dispatch Office",
+        "titleSize": "17px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "group bg-white rounded-2xl border border-gray-200 p-5 cursor-pointer",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "group bg-white rounded-2xl border border-gray-200 p-5 cursor-pointer",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  },
+  {
+    "route": "/experiences.html",
+    "h1": [
+      {
+        "text": "Time-Optimized Mumbai Layover Experiences",
+        "className": "text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "28px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Filters",
+        "className": "text-base font-bold text-gray-900",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "What Transit Guests Say",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Experiences FAQ",
+        "className": "text-3xl font-extrabold text-gray-900",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Layover Fit",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Price Per Person",
+        "className": "text-xs font-bold text-gray-500 uppercase tracking-wider mb-3",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "South Mumbai Gateway Heritage Tour",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Guided Bandra Street Food Trail",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Elephanta Caves Fast-Track Excursion",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Bazaar & Boutique Shopping Expedition",
+        "className": "font-bold text-gray-900 text-lg hover:text-theme-primary transition-colors",
+        "fontSize": "22px",
+        "fontWeight": "700",
+        "margin": "0px/8px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Explore Services",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Company",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Get In Touch",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Escape the airport gates. Book short, custom-guide",
+        "className": "text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "28px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Visit the iconic Gateway of India, drive along Mar",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Taste classic Mumbai Vada Pav, butter seekh kebabs",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Fast-track ferry ride to Elephanta Island. Tour th",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Shop authentic cottons, Indian silks, brass antiqu",
+        "className": "text-theme-primary text-sm mb-4 leading-relaxed line-clamp-2",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"The heritage tour was spectacular. Driver met us ",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"Best local food crawl. The guide was extremely kn",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "\"Crawford market shopping tour was highly efficien",
+        "className": "text-gray-800 text-sm italic mb-4",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Don't worry! We monitor flight arrivals in real-ti",
+        "className": "text-gray-800 text-sm mt-3 leading-relaxed",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "For Terminal 2 (International), the driver will me",
+        "className": "text-gray-800 text-sm mt-3 leading-relaxed",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "",
+        "className": "relative theme-hero text-white pt-24 pb-16 overflow-hidden",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "bg-white border-b border-gray-200 py-4 sticky top-16 sm:top-20 z-40 sh",
+        "padY": "0px/0px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-white border-t border-gray-100",
+        "padY": "104px/104px"
+      },
+      {
+        "id": "",
+        "className": "section bg-gray-50 border-t border-gray-100",
+        "padY": "104px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 border border-wh",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 p-6 sticky top-52",
+        "title": "Filters",
+        "titleSize": "17px",
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "South Mumbai Gateway Heritage Tour",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Guided Bandra Street Food Trail",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Elephanta Caves Fast-Track Excursion",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shad",
+        "title": "Bazaar & Boutique Shopping Expedition",
+        "titleSize": "22px",
+        "bodySize": "17px",
+        "innerPad": "28px 28px 28px 28px"
+      },
+      {
+        "className": "bg-gray-50 p-6 rounded-2xl border border-gray-200",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gray-50 p-6 rounded-2xl border border-gray-200",
+        "title": "",
+        "titleSize": null,
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  },
+  {
+    "route": "/my-itinerary.html",
+    "h1": [
+      {
+        "text": "Stopover Planner & Workspace",
+        "className": "text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight",
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "margin": "20px/16px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Timings & Exit Window",
+        "className": "text-lg font-bold text-slate-950",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "margin": "0px/12px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Timeline Sequence",
+        "className": "text-base font-bold text-slate-900",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Your Stopover Schedule is Empty",
+        "className": "text-base font-bold text-slate-900 mb-1",
+        "fontSize": "17px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Draft Itineraries",
+        "className": "text-sm font-bold text-slate-900 uppercase tracking-widest",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "AI Stopover Co-Pilot",
+        "className": "font-extrabold text-base tracking-tight",
+        "fontSize": "17px",
+        "fontWeight": "800",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Pricing Breakdown",
+        "className": "text-sm font-bold text-slate-900 uppercase tracking-widest",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Explore Services",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Company",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Get In Touch",
+        "className": "font-bold mb-4 text-sm text-sky-400 uppercase tracking-wider",
+        "fontSize": "13px",
+        "fontWeight": "700",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "p": [
+      {
+        "text": "Build and refine your layover timeline. Check real",
+        "className": "text-slate-300 text-sm max-w-2xl",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "20px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Immigration exit & transfer buffer: 3.5h",
+        "className": "text-xs text-slate-500 mt-1",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Choose transit hotels, fine dining, quick massages",
+        "className": "text-slate-500 text-xs max-w-sm mx-auto mb-6",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "0px/0px",
+        "padding": "0px 0px 0px 0px"
+      },
+      {
+        "text": "Need an optimized plan? The co-pilot reads your la",
+        "className": "text-xs text-slate-300 leading-relaxed",
+        "fontSize": "17px",
+        "fontWeight": "400",
+        "margin": "20px/0px",
+        "padding": "0px 0px 0px 0px"
+      }
+    ],
+    "sectionPads": [
+      {
+        "id": "",
+        "className": "section bg-slate-50 min-h-screen",
+        "padY": "104px/104px"
+      }
+    ],
+    "cards": [
+      {
+        "className": "bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-sm space-y-6",
+        "title": "Timings & Exit Window",
+        "titleSize": "32px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-slate-50 p-3 rounded-2xl border border-slate-100",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-sky-50/50 p-3 rounded-2xl border border-sky-100/30",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-indigo-50/50 p-3 rounded-2xl border border-indigo-100/30",
+        "title": "",
+        "titleSize": null,
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm",
+        "title": "Your Stopover Schedule is Empty",
+        "titleSize": "17px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-3xl border border-gray-200 p-6 shadow-sm space-y-4",
+        "title": "Draft Itineraries",
+        "titleSize": "13px",
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-6 shadow",
+        "title": "AI Stopover Co-Pilot",
+        "titleSize": "17px",
+        "bodySize": "17px",
+        "innerPad": "0px 0px 0px 0px"
+      },
+      {
+        "className": "bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 shadow-md space-y-6",
+        "title": "Pricing Breakdown",
+        "titleSize": "13px",
+        "bodySize": null,
+        "innerPad": "0px 0px 0px 0px"
+      }
+    ]
+  }
+]
