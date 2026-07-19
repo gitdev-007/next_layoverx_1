@@ -1,75 +1,99 @@
-@import "./design-system.css";
+/*
+ * Final shared UI pass. This stylesheet loads after Tailwind and the design
+ * system, so it is deliberately limited to rules that must be consistent on
+ * every generated page.
+ */
 
-/* Ensure consistent box-sizing */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* Enforce minimum tap targets for interactive elements */
-button,
-[role="button"],
-input[type="submit"],
-input[type="button"],
-a.btn,
-a[class*="btn"] {
-  min-height: var(--space-4);
+:root {
+  --primary: #0369a1;
+  --primary-dark: #075985;
+  --primary-light: #7dd3fc;
+  --text-muted: #475569;
+  --body-color: #1e293b;
 }
 
-/* Enforce heading sizes */
-h1 {
-  font-size: var(--font-size-h1);
-}
-h2 {
-  font-size: var(--font-size-h2);
-}
-h3 {
-  font-size: var(--font-size-h3);
-}
-h4 {
-  font-size: var(--font-size-h4);
-}
+/* Theme accents serve as both text and button colors, so keep each accessible on white. */
+.theme-hotels { --primary: #8a6527; --primary-dark: #70501d; --primary-light: #e9c987; }
+.theme-restaurants { --primary: #c2410c; --primary-dark: #9a3412; --primary-light: #fdba74; }
+.theme-spa { --primary: #7c3aed; --primary-dark: #6d28d9; --primary-light: #c4b5fd; }
+.theme-gaming { --primary: #a21caf; --primary-dark: #86198f; --primary-light: #f5d0fe; }
+.theme-tours { --primary: #be123c; --primary-dark: #9f1239; --primary-light: #fda4af; }
 
-/* Force consistent paragraph spacing */
+/* Reset browser paragraph margins; page utilities now control local composition. */
 p {
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
+  margin: 0;
+  line-height: 1.65;
 }
 
-/* Ensure forms use the design system typography */
-input,
-select,
-textarea,
-button {
-  font-family: var(--font-primary);
+main h1,
+main h2,
+main h3,
+main h4 {
+  letter-spacing: -0.015em;
 }
 
-/* Align card-based components to use design system spacing */
-.card {
-  padding: var(--space-4);
-}
-.card-actions .btn {
-  margin-top: auto;
+main h1,
+main h2 {
+  text-wrap: balance;
 }
 
-/* Align the container width consistently */
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-2);
-  padding-right: var(--space-2);
+/* Metadata stays secondary, while remaining comfortably readable at every breakpoint. */
+main .text-xs {
+  font-size: 0.8125rem;
+  line-height: 1.45;
 }
 
-/* Section spacing baseline */
+main .text-\[9px\],
+main .text-\[10px\],
+main .text-\[11px\] {
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+/* Low-contrast slate/gray utilities are used for primary information on white cards. */
+main .text-gray-400,
+main .text-slate-400 {
+  color: #64748b;
+}
+
+/* Preserve the light treatment for muted text that intentionally sits on dark surfaces. */
+main :is(.bg-gray-800, .bg-gray-900, .bg-gray-950, .bg-slate-800, .bg-slate-900, .bg-slate-950) :is(.text-gray-400, .text-slate-400) {
+  color: #cbd5e1;
+}
+
+/* One responsive rhythm keeps adjacent sections visually consistent. */
 .section {
-  padding-top: var(--space-9);
-  padding-bottom: var(--space-9);
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
 }
 
-/* Responsive adjustments */
-@media (max-width: 639px) {
+/* Cards define their own internal padding in page markup; only preserve their outer geometry here. */
+.card {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 1rem;
+}
+
+.container {
+  max-width: 75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
   .container {
-    padding-left: var(--space-2);
-    padding-right: var(--space-2);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid rgba(14, 165, 233, 0.45);
+  outline-offset: 3px;
 }
