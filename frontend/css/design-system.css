@@ -46,42 +46,42 @@
   --theme-hero-from: #0f172a;
   --theme-hero-to: #1e293b;
 
-  /* Typography scale (Phase 2 target) */
+  /* Typography scale — professional readable defaults */
   --font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-size-display: 2.25rem; /* 36px */
-  --font-size-h1: 2.25rem; /* 36px */
-  --font-size-h2: 1.875rem; /* 30px */
-  --font-size-h3: 1.25rem; /* 20px */
-  --font-size-h4: 1.125rem; /* 18px */
-  --font-size-body: 1rem; /* 16px */
-  --font-size-small: 0.875rem; /* 14px */
-  --font-size-xs: 0.75rem; /* 12px — caption */
-  --font-size-caption: 0.75rem;
-  --line-height-tight: 1.15;
+  --font-size-display: 2.5rem;
+  --font-size-h1: 2.5rem; /* 40px */
+  --font-size-h2: 2rem; /* 32px */
+  --font-size-h3: 1.375rem; /* 22px */
+  --font-size-h4: 1.125rem;
+  --font-size-body: 1.0625rem; /* 17px */
+  --font-size-small: 0.9375rem; /* 15px */
+  --font-size-xs: 0.8125rem; /* 13px caption */
+  --font-size-caption: 0.8125rem;
+  --line-height-tight: 1.12;
   --line-height-snug: 1.25;
   --line-height-heading: 1.35;
-  --line-height-body: 1.6;
+  --line-height-body: 1.7;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 
-  /* Spacing — strict 4/8px grid */
-  --space-1: 0.25rem; /* 4 */
-  --space-2: 0.5rem; /* 8 */
-  --space-3: 0.75rem; /* 12 */
-  --space-4: 1rem; /* 16 */
-  --space-5: 1.5rem; /* 24 */
-  --space-6: 2rem; /* 32 */
-  --space-7: 2.5rem; /* 40 */
-  --space-8: 3rem; /* 48 */
-  --space-9: 4rem; /* 64 */
-  --space-10: 5rem; /* 80 */
-  --space-11: 6rem; /* 96 */
+  /* Spacing — 8px grid + generous sections */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+  --space-10: 5rem;
+  --space-11: 6rem;
 
-  --section-y-sm: var(--space-9);
-  --section-y-md: var(--space-10);
-  --section-y-lg: var(--space-11);
+  --section-y-sm: 4.5rem;
+  --section-y-md: 5.5rem;
+  --section-y-lg: 6.5rem;
 
   /* Button sizes */
   --btn-pad-y-sm: var(--space-2);
@@ -723,12 +723,12 @@ textarea:focus {
 
 /* Semantic heading defaults (utilities may still override) */
 h1 {
-  font-size: clamp(1.875rem, 4vw, var(--font-size-h1));
+  font-size: clamp(2rem, 4.5vw, var(--font-size-h1));
   line-height: var(--line-height-tight);
   font-weight: var(--font-weight-extrabold);
 }
 h2 {
-  font-size: clamp(1.5rem, 3vw, var(--font-size-h2));
+  font-size: clamp(1.625rem, 3.2vw, var(--font-size-h2));
   line-height: var(--line-height-snug);
   font-weight: var(--font-weight-extrabold);
 }

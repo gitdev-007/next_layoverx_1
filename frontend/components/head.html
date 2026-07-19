@@ -29,17 +29,17 @@
       overflow-x: hidden;
     }
 
-    /* Phase 2 type roles: H1 36 / H2 30 / H3 20 / body 16 */
-    h1 { font-size: clamp(1.875rem, 4vw, 2.25rem); line-height: 1.15; font-weight: 800; }
-    h2 { font-size: clamp(1.5rem, 3vw, 1.875rem); line-height: 1.25; font-weight: 800; }
-    h3 { font-size: 1.25rem; line-height: 1.35; font-weight: 700; }
+    /* Phase 3 professional type: H1 40 / H2 32 / H3 22 / body 17 */
+    h1 { font-size: clamp(2rem, 4.5vw, 2.5rem); line-height: 1.12; font-weight: 800; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(1.625rem, 3.2vw, 2rem); line-height: 1.25; font-weight: 800; letter-spacing: -0.025em; }
+    h3 { font-size: 1.375rem; line-height: 1.35; font-weight: 700; }
     h4 { font-size: 1.125rem; line-height: 1.4; font-weight: 600; }
-    h5 { font-size: 1rem; line-height: 1.5; font-weight: 600; }
-    h6 { font-size: 0.875rem; line-height: 1.5; font-weight: 600; }
+    h5 { font-size: 1.0625rem; line-height: 1.5; font-weight: 600; }
+    h6 { font-size: 0.9375rem; line-height: 1.5; font-weight: 600; }
 
-    p { font-size: 1rem; line-height: 1.6; }
+    p { font-size: 1.0625rem; line-height: 1.7; }
 
-    input, select, textarea, button { font-family: inherit; font-size: 0.875rem; }
+    input, select, textarea, button { font-family: inherit; font-size: 0.9375rem; }
 
     .container { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1rem; }
 
@@ -70,10 +70,10 @@
   <script src="js/supabase-init.js" type="module"></script>
 
   <!-- LayoverX Design System (overrides Tailwind where needed) -->
-  <link rel="stylesheet" href="css/design-system.css"/>
+  <link rel="stylesheet" href="css/design-system.css?v=20260719c"/>
 
   <!-- Global Structure & Typography Overrides (loads last — highest priority) -->
-  <link rel="stylesheet" href="css/global-overrides.css"/>
+  <link rel="stylesheet" href="css/global-overrides.css?v=20260719c"/>
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
