@@ -1,153 +1,149 @@
 {
   "totalPagesAudited": 30,
   "successfulPages": 28,
-  "distinctFontSizes": 9,
-  "distinctLineHeights": 19,
+  "distinctFontSizes": 8,
+  "distinctLineHeights": 12,
   "distinctFontWeights": 6,
   "distinctTextColors": 33,
-  "distinctBackgroundColors": 39,
+  "distinctBackgroundColors": 43,
   "distinctPaddings": 7,
   "distinctGaps": 10,
   "distinctBorderRadii": 5,
-  "distinctButtonHeights": 13,
+  "distinctButtonHeights": 14,
   "topFontSizes": [
     {
       "value": "15px",
-      "count": 2357
+      "count": 2306
     },
     {
       "value": "13px",
-      "count": 1504
+      "count": 1470
     },
     {
       "value": "17px",
-      "count": 801
+      "count": 790
     },
     {
       "value": "26px",
-      "count": 263
+      "count": 256
     },
     {
       "value": "22px",
-      "count": 230
+      "count": 137
     },
     {
       "value": "32px",
-      "count": 100
+      "count": 82
     },
     {
       "value": "40px",
-      "count": 50
+      "count": 49
     },
     {
       "value": "19px",
-      "count": 26
-    },
-    {
-      "value": "16px",
-      "count": 4
+      "count": 25
     }
   ],
   "topLineHeights": [
     {
       "value": "18.85px",
-      "count": 1500
+      "count": 1470
     },
     {
       "value": "23.25px",
-      "count": 1381
+      "count": 1448
     },
     {
       "value": "28.9px",
-      "count": 750
+      "count": 790
     },
     {
       "value": "25.5px",
-      "count": 605
+      "count": 577
     },
     {
       "value": "33.8px",
-      "count": 263
+      "count": 256
     },
     {
       "value": "18.75px",
-      "count": 240
+      "count": 237
     },
     {
       "value": "29.7px",
-      "count": 230
-    },
-    {
-      "value": "24px",
-      "count": 103
+      "count": 137
     },
     {
       "value": "40px",
-      "count": 100
+      "count": 82
     },
     {
       "value": "44.8px",
-      "count": 50
+      "count": 49
+    },
+    {
+      "value": "20.25px",
+      "count": 36
     }
   ],
   "topFontWeights": [
     {
       "value": "400",
-      "count": 1855
+      "count": 1775
     },
     {
       "value": "700",
-      "count": 1338
+      "count": 1273
     },
     {
       "value": "600",
-      "count": 908
+      "count": 870
     },
     {
       "value": "500",
-      "count": 795
+      "count": 766
     },
     {
       "value": "800",
-      "count": 406
+      "count": 397
     },
     {
       "value": "900",
-      "count": 33
+      "count": 34
     }
   ],
   "topTextColors": [
     {
       "value": "rgb(51, 65, 85)",
-      "count": 3364
+      "count": 3191
     },
     {
       "value": "rgb(255, 255, 255)",
-      "count": 890
+      "count": 847
     },
     {
       "value": "rgb(15, 23, 42)",
-      "count": 581
+      "count": 570
     },
     {
       "value": "rgb(203, 213, 225)",
-      "count": 482
+      "count": 466
     },
     {
       "value": "rgb(30, 41, 59)",
-      "count": 480
+      "count": 464
     },
     {
       "value": "rgb(3, 105, 161)",
-      "count": 206
+      "count": 185
     },
     {
       "value": "rgb(71, 85, 105)",
-      "count": 164
+      "count": 156
     },
     {
       "value": "rgba(255, 255, 255, 0.95)",
-      "count": 58
+      "count": 50
     },
     {
       "value": "rgb(190, 18, 60)",
@@ -159,11 +155,11 @@
     },
     {
       "value": "oklch(0.577 0.245 27.325)",
-      "count": 30
+      "count": 29
     },
     {
       "value": "oklch(0.637 0.237 25.331)",
-      "count": 28
+      "count": 27
     },
     {
       "value": "rgb(124, 58, 237)",
@@ -181,47 +177,47 @@
   "topBackgroundColors": [
     {
       "value": "rgb(255, 255, 255)",
-      "count": 376
-    },
-    {
-      "value": "rgb(3, 105, 161)",
-      "count": 211
-    },
-    {
-      "value": "rgb(241, 245, 249)",
-      "count": 198
+      "count": 345
     },
     {
       "value": "oklch(0.985 0.002 247.839)",
-      "count": 194
+      "count": 249
+    },
+    {
+      "value": "rgb(3, 105, 161)",
+      "count": 191
     },
     {
       "value": "rgba(0, 0, 0, 0.6)",
-      "count": 115
+      "count": 114
     },
     {
       "value": "oklch(0.278 0.033 256.848)",
-      "count": 90
+      "count": 87
+    },
+    {
+      "value": "oklch(0.984 0.003 247.858)",
+      "count": 61
+    },
+    {
+      "value": "oklch(0.967 0.003 264.542)",
+      "count": 51
+    },
+    {
+      "value": "oklch(0.962 0.018 272.314)",
+      "count": 33
+    },
+    {
+      "value": "oklch(0.979 0.021 166.113)",
+      "count": 33
     },
     {
       "value": "oklch(0.21 0.034 264.665)",
       "count": 32
     },
     {
-      "value": "oklch(0.979 0.021 166.113)",
-      "count": 31
-    },
-    {
       "value": "oklab(0.979 -0.0203862 0.00504016 / 0.5)",
-      "count": 30
-    },
-    {
-      "value": "oklch(0.962 0.018 272.314)",
-      "count": 30
-    },
-    {
-      "value": "oklch(0.967 0.003 264.542)",
-      "count": 27
+      "count": 29
     },
     {
       "value": "rgba(255, 255, 255, 0.97)",
@@ -232,34 +228,34 @@
       "count": 20
     },
     {
-      "value": "rgb(138, 101, 39)",
-      "count": 16
+      "value": "oklch(0.928 0.006 264.531)",
+      "count": 18
     },
     {
-      "value": "rgb(71, 85, 105)",
-      "count": 15
+      "value": "rgb(138, 101, 39)",
+      "count": 16
     }
   ],
   "topPaddings": [
     {
       "value": "0px 32px",
-      "count": 149
+      "count": 141
     },
     {
       "value": "16px",
-      "count": 115
+      "count": 114
     },
     {
       "value": "28px",
-      "count": 65
+      "count": 53
     },
     {
       "value": "104px 0px",
-      "count": 49
+      "count": 44
     },
     {
       "value": "12px",
-      "count": 30
+      "count": 29
     },
     {
       "value": "16px 20px",
@@ -273,11 +269,11 @@
   "topGaps": [
     {
       "value": "8px",
-      "count": 288
+      "count": 286
     },
     {
       "value": "16px",
-      "count": 200
+      "count": 186
     },
     {
       "value": "20px",
@@ -285,27 +281,27 @@
     },
     {
       "value": "12px",
-      "count": 76
+      "count": 73
     },
     {
       "value": "24px",
-      "count": 67
+      "count": 61
     },
     {
       "value": "4px",
-      "count": 46
+      "count": 43
     },
     {
       "value": "36px",
-      "count": 31
+      "count": 30
     },
     {
       "value": "40px",
-      "count": 31
+      "count": 30
     },
     {
       "value": "28px",
-      "count": 20
+      "count": 16
     },
     {
       "value": "48px",
@@ -315,11 +311,11 @@
   "topBorderRadii": [
     {
       "value": "12px",
-      "count": 312
+      "count": 299
     },
     {
       "value": "14px",
-      "count": 131
+      "count": 126
     },
     {
       "value": "16px",
@@ -327,7 +323,7 @@
     },
     {
       "value": "9999px",
-      "count": 8
+      "count": 4
     },
     {
       "value": "3.35544e+07px",
@@ -341,35 +337,31 @@
     },
     {
       "value": "38.8438px",
-      "count": 30
+      "count": 29
     },
     {
       "value": "43.5px",
       "count": 22
     },
     {
+      "value": "41.5px",
+      "count": 7
+    },
+    {
       "value": "45.5px",
-      "count": 12
+      "count": 6
     },
     {
       "value": "48px",
-      "count": 9
-    },
-    {
-      "value": "41.5px",
-      "count": 8
-    },
-    {
-      "value": "24px",
       "count": 5
     },
     {
-      "value": "52px",
-      "count": 3
+      "value": "23.25px",
+      "count": 5
     },
     {
       "value": "53.5px",
-      "count": 3
+      "count": 4
     },
     {
       "value": "49.75px",
@@ -385,6 +377,14 @@
     },
     {
       "value": "37.6875px",
+      "count": 1
+    },
+    {
+      "value": "20.8438px",
+      "count": 1
+    },
+    {
+      "value": "51.25px",
       "count": 1
     }
   ]

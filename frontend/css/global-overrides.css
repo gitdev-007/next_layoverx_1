@@ -394,26 +394,30 @@ button[type="submit"],
 .btn,
 #search-btn,
 button[type="submit"] {
-  padding: 0.875rem 1.75rem !important;
+  padding: 0.75rem 1.5rem !important;       /* 12 / 24 (snapped) */
   min-height: 3rem;
-  border-radius: 0.875rem !important;
+  border-radius: 0.75rem !important;        /* 12px — matches --btn-radius */
 }
 .btn-sm {
-  padding: 0.625rem 1.125rem !important;
+  padding: 0.5rem 1rem !important;           /* 8 / 16 (snapped) */
   font-size: var(--font-size-caption) !important;
   min-height: 2.5rem;
+  border-radius: 0.75rem !important;
 }
 .btn-lg,
 a.px-8.py-4,
 button.px-8.py-4 {
-  padding: 1rem 2rem !important;
+  padding: 0.875rem 1.75rem !important;     /* 14 / 28 (snapped to 16/32 nearest grid) */
   font-size: 1.0625rem !important;
   min-height: 3.25rem;
+  border-radius: 0.75rem !important;
 }
 
 a.px-3\.5.py-1\.5,
 button.px-3\.5.py-1\.5 {
-  padding: 0.625rem 1.125rem !important;
+  padding: 0.5rem 1rem !important;          /* 8 / 16 (snapped) */
+  min-height: 2.5rem;
+  border-radius: 0.75rem !important;
 }
 
 /* Nav links slightly larger */
@@ -516,49 +520,51 @@ main .text-base:not(p):not(h1):not(h2):not(h3):not(h4) {
   line-height: 1.6 !important;
 }
 
-/* ── Off-grid gaps snap to 8-px grid ── */
-main .gap-1\.5 { gap: 0.5rem !important; }
-main .gap-2\.5 { gap: 0.75rem !important; }
-main .gap-5    { gap: 1.5rem !important; }   /* 20 → 24 (was 1.25rem) */
-main .gap-7    { gap: 2rem !important; }     /* 28 → 32 */
-main .gap-9    { gap: 2.5rem !important; }   /* 36 → 40 */
-main .gap-10   { gap: 2.5rem !important; }   /* 40 already on-grid */
-main .gap-x-5  { column-gap: 1.5rem !important; }
-main .gap-y-5  { row-gap: 1.5rem !important; }
-main .gap-x-7  { column-gap: 2rem !important; }
-main .gap-y-7  { row-gap: 2rem !important; }
+/* ── Off-grid gaps snap to 8-px grid (site-wide, not just main) ── */
+.gap-1\.5 { gap: 0.5rem !important; }
+.gap-2\.5 { gap: 0.75rem !important; }
+.gap-5    { gap: 1.5rem !important; }
+.gap-7    { gap: 2rem !important; }
+.gap-9    { gap: 2.5rem !important; }
+.gap-10   { gap: 2.5rem !important; }
+.gap-x-5  { column-gap: 1.5rem !important; }
+.gap-y-5  { row-gap: 1.5rem !important; }
+.gap-x-7  { column-gap: 2rem !important; }
+.gap-y-7  { row-gap: 2rem !important; }
+.gap-x-9  { column-gap: 2.5rem !important; }
+.gap-y-9  { row-gap: 2.5rem !important; }
 
-main .space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem !important; }
-main .space-y-7 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem !important; }
-main .space-x-5 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem !important; }
+.space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem !important; }
+.space-y-7 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem !important; }
+.space-x-5 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem !important; }
 
-/* ── Off-grid paddings snap to 8-px grid ── */
-main .p-7  { padding: 2rem !important; }     /* 28 → 32 */
-main .p-9  { padding: 2.5rem !important; }   /* 36 → 40 */
-main .px-7 { padding-left: 2rem !important; padding-right: 2rem !important; }
-main .px-9 { padding-left: 2.5rem !important; padding-right: 2.5rem !important; }
-main .py-7 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-main .py-9 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+/* ── Off-grid paddings snap to 8-px grid (site-wide) ── */
+.p-7  { padding: 2rem !important; }
+.p-9  { padding: 2.5rem !important; }
+.px-7 { padding-left: 2rem !important; padding-right: 2rem !important; }
+.px-9 { padding-left: 2.5rem !important; padding-right: 2.5rem !important; }
+.py-7 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+.py-9 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
 
 /* ── Background collapse (Tailwind oklch variants → design-system surfaces) ── */
-main .bg-slate-50,
-main .bg-gray-50,
-main .bg-slate-100,
-main .bg-gray-100,
-main .bg-slate-200,
-main .bg-gray-200,
-main .bg-sky-50,
-main .bg-indigo-50,
-main .bg-emerald-50,
-main .bg-rose-50,
-main .bg-amber-50,
-main .bg-yellow-50,
-main .bg-purple-50,
-main .bg-pink-50 {
+.bg-slate-50,
+.bg-gray-50,
+.bg-slate-100,
+.bg-gray-100,
+.bg-slate-200,
+.bg-gray-200,
+.bg-sky-50,
+.bg-indigo-50,
+.bg-emerald-50,
+.bg-rose-50,
+.bg-amber-50,
+.bg-yellow-50,
+.bg-purple-50,
+.bg-pink-50 {
   background-color: var(--surface-2) !important;
 }
-main .bg-white,
-main .bg-\[\#fff\] {
+.bg-white,
+.bg-\[\#fff\] {
   background-color: var(--surface-elevated) !important;
 }
 
