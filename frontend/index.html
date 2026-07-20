@@ -283,8 +283,8 @@ e
 <!-- QUICK SEARCH -->
 <section class="relative z-20 -mt-16 sm:-mt-20 px-4 sm:px-6 mb-16" id="search">
   <div class="container">
-    <div class="bg-white rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-8">
-      <div class="flex items-center gap-2 sm:gap-3 mb-6 overflow-x-auto no-scrollbar -mx-1 pb-2" id="search-tabs">
+    <div class="bg-white rounded-[24px] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] border border-[#E5E7EB] p-6 sm:p-10 transition-all" id="search-panel">
+      <div class="flex items-center gap-2 sm:gap-3 mb-8 overflow-x-auto no-scrollbar -mx-1 pb-2" id="search-tabs">
         <button class="search-tab active" onclick="location.href='hotels.html'">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
             <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h1m-1 4h1m-1 4h1m4-4h1m-1 4h1"/>
@@ -324,27 +324,27 @@ e
       </div>
       
       <!-- Search Form -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="search-fields">
-        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
-          <label for="search-location" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Destination Area</label>
-          <select id="search-location" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="search-fields">
+        <div class="bg-[#F3F4F6] border border-[#E5E7EB] rounded-[12px] p-4 transition-all focus-within:border-[#0284C7] focus-within:ring-4 focus-within:ring-[#0284C7]/10">
+          <label for="search-location" class="block text-xs font-bold text-[#6B7280] uppercase tracking-widest mb-2">Destination Area</label>
+          <select id="search-location" class="w-full bg-transparent text-sm font-semibold text-[#111827] border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
             <option value="near-airport">Near Mumbai Airport (CSMIA)</option>
             <option value="bandra">Bandra & Andheri West</option>
             <option value="colaba">Colaba & South Mumbai</option>
             <option value="juhu">Juhu Beach Area</option>
           </select>
         </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
-          <label for="search-arrival" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Flight Arrival Time</label>
-          <input type="datetime-local" id="search-arrival" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none" aria-label="Arrival date and time" required/>
+        <div class="bg-[#F3F4F6] border border-[#E5E7EB] rounded-[12px] p-4 transition-all focus-within:border-[#0284C7] focus-within:ring-4 focus-within:ring-[#0284C7]/10">
+          <label for="search-arrival" class="block text-xs font-bold text-[#6B7280] uppercase tracking-widest mb-2">Flight Arrival Time</label>
+          <input type="datetime-local" id="search-arrival" class="w-full bg-transparent text-sm font-semibold text-[#111827] border-none p-0 focus:ring-0 focus:outline-none" aria-label="Arrival date and time" required/>
         </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
-          <label for="search-departure" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Flight Departure Time</label>
-          <input type="datetime-local" id="search-departure" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none" aria-label="Departure date and time" required/>
+        <div class="bg-[#F3F4F6] border border-[#E5E7EB] rounded-[12px] p-4 transition-all focus-within:border-[#0284C7] focus-within:ring-4 focus-within:ring-[#0284C7]/10">
+          <label for="search-departure" class="block text-xs font-bold text-[#6B7280] uppercase tracking-widest mb-2">Flight Departure Time</label>
+          <input type="datetime-local" id="search-departure" class="w-full bg-transparent text-sm font-semibold text-[#111827] border-none p-0 focus:ring-0 focus:outline-none" aria-label="Departure date and time" required/>
         </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4">
-          <label for="search-travelers" class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Travelers</label>
-          <select id="search-travelers" class="w-full bg-transparent text-sm font-semibold text-gray-900 border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
+        <div class="bg-[#F3F4F6] border border-[#E5E7EB] rounded-[12px] p-4 transition-all focus-within:border-[#0284C7] focus-within:ring-4 focus-within:ring-[#0284C7]/10">
+          <label for="search-travelers" class="block text-xs font-bold text-[#6B7280] uppercase tracking-widest mb-2">Travelers</label>
+          <select id="search-travelers" class="w-full bg-transparent text-sm font-semibold text-[#111827] border-none p-0 focus:ring-0 focus:outline-none cursor-pointer">
             <option value="1">1 Adult</option>
             <option value="2">2 Adults</option>
             <option value="3">3 Adults</option>
@@ -354,15 +354,15 @@ e
       </div>
       
       <!-- Duration Display -->
-      <div class="mt-4 flex items-center justify-between flex-wrap gap-3">
-        <div class="flex items-center gap-2 text-sm text-gray-800" id="duration-display" aria-live="polite">
-          <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Calculated Layover window: <strong class="text-gray-900 font-bold" id="layover-duration">6h 00m</strong></span>
+      <div class="mt-6 flex items-center justify-between flex-wrap gap-3 py-3 px-4 bg-[#F9FAFB] rounded-xl border border-[#E5E7EB]/50">
+        <div class="flex items-center gap-2 text-sm text-[#6B7280]" id="duration-display" aria-live="polite">
+          <svg class="w-4 h-4 text-[#0284C7]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span class="font-medium">Calculated Layover window: <strong class="text-[#111827] font-bold" id="layover-duration">6h 00m</strong></span>
         </div>
-        <div id="validation-message" class="text-sm text-red-500 font-medium hidden" role="alert" aria-live="assertive"></div>
+        <div id="validation-message" class="text-sm text-rose-500 font-semibold hidden" role="alert" aria-live="assertive"></div>
       </div>
       
-      <button id="search-btn" class="w-full mt-6 py-4 bg-gradient-to-r from-sky-500 to-sky-600 text-white text-base font-bold rounded-2xl shadow-lg hover:shadow-xl hover:shadow-sky-500/10 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2" type="button">
+      <button id="search-btn" class="w-full mt-8 py-4 bg-[#0284C7] hover:bg-[#027ab1] text-white text-base font-bold rounded-[12px] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3" type="button">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 21l8.904-4.474L18 11.25l-8.187 4.654zm-1.125-2.25L3 18.003V6c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v6.003L18 12.5m-9.313 1.154L18 12.5"/></svg>
         Build Custom AI Itinerary
       </button>
