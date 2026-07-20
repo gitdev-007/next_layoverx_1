@@ -67,10 +67,10 @@
         To submit a supplier application and manage your business listing, please log in or create an account.
       </p>
       <div class="flex flex-col gap-3">
-        <button onclick="window.openAuthModal('login')" class="px-6 py-3 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-md transition-all">
+        <button type="button" onclick="window.openAuthModal('login')" class="px-6 py-3 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-md transition-all">
           Sign In / Log In
         </button>
-        <button onclick="window.openAuthModal('signup')" class="px-6 py-3 border border-gray-300 hover:bg-gray-50 text-gray-800 font-bold rounded-xl transition-all">
+        <button type="button" onclick="window.openAuthModal('signup')" class="px-6 py-3 border border-gray-300 hover:bg-gray-50 text-gray-800 font-bold rounded-xl transition-all">
           Create New Account
         </button>
       </div>
@@ -259,7 +259,7 @@
                 <div class="flex items-center gap-4">
                   <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-xl text-sky-600">🖼️</div>
                   <div class="flex-grow">
-                    <h4 class="font-bold text-gray-900 text-sm">Business Logo / Profile Banner <span class="text-red-500">*</span></h4>
+                    <h3 class="h4-style">Business Logo / Profile Banner <span class="text-red-500">*</span></h3>
                     <p class="text-xs text-gray-500 mt-0.5">High-quality image of logo or entrance storefront.</p>
                   </div>
                   <label class="cursor-pointer px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-bold rounded-xl transition">
@@ -323,35 +323,35 @@
             <div class="border border-gray-100 rounded-2xl overflow-hidden divide-y divide-gray-100 bg-gray-50/50">
               <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Owner Full Name</h4>
+                  <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Owner Full Name</p>
                   <p id="review-owner-name" class="text-sm font-semibold text-gray-900">--</p>
                 </div>
                 <div>
-                  <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Email & Phone</h4>
+                  <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Email & Phone</p>
                   <p id="review-owner-contact" class="text-sm font-semibold text-gray-900">--</p>
                 </div>
               </div>
               <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Business & Category</h4>
+                  <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Business & Category</p>
                   <p id="review-biz-name" class="text-sm font-semibold text-gray-900">--</p>
                 </div>
                 <div>
-                  <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Airport Proximity</h4>
+                  <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Airport Proximity</p>
                   <p id="review-biz-airport" class="text-sm font-semibold text-gray-900">--</p>
                 </div>
               </div>
               <div class="p-5">
-                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Listing Description</h4>
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Listing Description</p>
                 <p id="review-biz-desc" class="text-sm text-gray-700 leading-relaxed">--</p>
               </div>
               <div class="p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Website & Staff Count</h4>
+                  <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Website & Staff Count</p>
                   <p id="review-biz-details" class="text-sm font-semibold text-gray-900">--</p>
                 </div>
                 <div>
-                  <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Uploaded Documents</h4>
+                  <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Uploaded Documents</p>
                   <p id="review-biz-files" class="text-sm text-emerald-600 font-semibold flex items-center gap-1">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     <span>All 3 certificates selected</span>

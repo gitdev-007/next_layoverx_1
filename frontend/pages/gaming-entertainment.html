@@ -99,9 +99,9 @@
 <section class="bg-white border-b border-gray-200 py-4 sticky top-16 sm:top-20 z-40 shadow-sm">
   <div class="container">
     <div class="flex items-center gap-3 overflow-x-auto no-scrollbar" id="gaming-tabs">
-      <button class="gaming-tab active bg-theme-primary text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterGaming('all')">All Fun</button>
-      <button class="gaming-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterGaming('gaming')">🎮 Gaming Zones</button>
-      <button class="gaming-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterGaming('movie')">🍿 Cinema</button>
+      <button type="button" class="gaming-tab active bg-theme-primary text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterGaming('all')">All Fun</button>
+      <button type="button" class="gaming-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterGaming('gaming')">🎮 Gaming Zones</button>
+      <button type="button" class="gaming-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterGaming('movie')">🍿 Cinema</button>
     </div>
   </div>
 </section>
@@ -274,7 +274,7 @@
 <!-- DETAILS MODAL -->
 <div id="modal-gaming-detail" class="modal-overlay" data-modal="gaming-detail" role="dialog" aria-modal="true" aria-labelledby="gaming-detail-title">
   <div class="modal-content !max-w-2xl">
-    <button class="modal-close font-semibold text-2xl" aria-label="Close Gaming Modal" onclick="layoverx.closeGamingDetail()">&times;</button>
+    <button type="button" class="modal-close font-semibold text-2xl" aria-label="Close Gaming Modal" onclick="layoverx.closeGamingDetail()">&times;</button>
     <div class="p-6">
       <div class="relative h-60 rounded-xl overflow-hidden mb-6">
         <img id="detail-gaming-image" alt="Gaming main view" class="w-full h-full object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>

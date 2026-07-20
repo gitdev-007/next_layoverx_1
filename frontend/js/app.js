@@ -3805,7 +3805,7 @@
       container.innerHTML = `
         <div class="bg-white rounded-3xl border border-gray-200 p-12 text-center shadow-sm">
           <div class="w-16 h-16 bg-slate-50 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">📅</div>
-          <h3 class="text-base font-bold text-slate-900 mb-1">No Upcoming Bookings</h3>
+          <h2 class="h3-style mb-1">No Upcoming Bookings</h2>
           <p class="text-slate-500 text-xs max-w-sm mx-auto mb-6">You don't have any finalized stopovers booked yet. Complete checkout to secure your reservations.</p>
           <a href="plan-my-layover.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold rounded-xl transition shadow">
             Start Planning

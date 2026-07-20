@@ -7,36 +7,45 @@
   --primary: #0369a1;
   --primary-dark: #075985;
   --primary-light: #7dd3fc;
-  --text: #0f172a;
-  --text-muted: #475569;
-  --text-primary: #0f172a;
-  --body-color: #334155;
-  --heading-color: #0f172a;
-  --surface: #f8fafc;
-  --surface-elevated: #ffffff;
+  --premium-blue: #0A84FF;
+  --text: #0F172A;
+  --text-muted: #64748B;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --body-color: #0F172A;
+  --heading-color: #0F172A;
+  --surface: #F8FAFC;
+  --surface-elevated: #FFFFFF;
   --border: #e2e8f0;
   --font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  /* Larger, clearer type scale */
-  --font-size-h1: 2.5rem; /* 40px */
-  --font-size-h2: 2rem; /* 32px */
-  --font-size-h3: 1.375rem; /* 22px */
-  --font-size-body: 1.0625rem; /* 17px — readable body */
-  --font-size-small: 0.9375rem; /* 15px — UI chrome */
-  --font-size-caption: 0.8125rem; /* 13px — labels only */
-  --font-size-xs: 0.8125rem;
+  /* Strict type scale */
+  --font-size-h1: 4rem;             /* 64px — hero heading */
+  --font-size-h2: 3rem;             /* 48px — section heading */
+  --font-size-h3: 1.75rem;          /* 28px — sub heading */
+  --font-size-h4: 1.125rem;         /* 18px — secondary text */
+  --font-size-body: 1.25rem;        /* 20px — body text */
+  --font-size-secondary: 1.125rem;  /* 18px — secondary text */
+  --font-size-small: 0.875rem;      /* 14px — small text */
+  --font-size-xs: 0.875rem;         /* 14px — small text */
+  --font-size-caption: 1rem;        /* 16px — caption text */
 
-  --line-height-tight: 1.12;
-  --line-height-snug: 1.25;
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.15;
+  --line-height-heading: 1.15;
   --line-height-body: 1.7;
 
-  /* Generous section rhythm */
-  --section-y-sm: 4.5rem; /* 72 */
-  --section-y-md: 5.5rem; /* 88 */
-  --section-y-lg: 6.5rem; /* 104 */
+  /* Section rhythm */
+  --section-y-sm: 5rem;    /* 80px mobile */
+  --section-y-md: 6rem;    /* 96px tablet */
+  --section-y-lg: 7.5rem;  /* 120px desktop */
 
   --space-block: 1.5rem;
   --space-stack: 1rem;
+
+  /* Button sizing */
+  --btn-height-md: 3.25rem;  /* 52px */
+  --btn-radius: 0.875rem;    /* 14px */
 }
 
 .theme-hotels {
@@ -95,9 +104,7 @@ body {
   min-width: 600px;
 }
 
-/* ── Section Padding Enforcement (L5) ── */
-
-/* ── Section Padding Enforcement (L5) ── */
+/* ── Section Padding Enforcement ── */
 section:not(.theme-hero):not(.relative) {
   padding-top: var(--section-y-sm) !important;
   padding-bottom: var(--section-y-sm) !important;
@@ -134,11 +141,11 @@ body {
 
 /* ─── Headings: one clear hierarchy site-wide ─── */
 main h2:not(.text-xs):not(.text-sm):not(.text-base) {
-  font-size: clamp(1.625rem, 3.2vw, var(--font-size-h2)) !important;
+  font-size: clamp(1.75rem, 4vw, var(--font-size-h2)) !important;
   line-height: var(--line-height-snug) !important;
   font-weight: 800 !important;
   letter-spacing: -0.025em !important;
-  margin-bottom: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 main h3.text-lg,
@@ -147,10 +154,10 @@ main h3.text-2xl,
 .card h3,
 main .card h3 {
   font-size: var(--font-size-h3) !important;
-  line-height: 1.35 !important;
+  line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
   letter-spacing: -0.02em !important;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 main h1,
@@ -162,34 +169,41 @@ main h4 {
   text-wrap: balance;
 }
 
-/* ─── Body copy: upgrade cramped text-sm paragraphs to readable size ─── */
-main p,
-.card p,
-article p,
-section p {
-  font-size: var(--font-size-body) !important;
+/* ─── Body copy: 20px for readable content paragraphs only ─── */
+.section > .container > .text-center p,
+section > .container > div > p,
+section .prose p,
+.theme-hero p,
+.card > div > p,
+.card .p-6 p,
+.card .p-5 p,
+main .card p,
+article p {
+  font-size: var(--font-size-secondary) !important;
   line-height: var(--line-height-body) !important;
   color: var(--body-color);
+  margin-bottom: 1.5rem !important;
 }
 
-main p.text-sm,
-.card p.text-sm,
-section p.text-sm,
-main p.text-xs,
-.card p.text-xs {
+.section > .container > .text-center p,
+.theme-hero p,
+section > .container > div > p:last-child,
+article p {
   font-size: var(--font-size-body) !important;
-  line-height: var(--line-height-body) !important;
 }
 
-/* Supporting UI text (not long paragraphs) */
-.text-sm:not(p):not(h1):not(h2):not(h3),
-main .text-sm:not(p):not(h1):not(h2):not(h3) {
+/* Supporting UI text */
+.text-sm,
+main .text-sm,
+.card .text-sm,
+.badge,
+.tag,
+.meta {
   font-size: var(--font-size-small) !important;
-  line-height: 1.55 !important;
+  line-height: 1.5 !important;
 }
 
-/* Captions / labels only */
-.text-xs,
+/* Captions / labels / UI chrome */
 main .text-xs,
 .text-\[9px\],
 .text-\[10px\],
@@ -206,7 +220,7 @@ main h3.text-sm.uppercase,
 label.text-xs,
 .label-caption {
   font-size: var(--font-size-caption) !important;
-  line-height: 1.45 !important;
+  line-height: 1.5 !important;
 }
 
 .text-base,
@@ -216,27 +230,35 @@ main .text-base {
 }
 
 .text-lg {
-  font-size: 1.1875rem !important; /* 19px */
+  font-size: var(--font-size-secondary) !important;
   line-height: 1.5 !important;
 }
 .text-xl {
-  font-size: 1.375rem !important; /* 22px */
-  line-height: 1.35 !important;
+  font-size: 1.75rem !important;
+  line-height: var(--line-height-heading) !important;
 }
 .text-2xl {
-  font-size: 1.625rem !important; /* 26px */
-  line-height: 1.3 !important;
+  font-size: 2rem !important;
+  line-height: var(--line-height-heading) !important;
 }
 .text-3xl {
-  font-size: 2rem !important; /* 32px */
-  line-height: 1.25 !important;
+  font-size: 2.5rem !important;
+  line-height: var(--line-height-heading) !important;
 }
 .text-4xl {
-  font-size: 2.5rem !important; /* 40px */
-  line-height: 1.15 !important;
+  font-size: 3rem !important;
+  line-height: var(--line-height-heading) !important;
+}
+.text-5xl {
+  font-size: 3.5rem !important;
+  line-height: var(--line-height-heading) !important;
+}
+.text-6xl {
+  font-size: 4rem !important;
+  line-height: var(--line-height-tight) !important;
 }
 
-/* ─── Card padding consistency ─── */
+/* ─── Section padding consistency ─── */
 .section {
   padding-top: var(--section-y-sm) !important;
   padding-bottom: var(--section-y-sm) !important;
@@ -259,55 +281,66 @@ main .text-base {
 .section > .container > .mb-10,
 .section > .container > .mb-12,
 .section > .container > .mb-16 {
-  margin-bottom: 2.5rem !important;
+  margin-bottom: 2rem !important;
 }
 @media (min-width: 768px) {
   .section > .container > .text-center,
   .section > .container > .mb-10,
   .section > .container > .mb-12,
   .section > .container > .mb-16 {
-    margin-bottom: 3rem !important;
+    margin-bottom: 2.5rem !important;
   }
 }
 
-/* Grids / flex stacks — bump tight gaps onto an 8px professional grid */
+/* Grids / flex stacks — snap to 4-px grid */
 .gap-1\.5,
 .gap-x-1\.5,
 .gap-y-1\.5 {
-  gap: 0.5rem !important;
+  gap: 0.5rem !important;  /* 8px, snap from 6px */
 }
 .gap-2\.5,
 .gap-x-2\.5,
 .gap-y-2\.5 {
-  gap: 0.75rem !important;
+  gap: 0.75rem !important; /* 12px, snap from 10px */
 }
-main .gap-3 {
-  gap: 1rem !important;
-}
-main .gap-4 {
-  gap: 1.25rem !important;
-}
-main .gap-6 {
-  gap: 1.75rem !important;
-}
-main .gap-8 {
-  gap: 2.25rem !important;
+
+/* Off-grid gaps snap to design system */
+.gap-5    { gap: 1.5rem !important; }  /* 24px, snap from 20px */
+.gap-7    { gap: 2rem !important; }    /* 32px, snap from 28px */
+.gap-9    { gap: 2.5rem !important; }  /* 40px, snap from 36px */
+.gap-x-5  { column-gap: 1.5rem !important; }
+.gap-y-5  { row-gap: 1.5rem !important; }
+.gap-x-7  { column-gap: 2rem !important; }
+.gap-y-7  { row-gap: 2rem !important; }
+.gap-x-9  { column-gap: 2.5rem !important; }
+.gap-y-9  { row-gap: 2.5rem !important; }
+
+/* Card grid gap: 32px */
+main .grid.gap-6,
+main .grid.gap-8,
+main .grid.gap-10,
+main .grid.gap-12,
+main .grid.md\:grid-cols-2,
+main .grid.md\:grid-cols-3,
+main .grid.lg\:grid-cols-3,
+main .grid.lg\:grid-cols-4 {
+  gap: 2rem !important;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  margin-top: 0.75rem !important;
+  margin-top: 0.5rem !important;  /* 8px */
 }
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  margin-top: 1rem !important;
+  margin-top: 0.75rem !important; /* 12px */
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  margin-top: 1.25rem !important;
+  margin-top: 1rem !important;    /* 16px */
 }
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  margin-top: 1.75rem !important;
+  margin-top: 1.5rem !important;  /* 24px */
 }
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  margin-top: 2.25rem !important;
+  margin-top: 2rem !important;    /* 32px */
 }
 
 /* Fixed Padding only */
@@ -335,31 +368,66 @@ main [class*="rounded-3xl"] .p-6 {
   main [class*="rounded-2xl"] .p-6,
   main [class*="rounded-3xl"] .p-5,
   main [class*="rounded-3xl"] .p-6 {
-    padding: 1.75rem !important;
+    padding: 1.5rem !important;
   }
 }
 
-.card {
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  border-radius: 1.25rem;
-  background: var(--surface-elevated);
+/* One card style */
+.card,
+main .card,
+main a.group.bg-white,
+main .bg-white.rounded-2xl,
+main .bg-white.rounded-3xl,
+main .rounded-2xl.border,
+main .rounded-3xl.border {
+  border: 1px solid rgba(148, 163, 184, 0.22) !important;
+  border-radius: 1.25rem !important;
+  background: var(--surface-elevated) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+  overflow: hidden;
+}
+
+.card:hover,
+main .card:hover,
+main a.group.bg-white:hover,
+main .bg-white.rounded-2xl:hover,
+main .bg-white.rounded-3xl:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Card image ratio — only hero/thumbnail images, not avatars or icons */
+.card-image,
+.card > img:first-child,
+.card > a > img:first-child,
+main a.group.bg-white > img:first-child,
+main .bg-white.rounded-2xl > img:first-child,
+main .bg-white.rounded-3xl > img:first-child,
+.card .relative.aspect-\[3\/2\] img,
+.card .relative.aspect-\[16\/9\] img,
+.card .relative.h-48 img,
+.card .relative.h-52 img,
+.card .relative.h-56 img {
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  width: 100% !important;
 }
 
 .container {
   max-width: 80rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 @media (min-width: 1024px) {
   .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -426,7 +494,7 @@ main .text-slate-900,
   border-color: var(--primary) !important;
 }
 
-/* ─── Buttons: Larger tap targets, consistent type & layout ─── */
+/* ─── Buttons: 52px height, 14px radius, consistent type & layout ─── */
 .btn,
 #search-btn,
 button[type="submit"],
@@ -437,22 +505,23 @@ button[type="submit"],
   letter-spacing: -0.01em;
 }
 
-/* Standardize heights and paddings to UI Standard */
+/* Standardize heights and paddings */
 .btn,
 #search-btn,
 button[type="submit"] {
-  padding: 0.875rem 1.75rem !important;       /* Medium: 14 / 28px */
-  min-height: 3rem !important;                  /* 48px */
-  border-radius: var(--btn-radius) !important;  /* 12px */
+  padding: 0.75rem 1.5rem !important;
+  min-height: var(--btn-height-md) !important;
+  border-radius: var(--btn-radius) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  border: none !important;
 }
 
 .btn-sm {
-  padding: 0.625rem 1.125rem !important;       /* Small: 10 / 18px */
+  padding: 0.5rem 1rem !important;
   font-size: var(--font-size-caption) !important;
-  min-height: 2.5rem !important;               /* 40px */
+  min-height: 2.5rem !important;
   border-radius: var(--btn-radius) !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -462,23 +531,71 @@ button[type="submit"] {
 .btn-lg,
 a.px-8.py-4,
 button.px-8.py-4 {
-  padding: 1rem 2rem !important;               /* Large: 16 / 32px */
+  padding: 1rem 2rem !important;
   font-size: var(--font-size-body) !important;
-  min-height: 3.25rem !important;              /* 52px */
+  min-height: var(--btn-height-md) !important;
   border-radius: var(--btn-radius) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
-/* Fix for 199 link-buttons below 40px (H2/M3) */
+/* Primary / Secondary / Outline / Ghost variants */
+.btn-primary,
+#search-btn,
+button[type="submit"] {
+  background: var(--primary) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(10, 132, 255, 0.28) !important;
+}
+.btn-primary:hover,
+#search-btn:hover,
+button[type="submit"]:hover {
+  background: var(--primary-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(10, 132, 255, 0.38) !important;
+}
+
+.btn-secondary {
+  background: var(--secondary) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+.btn-secondary:hover {
+  background: #1e293b !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.btn-outline {
+  background: transparent !important;
+  color: var(--primary) !important;
+  border: 2px solid var(--primary) !important;
+}
+.btn-outline:hover {
+  background: var(--primary) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+
+.btn-ghost {
+  background: transparent !important;
+  color: var(--text) !important;
+  border: none !important;
+}
+.btn-ghost:hover {
+  background: var(--surface) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Fix for link-buttons below 40px */
 a.px-3\.5.py-1\.5,
 button.px-3\.5.py-1\.5,
 a[class*="text-"][class*="font-"]:not(.nav-link),
 a.text-sm:not(.nav-link),
 a.text-xs:not(.nav-link) {
   padding: 0.5rem 1rem !important;
-  min-height: 2.5rem !important;               /* 40px minimum tap target */
+  min-height: 2.5rem !important;
   border-radius: var(--btn-radius) !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -488,18 +605,17 @@ a.text-xs:not(.nav-link) {
 
 /* Nav links handled separately to avoid breaking header layout */
 #navbar .nav-link {
-  font-size: 0.9375rem !important;
+  font-size: var(--font-size-small) !important;
   font-weight: 500 !important;
 }
 
 :where(a, button, input, select, textarea):focus-visible {
-  outline: 3px solid rgba(3, 105, 161, 0.45);
+  outline: 3px solid rgba(10, 132, 255, 0.45);
   outline-offset: 3px;
 }
 
 /*
  * FINAL cascade — must beat Tailwind text-* utilities on headings.
- * Specificity: main h1[class] = (0,1,2) > .text-2xl (0,1,0)
  */
 main h1[class],
 .theme-hero h1[class],
@@ -507,19 +623,19 @@ section h1[class],
 main h1,
 .theme-hero h1,
 section h1 {
-  font-size: clamp(2rem, 4.5vw, 2.5rem) !important;
-  line-height: 1.12 !important;
+  font-size: clamp(2.125rem, 5vw, 4rem) !important;
+  line-height: var(--line-height-tight) !important;
   font-weight: 800 !important;
   letter-spacing: -0.03em !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 main h2.text-2xl,
 main h2.text-3xl,
 main h2.text-4xl,
 main h2.text-5xl {
-  font-size: clamp(1.625rem, 3.2vw, 2rem) !important;
-  line-height: 1.25 !important;
+  font-size: clamp(1.75rem, 4vw, 3rem) !important;
+  line-height: var(--line-height-snug) !important;
   font-weight: 800 !important;
 }
 
@@ -531,9 +647,10 @@ main h2.text-5xl {
 
 /* ── Headings: h2 / h3 always meet the type scale ── */
 main h2 {
-  font-size: clamp(1.625rem, 3.2vw, 2rem) !important;
-  line-height: 1.25 !important;
+  font-size: clamp(1.75rem, 4vw, 3rem) !important;
+  line-height: var(--line-height-snug) !important;
   font-weight: 800 !important;
+  margin-bottom: 1.5rem !important;
 }
 main h2.text-base,
 main h2.text-sm,
@@ -545,14 +662,16 @@ main h2.text-3xl,
 main h2.text-4xl,
 main h2.text-5xl,
 main h2.text-6xl {
-  font-size: clamp(1.625rem, 3.2vw, 2rem) !important;
-  line-height: 1.25 !important;
+  font-size: clamp(1.75rem, 4vw, 3rem) !important;
+  line-height: var(--line-height-snug) !important;
   font-weight: 800 !important;
+  margin-bottom: 1.5rem !important;
 }
 main h3 {
-  font-size: 1.375rem !important;   /* 22px */
-  line-height: 1.35 !important;
+  font-size: var(--font-size-h3) !important;
+  line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
 }
 main h3.text-base,
 main h3.text-sm,
@@ -560,51 +679,94 @@ main h3.text-xs,
 main h3.text-lg,
 main h3.text-xl,
 main h3.text-2xl {
-  font-size: 1.375rem !important;
-  line-height: 1.35 !important;
+  font-size: var(--font-size-h3) !important;
+  line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
 }
 main h4 {
-  font-size: 1.125rem !important;   /* 18px */
-  line-height: 1.4 !important;
+  font-size: var(--font-size-h4) !important;
+  line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
 }
 
-/* ── Body copy: every readable text node ≥ 15px ── */
-main li,
-main dd,
-main dt,
+/* Semantic heading repair: H2 that visually appears as H3 */
+h2.h3-style,
+main h2.h3-style {
+  font-size: var(--font-size-h3) !important;
+  line-height: var(--line-height-heading) !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Semantic heading repair: H3 that visually appears as H4 */
+h3.h4-style,
+main h3.h4-style {
+  font-size: var(--font-size-h4) !important;
+  line-height: var(--line-height-heading) !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ── Body copy: readable text nodes ── */
+main article li,
+main article dd,
+main article dt,
+main article blockquote,
+.prose li,
+.prose dd,
+.prose dt,
+.prose blockquote {
+  font-size: var(--font-size-body) !important;
+  line-height: var(--line-height-body) !important;
+  color: var(--body-color);
+}
+
 main td,
 main th,
-main blockquote {
-  font-size: 1rem !important;       /* 16px baseline (between small+body) */
-  line-height: 1.65 !important;
-  color: var(--body-color);
+main table td,
+main table th {
+  font-size: var(--font-size-small) !important;
+  line-height: 1.5 !important;
+}
+
+main li {
+  font-size: var(--font-size-secondary) !important;
+  line-height: var(--line-height-body) !important;
 }
 main .text-sm:not(p):not(h1):not(h2):not(h3):not(h4),
 main .text-base:not(p):not(h1):not(h2):not(h3):not(h4) {
   line-height: 1.6 !important;
 }
 
-/* ── Off-grid gaps snap to 8-px grid (site-wide, not just main) ── */
-.gap-1\.5 { gap: 0.5rem !important; }
-.gap-2\.5 { gap: 0.75rem !important; }
-.gap-5    { gap: 1.5rem !important; }
-.gap-7    { gap: 2rem !important; }
-.gap-9    { gap: 2.5rem !important; }
-.gap-10   { gap: 2.5rem !important; }
+/* ── Off-grid gaps snap to 4-px grid ── */
+.gap-5    { gap: 1.5rem !important; }  /* 24px, snap from 20px */
+.gap-7    { gap: 2rem !important; }    /* 32px, snap from 28px */
+.gap-9    { gap: 2.5rem !important; }  /* 40px, snap from 36px */
+.gap-10   { gap: 2.5rem !important; }  /* 40px */
 .gap-x-5  { column-gap: 1.5rem !important; }
 .gap-y-5  { row-gap: 1.5rem !important; }
 .gap-x-7  { column-gap: 2rem !important; }
 .gap-y-7  { row-gap: 2rem !important; }
 .gap-x-9  { column-gap: 2.5rem !important; }
 .gap-y-9  { row-gap: 2.5rem !important; }
+.gap-x-10 { column-gap: 2.5rem !important; }
+.gap-y-10 { row-gap: 2.5rem !important; }
+
+/* Card grid gap: 32px */
+main .grid.gap-6,
+main .grid.gap-8,
+main .grid.gap-10,
+main .grid.gap-12 {
+  gap: 2rem !important;
+}
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem !important; }
 .space-y-7 > :not([hidden]) ~ :not([hidden]) { margin-top: 2rem !important; }
 .space-x-5 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem !important; }
 
-/* ── Off-grid paddings snap to 8-px grid (site-wide) ── */
+/* ── Off-grid paddings snap to 4-px grid ── */
 .p-7  { padding: 2rem !important; }
 .p-9  { padding: 2.5rem !important; }
 .px-7 { padding-left: 2rem !important; padding-right: 2rem !important; }
@@ -612,7 +774,7 @@ main .text-base:not(p):not(h1):not(h2):not(h3):not(h4) {
 .py-7 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
 .py-9 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
 
-/* ── Background collapse (Tailwind oklch variants → design-system surfaces) ── */
+/* ── Background collapse ── */
 .bg-slate-50,
 .bg-gray-50,
 .bg-slate-100,
@@ -634,7 +796,7 @@ main .text-base:not(p):not(h1):not(h2):not(h3):not(h4) {
   background-color: var(--surface-elevated) !important;
 }
 
-/* ─── Form Standardization (Audit H4 / UI Standard 3.3) ─── */
+/* ─── Form Standardization ─── */
 .form-group {
   margin-bottom: 1.5rem !important;
   display: flex;
@@ -643,21 +805,23 @@ main .text-base:not(p):not(h1):not(h2):not(h3):not(h4) {
 }
 
 .form-label {
-  font-size: var(--font-size-small) !important;
+  font-size: var(--font-size-caption) !important;
   font-weight: 600 !important;
   color: var(--text-primary) !important;
   margin-bottom: 0.25rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 input.form-input,
 select.form-input,
 textarea.form-input {
   height: auto !important;
-  min-height: 2.75rem !important;   /* 44px */
-  padding: 0.625rem 1rem !important;
-  font-size: var(--font-size-body) !important;
+  min-height: 3rem !important;
+  padding: 0.75rem 1rem !important;
+  font-size: var(--font-size-secondary) !important;
   line-height: 1.4 !important;
-  border-radius: 0.75rem !important; /* 12px */
+  border-radius: var(--btn-radius) !important;
   border: 1px solid var(--border) !important;
   background-color: #fff !important;
   color: var(--text-primary) !important;
@@ -667,9 +831,9 @@ textarea.form-input {
 input.form-input:focus,
 select.form-input:focus,
 textarea.form-input:focus {
-  outline: 3px solid rgba(3, 105, 161, 0.45) !important;
+  outline: 3px solid rgba(10, 132, 255, 0.45) !important;
   outline-offset: 2px !important;
-  border-color: var(--primary) !important;
+  border-color: var(--premium-blue) !important;
 }
 
 /* Fix for select dropdown heights in browsers */
@@ -717,4 +881,18 @@ main .border-sky-300,
 main .border-indigo-200,
 main .border-emerald-200 {
   border-color: var(--primary-light) !important;
+}
+
+/* Premium blue accents */
+.text-premium,
+.text-premium-blue {
+  color: var(--premium-blue) !important;
+}
+.bg-premium,
+.bg-premium-blue {
+  background-color: var(--premium-blue) !important;
+}
+.border-premium,
+.border-premium-blue {
+  border-color: var(--premium-blue) !important;
 }

@@ -99,10 +99,10 @@
 <section class="bg-white border-b border-gray-200 py-4 sticky top-16 sm:top-20 z-40 shadow-sm">
   <div class="container">
     <div class="flex items-center gap-3 overflow-x-auto no-scrollbar" id="spa-tabs">
-      <button class="spa-tab active bg-theme-primary text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('all')">All Treatments</button>
-      <button class="spa-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('massage')">💆 Massages</button>
-      <button class="spa-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('express')">⚡ Express Services</button>
-      <button class="spa-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('full-day')">🛁 Full Wellness</button>
+      <button type="button" class="spa-tab active bg-theme-primary text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('all')">All Treatments</button>
+      <button type="button" class="spa-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('massage')">💆 Massages</button>
+      <button type="button" class="spa-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('express')">⚡ Express Services</button>
+      <button type="button" class="spa-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterSpa('full-day')">🛁 Full Wellness</button>
     </div>
   </div>
 </section>
@@ -279,7 +279,7 @@
 <!-- DETAILS MODAL -->
 <div id="modal-spa-detail" class="modal-overlay" data-modal="spa-detail" role="dialog" aria-modal="true" aria-labelledby="spa-detail-title">
   <div class="modal-content !max-w-2xl">
-    <button class="modal-close font-semibold text-2xl" aria-label="Close Spa Modal" onclick="layoverx.closeSpaDetail()">&times;</button>
+    <button type="button" class="modal-close font-semibold text-2xl" aria-label="Close Spa Modal" onclick="layoverx.closeSpaDetail()">&times;</button>
     <div class="p-6">
       <div class="relative h-60 rounded-xl overflow-hidden mb-6">
         <img id="detail-spa-image" alt="Spa main view" class="w-full h-full object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>

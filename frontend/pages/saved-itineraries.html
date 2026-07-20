@@ -134,10 +134,10 @@
             <span class="text-xs font-medium text-slate-500">🛒 Selected: ${countServices} Transit Services</span>
             <div class="flex flex-wrap gap-2">
               <a href="trip-details.html?id=${p.id}" class="px-2.5 py-1.5 bg-gray-55 hover:bg-gray-100 text-gray-700 border border-gray-200 rounded-lg text-xs font-bold transition">View Details</a>
-              <button onclick="loadPlanIntoPlanner(${idx})" class="px-2.5 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-100 rounded-lg text-xs font-bold transition">Load</button>
-              <button onclick="duplicatePlan(${idx})" class="px-2.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-bold transition">Duplicate</button>
-              <button onclick="sharePlanDetails(${idx})" class="px-2.5 py-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-100 rounded-lg text-xs font-bold transition">Share</button>
-              <button onclick="deletePlanDetails(${idx})" class="px-2.5 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 border border-red-100 rounded-lg text-xs font-bold transition">Delete</button>
+              <button type="button" onclick="loadPlanIntoPlanner(${idx})" class="px-2.5 py-1.5 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-100 rounded-lg text-xs font-bold transition">Load</button>
+              <button type="button" onclick="duplicatePlan(${idx})" class="px-2.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-bold transition">Duplicate</button>
+              <button type="button" onclick="sharePlanDetails(${idx})" class="px-2.5 py-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-100 rounded-lg text-xs font-bold transition">Share</button>
+              <button type="button" onclick="deletePlanDetails(${idx})" class="px-2.5 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 border border-red-100 rounded-lg text-xs font-bold transition">Delete</button>
             </div>
           </div>
         </div>

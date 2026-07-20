@@ -27,7 +27,7 @@
       <div class="hidden lg:flex items-center gap-3 flex-shrink-0">
         
         <!-- Trip Summary Chip -->
-        <button onclick="openAuthModal('trip-context')" class="flex items-center gap-2 px-3 py-1.5 rounded-[12px] text-xs font-bold text-[#6B7280] hover:text-[#0284C7] hover:bg-[#F3F4F6] transition-all cursor-pointer border border-[#E5E7EB]" id="global-trip-badge">
+        <button type="button" onclick="openAuthModal('trip-context')" class="flex items-center gap-2 px-3 py-1.5 rounded-[12px] text-xs font-bold text-[#6B7280] hover:text-[#0284C7] hover:bg-[#F3F4F6] transition-all cursor-pointer border border-[#E5E7EB]" id="global-trip-badge">
           <span>✈️ Trip Summary</span>
         </button>
         
@@ -48,7 +48,7 @@
  
         <!-- Auth User View -->
         <div class="auth-user hidden relative" id="header-user-menu">
-          <button id="user-menu-btn" class="flex items-center gap-2 border border-[#E5E7EB] px-2 py-1.5 rounded-[12px] transition cursor-pointer hover:bg-[#F3F4F6]" aria-expanded="false" aria-haspopup="true">
+          <button type="button" id="user-menu-btn" class="flex items-center gap-2 border border-[#E5E7EB] px-2 py-1.5 rounded-[12px] transition cursor-pointer hover:bg-[#F3F4F6]" aria-expanded="false" aria-haspopup="true">
             <div class="w-6 h-6 bg-[#0284C7] rounded-full flex items-center justify-center text-[10px] font-bold text-white uppercase user-avatar-letter">U</div>
             <span class="text-xs font-semibold text-[#0F172A] user-name">Traveler</span>
             <svg class="w-3.5 h-3.5 text-[#6B7280] transition-transform duration-200" id="user-menu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,13 +68,13 @@
             <a href="revenue-admin.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-emerald-600 bg-emerald-50/50 hover:bg-emerald-50 transition-colors font-semibold"><span class="text-base">📊</span> Revenue Admin</a>
             <a href="account-settings.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-[#6B7280] hover:bg-[#F3F4F6] transition-colors"><span class="text-base">⚙️</span> Settings</a>
             <div class="border-t border-[#E5E7EB] my-1"></div>
-            <button onclick="layoverx.logout()" class="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-650 hover:bg-red-50 transition-colors text-left"><span class="text-base">🚪</span> Logout</button>
+            <button type="button" onclick="layoverx.logout()" class="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-650 hover:bg-red-50 transition-colors text-left"><span class="text-base">🚪</span> Logout</button>
           </div>
         </div>
       </div>
  
       <!-- Mobile Hamburger Menu Button -->
-      <button class="lg:hidden p-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors" id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+      <button type="button" class="lg:hidden p-2 rounded-lg text-[#6B7280] hover:bg-[#F3F4F6] transition-colors" id="menu-btn" aria-label="Toggle Menu" aria-expanded="false">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
         </svg>
@@ -83,7 +83,7 @@
  
     <!-- Mobile Dropdown Menu -->
     <div class="lg:hidden hidden bg-white rounded-[24px] mt-2 p-4 shadow-2xl mx-4 border border-[#E5E7EB] overflow-hidden" id="mobile-menu">
-      <button onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-[12px] text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer" id="global-trip-badge-mobile">✈️ Trip Summary</button>
+      <button type="button" onclick="openAuthModal('trip-context')" class="mb-3 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-[12px] text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-100 transition-all cursor-pointer" id="global-trip-badge-mobile">✈️ Trip Summary</button>
       <a class="block text-[#0F172A] py-3 px-4 rounded-[12px] hover:bg-[#F3F4F6] text-sm font-medium" href="my-itinerary.html">My Itinerary <span id="itinerary-badge-mobile" class="hidden ml-1 px-1.5 py-0.5 text-xs font-extrabold bg-rose-500 text-white rounded-full">0</span></a>
       <a class="block text-[#0F172A] py-3 px-4 rounded-[12px] hover:bg-[#F3F4F6] text-sm font-medium {{ACTIVE_HOTELS}}" href="hotels.html">Hotels</a>
       <a class="block text-[#0F172A] py-3 px-4 rounded-[12px] hover:bg-[#F3F4F6] text-sm font-medium {{ACTIVE_RESTAURANTS}}" href="restaurants.html">Restaurants</a>
@@ -114,7 +114,7 @@
         <a href="supplier-dashboard.html" class="w-full text-center py-2.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-[12px] text-sm transition">Supplier Hub</a>
         <a href="revenue-admin.html" class="w-full text-center py-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-[12px] text-sm transition font-semibold">Revenue Admin</a>
         <a href="account-settings.html" class="w-full text-center py-2.5 bg-[#F3F4F6] hover:bg-slate-100 text-[#0F172 la la x] rounded-[12px] text-sm transition">Settings</a>
-        <button class="mt-2 w-full text-center py-2.5 bg-rose-50 text-rose-600 hover:bg-rose-100 text-sm font-semibold rounded-[12px] transition" onclick="layoverx.logout()">Logout</button>
+        <button type="button" class="mt-2 w-full text-center py-2.5 bg-rose-50 text-rose-600 hover:bg-rose-100 text-sm font-semibold rounded-[12px] transition" onclick="layoverx.logout()">Logout</button>
       </div>
     </div>
   </div>

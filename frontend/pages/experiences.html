@@ -99,12 +99,12 @@
 <section class="bg-white border-b border-gray-200 py-4 sticky top-16 sm:top-20 z-40 shadow-sm">
   <div class="container">
     <div class="flex items-center gap-3 overflow-x-auto no-scrollbar" id="experience-tabs">
-      <button class="exp-tab active bg-theme-primary text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('all')">All Activities</button>
-      <button class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('sightseeing')">📸 Sightseeing</button>
-      <button class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('culture')">🕌 Culture & Heritage</button>
-      <button class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('shopping')">🛍️ Shopping Tours</button>
-      <button class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('food')">🍲 Food Crawls</button>
-      <button class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('nightlife')">🌙 Nightlife</button>
+      <button type="button" class="exp-tab active bg-theme-primary text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('all')">All Activities</button>
+      <button type="button" class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('sightseeing')">📸 Sightseeing</button>
+      <button type="button" class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('culture')">🕌 Culture & Heritage</button>
+      <button type="button" class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('shopping')">🛍️ Shopping Tours</button>
+      <button type="button" class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('food')">🍲 Food Crawls</button>
+      <button type="button" class="exp-tab bg-gray-55 text-theme-primary hover:bg-theme-primary px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex-shrink-0" onclick="layoverx.filterExp('nightlife')">🌙 Nightlife</button>
     </div>
   </div>
 </section>
@@ -404,7 +404,7 @@
 <!-- EXPERIENCE DETAILS MODAL -->
 <div id="modal-exp-detail" class="modal-overlay" data-modal="exp-detail" role="dialog" aria-modal="true" aria-labelledby="exp-detail-title">
   <div class="modal-content !max-w-2xl">
-    <button class="modal-close font-semibold text-2xl" aria-label="Close Activity Modal" onclick="layoverx.closeExpDetail()">&times;</button>
+    <button type="button" class="modal-close font-semibold text-2xl" aria-label="Close Activity Modal" onclick="layoverx.closeExpDetail()">&times;</button>
     <div class="p-6">
       <div class="relative h-60 rounded-xl overflow-hidden mb-6">
         <img id="detail-exp-image" alt="Activity main view" class="w-full h-full object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>

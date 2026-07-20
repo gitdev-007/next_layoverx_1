@@ -1,7 +1,7 @@
 <!-- Auth Modals -->
 <div id="modal-login" class="modal-overlay opacity-0 transition-opacity duration-300" data-modal="login" role="dialog" aria-modal="true" aria-labelledby="login-title">
   <div class="modal-content transform scale-95 transition-transform duration-300 p-8 sm:p-10 !max-w-md">
-    <button class="modal-close font-semibold text-2xl" aria-label="Close Login Modal" onclick="layoverx.closeModal('login')">&times;</button>
+    <button type="button" class="modal-close font-semibold text-2xl" aria-label="Close Login Modal" onclick="layoverx.closeModal('login')">&times;</button>
     <div class="auth-form">
       <div class="mb-8 text-center">
         <h2 id="login-title" class="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">Welcome Back</h2>
@@ -38,7 +38,7 @@
       </div>
       
       <div class="space-y-3">
-        <button id="btn-google-login" class="social-btn border border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-700 font-semibold transition-all w-full py-3 rounded-xl flex items-center justify-center gap-3 shadow-sm" onclick="layoverx.socialLogin('google')">
+        <button type="button" id="btn-google-login" class="social-btn border border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-700 font-semibold transition-all w-full py-3 rounded-xl flex items-center justify-center gap-3 shadow-sm" onclick="layoverx.socialLogin('google')">
           <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v3.9h6.6c-.28 1.5-1.12 2.76-2.38 3.61v3h3.84c2.25-2.07 3.68-5.12 3.68-8.44z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.44 1.15-4.09 1.15-3.15 0-5.82-2.13-6.77-5H1.28v3.1c1.98 3.94 6.06 6.66 10.72 6.66z"/><path fill="#FBBC05" d="M5.23 14.24a7.17 7.17 0 010-4.48v-3.1H1.28a11.96 11.96 0 000 10.68l3.95-3.1z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.43-3.43C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.72 1.28 6.66l3.95 3.1c.95-2.87 3.62-5 6.77-5z"/></svg>
           Continue with Google
           <svg class="w-5 h-5 hidden loading-spinner animate-spin ml-2" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
@@ -55,7 +55,7 @@
 
 <div id="modal-signup" class="modal-overlay opacity-0 transition-opacity duration-300" data-modal="signup" role="dialog" aria-modal="true" aria-labelledby="signup-title">
   <div class="modal-content transform scale-95 transition-transform duration-300 p-8 sm:p-10 !max-w-md">
-    <button class="modal-close font-semibold text-2xl" aria-label="Close Signup Modal" onclick="layoverx.closeModal('signup')">&times;</button>
+    <button type="button" class="modal-close font-semibold text-2xl" aria-label="Close Signup Modal" onclick="layoverx.closeModal('signup')">&times;</button>
     <div class="auth-form">
       <div class="mb-8 text-center">
         <h2 id="signup-title" class="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">Create Account</h2>
@@ -100,7 +100,7 @@
       </div>
       
       <div class="space-y-3">
-        <button id="btn-google-signup" class="social-btn border border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-700 font-semibold transition-all w-full py-3 rounded-xl flex items-center justify-center gap-3 shadow-sm" onclick="layoverx.socialLogin('google')">
+        <button type="button" id="btn-google-signup" class="social-btn border border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-700 font-semibold transition-all w-full py-3 rounded-xl flex items-center justify-center gap-3 shadow-sm" onclick="layoverx.socialLogin('google')">
           <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v3.9h6.6c-.28 1.5-1.12 2.76-2.38 3.61v3h3.84c2.25-2.07 3.68-5.12 3.68-8.44z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.84-3c-1.07.72-2.44 1.15-4.09 1.15-3.15 0-5.82-2.13-6.77-5H1.28v3.1c1.98 3.94 6.06 6.66 10.72 6.66z"/><path fill="#FBBC05" d="M5.23 14.24a7.17 7.17 0 010-4.48v-3.1H1.28a11.96 11.96 0 000 10.68l3.95-3.1z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.43-3.43C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.72 1.28 6.66l3.95 3.1c.95-2.87 3.62-5 6.77-5z"/></svg>
           Continue with Google
           <svg class="w-5 h-5 hidden loading-spinner animate-spin ml-2" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
@@ -117,7 +117,7 @@
 
 <div id="modal-forgot" class="modal-overlay opacity-0 transition-opacity duration-300" data-modal="forgot" role="dialog" aria-modal="true" aria-labelledby="forgot-title">
   <div class="modal-content transform scale-95 transition-transform duration-300 p-8 sm:p-10 !max-w-md">
-    <button class="modal-close font-semibold text-2xl" aria-label="Close Forgot Modal" onclick="layoverx.closeModal('forgot')">&times;</button>
+    <button type="button" class="modal-close font-semibold text-2xl" aria-label="Close Forgot Modal" onclick="layoverx.closeModal('forgot')">&times;</button>
     <div class="auth-form">
       <div class="mb-8 text-center">
         <h2 id="forgot-title" class="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">Reset Password</h2>
@@ -128,7 +128,7 @@
         <label class="form-label block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5" for="forgot-email">Email</label>
         <input id="forgot-email" type="email" class="form-input w-full border border-gray-300 focus:border-sky-600 focus:ring-2 focus:ring-sky-600/20 rounded-xl px-4 py-3 text-sm text-gray-900 transition-all shadow-sm" required autocomplete="email"/>
       </div>
-      <button id="btn-forgot-submit" class="btn btn-primary w-full mt-6 py-3.5 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex justify-center items-center gap-2" onclick="layoverx.handleForgot()">
+      <button type="button" id="btn-forgot-submit" class="btn btn-primary w-full mt-6 py-3.5 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex justify-center items-center gap-2" onclick="layoverx.handleForgot()">
         <span>Send Reset Link</span>
         <svg class="w-5 h-5 hidden loading-spinner animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
       </button>
@@ -142,7 +142,7 @@
 
 <div id="modal-trip-context" class="modal-overlay opacity-0 transition-opacity duration-300 hidden" data-modal="trip-context" role="dialog" aria-modal="true" aria-labelledby="trip-context-title">
   <div class="modal-content transform scale-95 transition-transform duration-300 p-8 sm:p-10 !max-w-md">
-    <button class="modal-close font-semibold text-2xl" aria-label="Close Trip Modal" onclick="layoverx.closeModal('trip-context')">&times;</button>
+    <button type="button" class="modal-close font-semibold text-2xl" aria-label="Close Trip Modal" onclick="layoverx.closeModal('trip-context')">&times;</button>
     <div class="auth-form">
       <div class="mb-6 text-center">
         <h2 id="trip-context-title" class="text-gray-900 text-2xl font-extrabold tracking-tight mb-2">Update Trip Details</h2>

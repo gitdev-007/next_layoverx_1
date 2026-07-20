@@ -68,16 +68,16 @@
     
     <!-- Navigation Tabs -->
     <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-4 mb-6">
-      <button onclick="switchAdminTab('overview')" id="admin-tab-overview" class="px-5 py-3 text-sm font-extrabold rounded-xl transition bg-slate-900 text-white shadow-md">
+      <button type="button" onclick="switchAdminTab('overview')" id="admin-tab-overview" class="px-5 py-3 text-sm font-extrabold rounded-xl transition bg-slate-900 text-white shadow-md">
         📈 Revenue Overview
       </button>
-      <button onclick="switchAdminTab('pricing')" id="admin-tab-pricing" class="px-5 py-3 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition">
+      <button type="button" onclick="switchAdminTab('pricing')" id="admin-tab-pricing" class="px-5 py-3 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition">
         ⚙️ Pricing Rules & Yield
       </button>
-      <button onclick="switchAdminTab('promotions')" id="admin-tab-promotions" class="px-5 py-3 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition">
+      <button type="button" onclick="switchAdminTab('promotions')" id="admin-tab-promotions" class="px-5 py-3 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition">
         🏷️ Coupons & Discounts
       </button>
-      <button onclick="switchAdminTab('payouts')" id="admin-tab-payouts" class="px-5 py-3 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition">
+      <button type="button" onclick="switchAdminTab('payouts')" id="admin-tab-payouts" class="px-5 py-3 text-sm font-bold text-slate-600 hover:bg-slate-100 rounded-xl transition">
         💼 Payouts & Audit Logs
       </button>
     </div>
@@ -124,7 +124,7 @@
       <!-- Charts Section -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm lg:col-span-8 space-y-4">
-          <h3 class="font-bold text-slate-900 text-sm flex items-center justify-between">
+          <h2 class="h3-style flex items-center justify-between">
             <span>📊 Booking Performance Trends</span>
             <span class="text-xs text-slate-400">Weekly breakdown</span>
           </h3>
@@ -134,7 +134,7 @@
         </div>
 
         <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm lg:col-span-4 space-y-4">
-          <h3 class="font-bold text-slate-900 text-sm">🍰 Net Revenue Streams</h3>
+          <h2 class="h3-style">🍰 Net Revenue Streams</h3>
           <div class="relative h-64 w-full flex items-center justify-center">
             <canvas id="streamsChart"></canvas>
           </div>
@@ -148,7 +148,7 @@
             <h3 class="font-bold text-slate-900 text-base">🛒 Real-time Revenue Transaction Ledger</h3>
             <p class="text-xs text-slate-500 mt-0.5">Calculated prices, platform convenience fees, and taxes collected.</p>
           </div>
-          <button onclick="downloadFinancialPlanCA()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-md flex items-center gap-2">
+          <button type="button" onclick="downloadFinancialPlanCA()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-md flex items-center gap-2">
             📥 Compile CA Financial Summary
           </button>
         </div>
@@ -199,7 +199,7 @@
             <span>Normal</span>
             <span>+50% Max Markup</span>
           </div>
-          <button onclick="saveOverrideSetting()" class="mt-4 px-4 py-2 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
+          <button type="button" onclick="saveOverrideSetting()" class="mt-4 px-4 py-2 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
             Apply Global Override Slider
           </button>
         </div>
@@ -218,7 +218,7 @@
           </div>
 
           <div class="pt-4 border-t border-slate-100 flex justify-end">
-            <button onclick="saveBasePrices()" class="px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl shadow transition">
+            <button type="button" onclick="saveBasePrices()" class="px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl shadow transition">
               ✓ Save Configured Base Prices
             </button>
           </div>
@@ -257,7 +257,7 @@
               <label for="chk-auto-demand" class="text-xs font-bold text-slate-700 select-none">Enable Yield Yield Auto Adjustments</label>
             </div>
             
-            <button onclick="saveOccupancySettings()" class="w-full px-4 py-2.5 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
+            <button type="button" onclick="saveOccupancySettings()" class="w-full px-4 py-2.5 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
               Apply Yield Config
             </button>
           </div>
@@ -268,7 +268,7 @@
             <div id="seasonal-pricing-list" class="space-y-3">
               <!-- Populated dynamically -->
             </div>
-            <button onclick="saveSeasonalPricing()" class="w-full px-4 py-2.5 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
+            <button type="button" onclick="saveSeasonalPricing()" class="w-full px-4 py-2.5 bg-slate-900 hover:bg-black text-white font-extrabold text-xs rounded-xl transition shadow">
               Update Seasonal Ranges
             </button>
           </div>
@@ -812,7 +812,7 @@
           </td>
           <td class="py-3 px-4 text-slate-500">${c.desc || 'No description'}</td>
           <td class="py-3 px-4 text-right">
-            <button onclick="deleteCoupon(${idx})" class="text-rose-650 hover:text-rose-800 font-bold transition">Delete</button>
+            <button type="button" onclick="deleteCoupon(${idx})" class="text-rose-650 hover:text-rose-800 font-bold transition">Delete</button>
           </td>
         </tr>
       `;
@@ -901,7 +901,7 @@
           
           const isPending = po.status === 'Pending';
           const badgeClass = isPending ? 'bg-amber-50 text-amber-700 border-amber-200' : 'bg-emerald-50 text-emerald-700 border-emerald-250';
-          const processBtn = isPending ? `<button onclick="processPayout(${realIdx})" class="px-2.5 py-1 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-lg transition shadow-xs">Disburse Payout</button>` : `<span class="text-slate-400 italic text-xs">Settled ${new Date(po.datePaid).toLocaleDateString()}</span>`;
+          const processBtn = isPending ? `<button type="button" onclick="processPayout(${realIdx})" class="px-2.5 py-1 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-lg transition shadow-xs">Disburse Payout</button>` : `<span class="text-slate-400 italic text-xs">Settled ${new Date(po.datePaid).toLocaleDateString()}</span>`;
 
           payoutTbody.innerHTML += `
             <tr class="hover:bg-slate-50/80 transition-colors">
