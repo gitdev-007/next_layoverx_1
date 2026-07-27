@@ -1,36 +1,115 @@
-# Dependencies
-node_modules/
-backend/functions/node_modules/
+# ==============================================================================
+#                      LAYOVERX — PRODUCTION .GITIGNORE
+# Comprehensive rules to prevent security leaks, credential exposure & bloat
+# ==============================================================================
 
-# Local configuration & credentials
+# ------------------------------------------------------------------------------
+# 1. Environment Variables & Secret Credentials (CRITICAL SECURITY)
+# ------------------------------------------------------------------------------
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env.*.local
+*.env
+*.env.json
 
-# IDEs & System files
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+# API Keys, Private Certificates, Keyfiles & Service Accounts
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.asc
+*.kdb
+*.keystore
+*credential*.json
+*service-account*.json
+*secret*.json
+secrets/
+config/secrets/
 
-# Log files
+# ------------------------------------------------------------------------------
+# 2. Next.js & Build Outputs
+# ------------------------------------------------------------------------------
+.next/
+out/
+build/
+dist/
+.vercel/
+.serverless/
+.turbo/
+
+# ------------------------------------------------------------------------------
+# 3. Dependencies & Package Locks
+# ------------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+
+# ------------------------------------------------------------------------------
+# 4. Logs, Debug Dumps & Temporary Development Files
+# ------------------------------------------------------------------------------
 *.log
+debug*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+logs/
+tmp/
+scratch/
+tmp-*.mjs
+tmp-*.js
 
-# Playwright & test reports
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+# ------------------------------------------------------------------------------
+# 5. Playwright, Visual QA & Test Reports
+# ------------------------------------------------------------------------------
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+_screens/
+_audit/
+_qa/
+audit-reports/
 
-# Coverage reports
+# ------------------------------------------------------------------------------
+# 6. Coverage & Audit Reports
+# ------------------------------------------------------------------------------
 coverage/
 backend/functions/coverage/
 backend/functions/lcov-report/
 *.lcov
 coverage.dat
 
-# Audit tools
-audit_tools/
+# ------------------------------------------------------------------------------
+# 7. IDE, Code Editors & OS System Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+@eaDir
+
+# IDE Configurations
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.cursor/
+
+# TypeScript & Cache
+*.tsbuildinfo
+.eslintcache

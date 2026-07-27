@@ -653,21 +653,15 @@
     const logoText = $('#logo-text');
     const menuBtn = $('#menu-btn');
     if (!navbar) return;
-    
-    // Check if page has a dark hero section or layout
-    const hasHero = document.querySelector('#hero-section') || document.querySelector('.theme-hero');
-    
+
+    // Premium SaaS consistency: navbar is always white/frosted on every page.
     function handleScroll() {
-      // If no hero section exists, always use the scrolled/opaque style
-      const scrolled = window.scrollY > 40 || !hasHero;
-      navbar.classList.toggle('bg-transparent', !scrolled);
-      navbar.classList.toggle('bg-white/95', scrolled);
-      navbar.classList.toggle('backdrop-blur-xl', scrolled);
-      navbar.classList.toggle('shadow-md', scrolled);
-      navbar.classList.toggle('scrolled', scrolled);
-      // Colors are now handled purely by CSS variables and .scrolled class in design-system.css
+      const scrolled = true;
+      navbar.classList.remove('bg-transparent');
+      navbar.classList.add('bg-white/95', 'backdrop-blur-xl', 'shadow-md', 'scrolled');
+      // Colors are handled purely by CSS variables and .scrolled class in design-system.css
     }
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll();
   }

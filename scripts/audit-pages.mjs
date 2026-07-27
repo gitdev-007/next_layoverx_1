@@ -46,7 +46,8 @@ const pages = [
 ];
 
 const server = http.createServer((req, res) => {
-  const filePath = path.join(frontendDir, req.url === '/' ? 'index.html' : req.url);
+  const cleanUrl = req.url.split('?')[0];
+  const filePath = path.join(frontendDir, cleanUrl === '/' ? 'index.html' : cleanUrl);
   const ext = path.extname(filePath);
   const contentTypes = {
     '.html': 'text/html',
@@ -144,12 +145,12 @@ server.listen(8766, async () => {
           const bg = style.backgroundColor;
           if (color.includes('rgb(203, 213, 225)') || color.includes('rgb(148, 163, 184)')) {
             if (bg.includes('255, 255, 255') || bg.includes('transparent')) {
-              lowContrastElements.push(el.tagName + (el.className ? '.' + el.className.split(' ')[0] : ''));
+              lowContrastElements.push(el.tagName + (el.className ? '.' + el.className.split(' ')[0] : '') + ' | ' + el.textContent.trim().slice(0, 40));
             }
           }
         });
         if (lowContrastElements.length > 0) {
-          issues.push(`${lowContrastElements.length} potentially low-contrast text elements`);
+          issues.push(`${lowContrastElements.length} potentially low-contrast text elements: ${lowContrastElements.join('; ')}`);
         }
 
         // Layout overflow

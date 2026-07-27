@@ -20,28 +20,42 @@
 
   <!-- Critical CSS: prevents FOUC & locks design-system type scale before Tailwind -->
   <style>
+    :root {
+      --font-size-h1: 4rem;             /* 64px — hero heading */
+      --font-size-h2: 3rem;             /* 48px — section heading */
+      --font-size-h3: 1.75rem;          /* 28px — sub heading */
+      --font-size-h4: 1.125rem;         /* 18px — secondary text */
+      --font-size-body: 1.0625rem;       /* 17px — body text */
+      --font-size-secondary: 1.125rem;   /* 18px — secondary text */
+      --font-size-small: 0.875rem;       /* 14px — small text */
+      --font-size-caption: 1rem;         /* 16px — caption text */
+      --line-height-tight: 1.15;
+      --line-height-snug: 1.15;
+      --line-height-heading: 1.15;
+      --line-height-body: 1.7;
+    }
+
     html { font-size: 16px; box-sizing: border-box; }
     *, *::before, *::after { box-sizing: inherit; }
 
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: var(--font-size-body);
+      line-height: var(--line-height-body);
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* Phase 3 professional type: H1 40 / H2 32 / H3 22 / body 17 */
-    h1 { font-size: clamp(2rem, 4.5vw, 2.5rem); line-height: 1.12; font-weight: 800; letter-spacing: -0.03em; }
-    h2 { font-size: clamp(1.625rem, 3.2vw, 2rem); line-height: 1.25; font-weight: 800; letter-spacing: -0.025em; }
-    h3 { font-size: 1.375rem; line-height: 1.35; font-weight: 700; }
-    h4 { font-size: 1.125rem; line-height: 1.4; font-weight: 600; }
-    h5 { font-size: 1.0625rem; line-height: 1.5; font-weight: 600; }
-    h6 { font-size: 0.9375rem; line-height: 1.5; font-weight: 600; }
+    h1 { font-size: clamp(2.125rem, 5vw, var(--font-size-h1)); line-height: var(--line-height-tight); font-weight: 800; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(1.75rem, 4vw, var(--font-size-h2)); line-height: var(--line-height-snug); font-weight: 800; letter-spacing: -0.025em; }
+    h3 { font-size: var(--font-size-h3); line-height: var(--line-height-heading); font-weight: 700; }
+    h4 { font-size: var(--font-size-h4); line-height: var(--line-height-heading); font-weight: 600; }
+    h5 { font-size: var(--font-size-body); line-height: var(--line-height-body); font-weight: 600; }
+    h6 { font-size: var(--font-size-small); line-height: var(--line-height-body); font-weight: 600; }
 
-    p { font-size: 1.0625rem; line-height: 1.7; }
+    p { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 
-    input, select, textarea, button { font-family: inherit; font-size: 0.9375rem; }
+    input, select, textarea, button { font-family: inherit; font-size: var(--font-size-small); }
 
     .container { width: 100%; max-width: 80rem; margin: 0 auto; padding: 0 1rem; }
 
@@ -72,10 +86,10 @@
   <script src="js/supabase-init.js" type="module"></script>
 
   <!-- LayoverX Design System (overrides Tailwind where needed) -->
-  <link rel="stylesheet" href="css/design-system.css?v=20260719c"/>
+  <link rel="stylesheet" href="css/design-system.css?v=20260720a"/>
 
   <!-- Global Structure & Typography Overrides (loads last — highest priority) -->
-  <link rel="stylesheet" href="css/global-overrides.css?v=20260719c"/>
+  <link rel="stylesheet" href="css/global-overrides.css?v=20260720a"/>
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>

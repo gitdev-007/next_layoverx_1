@@ -39,7 +39,8 @@ const viewports = [
 
 // Simple static file server
 const server = http.createServer((req, res) => {
-  const filePath = path.join(frontendDir, req.url === '/' ? 'index.html' : req.url);
+  const cleanUrl = req.url.split('?')[0];
+  const filePath = path.join(frontendDir, cleanUrl === '/' ? 'index.html' : cleanUrl);
   const ext = path.extname(filePath);
   const contentTypes = {
     '.html': 'text/html',

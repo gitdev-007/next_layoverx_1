@@ -1,6 +1,6 @@
 # LayoverX Page Audit Report
 
-Generated: 2026-07-20T12:07:23.532Z
+Generated: 2026-07-20T18:29:16.406Z
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: 2026-07-20T12:07:23.532Z
 | spa-wellness.html | 0 | 15 | 5 | 30 | 5 | 3 |
 | gaming-entertainment.html | 0 | 15 | 5 | 29 | 5 | 3 |
 | experiences.html | 0 | 20 | 6 | 33 | 8 | 5 |
-| airport-transfers.html | 0 | 20 | 1 | 24 | 8 | 5 |
+| airport-transfers.html | 1 | 20 | 1 | 24 | 8 | 5 |
 | how-it-works.html | 0 | 19 | 1 | 18 | 6 | 6 |
 | contact.html | 0 | 13 | 1 | 19 | 2 | 4 |
 | plan-my-layover.html | 0 | 38 | 6 | 30 | 9 | 3 |
@@ -64,7 +64,7 @@ Generated: 2026-07-20T12:07:23.532Z
 
 ### airport-transfers.html
 
-- No major issues detected
+- 1 potentially low-contrast text elements: SPAN.inline-flex | 🚕 FIXED-RATE TRANSIT TRANSFERS
 
 ### how-it-works.html
 

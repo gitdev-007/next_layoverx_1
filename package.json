@@ -7,24 +7,19 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "node frontend/build.js",
-    "build:page": "node frontend/build.js",
-    "dev": "node frontend/build.js && cd frontend && npx serve . -p 8000",
-    "audit:ui": "node scripts/ui-style-audit.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "audit:ui": "node scripts/ui-style-audit.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gitdev-007/next_layoverx_1.git"
+  "dependencies": {
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@supabase/supabase-js": "^2.45.4",
+    "lucide-react": "^0.453.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/gitdev-007/next_layoverx_1/issues"
-  },
-  "homepage": "https://github.com/gitdev-007/next_layoverx_1#readme",
   "devDependencies": {
     "playwright": "^1.61.1"
   }

@@ -24,7 +24,7 @@
   --font-size-h2: 3rem;             /* 48px — section heading */
   --font-size-h3: 1.75rem;          /* 28px — sub heading */
   --font-size-h4: 1.125rem;         /* 18px — secondary text */
-  --font-size-body: 1.25rem;        /* 20px — body text */
+  --font-size-body: 1.0625rem;      /* 17px — body text */
   --font-size-secondary: 1.125rem;  /* 18px — secondary text */
   --font-size-small: 0.875rem;      /* 14px — small text */
   --font-size-xs: 0.875rem;         /* 14px — small text */
@@ -169,7 +169,11 @@ main h4 {
   text-wrap: balance;
 }
 
-/* ─── Body copy: 20px for readable content paragraphs only ─── */
+/* ─── Body copy: 17px for readable content paragraphs ─── */
+main p,
+main p.text-sm,
+main p.text-base,
+main p.text-lg,
 .section > .container > .text-center p,
 section > .container > div > p,
 section .prose p,
@@ -179,26 +183,36 @@ section .prose p,
 .card .p-5 p,
 main .card p,
 article p {
-  font-size: var(--font-size-secondary) !important;
+  font-size: var(--font-size-body) !important;
   line-height: var(--line-height-body) !important;
   color: var(--body-color);
   margin-bottom: 1.5rem !important;
 }
 
-.section > .container > .text-center p,
-.theme-hero p,
-section > .container > div > p:last-child,
-article p {
-  font-size: var(--font-size-body) !important;
+/* Explicit micro-copy inside paragraphs stays small */
+main p.text-xs,
+main .card p.text-xs,
+article p.text-xs {
+  font-size: var(--font-size-small) !important;
+  line-height: 1.5 !important;
 }
 
 /* Supporting UI text */
-.text-sm,
-main .text-sm,
-.card .text-sm,
 .badge,
 .tag,
-.meta {
+.meta,
+.label,
+label,
+.form-label,
+.input-hint,
+.help-text,
+figcaption,
+caption,
+.nav-link,
+.breadcrumb,
+.toast,
+.chip,
+.pill {
   font-size: var(--font-size-small) !important;
   line-height: 1.5 !important;
 }
@@ -541,16 +555,55 @@ button.px-8.py-4 {
 }
 
 /* Primary / Secondary / Outline / Ghost variants */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-ghost,
+#search-btn,
+button[type="submit"],
+a.bg-sky-700,
+a.bg-theme-primary,
+a.bg-primary,
+button.bg-sky-700,
+button.bg-theme-primary,
+button.bg-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: var(--btn-height-md) !important;
+  padding: var(--btn-pad-y-md) var(--btn-pad-x-md) !important;
+  border-radius: var(--btn-radius) !important;
+  font-size: var(--font-size-small) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: 1.25 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
 .btn-primary,
 #search-btn,
-button[type="submit"] {
+button[type="submit"],
+a.bg-sky-700,
+a.bg-theme-primary,
+a.bg-primary,
+button.bg-sky-700,
+button.bg-theme-primary,
+button.bg-primary {
   background: var(--primary) !important;
   color: #fff !important;
   box-shadow: 0 4px 14px rgba(10, 132, 255, 0.28) !important;
+  border: none !important;
 }
 .btn-primary:hover,
 #search-btn:hover,
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+a.bg-sky-700:hover,
+a.bg-theme-primary:hover,
+a.bg-primary:hover,
+button.bg-sky-700:hover,
+button.bg-theme-primary:hover,
+button.bg-primary:hover {
   background: var(--primary-dark) !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 8px 22px rgba(10, 132, 255, 0.38) !important;
@@ -620,9 +673,11 @@ a.text-xs:not(.nav-link) {
 main h1[class],
 .theme-hero h1[class],
 section h1[class],
+header h1[class],
 main h1,
 .theme-hero h1,
-section h1 {
+section h1,
+header h1 {
   font-size: clamp(2.125rem, 5vw, 4rem) !important;
   line-height: var(--line-height-tight) !important;
   font-weight: 800 !important;
@@ -633,7 +688,11 @@ section h1 {
 main h2.text-2xl,
 main h2.text-3xl,
 main h2.text-4xl,
-main h2.text-5xl {
+main h2.text-5xl,
+header h2.text-2xl,
+header h2.text-3xl,
+header h2.text-4xl,
+header h2.text-5xl {
   font-size: clamp(1.75rem, 4vw, 3rem) !important;
   line-height: var(--line-height-snug) !important;
   font-weight: 800 !important;
@@ -646,7 +705,8 @@ main h2.text-5xl {
    ============================================================ */
 
 /* ── Headings: h2 / h3 always meet the type scale ── */
-main h2 {
+main h2,
+header h2 {
   font-size: clamp(1.75rem, 4vw, 3rem) !important;
   line-height: var(--line-height-snug) !important;
   font-weight: 800 !important;
@@ -661,13 +721,24 @@ main h2.text-2xl,
 main h2.text-3xl,
 main h2.text-4xl,
 main h2.text-5xl,
-main h2.text-6xl {
+main h2.text-6xl,
+header h2.text-base,
+header h2.text-sm,
+header h2.text-xs,
+header h2.text-lg,
+header h2.text-xl,
+header h2.text-2xl,
+header h2.text-3xl,
+header h2.text-4xl,
+header h2.text-5xl,
+header h2.text-6xl {
   font-size: clamp(1.75rem, 4vw, 3rem) !important;
   line-height: var(--line-height-snug) !important;
   font-weight: 800 !important;
   margin-bottom: 1.5rem !important;
 }
-main h3 {
+main h3,
+header h3 {
   font-size: var(--font-size-h3) !important;
   line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
@@ -678,13 +749,20 @@ main h3.text-sm,
 main h3.text-xs,
 main h3.text-lg,
 main h3.text-xl,
-main h3.text-2xl {
+main h3.text-2xl,
+header h3.text-base,
+header h3.text-sm,
+header h3.text-xs,
+header h3.text-lg,
+header h3.text-xl,
+header h3.text-2xl {
   font-size: var(--font-size-h3) !important;
   line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
   margin-bottom: 1.5rem !important;
 }
-main h4 {
+main h4,
+header h4 {
   font-size: var(--font-size-h4) !important;
   line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
@@ -693,7 +771,8 @@ main h4 {
 
 /* Semantic heading repair: H2 that visually appears as H3 */
 h2.h3-style,
-main h2.h3-style {
+main h2.h3-style,
+header h2.h3-style {
   font-size: var(--font-size-h3) !important;
   line-height: var(--line-height-heading) !important;
   font-weight: 700 !important;
@@ -738,6 +817,18 @@ main li {
 main .text-sm:not(p):not(h1):not(h2):not(h3):not(h4),
 main .text-base:not(p):not(h1):not(h2):not(h3):not(h4) {
   line-height: 1.6 !important;
+}
+
+/* ── Section rhythm: every content section shares one vertical cadence ── */
+main section:not(.theme-hero):not(#hero-section):not(.no-section-padding) {
+  padding-top: var(--section-y-md) !important;
+  padding-bottom: var(--section-y-md) !important;
+}
+@media (min-width: 1024px) {
+  main section:not(.theme-hero):not(#hero-section):not(.no-section-padding) {
+    padding-top: var(--section-y-lg) !important;
+    padding-bottom: var(--section-y-lg) !important;
+  }
 }
 
 /* ── Off-grid gaps snap to 4-px grid ── */

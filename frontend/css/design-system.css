@@ -66,7 +66,7 @@
   --font-size-h2: 3rem;             /* 48px — section heading */
   --font-size-h3: 1.75rem;          /* 28px — sub heading */
   --font-size-h4: 1.125rem;         /* 18px — secondary text */
-  --font-size-body: 1.25rem;        /* 20px — body text */
+  --font-size-body: 1.0625rem;      /* 17px — body text */
   --font-size-secondary: 1.125rem;  /* 18px — secondary text */
   --font-size-small: 0.875rem;      /* 14px — small text */
   --font-size-xs: 0.875rem;         /* 14px — small text */
@@ -489,19 +489,22 @@ textarea:focus {
   right: 0;
   z-index: 1000;
   transition: var(--transition);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
 }
 #navbar .nav-link {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--text-primary);
   transition: color 0.3s ease;
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-medium);
 }
 #navbar .nav-link:hover,
 #navbar .nav-link:focus {
-  color: #fff;
+  color: var(--primary);
 }
-#navbar:not(.scrolled) #logo-text {
-  color: #fff;
+#navbar #logo-text {
+  color: var(--text-primary);
 }
 #navbar.scrolled {
   background: rgba(255, 255, 255, 0.97);
